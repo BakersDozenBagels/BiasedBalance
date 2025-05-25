@@ -988,7 +988,7 @@ SMODS.Joker {
                 for _, v in pairs(a.cards) do
                     if not SMODS.has_any_suit(v) then
                         if counts[v.base.suit] < penmax then
-                            return nil, true
+                            return true
                         end
                         if not hand_suits[v.base.suit] then
                             hand_suits_i[#hand_suits_i + 1] = v.base.suit
@@ -997,8 +997,8 @@ SMODS.Joker {
                     end
                 end
             end
-            check_area(G.hand)
-            check_area(G.play)
+            if check_area(G.hand) then return nil, true end
+            if check_area(G.play) then return nil, true end
 
             if #hand_suits_i > 2 or (#hand_suits_i == 2 and counts[hand_suits_i[1]] < max and counts[hand_suits_i[2]] < max) then
                 return nil, true
