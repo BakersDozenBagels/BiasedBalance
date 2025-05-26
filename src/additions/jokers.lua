@@ -982,27 +982,51 @@ SMODS.Joker {
                 end
             end
 
-            local hand_suits_i = {}
-            local hand_suits = {}
-            local function check_area(a)
-                for _, v in pairs(a.cards) do
-                    if not SMODS.has_any_suit(v) then
-                        if counts[v.base.suit] < penmax then
-                            return true
+            local count = 0
+            local valid = {}
+            if max == penmax then
+                for k, v in pairs(counts) do
+                    if v == max then
+                        count = count + 1
+                        valid[#valid + 1] = k
+                    end
+                end
+                if count > 2 then return nil, true end
+            else
+                for k, v in pairs(counts) do
+                    if v == max then
+                        valid[#valid + 1] = true
+                    else
+                        if v == penmax then
+                            count = count + 1
+                            valid[#valid + 1] = k
                         end
-                        if not hand_suits[v.base.suit] then
-                            hand_suits_i[#hand_suits_i + 1] = v.base.suit
-                            hand_suits[v.base.suit] = true
+                    end
+                end
+                if count > 1 then
+                    valid = {}
+                    for k, v in pairs(counts) do
+                        if v == max then
+                            valid[#valid + 1] = k
                         end
                     end
                 end
             end
+
+            local function check_area(a)
+                for _, v in pairs(a.cards) do
+                    local good = false
+                    for _, s in pairs(valid) do
+                        if v:is_suit(s) then
+                            good = true
+                            break
+                        end
+                    end
+                    if not good then return true end
+                end
+            end
             if check_area(G.hand) then return nil, true end
             if check_area(G.play) then return nil, true end
-
-            if #hand_suits_i > 2 or (#hand_suits_i == 2 and counts[hand_suits_i[1]] < max and counts[hand_suits_i[2]] < max) then
-                return nil, true
-            end
 
             return { x_mult = card.ability.extra.x_mult }
         end
