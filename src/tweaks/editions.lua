@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ SMODS.Edition:take_ownership("negative", {
 
 local raw_get_weight = G.P_CENTERS.e_foil.get_weight
 SMODS.Edition:take_ownership("foil", {
-    config = setmetatable({ chips = 60 }, {
+    config = setmetatable({ chips = 65 }, {
         __index = function(t, k)
             if k == 'extra' then return t.chips end
             return rawget(t, k)

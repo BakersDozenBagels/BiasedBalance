@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -190,9 +190,9 @@ SMODS.Consumable {
                 delay = 0.1,
                 func = function()
                     local edition = poll_edition('aura', nil, nil, true, {
-                        { name = 'e_foil',       weight = 25 },
-                        { name = 'e_holo',       weight = 35 },
-                        { name = 'e_negative',   weight = 25 },
+                         { name = 'e_foil',       weight = 30 },
+                        { name = 'e_holo',       weight = 22.5 },
+                        { name = 'e_negative',   weight = 32.5 },
                         { name = 'e_polychrome', weight = 15 },
                     })
                     v:set_edition(edition, true)
@@ -237,7 +237,7 @@ SMODS.Consumable {
         y = 1
     },
     cost = 4,
-    config = { extra = { dollars = 25 } },
+    config = { extra = { dollars = 30 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.dollars } }
     end,

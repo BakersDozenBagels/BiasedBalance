@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -18,18 +18,18 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ]] --
 
 local poker_hands = {
-    -- ["High Card"] = { 1, 15 },
-    -- ["Pair"] = { 1, 20 },
-    ["Two Pair"] = { 2, 15 },
-    ["Three of a Kind"] = { 2, 25 },
-    ["Straight"] = { 3, 35 },
-    ["Flush"] = { 2, 20 },
-    ["Full House"] = { 3, 35 },
-    ["Four of a Kind"] = { 3, 45 },
-    ["Straight Flush"] = { 4, 55 },
-    ["Five of a Kind"] = { 4, 50, 15, 150 },
-    ["Flush House"] = { 5, 45, 16, 175 },
-    ["Flush Five"] = { 5, 60, 20, 200 },
+    -- ["High Card"] = { 1, 15 }, -- Pluto
+    -- ["Pair"] = { 1, 20 }, --Mercury
+    ["Two Pair"] = { 2, 15 }, -- Uranus
+    ["Three of a Kind"] = { 2, 20 }, -- Venus
+    ["Straight"] = { 3, 35 }, -- Saturn
+    ["Flush"] = { 2, 20 }, -- Jupiter
+    ["Full House"] = { 3, 25 }, -- Earth
+    ["Four of a Kind"] = { 3, 40 }, -- Mars
+    ["Straight Flush"] = { 5, 50 }, -- Neptune
+    ["Five of a Kind"] = { 4, 50, 16, 160 }, --Planet X
+    ["Flush House"] = { 5, 40, 18, 175 }, -- Ceres
+    ["Flush Five"] = { 5, 60, 22, 220 }, -- Eris
 }
 
 local raw_Game_init_game_object = Game.init_game_object
@@ -58,9 +58,9 @@ SMODS.Consumable:take_ownership('c_aura', {
             func = function()
                 local over = false
                 local edition = poll_edition('aura', nil, nil, true, {
-                    { name = 'e_foil',       weight = 25 },
-                    { name = 'e_holo',       weight = 35 },
-                    { name = 'e_negative',   weight = 25 },
+                    { name = 'e_foil',       weight = 30 },
+                    { name = 'e_holo',       weight = 22.5 },
+                    { name = 'e_negative',   weight = 32.5 },
                     { name = 'e_polychrome', weight = 15 },
                 })
                 local aura_card = G.hand.highlighted[1]
@@ -432,16 +432,11 @@ SMODS.Consumable:take_ownership('c_hex', {
 SMODS.Consumable:take_ownership('c_strength', {
     config = {
         mod_conv = 'up_rank',
-        max_highlighted = 2,
-        extra = { uses = 2 }
+        max_highlighted = 3,
     },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.max_highlighted, card.ability.extra.uses, card.ability.extra.uses == 1 and "" or "s" } }
     end,
-    keep_on_use = function(self, card)
-        card.ability.extra.uses = card.ability.extra.uses - 1
-        return card.ability.extra.uses > 0
-    end
 })
 
 SMODS.Consumable:take_ownership('c_ankh', {

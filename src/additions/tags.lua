@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -155,7 +155,12 @@ SMODS.Consumable {
                             cards[i]:start_dissolve(nil, i == #cards)
                         end
                     else
-                        cards[i]:set_edition(poll_edition('Sacrifice', nil, nil, true), true)
+                        cards[i]:set_edition(poll_edition('Sacrifice', nil, nil, true, {
+                            { name = 'e_foil',       weight = 30 },
+                            { name = 'e_holo',       weight = 22.5 },
+                            { name = 'e_negative',   weight = 32.5 },
+                            { name = 'e_polychrome', weight = 15 },
+                        }), true)
                     end
                 end
                 return true

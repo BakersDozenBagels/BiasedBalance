@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -52,14 +52,14 @@ SMODS.Back {
         x = 1,
         y = 0
     },
-    config = { x_mult = 2 },
+    config = { x_mult = 3 },
     loc_vars = function(self, info_queue, back)
         return {
             vars = { self.config.x_mult }
         }
     end,
     calculate = function(self, back, args)
-        if args.context == 'final_scoring_step' then
+       if args.context == 'before' then
             args.mult = args.mult * self.config.x_mult
 
             local skip = Talisman and Talisman.config_file and Talisman.config_file.disable_anims

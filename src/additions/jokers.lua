@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills 44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -90,13 +90,13 @@ SMODS.Joker {
         y = 0
     },
     rarity = 1,
-    cost = 5,
+    cost = 3,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     config = {
         extra = {
-            mult = 10,
+            mult = 12,
             money = 10
         }
     },
@@ -108,60 +108,6 @@ SMODS.Joker {
             return {
                 mult = card.ability.extra.mult
             }
-        end
-    end
-}
-
-SMODS.Joker {
-    atlas = "Joker",
-    key = "Afterthought",
-    pos = {
-        x = 2,
-        y = 0
-    },
-    rarity = 1,
-    cost = 6,
-    blueprint_compat = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    config = {
-        extra = {
-            chips = 125,
-            on = false
-        }
-    },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.chips } }
-    end,
-    calculate = function(self, card, context)
-        if context.pre_discard and not context.repetition and not context.blueprint and not card.ability.extra.on then
-            local text = G.FUNCS.get_poker_hand_info(context.full_hand)
-            local highest = true
-            local play_more_than = (G.GAME.hands[text].played or 0)
-            for k, v in pairs(G.GAME.hands) do
-                if k ~= text and v.played > play_more_than and v.visible then
-                    highest = false
-                end
-            end
-            if highest then
-                card.ability.extra.on = true
-                juice_card_until(card, function() return card.ability.extra.on end, true)
-            end
-        end
-
-        if context.joker_main and card.ability.extra.on then
-            return {
-                chips = card.ability.extra.chips
-            }
-        end
-
-        if context.end_of_round and not context.repetition and context.game_over == false and not context.blueprint then
-            card.ability.extra.on = false
-        end
-    end,
-    load = function(self, card, card_table, other_card)
-        if card_table.ability.extra.on then
-            juice_card_until(card, function() return card.ability.extra.on end, true)
         end
     end
 }
@@ -203,11 +149,10 @@ SMODS.Joker {
         y = 0
     },
     rarity = 1,
-    cost = 10,
+    cost = 4,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
-    config = { extra_value = -4 }
 }
 
 SMODS.Joker {
@@ -224,7 +169,7 @@ SMODS.Joker {
     perishable_compat = false,
     config = { extra = {
         money = 10,
-        d_chips = 40,
+        d_chips = 50,
         chips = 0
     } },
     loc_vars = function(self, info_queue, card)
@@ -326,7 +271,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = { extra = 5 },
+    config = { extra = 4 },
     loc_vars = function(self, info_queue, card)
         return { vars = { G.GAME.probabilities.normal, card.ability.extra } }
     end,
@@ -342,10 +287,10 @@ SMODS.Joker {
                 if #eligible > 0 then
                     local apply = pseudorandom_element(eligible, pseudoseed 'j_biasedBalance_Spooky')
                     local edition = poll_edition('j_biasedBalance_Spooky', nil, nil, true, {
-                        { name = 'e_foil',       weight = 25 },
-                        { name = 'e_holo',       weight = 35 },
+                        { name = 'e_foil',       weight = 30 },
+                        { name = 'e_holo',       weight = 22.5 },
+                        { name = 'e_negative',   weight = 32.5 },
                         { name = 'e_polychrome', weight = 15 },
-                        { name = 'e_negative',   weight = 25 },
                     })
                     edition_buffer[apply] = true
                     juice_card(context.blueprint_card or card)
@@ -684,7 +629,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = {
         extra = {
-            x_mult = 2,
+            x_mult = 2.5,
             money = 75
         }
     },
@@ -1271,7 +1216,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = { extra = { chips = 65 } },
+    config = { extra = { chips = 75 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.chips } }
     end,
@@ -1423,7 +1368,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = { extra = { xmult = 3 } },
+    config = { extra = { xmult = 3.5 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult } }
     end,
@@ -1475,7 +1420,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = { extra = { xmult = 2.5 } },
+    config = { extra = { xmult = 3 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.xmult } }
     end,

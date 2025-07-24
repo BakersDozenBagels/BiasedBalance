@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -29,7 +29,11 @@ assert(SMODS.load_file('src/tweaks/rarities.lua'))()
 assert(SMODS.load_file('src/tweaks/stakes.lua'))()
 assert(SMODS.load_file('src/tweaks/enhancements.lua'))()
 
+assert(SMODS.load_file('lib/pools.lua'))()
+
 assert(SMODS.load_file('src/additions/backs.lua'))()
 assert(SMODS.load_file('src/additions/jokers.lua'))()
 assert(SMODS.load_file('src/additions/tags.lua'))()
 assert(SMODS.load_file('src/additions/spectrals.lua'))()
+assert(SMODS.load_file('src/additions/vouchers.lua'))()
+

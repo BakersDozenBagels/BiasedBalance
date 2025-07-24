@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills 44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -124,34 +124,6 @@ SMODS.Joker:take_ownership("erosion", { rarity = 1, cost = 4 })
 SMODS.Joker:take_ownership("to_the_moon", { rarity = 1 })
 SMODS.Joker:take_ownership("cloud_9", { rarity = 1 })
 
-SMODS.Joker:take_ownership("trousers", {
-    rarity = 1,
-    config = { extra = { mult = 2, chips = 6 }, mult = 0, chips = 0 },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult, card.ability.extra.chips, localize('Two Pair', 'poker_hands'), card.ability.mult, card.ability.chips } }
-    end,
-    calculate = function(self, card, context)
-        if context.before and (next(context.poker_hands['Two Pair']) or next(context.poker_hands['Full House'])) and not context.blueprint then
-            card.ability.mult = card.ability.mult + card.ability.extra.mult
-            card.ability.chips = card.ability.chips + card.ability.extra.chips
-            return {
-                message = localize('k_upgrade_ex'),
-                colour = G.C.RED
-            }
-        end
-        if context.joker_main and (next(context.poker_hands['Two Pair']) or next(context.poker_hands['Full House'])) then
-            return {
-                mult = card.ability.mult,
-                extra = { chips = card.ability.chips }
-            }
-        end
-
-        if context.joker_main then
-            return {}
-        end
-    end
-})
-
 SMODS.Joker:take_ownership("bootstraps", {
     cost = 6,
     rarity = 1,
@@ -228,6 +200,34 @@ SMODS.Joker:take_ownership("steel_joker", { config = { extra = 0.25 } })
 SMODS.Joker:take_ownership("arrowhead", { config = { extra = 60 } })
 SMODS.Joker:take_ownership("onyx_agate", { config = { extra = 9 } })
 SMODS.Joker:take_ownership("drivers_license", { rarity = 2 })
+
+SMODS.Joker:take_ownership("trousers", {
+    rarity = 2,
+    config = { extra = { mult = 2, chips = 4 }, mult = 0, chips = 0 },
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.extra.mult, card.ability.extra.chips, localize('Two Pair', 'poker_hands'), card.ability.mult, card.ability.chips } }
+    end,
+    calculate = function(self, card, context)
+        if context.before and (next(context.poker_hands['Two Pair']) or next(context.poker_hands['Full House'])) and not context.blueprint then
+            card.ability.mult = card.ability.mult + card.ability.extra.mult
+            card.ability.chips = card.ability.chips + card.ability.extra.chips
+            return {
+                message = localize('k_upgrade_ex'),
+                colour = G.C.RED
+            }
+        end
+        if context.joker_main and (next(context.poker_hands['Two Pair']) or next(context.poker_hands['Full House'])) then
+            return {
+                mult = card.ability.mult,
+                extra = { chips = card.ability.chips }
+            }
+        end
+
+        if context.joker_main then
+            return {}
+        end
+    end
+})
 
 local seanced = {}
 SMODS.Joker:take_ownership("seance", {
@@ -388,7 +388,7 @@ SMODS.Joker:take_ownership("todo_list", {
     rarity = 1,
     cost = 5,
     perishable_compat = false,
-    config = { extra = { dollars = 4, poker_hand = 'High Card', dx_mult = 0.2, played = false } },
+    config = { extra = { dollars = 4, poker_hand = 'High Card', dx_mult = 0.15, played = false } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.dx_mult, localize(card.ability.to_do_poker_hand, 'poker_hands'), card.ability.x_mult } }
     end,
@@ -417,9 +417,11 @@ SMODS.Joker:take_ownership("photograph", { rarity = 2 })
 --#endregion
 
 --#region Rare Jokers
+SMODS.Joker:take_ownership("stuntman", { config = { extra = {chip_mod = 300 } } })
 SMODS.Joker:take_ownership("vagabond", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("tribe", { config = { Xmult = 2.5, type = 'Flush' } })
 SMODS.Joker:take_ownership("card_sharp", { cost = 8, rarity = 3 })
+SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5} })
 
 SMODS.Joker:take_ownership("invisible", {
     cost = 10,
