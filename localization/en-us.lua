@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -111,6 +111,13 @@ return {
                     "hand contains a",
                     "{C:diamonds}Diamond{} card, {C:clubs}Club{} card,",
                     "{C:hearts}Heart{} card, and {C:spades}Spade{} card",
+                }
+            },
+             j_trio = {
+                text = {
+                    "{X:mult,C:white} X#1# {} Mult if played",
+                    "hand contains",
+                    "a {C:attention}#2#",
                 }
             },
             j_biasedBalance_Veteran = {
@@ -371,7 +378,36 @@ return {
                     "{C:dark_edition}Editioned{} cards",
                     "appear {C:attention}#1#X{} more often",
                 }
-            }
+            },
+            v_planet_merchant={
+                name="Planet Merchant",
+                text={
+                    "{C:planet}Planet{} cards appear",
+                    "{C:attention}#1#X{} more frequently",
+                    "in the shop",
+                },
+            },
+            v_planet_tycoon={
+                name="Planet Tycoon",
+                text={
+                    "Every {C:attention}#1#{} {C:planet}Planet{} cards",
+                    "Create a random {C:planet}Planet{} card"
+                }
+            },
+            v_biasedBalance_recipe={
+                name= "Recipe",
+                text={
+                   "Booster Packs contain {C:attention}1{}",
+                   "extra card to choose from"
+                }
+            },
+            v_biasedBalanced_trade_secret={
+                name = "Trade Secret",
+                text = {
+                    "Booster Packs contain {C:attention}2{}",
+                    "extra card to choose from"
+                }
+            },
         },
         Tag = {
             tag_meteor = {
