@@ -113,7 +113,7 @@ return {
                     "{C:hearts}Heart{} card, and {C:spades}Spade{} card",
                 }
             },
-             j_trio = {
+            j_trio = {
                 text = {
                     "{X:mult,C:white} X#1# {} Mult if played",
                     "hand contains",

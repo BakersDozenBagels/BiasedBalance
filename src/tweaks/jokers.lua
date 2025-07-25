@@ -421,7 +421,7 @@ SMODS.Joker:take_ownership("stuntman", { config = { extra = {chip_mod = 300 } } 
 SMODS.Joker:take_ownership("vagabond", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("tribe", { config = { Xmult = 2.5, type = 'Flush' } })
 SMODS.Joker:take_ownership("card_sharp", { cost = 8, rarity = 3 })
-SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5} })
+SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5, type = 'Three of a Kind'} })
 
 SMODS.Joker:take_ownership("invisible", {
     cost = 10,

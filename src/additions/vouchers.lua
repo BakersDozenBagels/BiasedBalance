@@ -33,7 +33,7 @@ SMODS.Voucher {
     unlocked = true,
     discovered = false,
     redeem = function(self)
-        G.GAME.recipe = (G.GAME.recipe or 0) + card.ability.extra.choices
+        G.GAME.recipe = (G.GAME.recipe or 0) + self.ability.extra.choices
 	end,
 }
 
@@ -54,6 +54,6 @@ SMODS.Voucher {
     unlocked = true,
     discovered = false,
     redeem = function(self)
-       G.GAME.trade_secret = (G.GAME.trade_secret or 0) + card.ability.extra.choices 
+       G.GAME.trade_secret = (G.GAME.trade_secret or 0) + self.ability.extra.choices 
 	end,
 }
