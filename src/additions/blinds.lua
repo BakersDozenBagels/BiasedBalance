@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025 Mills-44
+Copyright (C) 2025  Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -15,25 +15,4 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-]] --
-
-BiasedBalance.Planet_Pool = {
-    "pluto",
-    "mercury",
-    "uranus",
-    "venus",
-    "saturn",
-    "jupiter",
-    "earth",
-    "mars",
-    "neptune",
---  "planet_x",
---  "ceres",
---  "eris"
-}
-
-BiasedBalance.Hone_Tag_Editions = {
-    "e_foil",
-    "e_holo",
-    "e_polychrome"
-}
+]]  

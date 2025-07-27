@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025  BakersDozenBagels
+Copyright (C) 2025  BakersDozenBagels and Mills-44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -73,7 +73,7 @@ SMODS.Tag:take_ownership("rare", {
     end
 })
 
-SMODS.Tag:take_ownership("skip", { config = { type = 'immediate', skip_bonus = 6 } })
+SMODS.Tag:take_ownership("skip", { config = { type = 'immediate', skip_bonus = 8 } })
 
 local rare_sticker_tags = { "negative", "foil", "holo", "polychrome" }
 for _, tag_type in ipairs(rare_sticker_tags) do
@@ -324,7 +324,7 @@ SMODS.Tag:take_ownership("garbage", {
 
 SMODS.Tag:take_ownership("economy", {
     config = {
-        max = 40,
+        max = 50,
         min = 6,
     },
     loc_vars = function(self, info_queue, tag)

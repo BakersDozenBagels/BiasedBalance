@@ -83,6 +83,102 @@ local function le(a, b)
 end
 
 SMODS.Joker {
+    key = "Ballerina",
+    atlas = "Joker",
+    pos = {
+        x = 0,
+        y = 0
+    },
+    rarity = 1,
+    cost = 3,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    config = {},
+    loc_vars = function(self, info_queue, card)
+        return { 
+            vars = { 
+        
+            } 
+        }
+    end,
+    calculate = function(self, card, context)
+        if context.before then
+            local checker = false 
+            for i, v in ipairs(context.scoring_hand) do
+                if #v == 5 then
+                    checker = true
+                end
+            end
+            local first_check = 0
+            local second_check = 0
+            local third_check = 0
+            if checker then
+                local first_hand = G.GAME.hands[context.scoring_name]
+                first_check = first_check + 1
+                if first_check == 1 then 
+                    local second_hand = G.GAME.hands[context.scoring_name]
+                    second_check = second_check + 1
+                elseif second_check == 1 and not second_hand == first_hand then
+                    local third_hand = G.GAME.hands[context.scoring_name]
+                    third_check = third_check + 1
+                elseif third_check == 1 and not second_hand == third_hand
+                and not first_hand == third_hand then
+                end
+            end
+        end
+    end
+}
+
+SMODS.Joker {
+    atlas = "Joker",
+    key = "Practical_Perfectionist",
+    pos = {
+        x = 1,
+        y = 0
+    },
+    rarity = 1,
+    cost = 6,
+    blueprint_compat = true,
+    eternal_compat = true,
+    perishable_compat = true,
+    config = {
+        extra = {
+            money = 3,
+            count = 0
+        }
+    },
+    loc_vars = function(self, info_queue, card)
+        return { 
+            vars = { 
+                card.ability.extra.money 
+        } }
+    end,
+    calculate = function(self, card, context)
+        -- Reset count at start of scoring
+        if context.first_card then
+            card.ability.extra.count = 0
+        end
+
+        -- Count how many cards are in scoring hand
+        if context.individual and context.cardarea == G.play then
+            card.ability.extra.count = (card.ability.extra.count or 0) + 1
+            if card.ability.extra.count == 5 then
+                ease_dollars(card.ability.extra.money)
+            end
+        end
+
+        if context.joker_main then
+            return {
+                    message = "+$" .. tostring(card.ability.extra.money) .. "!",
+                    colour = G.C.GOLD
+                }
+
+         end
+end
+}
+
+SMODS.Joker {
     atlas = "Joker",
     key = "PitifulJoker",
     pos = {
@@ -828,8 +924,8 @@ SMODS.Joker {
         x = 3,
         y = 2
     },
-    rarity = 2,
-    cost = 8,
+    rarity = 1,
+    cost = 3,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
@@ -1084,7 +1180,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = {
         extra = {
-            x_mult = 2.25,
+            x_mult = 2.5,
             hand = 'Two Pair'
         }
     },

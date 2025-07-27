@@ -19,10 +19,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 --#region Banned Jokers
 local function ban()
-    local banned = {
+    local banned_jokers = {
         { "8_ball",     "smiley",       "green_joker", "superposition", "walkie_talkie" },
         { "ceremonial", "loyalty_card", "dusk",        "seeing_double", "matador" },
-        { "campfire",   "hit_the_road" }
+        { "campfire",   "hit_the_road", "acrobat" }
     }
 
     local function ban_one(key, rarity)
@@ -58,12 +58,13 @@ local function ban()
         end
     end
 
-    for i, row in pairs(banned) do
+    for i, row in pairs(banned_jokers) do
         for _, v in pairs(row) do
             ban_one("j_" .. v, i)
         end
     end
     ban_one("c_grim")
+    
 end
 local raw_Game_init_item_prototypes = Game.init_item_prototypes
 function Game:init_item_prototypes()
@@ -75,6 +76,8 @@ ban()
 --#endregion
 
 --#region Common Jokers
+SMODS.Joker:take_ownership("scholar", { config = { extra = { mult = 6, chips = 30 } } })
+
 SMODS.Joker:take_ownership("joker", { config = { mult = 5 } })
 SMODS.Joker:take_ownership("greedy_joker", { config = { extra = { s_mult = 4, suit = 'Diamonds' } } })
 SMODS.Joker:take_ownership("lusty_joker", { config = { extra = { s_mult = 4, suit = 'Hearts' } } })
@@ -119,10 +122,11 @@ SMODS.Joker:take_ownership("delayed_grat", {
 SMODS.Joker:take_ownership("gift", { cost = 4 })
 SMODS.Joker:take_ownership("ticket", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("space", { rarity = 1 })
-SMODS.Joker:take_ownership("hiker", { rarity = 1 })
+SMODS.Joker:take_ownership("hiker", { rarity = 1,  config = {extra = 6} })
 SMODS.Joker:take_ownership("erosion", { rarity = 1, cost = 4 })
 SMODS.Joker:take_ownership("to_the_moon", { rarity = 1 })
 SMODS.Joker:take_ownership("cloud_9", { rarity = 1 })
+SMODS.Joker:take_ownership("castle", { rarity = 1 })
 
 SMODS.Joker:take_ownership("bootstraps", {
     cost = 6,
@@ -200,6 +204,21 @@ SMODS.Joker:take_ownership("steel_joker", { config = { extra = 0.25 } })
 SMODS.Joker:take_ownership("arrowhead", { config = { extra = 60 } })
 SMODS.Joker:take_ownership("onyx_agate", { config = { extra = 9 } })
 SMODS.Joker:take_ownership("drivers_license", { rarity = 2 })
+SMODS.Joker:take_ownership("reduced_gratification", { rarity = 2, cost = 7 })
+SMODS.Joker:take_ownership("hack", {
+    calculate = function(self, card, context)
+        if context.repetition and (
+                context.other_card:get_id() == 2 or 
+                context.other_card:get_id() == 3 or 
+                context.other_card:get_id() == 4 or 
+                context.other_card:get_id() == 5 or
+                context.other_card:get_id() == 6) then
+                    return {
+                        repetitions = 1,
+                    }
+        end
+    end
+})
 
 SMODS.Joker:take_ownership("trousers", {
     rarity = 2,
@@ -421,7 +440,8 @@ SMODS.Joker:take_ownership("stuntman", { config = { extra = {chip_mod = 300 } } 
 SMODS.Joker:take_ownership("vagabond", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("tribe", { config = { Xmult = 2.5, type = 'Flush' } })
 SMODS.Joker:take_ownership("card_sharp", { cost = 8, rarity = 3 })
-SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5, type = 'Three of a Kind'} })
+SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5} })
+SMODS.Joker:take_ownership("hologram", {config = {extra = 0.25, Xmult = 1} })
 
 SMODS.Joker:take_ownership("invisible", {
     cost = 10,

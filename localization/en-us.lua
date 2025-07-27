@@ -18,6 +18,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 --]]
 return {
     descriptions = {
+        Blind = {},
         Joker = {
             j_scary_face = {
                 text = {
@@ -113,7 +114,7 @@ return {
                     "{C:hearts}Heart{} card, and {C:spades}Spade{} card",
                 }
             },
-            j_trio = {
+             j_trio = {
                 text = {
                     "{X:mult,C:white} X#1# {} Mult if played",
                     "hand contains",
@@ -158,7 +159,7 @@ return {
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)" }
             },
             j_biasedBalance_Jokester = {
-                name = "Jokester",
+                name = "Terrace",
                 text = { "Earn {C:money}$#1#{} per Joker", "at end of round", "{C:inactive}(Will give {C:money}$#2#{C:inactive})" }
             },
             j_biasedBalance_RedSun = {
@@ -347,6 +348,22 @@ return {
                 name = "Poacher",
                 text = { "{C:green}#1# in #2#{} chance to", "enhance each", "scored card to {C:attention}Wild" }
             },
+            j_biasedBalance_Practical_Perfectionist = {
+                name = "Practical Perfectionist",
+                text = { 
+                    "Any scoring hands with {C:attention}+5",
+                    "earn {C:gold}$#1#{}"
+                 }
+            },
+            j_hack = {
+                name = "Hack",
+                text = { 
+                    "Retrigger",
+                    "each played",
+                    "{C:attention}2{}, {C:attention}3{}, {C:attention}4{}",
+                    "{C:attention}5{}, or {C:attention}6{}",
+                 }
+            },
             j_biasedBalance_Toucan = {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
@@ -438,6 +455,14 @@ return {
                     "Choose {C:attention}#1#{} cards,",
                     "{C:red}destroy{} the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
+                }
+            },
+            tag_biasedBalance_Hone = {
+                name = 'Hone Tag',
+                text = {
+                    "A random {C:attention}Joker",
+                    "gains {C:dark_edition}Foil/Holographic/Polychrome",
+                    "at random if no edition applied"
                 }
             },
             tag_standard = {
@@ -651,6 +676,19 @@ return {
                     "Reroll costs scale {C:money}$1{} faster",
                     "{s:0.8}Applies all previous Stakes",
                 },
+            },
+            stake_biasedBalance_pink = {
+                text = {
+                    "Run ends at Ante 9",
+                    "{C:inactive}(Ante 8 & 9 have Finisher Blinds)"
+                }
+            },
+            stake_biasedBalance_silver = {
+                text = {
+                    "All cards in shop",
+                    "besides Playing Cards",
+                    "Cost $1 more"
+                }
             },
         },
         Enhanced = {

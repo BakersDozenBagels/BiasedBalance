@@ -28,12 +28,17 @@ assert(SMODS.load_file('src/tweaks/editions.lua'))()
 assert(SMODS.load_file('src/tweaks/rarities.lua'))()
 assert(SMODS.load_file('src/tweaks/stakes.lua'))()
 assert(SMODS.load_file('src/tweaks/enhancements.lua'))()
+assert(SMODS.load_file('src/tweaks/blinds.lua'))()
 
 assert(SMODS.load_file('lib/pools.lua'))()
+assert(SMODS.load_file('lib/utility.lua'))()
 
 assert(SMODS.load_file('src/additions/backs.lua'))()
 assert(SMODS.load_file('src/additions/jokers.lua'))()
 assert(SMODS.load_file('src/additions/tags.lua'))()
 assert(SMODS.load_file('src/additions/spectrals.lua'))()
-assert(SMODS.load_file('src/additions/vouchers.lua'))()
+--assert(SMODS.load_file('src/additions/vouchers.lua'))()
+assert(SMODS.load_file('src/additions/stakes.lua'))()
+assert(SMODS.load_file('src/additions/blinds.lua'))()
+
 

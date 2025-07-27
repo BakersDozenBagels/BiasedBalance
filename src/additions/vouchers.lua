@@ -26,9 +26,7 @@ SMODS.Voucher {
         y = 0
     },
     config = { 
-        extra = { 
-            choices = 1 
-        } 
+        choices = 1
     },
     unlocked = true,
     discovered = false,
@@ -54,6 +52,6 @@ SMODS.Voucher {
     unlocked = true,
     discovered = false,
     redeem = function(self)
-       G.GAME.trade_secret = (G.GAME.trade_secret or 0) + self.ability.extra.choices 
+       G.GAME.trade_secret = (G.GAME.trade_secret or 0) + self.ability.choices
 	end,
 }

@@ -1,6 +1,6 @@
 --[[
 
-Copyright (C) 2025 Mills-44
+Copyright (C) 2025 Mills 44
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -17,23 +17,37 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ]] --
 
-BiasedBalance.Planet_Pool = {
-    "pluto",
-    "mercury",
-    "uranus",
-    "venus",
-    "saturn",
-    "jupiter",
-    "earth",
-    "mars",
-    "neptune",
---  "planet_x",
---  "ceres",
---  "eris"
+SMODS.Atlas {
+    key = "stakes",
+    path = "stakes.png",
+    px = 28,
+    py = 28
 }
 
-BiasedBalance.Hone_Tag_Editions = {
-    "e_foil",
-    "e_holo",
-    "e_polychrome"
+SMODS.Stake{
+    key = "pink",
+    atlas = "stakes",
+    pos = { 
+        x = 0,
+        y = 0 
+    },
+    applied_stakes = { "gold" },
+    modifiers = function()
+        G.GAME.win_ante = 9
+        if G.GAME.ante == 9 then
+            G.GAME.show_boss = true
+        end
+    end,
+    order = 9,
+    colour = HEX("ff27cc")
+}
+
+SMODS.Stake{
+    key = "silver",
+    atlas = "stakes",
+    pos = { 
+        x = 1,
+        y = 0 
+    },
+    applied_stakes = { "biasedBalance_pink" },
 }

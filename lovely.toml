@@ -116,3 +116,20 @@ position = "at"
 root_capture = "0"
 times = 1
 payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0)"
+
+# Patch For Recipe and Trade Secret
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "G.GAME.pack_choices = self.ability.choose or self.config.center.config.choose or 1"
+position = "after"
+payload = '''
+if G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret then
+    self.ability.extra = self.ability.extra + (G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret)
+    G.GAME.pack_choices = G.GAME.pack_choices + (G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret)
+    G.GAME.v_biasedBalance_recipe = nil
+    G.GAME.v_biasedBalance_trade_secret = nil
+end
+G.GAME.pack_size = self.ability.extra
+'''
+match_indent = true
