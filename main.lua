@@ -19,56 +19,77 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 BiasedBalance = {}
 
-assert(SMODS.load_file('src/tweaks/consumables.lua'))()
-assert(SMODS.load_file('src/tweaks/vouchers.lua'))()
-assert(SMODS.load_file('src/tweaks/jokers.lua'))()
-assert(SMODS.load_file('src/tweaks/tags.lua'))()
-assert(SMODS.load_file('src/tweaks/backs.lua'))()
-assert(SMODS.load_file('src/tweaks/editions.lua'))()
-assert(SMODS.load_file('src/tweaks/rarities.lua'))()
-assert(SMODS.load_file('src/tweaks/stakes.lua'))()
-assert(SMODS.load_file('src/tweaks/enhancements.lua'))()
-assert(SMODS.load_file('src/tweaks/blinds.lua'))()
+--Load Lib Files
+SMODS.load_file("lib/content.lua")() -- Definitions 
+SMODS.load_file("lib/utils.lua")() -- Utility functions built
+SMODS.load_file("lib/pools.lua")()
 
-assert(SMODS.load_file('lib/pools.lua'))()
-assert(SMODS.load_file('lib/utility.lua'))()
+-- Lovely Fixes
+SMODS.load_file("lovely/fixes.toml")
 
-assert(SMODS.load_file('src/additions/backs.lua'))()
-assert(SMODS.load_file('src/additions/jokers.lua'))()
-assert(SMODS.load_file('src/additions/tags.lua'))()
-assert(SMODS.load_file('src/additions/spectrals.lua'))()
---assert(SMODS.load_file('src/additions/vouchers.lua'))()
-assert(SMODS.load_file('src/additions/stakes.lua'))()
-assert(SMODS.load_file('src/additions/blinds.lua'))()
+-- TWEAKS
+BiasedBalance.file_loader(BiasedBalance.Back_Tweaks, "src/tweaks/backs")
+BiasedBalance.file_loader(BiasedBalance.Blind_Tweaks, "src/tweaks/blinds")
+BiasedBalance.file_loader(BiasedBalance.Edition_Tweaks, "src/tweaks/editions")
+BiasedBalance.file_loader(BiasedBalance.Enhancement_Tweaks, "src/tweaks/enhancements")
+BiasedBalance.file_loader(BiasedBalance.Joker_Tweaks, "src/tweaks/jokers")
+BiasedBalance.file_loader(BiasedBalance.Planet_Tweaks, "src/tweaks/planets")
+BiasedBalance.file_loader(BiasedBalance.Rarity_Tweaks, "src/tweaks/rarities")
+BiasedBalance.file_loader(BiasedBalance.Spectral_Tweaks, "src/tweaks/spectrals")
+BiasedBalance.file_loader(BiasedBalance.Stake_Tweaks, "src/tweaks/stakes")
+BiasedBalance.file_loader(BiasedBalance.Tag_Tweaks, "src/tweaks/tags")
+BiasedBalance.file_loader(BiasedBalance.Tarot_Tweaks, "src/tweaks/tarots")
+BiasedBalance.file_loader(BiasedBalance.Voucher_Tweaks, "src/tweaks/vouchers")
+
+-- ADDS
+BiasedBalance.file_loader(BiasedBalance.Back_Adds, "src/adds/backs")
+BiasedBalance.file_loader(BiasedBalance.Blind_Adds, "src/adds/blinds")
+BiasedBalance.file_loader(BiasedBalance.Joker_Adds, "src/adds/jokers")
+BiasedBalance.file_loader(BiasedBalance.Spectral_Adds, "src/adds/spectrals")
+BiasedBalance.file_loader(BiasedBalance.Stake_Adds, "src/adds/stakes")
+BiasedBalance.file_loader(BiasedBalance.Tag_Adds, "src/adds/tags")
+BiasedBalance.file_loader(BiasedBalance.Voucher_Adds, "src/adds/vouchers")
 
 -- ||           ATLAS           ||
 
--- Jokers
-local deck_keys = {
-
-}
-
-for _, key in ipairs(deck_keys) do 
-  SMODS.Atlas {
-    key  = key, 
-    path = key .. '.png', 
+SMODS.Atlas {
+    key  = "Backs", 
+    path = "Backs.png", 
     px   = 71,
     py   = 95,
-  }
-end
-
--- Jokers
-local joker_keys = {
-
 }
 
-for _, key in ipairs(joker_keys) do 
-  SMODS.Atlas {
-    key  = key, 
-    path = key .. '.png', 
+SMODS.Atlas {
+    key  = "Joker", 
+    path = "Jokers.png", 
     px   = 71,
     py   = 95,
-  }
-end
+}
 
+SMODS.Atlas {
+    key  = "Spectrals", 
+    path = "Spectrals.png", 
+    px   = 71,
+    py   = 95,
+}
 
+SMODS.Atlas {
+    key  = "Stakes", 
+    path = "Stakes.png", 
+    px   = 71,
+    py   = 95,
+}
+
+SMODS.Atlas {
+    key = "Tags",
+    path = "Tags.png",
+    px = 34,
+    py = 34
+}
+
+--SMODS.Atlas {
+  --  key = "Vouchers",
+  --  path = "Vouchers.png",
+  --  px = 71,
+  --  py = 95
+--}
