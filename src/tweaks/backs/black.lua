@@ -1,0 +1,1 @@
+SMODS.Back:take_ownership("black", {})
