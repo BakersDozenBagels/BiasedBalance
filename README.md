@@ -3,7 +3,8 @@
 This is a [Balatro](https://www.playbalatro.com/) mod that aims to rebalance the game.
 
 Ideas come from Serenos
-Coding was done by BakersDozenBagels
+Coding was done by BakersDozenBagels and Mills
+Art By Mills
 
 # Installation
 
