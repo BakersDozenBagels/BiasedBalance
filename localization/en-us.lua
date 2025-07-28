@@ -1,24 +1,70 @@
---[[
-
-Copyright (C) 2025  BakersDozenBagels and Mills-44
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
---]]
 return {
     descriptions = {
-        Blind = {},
+       Back = {
+            b_black = {
+                text = { "{C:attention}+#1#{} Joker slot",
+                    "",
+                    "{C:blue}-#2#{} hand",
+                    "every round",
+                    "",
+                    "{C:dark_edition}Negative{} is",
+                    "{C:green}4X{} more common" }
+            },
+            b_ghost = {
+                text = {
+                    "{C:spectral}Spectral{} cards may",
+                    "appear in the shop,",
+                    "start with a {C:spectral,T:c_hex}Hex{} card,",
+                    "{C:spectral}Spectral Packs{} are",
+                    "{C:green}3X{} more common"
+                }
+            },
+            b_biasedBalance_Pink = {
+                name = "Pink Deck",
+                text = {
+                    "{C:common}Common{} Jokers are",
+                    "less common"
+                }
+            },
+            b_biasedBalance_White = {
+                name = "White Deck",
+                text = {
+                    "When {C:attention}Small Blind{} or {C:attention}Big Blind{}",
+                    "is selected, create a {C:blue}Common{C:attention} Joker",
+                    "{C:inactive}(Must have room)",
+                }
+            },
+            b_biasedBalance_Purple = {
+                name = "Purple Deck",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "No repeat hand types",
+                }
+            }
+        },
+        Blind = {
+            bl_biasedBalance_Theta = {
+                name = "Theta",
+                text = {
+                    "All cards with Odd",
+                    "rank are debuffed"
+                }
+            },
+            bl_biasedBalance_Zeta = {
+                name = "Zeta",
+                text = {
+                    "All cards with Even",
+                    "rank are debuffed"
+                }
+            },
+        },
+        Enhanced = {
+            m_bonus = {
+                text = { 
+                    "{C:chips}#1#{} extra chips" 
+                }
+            }
+        },
         Joker = {
             j_scary_face = {
                 text = {
@@ -121,7 +167,7 @@ return {
                     "a {C:attention}#2#",
                 }
             },
-            j_biasedBalance_Veteran = {
+             j_biasedBalance_Veteran = {
                 name = "Veteran",
                 text = {
                     "Playing the same {C:attention}Poker Hand",
@@ -367,110 +413,7 @@ return {
             j_biasedBalance_Toucan = {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
-            }
-        },
-        Voucher = {
-            v_omen_globe = {
-                text = {
-                    "{C:spectral}Spectral{} cards may",
-                    "appear in any of",
-                    "the {C:tarot}Arcana{} or {C:planet}Celestial{} Packs",
-                },
             },
-            v_illusion = {
-                text = {
-                    "{C:attention}Playing cards{} in shop",
-                    "always have an {C:enhanced}Enhancement{},",
-                    "{C:dark_edition}Edition{}, and/or a {C:attention}Seal{}",
-                }
-            },
-            v_hone = {
-                text = {
-                    "{C:dark_edition}Editioned{} cards",
-                    "appear {C:attention}#1#X{} more often",
-                }
-            },
-            v_glow_up = {
-                text = {
-                    "{C:dark_edition}Editioned{} cards",
-                    "appear {C:attention}#1#X{} more often",
-                }
-            },
-            v_planet_merchant={
-                name="Planet Merchant",
-                text={
-                    "{C:planet}Planet{} cards appear",
-                    "{C:attention}#1#X{} more frequently",
-                    "in the shop",
-                },
-            },
-            v_planet_tycoon={
-                name="Planet Tycoon",
-                text={
-                    "Every {C:attention}#1#{} {C:planet}Planet{} cards",
-                    "Create a random {C:planet}Planet{} card"
-                }
-            },
-            v_biasedBalance_recipe={
-                name= "Recipe",
-                text={
-                   "Booster Packs contain {C:attention}1{}",
-                   "extra card to choose from"
-                }
-            },
-            v_biasedBalanced_trade_secret={
-                name = "Trade Secret",
-                text = {
-                    "Booster Packs contain {C:attention}2{}",
-                    "extra card to choose from"
-                }
-            },
-        },
-        Tag = {
-            tag_meteor = {
-                text = { "{C:planet}Upgrades{} all", "{C:attention}Poker Hands{} once" }
-            },
-            tag_boss = {
-                text = { "Disables effect of", "next {C:attention}Boss Blind", "{s:0.8,C:inactive}(Can't be copied)" }
-            },
-            tag_juggle = {
-                text = { "{C:attention}+#1#{} hand size for", "the next {C:attention}#2#{} rounds" }
-            },
-            tag_garbage = {
-                text = { "{C:red}+#1#{} discards for", "the next {C:attention}#2#{} rounds" }
-            },
-            tag_economy = {
-                text = { "Doubles your money", "{C:inactive}(Max of {C:money}$#1#{C:inactive},", "{C:inactive}Min of {C:money}$#2#{C:inactive})", }
-            },
-            tag_biasedBalance_Utility = {
-                name = 'Utility Tag',
-                text = {
-                    "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2#{} Utility {C:joker}Jokers",
-                }
-            },
-            tag_biasedBalance_Sacrifice = {
-                name = 'Sacrifice Tag',
-                text = {
-                    "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
-                    "give the rest a random {C:dark_edition}edition"
-                }
-            },
-            tag_biasedBalance_Hone = {
-                name = 'Hone Tag',
-                text = {
-                    "A random {C:attention}Joker",
-                    "gains {C:dark_edition}Foil/Holographic/Polychrome",
-                    "at random if no edition applied"
-                }
-            },
-            tag_standard = {
-                text = {
-                    "Gives a free",
-                    "{C:attention}Giga Standard Pack",
-                }
-            }
         },
         Other = {
             p_biasedBalance_Utility = {
@@ -497,72 +440,12 @@ return {
                 }
             }
         },
-        Back = {
-            b_black = {
-                text = { "{C:attention}+#1#{} Joker slot",
-                    "",
-                    "{C:blue}-#2#{} hand",
-                    "every round",
-                    "",
-                    "{C:dark_edition}Negative{} is",
-                    "{C:green}4X{} more common" }
-            },
-            b_ghost = {
-                text = {
-                    "{C:spectral}Spectral{} cards may",
-                    "appear in the shop,",
-                    "start with a {C:spectral,T:c_hex}Hex{} card,",
-                    "{C:spectral}Spectral Packs{} are",
-                    "{C:green}3X{} more common"
-                }
-            },
-            b_biasedBalance_Pink = {
-                name = "Pink Deck",
-                text = {
-                    "{C:common}Common{} Jokers are",
-                    "less common"
-                }
-            },
-            b_biasedBalance_White = {
-                name = "White Deck",
-                text = {
-                    "When {C:attention}Small Blind{} or {C:attention}Big Blind{}",
-                    "is selected, create a {C:blue}Common{C:attention} Joker",
-                    "{C:inactive}(Must have room)",
-                }
-            },
-            b_biasedBalance_Purple = {
-                name = "Purple Deck",
-                text = {
-                    "{X:mult,C:white}X#1#{} Mult",
-                    "No repeat hand types",
-                }
-            }
-        },
-        Tarot = {
-            c_lovers = {
-                text = {
-                    "Enhances {C:attention}#1#{} selected",
-                    "cards into a",
-                    "{C:attention}#2#",
-                },
-            },
-            c_strength = {
-                text = {
-                    "Increases rank of",
-                    "up to {C:attention}#1#{} selected",
-                    "cards by {C:attention}1",
-                    "{C:inactive}({C:attention}#2#{C:inactive} use#3#)"
-                }
-            }
-        },
         Spectral = {
-            c_biasedBalance_Sacrifice2 = {
-                name = 'Sacrifice',
+            c_ankh = {
                 text = {
-                    "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
-                    "give the rest a random {C:dark_edition}edition"
+                    "Create a copy of",
+                    "leftmost {C:attention}Joker{}, destroy",
+                    "all other Jokers",
                 }
             },
             c_aura = {
@@ -624,6 +507,14 @@ return {
                     "lose up to {C:money}$#1#",
                 }
             },
+        c_biasedBalance_Sacrifice2 = {
+                name = 'Sacrifice',
+                text = {
+                    "Choose {C:attention}#1#{} cards,",
+                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "give the rest a random {C:dark_edition}edition"
+                },
+            },
             c_biasedBalance_Conjuration = {
                 name = "Conjuration",
                 text = {
@@ -662,13 +553,6 @@ return {
                     "{C:red}Destroys{} leftmost Joker,", "earn {C:money}$#1#"
                 }
             },
-            c_ankh = {
-                text = {
-                    "Create a copy of",
-                    "leftmost {C:attention}Joker{}, destroy",
-                    "all other Jokers",
-                }
-            }
         },
         Stake = {
             stake_blue = {
@@ -677,7 +561,7 @@ return {
                     "{s:0.8}Applies all previous Stakes",
                 },
             },
-            stake_biasedBalance_pink = {
+             stake_biasedBalance_pink = {
                 text = {
                     "Run ends at Ante 9",
                     "{C:inactive}(Ante 8 & 9 have Finisher Blinds)"
@@ -691,11 +575,143 @@ return {
                 }
             },
         },
-        Enhanced = {
-            m_bonus = {
-                text = { "{C:chips}#1#{} extra chips" }
+        Tarot = {
+             c_lovers = {
+                text = {
+                    "Enhances {C:attention}#1#{} selected",
+                    "cards into a",
+                    "{C:attention}#2#",
+                },
+            },
+            c_strength = {
+                text = {
+                    "Increases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
+                    "{C:inactive}({C:attention}#2#{C:inactive} use#3#)"
+                }
+            },
+        },
+        Tag = {
+            tag_meteor = {
+                text = { 
+                    "{C:planet}Upgrades{} all", 
+                    "{C:attention}Poker Hands{} once" 
+                }
+            },
+            tag_boss = {
+                text = { 
+                    "Disables effect of", 
+                    "next {C:attention}Boss Blind", 
+                    "{s:0.8,C:inactive}(Can't be copied)" 
             }
-        }
+            },
+            tag_juggle = {
+                text = { 
+                    "{C:attention}+#1#{} hand size for", 
+                    "the next {C:attention}#2#{} rounds" 
+                }
+            },
+            tag_garbage = {
+                text = { 
+                    "{C:red}+#1#{} discards for", 
+                    "the next {C:attention}#2#{} rounds" 
+                }
+            },
+            tag_economy = {
+                text = { 
+                    "Doubles your money", 
+                    "{C:inactive}(Max of {C:money}$#1#{C:inactive},", 
+                    "{C:inactive}Min of {C:money}$#2#{C:inactive})", 
+                }
+            },
+            tag_standard = {
+                text = {
+                    "Gives a free",
+                    "{C:attention}Giga Standard Pack",
+                }
+            },
+            tag_biasedBalance_Utility = {
+                name = 'Utility Tag',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
+            tag_biasedBalance_Sacrifice = {
+                name = 'Sacrifice Tag',
+                text = {
+                    "Choose {C:attention}#1#{} cards,",
+                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "give the rest a random {C:dark_edition}edition"
+                }
+            },
+            tag_biasedBalance_Hone = {
+                name = 'Hone Tag',
+                text = {
+                    "A random {C:attention}Joker",
+                    "gains {C:dark_edition}Foil/Holographic/Polychrome",
+                    "at random if no edition applied"
+                }
+            },
+        },
+        Voucher = {
+            v_omen_globe = {
+                text = {
+                    "{C:spectral}Spectral{} cards may",
+                    "appear in any of",
+                    "the {C:tarot}Arcana{} or {C:planet}Celestial{} Packs",
+                },
+            },
+            v_illusion = {
+                text = {
+                    "{C:attention}Playing cards{} in shop",
+                    "always have an {C:enhanced}Enhancement{},",
+                    "{C:dark_edition}Edition{}, and/or a {C:attention}Seal{}",
+                }
+            },
+            v_hone = {
+                text = {
+                    "{C:dark_edition}Editioned{} cards",
+                    "appear {C:attention}#1#X{} more often",
+                }
+            },
+            v_glow_up = {
+                text = {
+                    "{C:dark_edition}Editioned{} cards",
+                    "appear {C:attention}#1#X{} more often",
+                }
+            },
+            v_planet_merchant={
+                name="Planet Merchant",
+                text={
+                    "{C:planet}Planet{} cards appear",
+                    "{C:attention}#1#X{} more frequently",
+                    "in the shop",
+                },
+            },
+            v_planet_tycoon={
+                name="Planet Tycoon",
+                text={
+                    "Every {C:attention}#1#{} {C:planet}Planet{} cards",
+                    "Create a random {C:planet}Planet{} card"
+                }
+            },
+            v_biasedBalance_recipe={
+                name= "Recipe",
+                text={
+                   "Booster Packs contain {C:attention}1{}",
+                   "extra card to choose from"
+                }
+            },
+            v_biasedBalanced_trade_secret={
+                name = "Trade Secret",
+                text = {
+                    "Booster Packs contain {C:attention}2{}",
+                    "extra card to choose from"
+                }
+            },
+        },
     },
     misc = {
         dictionary = {

@@ -1,0 +1,120 @@
+[manifest]
+version = "1.0.0"
+priority = 999
+
+# Omen Globe tweak
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/game_object.lua"]'
+pattern = '_card = {set = "Planet", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "pl1"}'
+position = 'before'
+match_indent = true
+payload = '''
+if G.GAME.used_vouchers.v_omen_globe and pseudorandom('omen_globe') > 0.75 then
+    _card = {set = "Spectral", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "pl2"}
+else
+'''
+times = 1
+
+[[patches]]
+[patches.pattern]
+target = '=[SMODS _ "src/game_object.lua"]'
+pattern = '_card = {set = "Planet", area = G.pack_cards, skip_materialize = true, soulable = true, key_append = "pl1"}'
+position = 'after'
+match_indent = true
+payload = 'end'
+times = 1
+
+# Magic Trick tweak
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+pattern = "\\(G\\.GAME\\.used_vouchers\\[\"v_illusion\"\\] and pseudorandom\\(pseudoseed\\('illusion'\\)\\) > 0\\.6\\) and 'Enhanced' or 'Base'"
+position = 'at'
+payload = 'BiasedBalance and BiasedBalance.magic_trick()'
+times = 1
+
+# Illusion tweak
+[[patches]]
+[patches.regex]
+target = 'functions/UI_definitions.lua'
+pattern = "\\(v\\.type == 'Base' or v\\.type == 'Enhanced'\\) and G\\.GAME\\.used_vouchers\\[\"v_illusion\"\\] and pseudorandom\\(pseudoseed\\('illusion'\\)\\) > 0\\.8"
+position = 'at'
+payload = 'BiasedBalance and BiasedBalance.illusion(card, v.type)'
+times = 1
+
+# Common/Rare Tag tweak
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = 'self.ability.perishable = true'
+position = 'at'
+match_indent = true
+payload = 'self.ability.perishable = _perishable'
+times = 1
+
+# Boss Tag tweak
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "-- TARGET: setting_blind effects"
+position = "after"
+match_indent = true
+times = 1
+payload = "if BiasedBalance then BiasedBalance.on_set_blind(G.GAME.blind) end"
+
+# Blunted Impact w/o Talisman
+[[patches]]
+[patches.pattern]
+target = "functions/state_events.lua"
+pattern = "-- TARGET: effects after hand evaluation"
+position = "after"
+match_indent = true
+times = 1
+payload = "if not Talisman then G.GAME.biasedBalance_priorHand = text end"
+
+# Blue Stake Tweak
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = "G.GAME.current_round.reroll_cost = (G.GAME.round_resets.temp_reroll_cost or G.GAME.round_resets.reroll_cost) + G.GAME.current_round.reroll_cost_increase"
+position = "after"
+match_indent = true
+times = 1
+payload = "* (BiasedBalance and BiasedBalance.reroll_scale() or 1)"
+
+# Jumbo
+[[patches]]
+[patches.regex]
+target = "functions/button_callbacks.lua"
+pattern = "card\\.edition and card\\.edition\\.card_limit or 0"
+position = "at"
+root_capture = "0"
+times = 4
+payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0)"
+
+[[patches]]
+[patches.regex]
+target = '=[SMODS _ "src/utils.lua"]'
+pattern = "card\\.edition and card\\.edition\\.card_limit or 0"
+position = "at"
+root_capture = "0"
+times = 1
+payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0)"
+
+# Patch For Recipe and Trade Secret
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "G.GAME.pack_choices = self.ability.choose or self.config.center.config.choose or 1"
+position = "after"
+payload = '''
+if G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret then
+    self.ability.extra = self.ability.extra + (G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret)
+    G.GAME.pack_choices = G.GAME.pack_choices + (G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret)
+    G.GAME.v_biasedBalance_recipe = nil
+    G.GAME.v_biasedBalance_trade_secret = nil
+end
+G.GAME.pack_size = self.ability.extra
+'''
+match_indent = true
