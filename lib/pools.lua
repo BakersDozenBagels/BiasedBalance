@@ -57,7 +57,7 @@ BiasedBalance.Rare_Jokers = {
     "dna",
     "baron",
     "obelisk",
-    "baseball_card",
+    "baseball",
     "blueprint",
     "wee_joker",
     "duo",
