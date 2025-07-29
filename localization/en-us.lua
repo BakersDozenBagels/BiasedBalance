@@ -48,6 +48,13 @@ return {
                     "extra {C:money}$#1#",
                 },
             },
+            b_biasedBalance_Teal = {
+                name = "Teal Deck",
+                text = {
+                    "Whenever you leave shop",
+                    "Create a random {C:tarot}Tarot{} card"
+                }
+            },
         },
         Blind = {
             bl_biasedBalance_Epsilon = {

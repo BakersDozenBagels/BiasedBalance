@@ -125,6 +125,7 @@ BiasedBalance.Back_Adds = {
 	"Pink",
 	"White",
 	"Purple",
+	"Teal"
 }
 
 BiasedBalance.Blind_Adds = {
