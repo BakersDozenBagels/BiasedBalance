@@ -495,6 +495,36 @@ return {
                     "Currently: {C:mult}+#2#{} Mult"
                 }
             },
+            j_biasedBalance_Last_Dance = {
+                name = "Last Dance",
+                text = { 
+                    "Retrigger {C:attention}2{} last scoring cards"
+                }
+            },
+            j_biasedBalance_Kestrel = {
+                name = "Kestrel",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every",
+                    "enhanced cards in deck",
+                    "Currently: {C:mult}+#2#{} Mult"
+                }
+            },
+            j_biasedBalance_Mystery_Box = {
+                name = "Mystery Box",
+                text = { 
+                    "When a {C:attention}Blind{} is skipped",
+                    "Destroy this {C:attention}Joker and",
+                    "create a random {C:attention}Rare Joker"
+                }
+            },
+            j_biasedBalance_Shameless_Profit = {
+                name = "Shameless Profit",
+                text = { 
+                    "Earn {C:gold}$#1#{} at the end of the round",
+                    "When a {C:attention}Blind{} is skipped",
+                    "This {C:attention}Joker{} gains {C:gold}$1{} "
+                }
+            },
         },
         Other = {
             p_biasedBalance_Utility = {

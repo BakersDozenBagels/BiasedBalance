@@ -32,8 +32,8 @@ end
 local function ban()
     local banned_jokers = {
         { "8_ball", "smiley",  "superposition", "walkie_talkie" },
-        { "ceremonial", "loyalty_card", "dusk", "seeing_double", "matador" },
-        { "campfire",   "hit_the_road", "acrobat" }
+        { "ceremonial", "loyalty_card", "dusk", "seeing_double", "matador", "acrobat" },
+        { "campfire", "hit_the_road" }
     }
 
     local function ban_one(key, rarity)

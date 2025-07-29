@@ -139,6 +139,10 @@ BiasedBalance.Joker_Adds = {
 	"bagel_jokers",
 	--"Discounted_Joker",
 	"Everhungry_Joker",
+	"Kestrel",
+	"Mystery_Box",
+	"Shameless_Profit",
+	"Last_Dance",
 	"Wallpaper",
 	"Wysteria_Joker",
 	--"melancholic_joker"

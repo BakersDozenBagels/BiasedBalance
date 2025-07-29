@@ -6,6 +6,9 @@
         "pseudoseed",
         "pseudorandom_element",
         "juice_card_until",
-        "G"
+        "G",
+        "Event",
+        "create_card",
+        "ease_dollars"
     ]
 }

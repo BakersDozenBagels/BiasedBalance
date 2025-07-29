@@ -1,6 +1,7 @@
 SMODS.Joker:take_ownership("red_card", {
-    rarity = 2,
-    config = { extra = 0.1 },
+    rarity = 1,
+    config = { extra = 0.05 },
+    cost = 3,
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra, card.ability.x_mult } }
     end,
