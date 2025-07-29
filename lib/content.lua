@@ -1,6 +1,7 @@
 BiasedBalance.Back_Tweaks = {
     "black",
-    "ghost"
+    "ghost",
+	"yellow",
 }
 
 BiasedBalance.Blind_Tweaks = {
@@ -121,10 +122,9 @@ BiasedBalance.Voucher_Tweaks = {
 }
 
 BiasedBalance.Back_Adds = {
-	"pink",
-	"white",
-	"purple",
-	"yellow",
+	"Pink",
+	"White",
+	"Purple",
 }
 
 BiasedBalance.Blind_Adds = {

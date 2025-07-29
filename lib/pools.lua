@@ -19,6 +19,37 @@ BiasedBalance.Hone_Tag_Editions = {
     "e_polychrome"
 }
 
+
+BiasedBalance.Common_Jokers = {
+    "joker",
+    "greedy_joker",
+    "lusty_joker",
+    "wrathful_joker",
+    "gluttonous_joker",
+    "crazy_joker",
+    "droll_joker",
+    "devious_joker",
+    "crafty_joker",
+    "banner",
+    "scary_face",
+    "golden_ticket",
+    "space",
+    "hiker",
+    "erosion",
+    "to_the_moon",
+    "spare_trousers",
+    "flower_pot",
+    "bootstraps",
+    "todo_list",
+    "biasedBalance_pitiful",
+    "biasedBalance_afterthought",
+    "biasedBalance_jumbo",
+    "biasedBalance_caviar",
+    "biasedBalance_impatient",
+    "biasedBalance_terrace_garden",
+    "biasedBalance_upsidedown"
+}
+
 BiasedBalance.Rare_Jokers = {
     "vagabond",
     "invisible",
