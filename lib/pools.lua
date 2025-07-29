@@ -19,7 +19,6 @@ BiasedBalance.Hone_Tag_Editions = {
     "e_polychrome"
 }
 
-
 BiasedBalance.Common_Jokers = {
     "joker",
     "greedy_joker",
@@ -86,4 +85,29 @@ BiasedBalance.Legendary_Jokers = {
     "yorick",
     "triboulet",
     "chicot"
+}
+
+BiasedBalance.Tarots = {
+    "fool",
+    "magician",
+    "high_priestess",
+    "empress",
+    "emperor",
+    "hierophant",
+    "lovers",
+    "chariot",
+    "justice",
+    "hermit",
+    "wheel_of_fortune",
+    "strength",
+    "hanged_man",
+    "death",
+    "temperance",
+    "devil",
+    "tower",
+    "star",
+    "moon",
+    "sun",
+    "judgement",
+    "world"
 }

@@ -127,7 +127,8 @@ BiasedBalance.Stake_Adds = {
 }
 
 BiasedBalance.Tag_Adds = {
-	"bagel_tags"
+	"bagel_tags",
+	--"hone"
 }
 
 BiasedBalance.Voucher_Adds = {
