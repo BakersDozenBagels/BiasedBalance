@@ -137,6 +137,9 @@ BiasedBalance.Blind_Adds = {
 
 BiasedBalance.Joker_Adds = {
 	"bagel_jokers",
+	--"Discounted_Joker",
+	"Everhungry_Joker",
+	"Wallpaper",
 	"Wysteria_Joker",
 	--"melancholic_joker"
 }

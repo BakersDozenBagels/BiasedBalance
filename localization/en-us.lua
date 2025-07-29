@@ -418,8 +418,13 @@ return {
                 }
             },
             j_biasedBalance_WallPaper = {
-                name = "Wall Paper",
-                text = { "{C:white,X:mult}X#1#{} Mult if all", "cards played and held in hand", "are the {C:attention}#2#{} most common", "suits in your full deck" }
+                name = "Wallpaper",
+                text = { 
+                    "{C:white,X:mult}X#1#{} Mult if all", 
+                    "cards played and held in hand", 
+                    "are the {C:attention}2{} most common", 
+                    "suits in your full deck" 
+                }
             },
             j_biasedBalance_Poacher = {
                 name = "Poacher",
@@ -445,7 +450,7 @@ return {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
             },
-             j_biasedBalance_Wysteria_Joker = {
+            j_biasedBalance_Wysteria_Joker = {
                 name = "Wysteria Joker",
                 text = { 
                     "This {C:attention}Joker{} gains",
@@ -480,6 +485,15 @@ return {
                     "{C:mult}-#2#{} Mult if it does not",
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
                 },
+            },
+            j_biasedBalance_Everhungry_Joker = {
+                name = "Everhungry Joker",
+                text = { 
+                    "This {C:attention}Joker{} gains",
+                    "{C:mult}+#1#{} Mult if",
+                    "Any consumable is used",
+                    "Currently: {C:mult}+#2#{} Mult"
+                }
             },
         },
         Other = {
