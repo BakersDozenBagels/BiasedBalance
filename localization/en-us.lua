@@ -43,6 +43,23 @@ return {
             }
         },
         Blind = {
+            bl_biasedBalance_Omega = {
+                name = "Omega",
+                text = {
+                    "Reduce Chips by X at the end of scoring",
+                    "Cannot go below 5 Chips",
+                    "(X Value - 5 = 110, 6=125",
+                    "7=140, ante 8+ = 155"
+                }
+            },
+            bl_biasedBalance_Sigma = {
+                name = "Sigma",
+                text = {
+                    "If score is over",
+                    "Half of total",
+                    "Reduces to half"
+                }
+            },
             bl_biasedBalance_Theta = {
                 name = "Theta",
                 text = {

@@ -127,6 +127,8 @@ BiasedBalance.Back_Adds = {
 }
 
 BiasedBalance.Blind_Adds = {
+	"Omega",
+	"Sigma",
 	"Theta",
 	"Zeta",
 }
