@@ -138,6 +138,9 @@ BiasedBalance.Blind_Adds = {
 BiasedBalance.Joker_Adds = {
 	"bagel_jokers",
 	--"Discounted_Joker",
+	"Crystal_Cave",
+	"End_Of_Days",
+	"Pierogi",
 	"Everhungry_Joker",
 	"Dark_Forest",
 	"Kestrel",

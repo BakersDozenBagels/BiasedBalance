@@ -1,6 +1,6 @@
 SMODS.Joker {
     atlas = "Joker",
-    key = "Gourmet",
+    key = "Chisel",
     pos = {
         x = 0,
         y = 0
@@ -12,24 +12,24 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-            mult = 0,
-            mult_gain = 8
+           stone_trans = 0
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.mult_gain,
-                card.ability.extra.mult
+
         } 
     }
     end,
     calculate = function(self, card, context)
-
-        if context.joker_main then
-            return {
-                mult = card.ability.extra.mult
-            }
+        if context.setting_blind then 
+            card.ability.extra.stone_trans = card.ability.extra.stone_trans + 1
+        end
+        if context.joker_main and context.cardarea == G.hand then
+            if context.other_card then
+                context.other_card[1]:set_ability("m_stone", true)
+            end
         end
     end
 }

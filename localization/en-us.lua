@@ -542,6 +542,30 @@ return {
                     "Currently: {X:mult,C:white}#3#{} Mult"
                 }
             },
+            j_biasedBalance_Crystal_Cave = {
+                name = "Crystal Cave",
+                text = { 
+                    "This Joker gains {X:mult,C:white}#1#{} Mult",
+                    "For every {C:hearts}Heart{} or {C:diamonds} Diamond{} scored",
+                    "Resets at end of round",
+                    "Currently: {X:mult,C:white}#2#{} Mult"
+                }
+            },
+            j_biasedBalance_End_Of_Days = {
+                name = "End Of Days",
+                text = { 
+                    "Create a random {C:dark_edition}Spectral{} card",
+                    "If your deck has {C:attention}10{} or less cards"
+                }
+            },
+            j_biasedBalance_Pierogi = {
+                name = "Pierogi",
+                text = { 
+                    "This Joker loses {X:mult,C:white}#1#{} Mult",
+                    "for every reroll used",
+                    "Currently: {X:mult,C:white}#2#{} Mult"
+                }
+            },
         },
         Other = {
             p_biasedBalance_Utility = {

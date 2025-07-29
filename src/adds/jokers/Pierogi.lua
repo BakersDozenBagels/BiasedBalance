@@ -1,6 +1,6 @@
 SMODS.Joker {
     atlas = "Joker",
-    key = "Gourmet",
+    key = "Pierogi",
     pos = {
         x = 0,
         y = 0
@@ -12,23 +12,29 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-            mult = 0,
-            mult_gain = 8
+           xmult = 2,
+           xmult_reroll = .05
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.mult_gain,
-                card.ability.extra.mult
+                card.ability.extra.xmult_reroll,
+                card.ability.extra.xmult
         } 
     }
     end,
     calculate = function(self, card, context)
-
+        if context.reroll_shop then
+            card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_reroll
+            return {
+                message = "-.05 Mult",
+                colour = G.C.MULT
+            }
+        end
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult
+                xmult = card.ability.extra.xmult
             }
         end
     end
