@@ -525,6 +525,23 @@ return {
                     "This {C:attention}Joker{} gains {C:gold}$1{} "
                 }
             },
+            j_biasedBalance_Stairs = {
+                name = "Stairs",
+                text = { 
+                    "This Joker gives {X:mult,C:white}#1#{} Mult",
+                    "When a straight is discarded",
+                    "Currently: {X:mult,C:white}#2#{} Mult"
+                }
+            },
+            j_biasedBalance_Dark_Forest = {
+                name = "Dark Forest",
+                text = { 
+                    "This Joker loses {X:mult,C:white}#1#{} Mult",
+                    "For every {C:hearts}Heart{} or {C:diamonds} Diamond",
+                    "card in your deck",
+                    "Currently: {X:mult,C:white}#3#{} Mult"
+                }
+            },
         },
         Other = {
             p_biasedBalance_Utility = {
