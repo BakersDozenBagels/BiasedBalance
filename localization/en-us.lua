@@ -783,9 +783,8 @@ return {
             c_strength = {
                 text = {
                     "Increases rank of",
-                    "up to {C:attention}#1#{} selected",
+                    "up to {C:attention}3{} selected",
                     "cards by {C:attention}1",
-                    "{C:inactive}({C:attention}#2#{C:inactive} use#3#)"
                 }
             },
         },
