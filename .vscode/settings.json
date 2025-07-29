@@ -9,6 +9,10 @@
         "G",
         "Event",
         "create_card",
-        "ease_dollars"
+        "ease_dollars",
+        "pseudorandom"
+    ],
+    "Lua.diagnostics.disable": [
+        "empty-block"
     ]
 }

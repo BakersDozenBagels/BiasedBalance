@@ -124,6 +124,7 @@ BiasedBalance.Back_Adds = {
 	"pink",
 	"white",
 	"purple",
+	"yellow",
 }
 
 BiasedBalance.Blind_Adds = {
@@ -146,10 +147,14 @@ BiasedBalance.Joker_Adds = {
 	"Kestrel",
 	"Mystery_Box",
 	"Shameless_Profit",
+	"Haunted_House",
+	"Negative_Norman",
 	"Stairs",
+	"Reverberating_Echo",
 	"Last_Dance",
 	"Wallpaper",
 	"Wysteria_Joker",
+	"Wildflower_Honey"
 	--"melancholic_joker"
 }
 

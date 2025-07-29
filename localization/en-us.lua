@@ -40,7 +40,14 @@ return {
                     "{X:mult,C:white}X#1#{} Mult",
                     "No repeat hand types",
                 }
-            }
+            },
+            b_yellow={
+                name="Yellow Deck",
+                text={
+                    "Start with",
+                    "extra {C:money}$#1#",
+                },
+            },
         },
         Blind = {
             bl_biasedBalance_Epsilon = {
@@ -564,6 +571,35 @@ return {
                     "This Joker loses {X:mult,C:white}#1#{} Mult",
                     "for every reroll used",
                     "Currently: {X:mult,C:white}#2#{} Mult"
+                }
+            },
+            j_biasedBalance_Wildflower_Honey = {
+                name = "Wildflower Honey",
+                text = { 
+                    "Gain {C:gold}$#1#{}",
+                    "every skipped {C:attention}Blind{} or end of round",
+                    "Decreases $ each time triggered"
+                }
+            },
+            j_biasedBalance_Haunted_House = {
+                name = "Haunted House",
+                text = { 
+                    "When a {C:attention}Full House{} is scored",
+                    "{C:green}#1# in #2#{} chance to create",
+                    "A random {C:dark_edition}Spectral{} card"
+                }
+            },
+            j_biasedBalance_Negative_Norman = {
+                name = "Negative Norman",
+                text = { 
+                    "When a {C:attention}Boss Blind{} is defeated",
+                    "Create a {C:attention}Negative tag"
+                }
+            },
+            j_biasedBalance_Reverberating_Echo = {
+                name = "Reverberating Echo",
+                text = { 
+                    "{X:mult,C:white}#1#{} Mult for every scoring card"
                 }
             },
         },
