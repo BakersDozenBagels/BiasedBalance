@@ -31,8 +31,8 @@ end
 --Banned Jokers
 local function ban()
     local banned_jokers = {
-        { "8_ball",     "smiley",       "green_joker", "superposition", "walkie_talkie" },
-        { "ceremonial", "loyalty_card", "dusk",        "seeing_double", "matador" },
+        { "8_ball", "smiley",  "superposition", "walkie_talkie" },
+        { "ceremonial", "loyalty_card", "dusk", "seeing_double", "matador" },
         { "campfire",   "hit_the_road", "acrobat" }
     }
 

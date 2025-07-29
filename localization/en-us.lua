@@ -445,6 +445,42 @@ return {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
             },
+             j_biasedBalance_Wysteria_Joker = {
+                name = "Wysteria Joker",
+                text = { 
+                    "This {C:attention}Joker{} gains",
+                    "{C:chips}+#1#{} Chips if",
+                    "Any scoring hands with {C:attention}+5",
+                    "cards or {C:chips}-#2#{} chips if not",
+                    "Currently: {C:chips}+#3#{} Chips"
+                }
+            },
+            j_green_joker={
+                name="Green Joker",
+                text={
+                    "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
+                    "{C:mult}-#1#{} Mult if it does not",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                },
+            },
+            j_flash={
+                name="Flash Card",
+                text={
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "per {C:attention}reroll{} in the shop",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                },
+            },
+            j_ride_the_bus={
+                name="Ride the Bus",
+                text={
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "played without a",
+                    "scoring {C:attention}face{} card",
+                    "{C:mult}-#2#{} Mult if it does not",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
+                },
+            },
         },
         Other = {
             p_biasedBalance_Utility = {

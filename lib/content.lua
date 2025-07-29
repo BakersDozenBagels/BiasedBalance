@@ -64,7 +64,8 @@ BiasedBalance.Joker_Tweaks = {
 	"troubadour",
 	"trousers",
 	"vagabond",
-	"wrathful_joker"
+	"wrathful_joker",
+	"green_joker"
 }
 
 BiasedBalance.Planet_Tweaks = {
@@ -136,6 +137,7 @@ BiasedBalance.Blind_Adds = {
 
 BiasedBalance.Joker_Adds = {
 	"bagel_jokers",
+	"Wysteria_Joker",
 	--"melancholic_joker"
 }
 
