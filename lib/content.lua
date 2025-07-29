@@ -123,14 +123,15 @@ BiasedBalance.Back_Adds = {
 	"pink",
 	"white",
 	"purple",
-
 }
 
 BiasedBalance.Blind_Adds = {
+	"Epsilon",
 	"Omega",
 	"Sigma",
 	"Theta",
 	"Zeta",
+	"Delta",
 }
 
 BiasedBalance.Joker_Adds = {

@@ -43,6 +43,20 @@ return {
             }
         },
         Blind = {
+            bl_biasedBalance_Epsilon = {
+                name = "Epsilon",
+                text = {
+                    "All cards debuffed",
+                    "until 1 Joker sold",
+                }
+            },
+            bl_biasedBalance_Delta = {
+                name = "Delta",
+                text = {
+                    "After every scoring hand",
+                    "Debuff all cards in hand"
+                }
+            },
             bl_biasedBalance_Omega = {
                 name = "Omega",
                 text = {
@@ -561,7 +575,9 @@ return {
             c_biasedBalance_Awakening = {
                 name = "Awakening",
                 text = {
-                    "Reduce the odds of", "finding {C:common}Common{} Jokers"
+                    "Select {C:attention}2{} cards",
+                    "decrease rank by {C:attention}1{}",
+                    "Uses {C:attention}#1#"
                 }
             },
             c_biasedBalance_Sacrifice = {
