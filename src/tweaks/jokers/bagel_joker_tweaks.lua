@@ -20,9 +20,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 --#region Banned Jokers
 local function ban()
     local banned_jokers = {
-        { "8_ball",     "smiley",       "green_joker", "superposition", "walkie_talkie" },
-        { "ceremonial", "loyalty_card", "dusk",        "seeing_double", "matador" },
-        { "campfire",   "hit_the_road", "acrobat" }
+        { "8_ball","smiley", "superposition", "walkie_talkie" },
+        { "ceremonial", "loyalty_card", "dusk", "seeing_double", "matador", "acrobat" },
+        { "campfire", "hit_the_road" }
     }
 
     local function ban_one(key, rarity)
@@ -126,6 +126,7 @@ SMODS.Joker:take_ownership("hiker", { rarity = 1,  config = {extra = 6} })
 SMODS.Joker:take_ownership("erosion", { rarity = 1, cost = 4 })
 SMODS.Joker:take_ownership("to_the_moon", { rarity = 1 })
 SMODS.Joker:take_ownership("cloud_9", { rarity = 1 })
+SMODS.Joker:take_ownership("flash", { rarity = 1})
 SMODS.Joker:take_ownership("castle", { rarity = 1 })
 
 SMODS.Joker:take_ownership("bootstraps", {
@@ -441,7 +442,7 @@ SMODS.Joker:take_ownership("vagabond", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("tribe", { config = { Xmult = 2.5, type = 'Flush' } })
 SMODS.Joker:take_ownership("card_sharp", { cost = 8, rarity = 3 })
 SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5} })
-SMODS.Joker:take_ownership("hologram", {config = {extra = 0.25, Xmult = 1} })
+SMODS.Joker:take_ownership("hologram", {config = {extra = 0.175, Xmult = 1} })
 
 SMODS.Joker:take_ownership("invisible", {
     cost = 10,
