@@ -28,7 +28,7 @@ SMODS.Joker {
                 func = function()
                     for i, c in ipairs(G.jokers.cards) do
                         if c == card then
-                            SMODS.destroy_card(G.jokers.cards, i) -- Removes This Joker
+                            c:start_dissolve()
                         break
                         end
                     end
@@ -49,8 +49,10 @@ SMODS.Joker {
                 trigger = 'after',
                 delay = 0.4,
                 func = function()
-                    local tarot1 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_')
-                    local tarot2 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_')
+                    local chosen_tarot1 = pseudorandom_element(BiasedBalance.Tarots, pseudoseed('choice'))
+                    local chosen_tarot2 = pseudorandom_element(BiasedBalance.Tarots, pseudoseed('choice'))
+                    local tarot1 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_' .. chosen_tarot1 )
+                    local tarot2 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_' .. chosen_tarot2)
                     tarot1:add_to_deck()
                     tarot2:add_to_deck()
                     G.consumeables:emplace(tarot1)
