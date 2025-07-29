@@ -1,3 +1,35 @@
+local function destroy_highlighted(used_tarot)
+    local destroyed_cards = {}
+    for _, v in ipairs(G.hand.highlighted) do
+        destroyed_cards[#destroyed_cards + 1] = v
+    end
+    G.E_MANAGER:add_event(Event({
+        trigger = 'after',
+        delay = 0.4,
+        func = function()
+            play_sound('tarot1')
+            used_tarot:juice_up(0.3, 0.5)
+            return true
+        end
+    }))
+    G.E_MANAGER:add_event(Event({
+        trigger = 'after',
+        delay = 0.1,
+        func = function()
+            for i = #destroyed_cards, 1, -1 do
+                local card = destroyed_cards[i]
+                if card.ability.name == 'Glass Card' then
+                    card:shatter()
+                else
+                    card:start_dissolve(nil, i ~= #destroyed_cards)
+                end
+            end
+            return true
+        end
+    }))
+    return destroyed_cards
+end
+
 SMODS.Consumable:take_ownership('c_incantation', {
     config = {
         extra = {

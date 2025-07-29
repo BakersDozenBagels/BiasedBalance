@@ -1,4 +1,4 @@
- function destroy_highlighted(used_tarot)
+ local function destroy_highlighted(used_tarot)
     local destroyed_cards = {}
     for _, v in ipairs(G.hand.highlighted) do
         destroyed_cards[#destroyed_cards + 1] = v
