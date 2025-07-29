@@ -9,12 +9,9 @@ SMODS.Consumable:take_ownership('c_strength', {
         }  
     end,
     can_use = function(self)
-        return #G.hand.highlighted == self.config.max_highlighted
+        return #G.hand.highlighted <= self.config.max_highlighted
     end,
-    use = function(self, card, area)
-        local selected = G.hand.highlighted
-        if #selected ~= 3 then return end
-        
+    use = function(self, card, area)   
         for i=1, #G.hand.highlighted do
         G.E_MANAGER:add_event(Event({
             trigger = 'after',

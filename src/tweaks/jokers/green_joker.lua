@@ -3,7 +3,8 @@ SMODS.Joker:take_ownership("green_joker", {
         extra = {
             mult = 0,
             mult_gain = 1,
-            count = 0
+            count = 0,
+            hand_add = 0
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -14,19 +15,19 @@ SMODS.Joker:take_ownership("green_joker", {
         } }
     end,
     calculate = function(self, card, context)
-        -- Reset count at start of scoring
-        if context.first_card then
+        if context.before then
             card.ability.extra.count = 0
         end
-
         -- Count how many cards are in scoring hand
         if context.individual and context.cardarea == G.play then
             card.ability.extra.count = (card.ability.extra.count or 0) + 1
             if card.ability.extra.count >= 4 then
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
+                card.ability.extra.hand_add = card.ability.extra.hand_add + card.ability.extra.mult_gain
             else 
                 card.ability.extra.mult = card.ability.extra.mult - card.ability.extra.mult_gain
-                if card.ability.extra.chips < 0 then
+                 card.ability.extra.hand_add = card.ability.extra.hand_add - card.ability.extra.mult_gain
+                if card.ability.extra.mult < 0 then
                     card.ability.extra.mult = 0
                 end
             end
@@ -36,7 +37,6 @@ SMODS.Joker:take_ownership("green_joker", {
             return {
                    mult = card.ability.extra.mult
                 }
-
          end
 end
 })
