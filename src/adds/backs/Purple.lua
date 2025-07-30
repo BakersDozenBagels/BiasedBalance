@@ -6,14 +6,14 @@ SMODS.Back {
         x = 1,
         y = 0
     },
-    config = { x_mult = 3 },
+    config = { x_mult = 2 },
     loc_vars = function(self, info_queue, back)
         return {
             vars = { self.config.x_mult }
         }
     end,
     calculate = function(self, back, args)
-       if args.context == 'before' then
+        if args.context == 'final_scoring_step' then
             args.mult = args.mult * self.config.x_mult
 
             local skip = Talisman and Talisman.config_file and Talisman.config_file.disable_anims
