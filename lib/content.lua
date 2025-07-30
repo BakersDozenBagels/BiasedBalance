@@ -1,16 +1,9 @@
 BiasedBalance.Back_Tweaks = {
     "black",
-    "ghost",
-	"yellow",
 }
 
 BiasedBalance.Blind_Tweaks = {
 
-}
-
-BiasedBalance.Booster_Tweaks = {
-	"celestial",
-    "spectral"
 }
 
 BiasedBalance.Edition_Tweaks = {
@@ -35,33 +28,11 @@ BiasedBalance.Rarity_Tweaks = {
 	"rarity"
 }
 
-BiasedBalance.Spectral_Tweaks = {
-	"ankh",
-	"aura",
-	"familiar",
-	"hex",
-	"immolate",
-	"incantation",
-	"ouija",
-	"sigil",
-	"wraith"
-}
-
 BiasedBalance.Stake_Tweaks = {
 	"blue"
 }
 BiasedBalance.Tag_Tweaks = {
-	"boss",
-	"buffoon",
-	"double",
-	"economy",
-	"garbage",
-	"juggle",
-	"meteor",
-	"rare",
-	"skip",
-	"standard",
-	"uncommon"
+	"bagel_tags"
 }
 BiasedBalance.Tarot_Tweaks = {
 	"lovers",
@@ -69,13 +40,7 @@ BiasedBalance.Tarot_Tweaks = {
 }
 
 BiasedBalance.Voucher_Tweaks = {
-	"antimatter",
-	"blank",
-	"glow_up",
-	"hone",
-	"magic_trick",
-	"planet_merchant",
-	"planet_tycoon"
+	"bagel_vouchers"
 
 }
 
