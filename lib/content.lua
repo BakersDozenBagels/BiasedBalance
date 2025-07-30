@@ -89,7 +89,8 @@ BiasedBalance.Joker_Adds = {
 }
 
 BiasedBalance.Spectral_Adds = {
-	"bagel_spectrals"
+	"bagel_spectrals",
+	"Vertigo"
 }
 
 BiasedBalance.Stake_Adds = {
@@ -105,4 +106,8 @@ BiasedBalance.Tag_Adds = {
 BiasedBalance.Voucher_Adds = {
 	--"trade_secret",
 	--"recipe"
+}
+
+BiasedBalance.Seal_Adds = {
+	"Teal",
 }

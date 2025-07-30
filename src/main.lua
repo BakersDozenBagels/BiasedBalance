@@ -48,6 +48,7 @@ BiasedBalance.file_loader(BiasedBalance.Spectral_Adds, "src/adds/spectrals")
 BiasedBalance.file_loader(BiasedBalance.Stake_Adds, "src/adds/stakes")
 BiasedBalance.file_loader(BiasedBalance.Tag_Adds, "src/adds/tags")
 BiasedBalance.file_loader(BiasedBalance.Voucher_Adds, "src/adds/vouchers")
+BiasedBalance.file_loader(BiasedBalance.Seal_Adds, "src/adds/seals")
 
 -- ||           ATLAS           ||
 

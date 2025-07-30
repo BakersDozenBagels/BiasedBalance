@@ -683,7 +683,14 @@ return {
                     "{C:attention}#2# Playing{} cards to",
                     "add to your deck",
                 }
-            }
+            },
+            biasedBalance_Teal_seal = {
+                name = "Teal Seal",
+                text = {
+                    "When held in hand",
+                    "Double all listed Probabilities"
+                }
+            },
         },
         Spectral = {
             c_ankh = {
@@ -798,6 +805,12 @@ return {
                 name = "Sacrifice",
                 text = {
                     "{C:red}Destroys{} leftmost Joker,", "earn {C:money}$#1#"
+                }
+            },
+            c_biasedBalance_Vertigo = {
+                name = "Vertigo",
+                text = {
+                    "Add a {C:attention}Teal Seal{} to 1 selected card"
                 }
             },
         },
@@ -969,6 +982,9 @@ return {
         },
         text = {
             biasedBalance_none = "None"
-        }
+        },
+        labels={
+            biasedBalance_Teal_seal = "Teal Seal",
+        },
     }
 }
