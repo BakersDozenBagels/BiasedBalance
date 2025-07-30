@@ -11,9 +11,9 @@ SMODS.Back {
     if context.ending_shop then
         G.E_MANAGER:add_event(Event({
           func = function()
-            local card = create_card('Tarot', G.jokers, nil, nil, nil, nil, nil, 'c_')
+            local card = create_card('Tarot', G.consumeables, nil, nil, nil, nil, nil, 'c_')
             card:add_to_deck()
-            G.jokers:emplace(card)
+            G.consumeables:emplace(card)
             return true
           end
         }))
