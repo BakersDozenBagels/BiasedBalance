@@ -1,1 +1,0 @@
-SMODS.Back:take_ownership("ghost", {})
