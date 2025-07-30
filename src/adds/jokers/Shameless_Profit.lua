@@ -31,7 +31,7 @@ SMODS.Joker {
             }
         end
         if context.end_of_round and context.cardarea == G.jokers then
-            ease_dollars(card.ability.extra.money)
+            ease_dollars((G.GAME.skips or 0) *card.ability.extra.money)
             return {
                 message = "+$" .. card.ability.extra.money,
                 colour = G.C.GOLD

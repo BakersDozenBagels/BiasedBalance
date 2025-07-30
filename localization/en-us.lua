@@ -543,7 +543,7 @@ return {
             j_biasedBalance_Shameless_Profit = {
                 name = "Shameless Profit",
                 text = { 
-                    "Earn {C:gold}$#1#{} at the end of the round",
+                    "Earn {C:gold}$#1#{} at the end of the round or",
                     "When a {C:attention}Blind{} is skipped",
                     "This {C:attention}Joker{} gains {C:gold}$1{} "
                 }

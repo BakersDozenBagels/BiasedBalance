@@ -49,6 +49,7 @@ SMODS.Joker {
                 trigger = 'after',
                 delay = 0.4,
                 func = function()
+                    if G.consumeables.config.card_limit > #G.consumeables.cards then
                     local chosen_tarot1 = pseudorandom_element(BiasedBalance.Tarots, pseudoseed('choice'))
                     local chosen_tarot2 = pseudorandom_element(BiasedBalance.Tarots, pseudoseed('choice'))
                     local tarot1 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_' .. chosen_tarot1 )
@@ -57,6 +58,7 @@ SMODS.Joker {
                     tarot2:add_to_deck()
                     G.consumeables:emplace(tarot1)
                     G.consumeables:emplace(tarot2)
+                    end
                     return true
                 end
                 }))
