@@ -26,10 +26,10 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.before then
-        for i, v in ipairs(G.deck) do
-            if v:is_suit("Diamonds") then
+        for _, c in ipairs(G.playing_cards or {}) do
+            if c:is_suit("Diamonds") then
                 card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
-            elseif v:is_suit("Hearts") then
+            elseif c:is_suit("Hearts") then
                 card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
             end
         end

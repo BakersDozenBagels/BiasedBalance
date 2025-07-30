@@ -204,7 +204,7 @@ SMODS.Joker:take_ownership("flower_pot", {
 SMODS.Joker:take_ownership("steel_joker", { config = { extra = 0.25 } })
 SMODS.Joker:take_ownership("arrowhead", { config = { extra = 60 } })
 SMODS.Joker:take_ownership("onyx_agate", { config = { extra = 9 } })
-SMODS.Joker:take_ownership("drivers_license", { rarity = 2 })
+SMODS.Joker:take_ownership("drivers_license", { rarity = 2, config = {extra = 2.5}})
 SMODS.Joker:take_ownership("reduced_gratification", { rarity = 2, cost = 7 })
 SMODS.Joker:take_ownership("hack", {
     calculate = function(self, card, context)
@@ -437,7 +437,7 @@ SMODS.Joker:take_ownership("photograph", { rarity = 2 })
 --#endregion
 
 --#region Rare Jokers
-SMODS.Joker:take_ownership("stuntman", { config = { extra = {chip_mod = 300 } } })
+SMODS.Joker:take_ownership("stuntman", { config = { extra = {chip_mod = 300, h_size = 2} } })
 SMODS.Joker:take_ownership("vagabond", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("tribe", { config = { Xmult = 2.5, type = 'Flush' } })
 SMODS.Joker:take_ownership("card_sharp", { cost = 8, rarity = 3 })

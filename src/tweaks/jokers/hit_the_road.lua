@@ -1,4 +1,4 @@
-SMODS.Joker:take_ownership("green_joker", {
+SMODS.Joker:take_ownership("hit_the_road", {
     rarity = 2,
     cost = 7,
     config = { 
