@@ -109,5 +109,5 @@ BiasedBalance.Voucher_Adds = {
 }
 
 BiasedBalance.Seal_Adds = {
-	"Teal",
+	--"Teal",
 }

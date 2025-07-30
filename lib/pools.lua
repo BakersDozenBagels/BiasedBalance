@@ -40,13 +40,11 @@ BiasedBalance.Common_Jokers = {
     "flower_pot",
     "bootstraps",
     "todo_list",
-    "biasedBalance_pitiful",
-    "biasedBalance_afterthought",
-    "biasedBalance_jumbo",
-    "biasedBalance_caviar",
-    "biasedBalance_impatient",
-    "biasedBalance_terrace_garden",
-    "biasedBalance_upsidedown"
+    "biasedBalance_PitifulJoker",
+    "biasedBalance_Jumbo",
+    "biasedBalance_Caviar",
+    "biasedBalance_Impatient",
+    "biasedBalance_Jokester",
 }
 
 BiasedBalance.Rare_Jokers = {
