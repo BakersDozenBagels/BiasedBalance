@@ -15,7 +15,7 @@ SMODS.Joker {
             chips = 0,
             chip_gain = 15,
             chip_lose = 10,
-            count = 0
+            size = 5
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -27,29 +27,13 @@ SMODS.Joker {
         } }
     end,
     calculate = function(self, card, context)
-        -- Reset count at start of scoring
-        if context.first_card then
-            card.ability.extra.count = 0
-        end
-
-        -- Count how many cards are in scoring hand
-        if context.individual and context.cardarea == G.play then
-            card.ability.extra.count = (card.ability.extra.count or 0) + 1
-            if card.ability.extra.count == 5 then
-                card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
-            else 
-                card.ability.extra.chips = card.ability.extra.chips - card.ability.extra.chip_lose
-                if card.ability.extra.chips < 0 then
-                    card.ability.extra.chips = 0
-                end
-            end
-        end
-
-        if context.joker_main then
-            return {
+        if context.joker_main and #context.full_hand >= card.ability.extra.size then
+            card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
+        elseif context.joker_main and #context.full_hand < card.ability.extra.size then
+            card.ability.extra.chips = math.max(card.ability.extra.chips - card.ability.extra.chip_lose, 0)
+        return {
                    chips = card.ability.extra.chips
                 }
-
-         end
+        end
 end
 }
