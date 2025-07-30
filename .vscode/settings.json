@@ -10,7 +10,9 @@
         "Event",
         "create_card",
         "ease_dollars",
-        "pseudorandom"
+        "pseudorandom",
+        "add_tag",
+        "Tag"
     ],
     "Lua.diagnostics.disable": [
         "empty-block"

@@ -71,6 +71,7 @@ BiasedBalance.Joker_Adds = {
 	"Dark_Forest",
 	"Kestrel",
 	"Solitude",
+	"Ouroboros",
 	"Hypernova",
 	"Mystery_Box",
 	"Shameless_Profit",

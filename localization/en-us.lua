@@ -628,9 +628,18 @@ return {
             j_biasedBalance_Solitude = {
                 name = "Solitude",
                 text = { 
-                    "This {C:attention}Joker gives",
+                    "This {C:attention}Joker{} gives",
                     "{X:mult,C:white}X#1#{} Mult if",
                     "Scoring hand doesn't contain a {C:attention}Pair"
+                }
+            },
+            j_biasedBalance_Ouroboros = {
+                name = "Ouroboros",
+                text = { 
+                    "This {C:attention}Joker{} gains",
+                    "{X:mult,C:white}X#1#{} Mult after {C:attention}4 or 8{}",
+                    "is scored and only triggered after {C:attention}#3#{} times",
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
                 }
             },
         },

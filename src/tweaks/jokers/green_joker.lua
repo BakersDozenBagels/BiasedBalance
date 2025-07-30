@@ -7,6 +7,7 @@ SMODS.Joker:take_ownership("green_joker", {
             hand_add = 0
         }
     },
+    perishable_compat = false,
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
