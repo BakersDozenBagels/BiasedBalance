@@ -68,7 +68,7 @@ SMODS.Joker {
     config = {
         extra = {
             money = 3,
-            count = 0
+            size = 5
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -78,27 +78,14 @@ SMODS.Joker {
         } }
     end,
     calculate = function(self, card, context)
-        -- Reset count at start of scoring
-        if context.first_card then
-            card.ability.extra.count = 0
-        end
-
-        -- Count how many cards are in scoring hand
-        if context.individual and context.cardarea == G.play then
-            card.ability.extra.count = (card.ability.extra.count or 0) + 1
-            if card.ability.extra.count == 5 then
-                ease_dollars(card.ability.extra.money)
-            end
-        end
-
-        if context.joker_main then
-            return {
-                    message = "+$" .. tostring(card.ability.extra.money) .. "!",
-                    colour = G.C.GOLD
+        if context.joker_main and #context.full_hand >= card.ability.extra.size then
+            ease_dollars(card.ability.extra.money)
+        return {
+                message = "+$3!",
+                colour = G.C.GOLD
                 }
-
-         end
-end
+        end
+    end
 }
 
 SMODS.Joker {

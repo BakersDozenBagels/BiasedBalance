@@ -17,7 +17,8 @@ BiasedBalance.Enhancement_Tweaks = {
 BiasedBalance.Joker_Tweaks = {
 	"bagel_joker_tweaks",
 	"green_joker",
-	"ride_the_bus"
+	"ride_the_bus",
+	"hit_the_road"
 }
 
 BiasedBalance.Planet_Tweaks = {
@@ -57,7 +58,7 @@ BiasedBalance.Blind_Adds = {
 	"Sigma",
 	"Theta",
 	"Zeta",
-	"Delta",
+	--"Delta",
 }
 
 BiasedBalance.Joker_Adds = {
@@ -69,6 +70,8 @@ BiasedBalance.Joker_Adds = {
 	"Everhungry_Joker",
 	"Dark_Forest",
 	"Kestrel",
+	"Solitude",
+	"Hypernova",
 	"Mystery_Box",
 	"Shameless_Profit",
 	"Haunted_House",

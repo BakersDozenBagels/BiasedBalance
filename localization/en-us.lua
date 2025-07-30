@@ -500,6 +500,15 @@ return {
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
                 },
             },
+            j_hit_the_road = {
+                name = "Hit the Road",
+                text = {
+                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
+                    "for every {C:attention}Face Card{}",
+                    "discarded this round",
+                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
+                }
+            },
             j_biasedBalance_Everhungry_Joker = {
                 name = "Everhungry Joker",
                 text = { 
@@ -607,6 +616,21 @@ return {
                 name = "Reverberating Echo",
                 text = { 
                     "{X:mult,C:white}#1#{} Mult for every scoring card"
+                }
+            },
+            j_biasedBalance_Hypernova = {
+                name = "Hypernova",
+                text = { 
+                    "This {C:attention}Joker gives",
+                    "{C:mult}+3{} Mult for every level of played hand"
+                }
+            },
+            j_biasedBalance_Solitude = {
+                name = "Solitude",
+                text = { 
+                    "This {C:attention}Joker gives",
+                    "{X:mult,C:white}X#1#{} Mult if",
+                    "Scoring hand doesn't contain a {C:attention}Pair"
                 }
             },
         },
@@ -740,7 +764,7 @@ return {
                 name = "Awakening",
                 text = {
                     "Select {C:attention}2{} cards",
-                    "decrease rank by {C:attention}1{}",
+                    "increase rank by {C:attention}1{}",
                     "Uses {C:attention}#1#"
                 }
             },
