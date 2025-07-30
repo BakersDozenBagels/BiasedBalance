@@ -76,8 +76,8 @@ ban()
 --#endregion
 
 --#region Common Jokers
+SMODS.Joker:take_ownership("egg", {  eternal_compat = false })
 SMODS.Joker:take_ownership("scholar", { config = { extra = { mult = 6, chips = 30 } } })
-
 SMODS.Joker:take_ownership("joker", { config = { mult = 5 } })
 SMODS.Joker:take_ownership("greedy_joker", { config = { extra = { s_mult = 4, suit = 'Diamonds' } } })
 SMODS.Joker:take_ownership("lusty_joker", { config = { extra = { s_mult = 4, suit = 'Hearts' } } })

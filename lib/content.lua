@@ -68,6 +68,8 @@ BiasedBalance.Joker_Adds = {
 	"End_Of_Days",
 	"Pierogi",
 	"Everhungry_Joker",
+	"Gourmet",
+	"Rhododendron",
 	"Dark_Forest",
 	"Kestrel",
 	"Solitude",

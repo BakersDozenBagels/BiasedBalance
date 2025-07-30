@@ -642,6 +642,23 @@ return {
                     "Currently: {X:mult,C:white}X#2#{} Mult"
                 }
             },
+            j_biasedBalance_Gourmet = {
+                name = "Gourmet",
+                text = { 
+                    "{C:attention}+1{} Consumable Slot",
+                    "This {C:attention}Joker{} gains {C:mult}+#1#{} Mult",
+                    "For every consumable used",
+                    "Resets every {C:attention}Boss Blind",
+                    "Currently: {C:mult}+#2#{} Mult"
+                }
+            },
+            j_biasedBalance_Rhododendron = {
+                name = "Rhododendron",
+                text = { 
+                    "{C:mult}X#1#{} Mult if played hand", 
+                    "contains at least {C:attention}#2#{} ranks"
+                }
+            },
         },
         Other = {
             p_biasedBalance_Utility = {
