@@ -7,7 +7,7 @@ SMODS.Back {
         y = 0
     },
     calculate = function(self, card, context)
-        if context.setting_blind then 
+        if context.end_of_round then 
             G.E_MANAGER:add_event(Event({
                 trigger = 'after',
                 delay = 0.4,

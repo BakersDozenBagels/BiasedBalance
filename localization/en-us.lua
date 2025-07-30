@@ -29,8 +29,8 @@ return {
             b_biasedBalance_White = {
                 name = "White Deck",
                 text = {
-                    "When {C:attention}Small Blind{} or {C:attention}Big Blind{}",
-                    "is selected, create a {C:blue}Common{C:attention} Joker",
+                    "At the end of each round",
+                    "Create a {C:blue}Common{C:attention} Joker",
                     "{C:inactive}(Must have room)",
                 }
             },
@@ -271,7 +271,10 @@ return {
             },
             j_biasedBalance_Trinity = {
                 name = "Trinity",
-                text = { "{X:mult,C:white}X#1#{} Mult if played hand", "contains at least {C:attention}#2#{} suits" }
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult if played hand", 
+                    "contains at least {C:attention}#2#{} suits" 
+                }
             },
             j_biasedBalance_Snob = {
                 name = "Snob",

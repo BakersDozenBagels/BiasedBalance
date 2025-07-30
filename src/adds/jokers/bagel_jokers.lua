@@ -1001,7 +1001,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = {
         extra = {
-            x_mult = 2.5,
+            x_mult = 2.25,
             hand = 'Two Pair'
         }
     },

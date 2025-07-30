@@ -1,10 +1,10 @@
 
 SMODS.Joker {
     atlas = "Joker",
-    key = " Rhododendron",
+    key = "Rhododendron",
     pos = {
-        x = 1,
-        y = 2
+        x = 0,
+        y = 0
     },
     rarity = 2,
     cost = 6,
