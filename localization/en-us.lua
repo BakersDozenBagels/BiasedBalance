@@ -701,6 +701,14 @@ return {
                     "gives {C:chips}+#1#{} Chips",
                 }
             },
+            j_biasedBalance_Velvet_Choker= {
+                name = "Velvet Choker",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:mult}-1{} Discard",
+                    "{C:chips}-1{} Hand",
+                }
+            },
         },
         Other = {
             p_biasedBalance_Utility = {

@@ -68,6 +68,7 @@ BiasedBalance.Joker_Adds = {
 	"Crystal_Cave",
 	"End_Of_Days",
 	"Pierogi",
+	"Velvet_Choker",
 	"Everhungry_Joker",
 	"Gourmet",
 	"Rhododendron",
