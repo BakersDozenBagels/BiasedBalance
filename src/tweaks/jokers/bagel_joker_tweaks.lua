@@ -383,7 +383,7 @@ SMODS.Joker:take_ownership("red_card", {
         return { vars = { card.ability.extra, card.ability.x_mult } }
     end,
     calculate = function(self, card, context)
-        if context.open_booster  and not context.blueprint then
+        if context.open_booster and not context.blueprint then
             card.ability.x_mult = card.ability.x_mult + card.ability.extra
             G.E_MANAGER:add_event(Event {
                 func = function()

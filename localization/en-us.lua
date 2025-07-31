@@ -176,7 +176,7 @@ return {
                 text = {
                     "This Joker gains",
                     "{X:mult,C:white}X#1#{} Mult when any",
-                    "{C:attention}Booster Pack{} is skipped",
+                    "{C:attention}Booster Pack{} is opened",
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
                 }
             },
@@ -207,9 +207,9 @@ return {
             },
              j_trio = {
                 text = {
-                    "{X:mult,C:white} X#1# {} Mult if played",
+                    "{X:mult,C:white}X#1#{} Mult if played",
                     "hand contains",
-                    "a {C:attention}#2#",
+                    "a {C:attention}Three of a Kind",
                 }
             },
              j_biasedBalance_Veteran = {
