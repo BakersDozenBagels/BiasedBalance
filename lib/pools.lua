@@ -31,7 +31,7 @@ BiasedBalance.Common_Jokers = {
     "crafty_joker",
     "banner",
     "scary_face",
-    "golden_ticket",
+    "ticket",
     "space",
     "hiker",
     "erosion",

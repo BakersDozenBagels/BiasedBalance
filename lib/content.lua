@@ -87,7 +87,7 @@ BiasedBalance.Joker_Adds = {
 	"Wysteria_Joker",
 	"Wildflower_Honey",
 	"Esteemed_Audience",
-	"Joker_In_The_High_Castle"
+	--"Joker_In_The_High_Castle"
 	--"melancholic_joker"
 }
 
