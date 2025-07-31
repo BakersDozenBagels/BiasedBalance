@@ -13,7 +13,8 @@ SMODS.Joker {
     config = { 
         extra = { 
             xmult = 1,
-            xmult_gain = .3
+            xmult_gain = .3,
+            first_trigger = 0
         } 
     },
     loc_vars = function(self, info_queue, card)
@@ -26,9 +27,13 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.discard and context.discard_hand then
-            if context.discard_hand.name == "Straight" then
+            if context.discard_hand.name == "Straight" and  card.ability.extra.first_trigger == 0 then
                 card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
+                card.ability.extra.first_trigger = 1
             end
+        end
+        if context.end_of_round then
+            card.ability.extra.first_trigger = 1
         end
         if context.joker_main then
             return {

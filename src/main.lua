@@ -74,17 +74,17 @@ SMODS.Atlas {
 }
 
 SMODS.Atlas {
-    key  = "Stakes", 
-    path = "Stakes.png", 
-    px   = 71,
-    py   = 95,
-}
-
-SMODS.Atlas {
     key = "Tags",
     path = "Tags.png",
     px = 34,
     py = 34
+}
+
+SMODS.Atlas {
+    key = "stakes",
+    path = "stakes.png",
+    px = 28,
+    py = 28
 }
 
 --SMODS.Atlas {

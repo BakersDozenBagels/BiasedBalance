@@ -33,7 +33,8 @@ BiasedBalance.Stake_Tweaks = {
 	"blue"
 }
 BiasedBalance.Tag_Tweaks = {
-	"bagel_tags"
+	"bagel_tags",
+	--"ethereal",
 }
 BiasedBalance.Tarot_Tweaks = {
 	"lovers",
@@ -84,7 +85,9 @@ BiasedBalance.Joker_Adds = {
 	"Last_Dance",
 	"Wallpaper",
 	"Wysteria_Joker",
-	"Wildflower_Honey"
+	"Wildflower_Honey",
+	"Esteemed_Audience",
+	"Joker_In_The_High_Castle"
 	--"melancholic_joker"
 }
 
@@ -95,7 +98,7 @@ BiasedBalance.Spectral_Adds = {
 
 BiasedBalance.Stake_Adds = {
 	--"silver",
-	"pink"
+	--"pink"
 }
 
 BiasedBalance.Tag_Adds = {

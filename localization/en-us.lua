@@ -658,8 +658,23 @@ return {
             j_biasedBalance_Rhododendron = {
                 name = "Rhododendron",
                 text = { 
-                    "{C:mult}X#1#{} Mult if played hand", 
+                    "{C:mult}+#1#{} Mult if played hand", 
                     "contains at least {C:attention}#2#{} ranks"
+                }
+            },
+            j_biasedBalance_Esteemed_Audience = {
+                name = "Esteemed Audience",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every scored", 
+                    "{C:}Face card in played hands",
+                    "Currently: {C:mult}+#2#{} Mult"
+                }
+            },
+            j_biasedBalance_Joker_In_The_High_Castle = {
+                name = "Joker In The High Castle",
+                text = { 
+                    "Retrigger the first card {C:attention}2{} Times",
+                    "If it has an ability"
                 }
             },
         },
@@ -824,7 +839,7 @@ return {
                     "{s:0.8}Applies all previous Stakes",
                 },
             },
-             stake_biasedBalance_pink = {
+            stake_biasedBalance_pink = {
                 text = {
                     "Run ends at Ante 9",
                     "{C:inactive}(Ante 8 & 9 have Finisher Blinds)"
