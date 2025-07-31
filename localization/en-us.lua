@@ -677,6 +677,30 @@ return {
                     "If it has an ability"
                 }
             },
+            j_biasedBalance_Eldritch_Joker= {
+                name = "Eldritch Joker",
+                text = { 
+                    "This {C:attention}Joker{} gains",
+                    "{X:mult,C:white}X#1#{} Mult after every",
+                    "card scored in played hands",
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                }
+            },
+            j_biasedBalance_Lingering_Resentment= {
+                name = "Lingering Resentment",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:mult}-1{} Discard"
+                }
+            },
+            j_biasedBalance_Knave= {
+                name = "Knave",
+                text = { 
+                    "Each {C:attention}Jack{}",
+                    "held in hand",
+                    "gives {C:chips}+#1#{} Chips",
+                }
+            },
         },
         Other = {
             p_biasedBalance_Utility = {

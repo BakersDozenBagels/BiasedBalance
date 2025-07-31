@@ -73,6 +73,8 @@ BiasedBalance.Joker_Adds = {
 	"Rhododendron",
 	"Dark_Forest",
 	"Kestrel",
+	"Lingering_Resentment",
+	"Knave",
 	"Solitude",
 	"Ouroboros",
 	"Hypernova",

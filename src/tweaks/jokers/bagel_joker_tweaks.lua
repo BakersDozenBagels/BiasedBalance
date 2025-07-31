@@ -378,12 +378,12 @@ SMODS.Joker:take_ownership("glass", {
 
 SMODS.Joker:take_ownership("red_card", {
     rarity = 2,
-    config = { extra = 0.1 },
+    config = { extra = 0.05 },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra, card.ability.x_mult } }
     end,
     calculate = function(self, card, context)
-        if context.skipping_booster and not context.blueprint then
+        if context.open_booster  and not context.blueprint then
             card.ability.x_mult = card.ability.x_mult + card.ability.extra
             G.E_MANAGER:add_event(Event {
                 func = function()
