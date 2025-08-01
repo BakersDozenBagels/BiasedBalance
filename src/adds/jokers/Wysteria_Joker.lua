@@ -27,13 +27,16 @@ SMODS.Joker {
         } }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and #context.full_hand >= card.ability.extra.size then
+        if context.joker_main and #context.full_hand == card.ability.extra.size then
             card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
-        elseif context.joker_main and #context.full_hand < card.ability.extra.size then
-            card.ability.extra.chips = math.max(card.ability.extra.chips - card.ability.extra.chip_lose, 0)
-        return {
+        else
+            local prev_chips = card.ability.extra.chips
+            card.ability.extra.chips = math.max(0, card.ability.extra.chips - card.ability.extra.chip_lose)
+            if card.ability.extra.chips ~= prev_chips then
+                return {
                    chips = card.ability.extra.chips
-                }
+                    }
+            end
         end
     end
 }

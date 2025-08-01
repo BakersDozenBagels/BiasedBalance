@@ -33,7 +33,9 @@ SMODS.Joker:take_ownership("green_joker", {
                 end
             end
         end
-
+        if context.discard and not context.blueprint and context.other_card == context.full_hand[#context.full_hand] then
+            
+        end
         if context.joker_main then
             return {
                    mult = card.ability.extra.mult

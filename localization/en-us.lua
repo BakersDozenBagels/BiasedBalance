@@ -556,6 +556,7 @@ return {
                 text = { 
                     "This Joker gives {X:mult,C:white}#1#{} Mult",
                     "When a straight is discarded",
+                    "only the first hand for each round",
                     "Currently: {X:mult,C:white}#2#{} Mult"
                 }
             },
