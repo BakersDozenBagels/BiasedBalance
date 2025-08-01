@@ -109,3 +109,26 @@ BiasedBalance.Tarots = {
     "judgement",
     "world"
 }
+
+BiasedBalance.Spectrals = {
+    "familiar",
+    "incantation",
+    "tailsman",
+    "aura",
+    "wraith",
+    "sigil",
+    "ouija",
+    "ectoplasm",
+    "immolate",
+    "ankh",
+    "deja_vu",
+    "hex",
+    "trance",
+    "medium",
+    "cryptid",
+    "biasedBalance_Conjuration",
+    "biasedBalance_Stain",
+    "biasedBalance_Crossroads",
+    "biasedBalance_Awakening",
+    "biasedBalance_Sacrifice", 
+}

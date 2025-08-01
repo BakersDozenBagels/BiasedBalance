@@ -4,7 +4,8 @@ SMODS.Joker:take_ownership("green_joker", {
             mult = 0,
             mult_gain = 1,
             count = 0,
-            hand_add = 0
+            hand_add = 0,
+            discard_sub = 0
         }
     },
     perishable_compat = false,
@@ -34,7 +35,7 @@ SMODS.Joker:take_ownership("green_joker", {
             end
         end
         if context.discard and not context.blueprint and context.other_card == context.full_hand[#context.full_hand] then
-            
+            card.ability.extra.discard_sub = 0
         end
         if context.joker_main then
             return {

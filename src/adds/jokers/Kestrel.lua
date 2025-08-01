@@ -27,7 +27,14 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.joker_main then
              for _, c in ipairs(G.playing_cards or {}) do
-                if SMODS.get_enhancements(c, false) then
+                if SMODS.has_enhancement(c, 'm_bonus') or 
+                SMODS.has_enhancement(c, 'm_mult') or
+                SMODS.has_enhancement(c, 'm_wild') or
+                SMODS.has_enhancement(c, 'm_glass') or
+                SMODS.has_enhancement(c, 'm_steel') or
+                SMODS.has_enhancement(c, 'm_stone') or
+                SMODS.has_enhancement(c, 'm_gold') or
+                SMODS.has_enhancement(c, 'm_lucky') then
                     card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
                 end
             end

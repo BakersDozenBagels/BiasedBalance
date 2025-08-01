@@ -27,16 +27,22 @@ SMODS.Joker {
         if context.before then 
             if next(context.poker_hands['Full House']) then
                 if (pseudorandom('Haunted_House_spectral_suc') < G.GAME.probabilities.normal / card.ability.extra.spectral_suc) then
+                    local chosen_spectral = pseudorandom_element(BiasedBalance.Spectrals, pseudoseed('choice'))
                     G.E_MANAGER:add_event(Event({
                         trigger = 'after',
                         delay = 0.4,
                         func = function()
-                            local spectral = create_card("Spectral", G.consumeables, nil, nil, nil, nil, 'c_')
+                            local spectral = create_card("Spectral", G.consumeables, nil, nil, nil, nil, 'c_'.. chosen_spectral)
                             spectral:add_to_deck()
                             G.consumeables:emplace(spectral)
                             return true
                         end
                 }))
+            else
+                return {
+                    message = "Nope!",
+                    colour = G.C.FILTER
+                }
                 end
             end
         end

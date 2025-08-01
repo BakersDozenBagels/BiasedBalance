@@ -25,11 +25,9 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand 
         and not context.end_of_round and context.other_card:get_id() == 11 then
-            if context.other_card.debuff then
             return {
                 chips = card.ability.extra.chips
             }
-        end
         end
     end,
 }

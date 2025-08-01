@@ -16,7 +16,7 @@ BiasedBalance.Enhancement_Tweaks = {
 
 BiasedBalance.Joker_Tweaks = {
 	"bagel_joker_tweaks",
-	"green_joker",
+	--"green_joker",
 	"ride_the_bus",
 	"hit_the_road"
 }

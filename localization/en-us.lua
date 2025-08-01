@@ -477,14 +477,14 @@ return {
                     "Currently: {C:chips}+#3#{} Chips"
                 }
             },
-            j_green_joker={
-                name="Green Joker",
-                text={
-                    "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
-                    "{C:mult}-#1#{} Mult if it does not",
-                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
-                },
-            },
+            --j_green_joker={
+                --name="Green Joker",
+                --text={
+                   -- "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
+                   -- "{C:mult}-#1#{} Mult if it does not",
+                  --  "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                --},
+            --},
             j_flash={
                 name="Flash Card",
                 text={
@@ -554,28 +554,28 @@ return {
             j_biasedBalance_Stairs = {
                 name = "Stairs",
                 text = { 
-                    "This Joker gives {X:mult,C:white}#1#{} Mult",
+                    "This Joker gives {X:mult,C:white}X#1#{} Mult",
                     "When a straight is discarded",
-                    "only the first hand for each round",
-                    "Currently: {X:mult,C:white}#2#{} Mult"
+                     "only the first hand for each round",
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_Dark_Forest = {
                 name = "Dark Forest",
                 text = { 
-                    "This Joker loses {X:mult,C:white}#1#{} Mult",
+                    "This Joker loses {X:mult,C:white}X#1#{} Mult",
                     "For every {C:hearts}Heart{} or {C:diamonds} Diamond",
                     "card in your deck",
-                    "Currently: {X:mult,C:white}#3#{} Mult"
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_Crystal_Cave = {
                 name = "Crystal Cave",
                 text = { 
-                    "This Joker gains {X:mult,C:white}#1#{} Mult",
-                    "For every {C:hearts}Heart{} or {C:diamonds} Diamond{} scored",
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "For every {C:hearts}Heart{} or {C:diamonds}Diamond{} scored",
                     "Resets at end of round",
-                    "Currently: {X:mult,C:white}#2#{} Mult"
+                    "Currently: {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_End_Of_Days = {

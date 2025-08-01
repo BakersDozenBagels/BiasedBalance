@@ -25,7 +25,7 @@ SMODS.Joker {
     }
     end,
     calculate = function(self, card, context)
-        if context.cardarea == G.play then
+        if context.cardarea == G.play and context.individual then
             if context.other_card:is_suit("Hearts") or context.other_card:is_suit("Diamonds") then
                 card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
             end
