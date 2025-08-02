@@ -12,8 +12,8 @@ SMODS.Joker {
     perishable_compat = false,
     config = { 
         extra = { 
-            mult = 1,
-            mult_gain = .3,
+            mult = 0,
+            mult_gain = 1,
         } 
     },
     loc_vars = function(self, info_queue, card)

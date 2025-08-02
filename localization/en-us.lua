@@ -212,15 +212,6 @@ return {
                     "a {C:attention}Three of a Kind",
                 }
             },
-             j_biasedBalance_Veteran = {
-                name = "Veteran",
-                text = {
-                    "Playing the same {C:attention}Poker Hand",
-                    "{C:attention}three{} times in a {C:attention}round",
-                    "levels it up and creates",
-                    "a random {C:tarot}Tarot{} card"
-                }
-            },
             j_biasedBalance_PitifulJoker = {
                 name = "Pitiful Joker",
                 text = {
@@ -596,9 +587,9 @@ return {
             j_biasedBalance_Wildflower_Honey = {
                 name = "Wildflower Honey",
                 text = { 
-                    "Gain {C:gold}$#1#{}",
-                    "every skipped {C:attention}Blind{} or end of round",
-                    "Decreases $ each time triggered"
+                    "Gain {C:gold}$#1#{} every skipped",
+                    "{C:attention}Blind{} or end of round",
+                    "Decreases $ each time trigger"
                 }
             },
             j_biasedBalance_Haunted_House = {

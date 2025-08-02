@@ -1,4 +1,4 @@
-SMODS.Joker:take_ownership("j_ride_the_bus", { 
+SMODS.Joker:take_ownership("ride_the_bus", { 
     rarity = 1,  
     config = {
         extra = {
@@ -9,10 +9,10 @@ SMODS.Joker:take_ownership("j_ride_the_bus", {
     },
      loc_vars = function(self, info_queue, card)
         return { 
-            vars = { 
-                card.ability.extra.mult, 
+            vars = {  
                 card.ability.extra.mult_gain,
-                card.ability.extra.mult_lose 
+                card.ability.extra.mult_lose,
+                card.ability.extra.mult,
             } }
     end,
     calculate = function(self, card, context)

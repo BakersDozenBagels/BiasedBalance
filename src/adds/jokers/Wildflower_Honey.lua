@@ -25,11 +25,11 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.skip_blind then
             ease_dollars(card.ability.extra.money)
-            card.ability.extra.money = card.ability.extra.money - 1
+            card.ability.extra.money = math.max(card.ability.extra.money - 1,0)
         end
         if context.end_of_round then 
             ease_dollars(card.ability.extra.money)
-            card.ability.extra.money = card.ability.extra.money - 1
+            card.ability.extra.money = math.max(card.ability.extra.money - 1,0)
         end
     end
 }
