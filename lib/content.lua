@@ -96,7 +96,7 @@ BiasedBalance.Joker_Adds = {
 
 BiasedBalance.Spectral_Adds = {
 	"bagel_spectrals",
-	"Vertigo"
+	--"Vertigo"
 }
 
 BiasedBalance.Stake_Adds = {

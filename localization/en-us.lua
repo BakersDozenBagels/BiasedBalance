@@ -489,7 +489,7 @@ return {
                 text={
                     "This Joker gains {C:mult}+#1#{} Mult",
                     "played without a",
-                    "scoring {C:attention}face{} card",
+                    "scoring {C:attention}Face{} card",
                     "{C:mult}-#2#{} Mult if it does not",
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
                 },
@@ -632,8 +632,8 @@ return {
                 name = "Ouroboros",
                 text = { 
                     "This {C:attention}Joker{} gains",
-                    "{X:mult,C:white}X#1#{} Mult after {C:attention}4 or 8{}",
-                    "is scored and only triggered after {C:attention}#3#{} times",
+                    "{X:mult,C:white}X#1#{} Mult every {C:attention}#3#{} times",
+                    "A {C:attention}4 or 8{} is scored",
                     "Currently: {X:mult,C:white}X#2#{} Mult"
                 }
             },
@@ -849,12 +849,12 @@ return {
                     "{C:red}Destroys{} leftmost Joker,", "earn {C:money}$#1#"
                 }
             },
-            c_biasedBalance_Vertigo = {
-                name = "Vertigo",
-                text = {
-                    "Add a {C:attention}Teal Seal{} to 1 selected card"
-                }
-            },
+            --c_biasedBalance_Vertigo = {
+               -- name = "Vertigo",
+               -- text = {
+               --     "Add a {C:attention}Teal Seal{} to 1 selected card"
+              --  }
+           -- },
         },
         Stake = {
             stake_blue = {

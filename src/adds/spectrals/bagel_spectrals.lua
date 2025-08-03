@@ -1,5 +1,5 @@
 local function lose_up_to(dollars)
-    local lose = math.max(0, math.min(G.newcard.dollars - G.newcard.bankrupt_at, dollars))
+    local lose = math.max(0, math.min(G.GAME.dollars - G.GAME.bankrupt_at, dollars))
     if lose ~= 0 then
         ease_dollars(-lose, true)
     end
@@ -56,8 +56,8 @@ SMODS.Consumable {
                 if G.shop_vouchers then
                     G.E_MANAGER:add_event(Event {
                         func = function()
-                            for i = 1, #G.newcard.tags do
-                                G.newcard.tags[i]:apply_to_run({ type = 'voucher_add' })
+                            for i = 1, #G.GAME.tags do
+                                G.GAME.tags[i]:apply_to_run({ type = 'voucher_add' })
                             end
                             return true
                         end
@@ -164,9 +164,9 @@ SMODS.Consumable {
                 delay = 0.1,
                 func = function()
                     local edition = poll_edition('aura', nil, nil, true, {
-                         { name = 'e_foil',       weight = 30 },
-                        { name = 'e_holo',       weight = 22.5 },
-                        { name = 'e_negative',   weight = 32.5 },
+                        { name = 'e_foil',       weight = 25 },
+                        { name = 'e_holo',       weight = 35 },
+                        { name = 'e_negative',   weight = 25 },
                         { name = 'e_polychrome', weight = 15 },
                     })
                     v:set_edition(edition, true)
@@ -195,56 +195,11 @@ SMODS.Consumable {
         x = 4,
         y = 0
     },
-    config = {
-        max_highlighted = 2,
-        extra = {
-            uses = 2
-        }
-    },
     cost = 4,
-    loc_vars = function(self, info_queue, card)
-        return {
-            vars = {
-                card.ability.extra.uses,
-            }
-        }  
-    end,
-    can_use = function(self)
-        return #G.hand.highlighted == self.config.max_highlighted
-    end,
-    use = function(self, card, area)
-        if card.ability.extra.uses == 2 then
-            G.E_MANAGER:add_event(Event({
-            trigger = 'after',
-            delay = 0.1,
-            func = function()
-                local newcard = create_card("Spectral", G.consumeables, nil, nil, nil, nil, 'c_biasedBalance_Awakening')
-                newcard.ability.extra.uses = newcard.ability.extra.uses - 1
-                newcard:add_to_deck()
-                G.consumeables:emplace(newcard)
-                card:juice_up(0.3, 0.5)
-                return true
-            end
-        }))
-        end
-        local selected = G.hand.highlighted
-        if #selected ~= 2 then return end
-        
-        for i=1, #G.hand.highlighted do
-        G.E_MANAGER:add_event(Event({
-            trigger = 'after',
-            delay = 0.1,
-            func = function()
-            local card = G.hand.highlighted[i]
-            card:flip()
-            card:juice_up(0.3, 0.5)
-            assert(SMODS.modify_rank(card, 1))
-            card:flip()
-            return true
-        end
-        }))
+    can_use = function(self, card) return true end,
+    use = function(self, card, area, copier)
+        G.GAME.biasedBalance_awakening = (G.GAME.biasedBalance_awakening or 0) + 1
     end
-end
 }
 
 SMODS.Consumable {
@@ -256,7 +211,7 @@ SMODS.Consumable {
         y = 1
     },
     cost = 4,
-    config = { extra = { dollars = 30 } },
+    config = { extra = { dollars = 25 } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.dollars } }
     end,

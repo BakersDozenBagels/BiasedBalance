@@ -2,13 +2,13 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Mystery_Box",
     pos = {
-        x = 0,
+        x = 2,
         y = 0
     },
     rarity = 1,
     cost = 6,
     blueprint_compat = true,
-    eternal_compat = true,
+    eternal_compat = false,
     perishable_compat = true,
     config = { 
         extra = { 
