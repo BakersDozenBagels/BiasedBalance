@@ -36,7 +36,7 @@ BiasedBalance.Common_Jokers = {
     "hiker",
     "erosion",
     "to_the_moon",
-    "spare_trousers",
+    "trousers",
     "flower_pot",
     "bootstraps",
     "todo_list",

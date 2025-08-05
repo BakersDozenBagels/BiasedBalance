@@ -1,6 +1,6 @@
 SMODS.Blind {
     key = "Omega",
-    --atlas = "blinds",
+    atlas = "blinds",
     pos = {
         x = 0,
         y = 0
@@ -23,7 +23,7 @@ SMODS.Blind {
             elseif ante == 8 then x_value = 155
             else x_value = 155 end
             
-            hand_chips = math.max(-x_value, 5)
+           return hand_chips - math.max(-x_value, 5), mult
         end
     end
 }

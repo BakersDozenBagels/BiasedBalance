@@ -13,10 +13,9 @@ SMODS.Back {
                 delay = 0.4,
                 func = function()
                     local chosen_joker = pseudorandom_element(BiasedBalance.Common_Jokers, pseudoseed('choice'))
-                    local card = create_card("Joker", G.jokers, nil, nil, nil, nil, 'j_'.. chosen_joker)
-                    card:add_to_deck()
-                    G.jokers:emplace(card)
-                    card:juice_up(0.3, 0.5)
+                    local newcard = create_card("Joker", G.jokers, nil, nil, nil, nil, nil, 'j_'.. chosen_joker)
+                    newcard:add_to_deck()
+                    G.jokers:emplace(newcard)
                     return true
                 end
                 }))
