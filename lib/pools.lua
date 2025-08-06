@@ -26,7 +26,7 @@ BiasedBalance.Common_Jokers = {
     "wrathful_joker",
     "gluttenous_joker",
     "crazy_joker",
-    "droll_joker",
+    "droll",
     "devious_joker",
     "crafty_joker",
     "banner",
