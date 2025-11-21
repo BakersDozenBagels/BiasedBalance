@@ -3,9 +3,6 @@ SMODS.Joker:take_ownership("green_joker", {
         extra = {
             mult = 0,
             mult_gain = 1,
-            count = 0,
-            hand_add = 0,
-            discard_sub = 0
         }
     },
     perishable_compat = false,
@@ -17,30 +14,25 @@ SMODS.Joker:take_ownership("green_joker", {
         } }
     end,
     calculate = function(self, card, context)
-        if context.before then
-            card.ability.extra.count = 0
-        end
-        -- Count how many cards are in scoring hand
-        if context.individual and context.cardarea == G.play then
-            card.ability.extra.count = (card.ability.extra.count or 0) + 1
-            if card.ability.extra.count >= 4 then
+        if context.before and context.main_eval and not context.blueprint then
+            if #context.scoring_hand < 4 then
+                card.ability.extra.mult = math.max(0, card.ability.extra.mult - card.ability.extra.mult_gain)
+                return {
+                    message = localize { type = 'variable', key = 'a_mult_minus', vars = { card.ability.extra.mult_gain } },
+                    colour = G.C.RED
+                }
+            else
                 card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
-                card.ability.extra.hand_add = card.ability.extra.hand_add + card.ability.extra.mult_gain
-            else 
-                card.ability.extra.mult = card.ability.extra.mult - card.ability.extra.mult_gain
-                 card.ability.extra.hand_add = card.ability.extra.hand_add - card.ability.extra.mult_gain
-                if card.ability.extra.mult < 0 then
-                    card.ability.extra.mult = 0
-                end
+                
+                return {
+                    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_gain } }
+                }
             end
-        end
-        if context.discard and not context.blueprint and context.other_card == context.full_hand[#context.full_hand] then
-            card.ability.extra.discard_sub = 0
         end
         if context.joker_main then
             return {
-                   mult = card.ability.extra.mult
-                }
-         end
-end
+                mult = card.ability.extra.mult
+            }
+        end
+    end
 })

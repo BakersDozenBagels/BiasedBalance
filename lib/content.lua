@@ -15,10 +15,42 @@ BiasedBalance.Enhancement_Tweaks = {
 }
 
 BiasedBalance.Joker_Tweaks = {
+	--"!bans",
 	"bagel_joker_tweaks",
-	--"green_joker",
+	-- Common Jokers --
+	"joker",
+	"greedy_joker",
+	"lusty_joker",
+	"wrathful_joker",
+	"gluttonous_joker",
+	"crazy_joker",
+	"droll_joker",
+	"devious_joker",
+	"crafty_joker",
+	"banner",
+	"8_ball",
+	"egg",
+	"scholar",
+	"red_card",
+	"smiley",
+	"green_joker",
+	"superposition",
+	"walkie_talkie",
 	"ride_the_bus",
-	"hit_the_road"
+
+	-- Uncommon Jokers --
+	"ceremonial_dagger",
+	"acrobat",
+	"loyalty_card",
+	-- "dusk",
+	"seeing_double",
+	"matador",
+	"hit_the_road",
+
+	-- Rare Jokers --
+	"campfire",
+	-- Legendary Jokers --
+
 }
 
 BiasedBalance.Planet_Tweaks = {

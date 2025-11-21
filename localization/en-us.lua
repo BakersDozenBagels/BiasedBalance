@@ -468,14 +468,14 @@ return {
                     "Currently: {C:chips}+#3#{} Chips"
                 }
             },
-            --j_green_joker={
-                --name="Green Joker",
-                --text={
-                   -- "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
-                   -- "{C:mult}-#1#{} Mult if it does not",
-                  --  "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
-                --},
-            --},
+            j_green_joker={
+                name="Green Joker",
+                text={
+                   "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
+                   "{C:mult}-#1#{} Mult if it does not",
+                  "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+               },
+            },
             j_flash={
                 name="Flash Card",
                 text={

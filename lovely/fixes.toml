@@ -133,3 +133,14 @@ end
 G.GAME.pack_size = self.ability.extra
 '''
 match_indent = true
+
+# Patch for Red Card
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Red Card' and not context.blueprint then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
