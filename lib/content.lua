@@ -1,17 +1,25 @@
 BiasedBalance.Back_Tweaks = {
+	-- "green",
+	-- "yellow",
     "black",
+	-- "ghost",
 }
 
 BiasedBalance.Blind_Tweaks = {
-
+	-- "crimson_heart",
+	-- "the_acorn",
+	-- "the_leaf",
 }
 
 BiasedBalance.Edition_Tweaks = {
-    "edition"
+    "edition",
+	-- "foil",
+	-- "negative",
 }
 
 BiasedBalance.Enhancement_Tweaks = {
-    "enhance"
+    "enhance",
+	-- "wild",
 }
 
 BiasedBalance.Joker_Tweaks = {
@@ -30,31 +38,75 @@ BiasedBalance.Joker_Tweaks = {
 	"banner",
 	"8_ball",
 	"egg",
+	"scary_face",
 	"scholar",
 	"red_card",
 	"smiley",
 	"green_joker",
 	"superposition",
 	"walkie_talkie",
+	-- "golden ticket",
 	"ride_the_bus",
+	-- "castle",
+	-- "space_joker",
+	-- "hiker",
+	-- "erosion",
+	-- "to_the_moon",
+	-- "flower_pot",
+	-- "flash_card",
+	-- "bootstraps",
+	-- "to_do_list",
 
 	-- Uncommon Jokers --
+	-- "spare_trousers",
 	"ceremonial_dagger",
+	-- "constellation",
 	"acrobat",
 	"loyalty_card",
 	-- "dusk",
+	-- "steel_joker",
+	-- "seance",
+	-- "troubadour",
+	-- "rough_gem",
+	-- "arrowhead",
+	-- "onyx_agate",
+	-- "glass_joker",
 	"seeing_double",
 	"matador",
+	-- "gift_card",
+	-- "photograph",
+	-- "hologram",
+	-- "reduced_gratification",
+	-- "drivers_licence",
 	"hit_the_road",
+	-- "square_joker",
 
 	-- Rare Jokers --
+	-- "vagabond",
 	"campfire",
+	-- "invisible_joker",
+	-- "the_tribe",
+	-- "card_sharp",
+	-- "the_trio",
+	-- "stuntman",
+
 	-- Legendary Jokers --
+	-- "yorick",
 
 }
 
 BiasedBalance.Planet_Tweaks = {
-    "poker_hands"
+    "poker_hands",
+	-- "uranus",
+	-- "venus",
+	-- "saturn",
+	-- "jupiter",
+	-- "earth",
+	-- "mars",
+	-- "neptune",
+	-- "planet_x",
+	-- "ceres",
+	-- "eris",
 }
 
 BiasedBalance.Rarity_Tweaks = {
