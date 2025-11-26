@@ -32,7 +32,6 @@ SMODS.Joker:take_ownership("delayed_grat", {
 })
 
 SMODS.Joker:take_ownership("gift", { cost = 4 })
-SMODS.Joker:take_ownership("ticket", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("space", { rarity = 1 })
 SMODS.Joker:take_ownership("hiker", { rarity = 1,  config = {extra = 6} })
 SMODS.Joker:take_ownership("erosion", { rarity = 1, cost = 4 })

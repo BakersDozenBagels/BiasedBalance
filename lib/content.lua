@@ -45,7 +45,7 @@ BiasedBalance.Joker_Tweaks = {
 	"green_joker",
 	"superposition",
 	"walkie_talkie",
-	-- "golden ticket",
+	"golden_ticket",
 	"ride_the_bus",
 	-- "castle",
 	-- "space_joker",
