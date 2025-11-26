@@ -458,8 +458,8 @@ return {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
             },
-            j_biasedBalance_Wysteria_Joker = {
-                name = "Wysteria Joker",
+            j_biasedBalance_Wisteria_Joker = {
+                name = "Wisteria Joker",
                 text = { 
                     "This {C:attention}Joker{} gains",
                     "{C:chips}+#1#{} Chips if",

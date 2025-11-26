@@ -31,85 +31,6 @@ SMODS.Joker:take_ownership("delayed_grat", {
     calc_dollar_bonus = function(self, card) end
 })
 
-SMODS.Joker:take_ownership("space", { rarity = 1 })
-SMODS.Joker:take_ownership("hiker", { rarity = 1,  config = {extra = 6} })
-SMODS.Joker:take_ownership("erosion", { rarity = 1, cost = 4 })
-SMODS.Joker:take_ownership("to_the_moon", { rarity = 1 })
-SMODS.Joker:take_ownership("cloud_9", { rarity = 1 })
-SMODS.Joker:take_ownership("flash", { rarity = 1})
-SMODS.Joker:take_ownership("castle", { rarity = 1 })
-
-SMODS.Joker:take_ownership("bootstraps", {
-    cost = 6,
-    rarity = 1,
-    config = { extra = { mult = 18, dollars = 1 } },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult, card.ability.extra.dollars } }
-    end,
-    calculate = function(self, card, context)
-        if context.joker_main then
-            return {
-                mult = card.ability.extra.mult
-            }
-        end
-    end,
-    add_to_deck = function(self, card, from_debuff)
-        card.ability.extra_value = -2
-        G.GAME.inflation = G.GAME.inflation + card.ability.extra.dollars
-        G.E_MANAGER:add_event(Event({
-            func = function()
-                for k, v in pairs(G.I.CARD) do
-                    if v.set_cost then v:set_cost() end
-                end
-                return true
-            end
-        }))
-    end,
-    remove_from_deck = function(self, card, from_debuff)
-        G.GAME.inflation = G.GAME.inflation - card.ability.extra.dollars
-        G.E_MANAGER:add_event(Event({
-            func = function()
-                for k, v in pairs(G.I.CARD) do
-                    if v.set_cost then v:set_cost() end
-                end
-                return true
-            end
-        }))
-    end,
-})
-
-SMODS.Joker:take_ownership("flower_pot", {
-    cost = 5,
-    rarity = 1,
-    -- calculate = function(self, card, context)
-    --     if context.joker_main then
-    --         local suits_l = { 'Hearts', 'Diamonds', 'Spades', 'Clubs' }
-    --         local suits = {}
-    --         local count = 0
-    --         for i = 1, #context.full_hand do
-    --             if not SMODS.has_any_suit(context.full_hand[i]) then
-    --                 for _, v in ipairs(suits_l) do
-    --                     if context.full_hand[i]:is_suit(v, true) and not suits[v] then
-    --                         suits[v] = true
-    --                         count = count + 1
-    --                         break
-    --                     end
-    --                 end
-    --             else
-    --                 count = count + 1
-    --             end
-    --         end
-    --         if count >= 4 then
-    --             return {
-    --                 message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra } },
-    --                 Xmult_mod = card.ability.extra
-    --             }
-    --         end
-    --     end
-    -- end
-})
---#endregion
-
 --#region Uncommon Jokers
 SMODS.Joker:take_ownership("steel_joker", { config = { extra = 0.25 } })
 SMODS.Joker:take_ownership("arrowhead", { config = { extra = 60 } })
@@ -286,34 +207,7 @@ SMODS.Joker:take_ownership("glass", {
     end
 })
 
-SMODS.Joker:take_ownership("todo_list", {
-    rarity = 1,
-    cost = 5,
-    perishable_compat = false,
-    config = { extra = { dollars = 4, poker_hand = 'High Card', dx_mult = 0.15, played = false } },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.dx_mult, localize(card.ability.to_do_poker_hand, 'poker_hands'), card.ability.x_mult } }
-    end,
-    calculate = function(self, card, context)
-        if context.before and context.scoring_name == card.ability.to_do_poker_hand then
-            if card.ability.extra.played then
-                return {}
-            end
-            card.ability.x_mult = card.ability.x_mult + card.ability.extra.dx_mult
-            card.ability.extra.played = true
-            return {
-                message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.x_mult } },
-                colour = G.C.RED
-            }
-        end
-        if context.end_of_round and not context.blueprint then
-            card.ability.extra.played = false
-        end
-        if context.joker_main then
-            return { x_mult = card.ability.x_mult }
-        end
-    end,
-})
+
 
 SMODS.Joker:take_ownership("photograph", { rarity = 2 })
 --#endregion
