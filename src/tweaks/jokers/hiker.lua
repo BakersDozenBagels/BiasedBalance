@@ -1,1 +1,1 @@
-SMODS.Joker:take_ownership("hiker", { rarity = 1,  config = {extra = 6} })
+SMODS.Joker:take_ownership("hiker", { cost = 3, rarity = 1,  config = {extra = 6} })

@@ -102,6 +102,13 @@ local function destroy_highlighted(used_tarot)
     return destroyed_cards
 end
 
+SMODS.Consumable:take_ownership('c_grim', {
+    no_collection = true,
+	in_pool = function(self, args)
+		return false
+	end,
+})
+
 SMODS.Consumable:take_ownership('c_familiar', {
     config = {
         extra = {

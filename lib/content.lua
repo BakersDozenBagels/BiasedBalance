@@ -23,7 +23,6 @@ BiasedBalance.Enhancement_Tweaks = {
 }
 
 BiasedBalance.Joker_Tweaks = {
-	--"!bans",
 	"bagel_joker_tweaks",
 	-- Common Jokers --
 	"joker",
@@ -60,10 +59,10 @@ BiasedBalance.Joker_Tweaks = {
 	-- Uncommon Jokers --
 	"spare_trousers",
 	"ceremonial_dagger",
-	-- "constellation",
+	"constellation",
 	"acrobat",
 	"loyalty_card",
-	-- "steel_joker",
+	"steel_joker",
 	-- "seance",
 	-- "troubadour",
 	-- "rough_gem",
@@ -75,7 +74,7 @@ BiasedBalance.Joker_Tweaks = {
 	-- "gift_card",
 	-- "photograph",
 	-- "hologram",
-	-- "reduced_gratification",
+	"reduced_gratification",
 	-- "drivers_licence",
 	"hit_the_road",
 	-- "dusk",
@@ -95,7 +94,7 @@ BiasedBalance.Joker_Tweaks = {
 
 }
 
-BiasedBalance.Planet_Tweaks = {
+BiasedBalance.Planet_Tweaks = { -- This also defines spectral cards, maybe fix later but I don't care rn
     "poker_hands",
 	-- "uranus",
 	-- "venus",

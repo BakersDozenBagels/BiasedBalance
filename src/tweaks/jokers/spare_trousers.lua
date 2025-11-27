@@ -25,4 +25,3 @@ SMODS.Joker:take_ownership("trousers", {
         end
     end
 })
--- or next(context.poker_hands['Full House'])
