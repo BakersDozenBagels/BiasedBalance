@@ -58,12 +58,11 @@ BiasedBalance.Joker_Tweaks = {
 	"to_do_list",
 
 	-- Uncommon Jokers --
-	-- "spare_trousers",
+	"spare_trousers",
 	"ceremonial_dagger",
 	-- "constellation",
 	"acrobat",
 	"loyalty_card",
-	-- "dusk",
 	-- "steel_joker",
 	-- "seance",
 	-- "troubadour",
@@ -79,6 +78,7 @@ BiasedBalance.Joker_Tweaks = {
 	-- "reduced_gratification",
 	-- "drivers_licence",
 	"hit_the_road",
+	-- "dusk",
 	-- "square_joker",
 
 	-- Rare Jokers --
@@ -118,7 +118,24 @@ BiasedBalance.Stake_Tweaks = {
 }
 BiasedBalance.Tag_Tweaks = {
 	"bagel_tags",
+	-- "economy",
+	-- "speed",
+	-- "d6",
+	-- "handy",
+	-- "garbage",
+	-- "juggle",
+	-- "charm",
 	--"ethereal",
+	-- "standard",
+	-- "meteor",
+	-- "boss",
+	-- "uncommon",
+	-- "rare",
+	-- "negative",
+	-- "foil",
+	-- "holographic",
+	-- "polychrome",
+	-- "buffoon",
 }
 BiasedBalance.Tarot_Tweaks = {
 	"lovers",
@@ -126,23 +143,38 @@ BiasedBalance.Tarot_Tweaks = {
 }
 
 BiasedBalance.Voucher_Tweaks = {
-	"bagel_vouchers"
+	"bagel_vouchers",
+	-- "planet_merchant",
+	-- "planet_tycoon",
+	-- "blank",
+	-- "antimatter",
+	-- "retcon",
+	-- "omen_globe",
+	-- "magic_trick",
+	-- "illusion",
+	-- "hone",
+	-- "glow_up",
+	-- "reroll_surplus",
+	-- "reroll_glut",
 
 }
 
 BiasedBalance.Back_Adds = {
-	"Pink",
 	"White",
 	"Purple",
-	"Teal"
+	"Pink",
+	"Teal",
+	-- "Hibiscus",
+	-- "Legendary",
+	-- "Engineer",
+	-- "Vainglory",
 }
 
-BiasedBalance.Blind_Adds = {
+BiasedBalance.Blind_Adds = {-- check names later
+	
 	"Epsilon",
-	"Omega",
+	--"Omega",
 	"Sigma",
-	"Theta",
-	"Zeta",
 	--"Delta",
 }
 
@@ -260,7 +292,26 @@ BiasedBalance.Joker_Adds = {
 
 BiasedBalance.Spectral_Adds = {
 	"bagel_spectrals",
-	--"Vertigo"
+	-- "familiar",
+	-- "grim",
+	-- "incantation",
+	-- "aura",
+	-- "ankh",
+	-- "wraith",
+	-- "sigil",
+	-- "ouija",
+	-- "immolate",
+	-- "hex",
+	-- "Conjuration",
+	-- "Phantom",
+	-- "Stain",
+	-- "Crossroads",
+	-- "Sacrifice",
+	-- "Awakening",
+	-- "Mania",
+	-- "Transmutation",
+	-- "Anguish",
+	-- "Vertigo",
 }
 
 BiasedBalance.Stake_Adds = {
@@ -270,14 +321,17 @@ BiasedBalance.Stake_Adds = {
 
 BiasedBalance.Tag_Adds = {
 	"bagel_tags",
+	-- "utility",
+	-- "tagsacrifice",
 	--"hone"
 }
 
 BiasedBalance.Voucher_Adds = {
-	--"trade_secret",
 	--"recipe"
+	--"trade_secret",
 }
 
 BiasedBalance.Seal_Adds = {
+	--"Tangerine",
 	--"Teal",
 }
