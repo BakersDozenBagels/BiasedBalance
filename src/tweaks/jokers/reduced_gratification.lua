@@ -1,5 +1,6 @@
 SMODS.Joker:take_ownership("delayed_grat", {
     rarity = 2,
+    cost = 7,
     blueprint_compat = true,
     config = { extra = { dollars = 3, cards = 3 } },
     loc_vars = function(self, info_queue, card)

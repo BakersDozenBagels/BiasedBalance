@@ -18,10 +18,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ]] --
 
 --#region Uncommon Jokers
-SMODS.Joker:take_ownership("arrowhead", { config = { extra = 60 } })
-SMODS.Joker:take_ownership("onyx_agate", { config = { extra = 9 } })
+
+
 SMODS.Joker:take_ownership("drivers_license", { rarity = 2, config = {extra = 2.5}})
-SMODS.Joker:take_ownership("reduced_gratification", { rarity = 2, cost = 7 })
 SMODS.Joker:take_ownership("hack", {
     calculate = function(self, card, context)
         if context.repetition and (
@@ -36,8 +35,6 @@ SMODS.Joker:take_ownership("hack", {
         end
     end
 })
-
-
 
 local seanced = {}
 SMODS.Joker:take_ownership("seance", {
@@ -80,95 +77,6 @@ SMODS.Joker:take_ownership("seance", {
         if context.joker_main then return {} end
     end
 })
-
-local function two_pairs(a, b)
-    local next, t, k = pairs(a)
-    local done, v = false, nil
-    return function()
-        k, v = next(t, k)
-        if k == nil and not done then
-            done = true
-            next, t, k = pairs(b)
-            k, v = next(b)
-        end
-        return k, v
-    end
-end
-
-local raw_G_FUNCS_can_discard = G.FUNCS.can_discard
-function G.FUNCS.can_discard(e)
-    for k, v in two_pairs(SMODS.find_card("j_troubadour"), SMODS.find_card("j_biasedBalance_Minstrel")) do
-        if v.ability and #G.hand.highlighted > v.ability.extra.discard_size then
-            e.config.colour = G.C.UI.BACKGROUND_INACTIVE
-            e.config.button = nil
-            return
-        end
-    end
-    raw_G_FUNCS_can_discard(e)
-end
-
-SMODS.Joker:take_ownership("troubadour", {
-    config = { extra = { h_size = 2, h_plays = 0, discard_size = 4 } },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.h_size, card.ability.extra.discard_size } }
-    end
-})
-
-SMODS.Joker:take_ownership("rough_gem", {
-    config = { extra = { odds = 2, dollars = 3 } },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { G.GAME.probabilities.normal, card.ability.extra.odds, card.ability.extra.dollars } }
-    end,
-    calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and context.other_card:is_suit("Diamonds") then
-            local amount = (pseudorandom(pseudoseed('rough_gem')) < G.GAME.probabilities.normal / card.ability.extra.odds)
-                and card.ability.extra.dollars or 0
-            G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + amount
-            if not Talisman or not Talisman.config_file.disable_anims then
-                G.E_MANAGER:add_event(Event {
-                    func = function()
-                        G.GAME.dollar_buffer = 0; return true
-                    end
-                })
-            else
-                G.GAME.dollar_buffer = 0
-            end
-            if amount == 0 then return {} end
-            return {
-                dollars = amount
-            }
-        end
-    end
-})
-
-local raw_Card_shatter = Card.shatter
-function Card:shatter(...)
-    if self.config.center.key == 'm_glass' then
-        G.GAME.BiasedBalance_shattered = (G.GAME.BiasedBalance_shattered or 0) + 1
-    end
-    return raw_Card_shatter(self, ...)
-end
-
-SMODS.Joker:take_ownership("glass", {
-    config = { extra = 0.5 },
-    perishable_compat = true,
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra, (G.GAME.BiasedBalance_shattered or 0) * card.ability.extra + 1 } }
-    end,
-    calculate = function(self, card, context)
-        if context.joker_main then
-            return {
-                xmult = (G.GAME.BiasedBalance_shattered or 0) * card.ability.extra + 1
-            }
-        end
-
-        if context.cards_destroyed or context.remove_playing_cards or context.using_consumeable then return {} end
-    end
-})
-
-
-
-SMODS.Joker:take_ownership("photograph", { rarity = 2 })
 --#endregion
 
 --#region Rare Jokers
@@ -177,7 +85,6 @@ SMODS.Joker:take_ownership("vagabond", { config = { extra = 5 } })
 SMODS.Joker:take_ownership("tribe", { config = { Xmult = 2.5, type = 'Flush' } })
 SMODS.Joker:take_ownership("card_sharp", { cost = 8, rarity = 3 })
 SMODS.Joker:take_ownership("trio", { config = {Xmult = 2.5, type = 'Three of a Kind'} })
-SMODS.Joker:take_ownership("hologram", {config = {extra = 0.175, Xmult = 1} })
 
 SMODS.Joker:take_ownership("invisible", {
     cost = 10,

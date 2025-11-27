@@ -119,6 +119,14 @@ return {
                     "when scored",
                 }
             },
+            j_hologram = {
+                text={
+                    "This Joker gains {X:mult,C:white} X#3# {} Mult",
+                    "every time a {C:attention}playing card{}",
+                    "is added to your deck",
+                    "{C:inactive}(Currently {X:mult,C:white} X#4# {C:inactive} Mult)",
+                },
+            },
             j_delayed_grat = {
                 name = "Reduced Gratification",
                 text = {

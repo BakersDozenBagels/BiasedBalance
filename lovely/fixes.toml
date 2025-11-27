@@ -144,3 +144,14 @@ payload = '''
 if False then
 '''
 match_indent = true
+
+# Patch for Hologram
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Hologram' and (not context.blueprint)"
+position = "at"
+payload = '''
+if False
+'''
+match_indent = true
