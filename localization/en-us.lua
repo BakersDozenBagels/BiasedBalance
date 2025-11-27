@@ -1029,6 +1029,7 @@ return {
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
             k_booster_group_p_biasedBalance_LowStickerBuffoon = 'Mega Buffoon Pack',
             k_biasedBalance_noRepeats = 'No repeat hand types',
+            k_no_joker = "No Joker!",
         },
         text = {
             biasedBalance_none = "None"
