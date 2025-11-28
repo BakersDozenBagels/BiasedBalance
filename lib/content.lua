@@ -94,18 +94,12 @@ BiasedBalance.Joker_Tweaks = {
 
 }
 
-BiasedBalance.Planet_Tweaks = { -- This also defines spectral cards, maybe fix later but I don't care rn
+BiasedBalance.Consumable_Tweaks = {
+	-- Planets --
     "poker_hands",
-	-- "uranus",
-	-- "venus",
-	-- "saturn",
-	-- "jupiter",
-	-- "earth",
-	-- "mars",
-	-- "neptune",
-	-- "planet_x",
-	-- "ceres",
-	-- "eris",
+
+	-- Spectrals --
+	
 }
 
 BiasedBalance.Rarity_Tweaks = {
