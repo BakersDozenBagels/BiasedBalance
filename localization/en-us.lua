@@ -131,7 +131,7 @@ return {
                 name = "Reduced Gratification",
                 text = {
                     "Earn {C:money}$#1#{} when",
-                    "{C:red}discarding {C:attention}#2#",
+                    "you discard {C:attention}#2#",
                     "or fewer cards"
                 }
             },
@@ -141,7 +141,7 @@ return {
                     "{C:mult}+#1#{} Mult and {C:chips}+#2#{} Chips",
                     "if played hand contains",
                     "a {C:attention}#3#",
-                    "{C:inactive}(Currently {C:red}+#4#{C:inactive} Mult and {C:chips}+#5#{C:inactive} Chips)",
+                    "{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult and {C:chips}+#5#{C:inactive} Chips)",
                 },
             },
             j_seance = {
@@ -149,22 +149,22 @@ return {
                     "Replace a random held",
                     "{C:tarot}Tarot{} card with",
                     "a {C:spectral}Spectral{} card",
-                    "at end of round"
+                    "at end of the {C:attention}shop"
                 }
             },
             j_troubadour = {
                 text = {
-                    "{C:attention}+#1#{} hand size,",
-                    "discard at most {C:attention}#2#{}",
-                    "cards at once"
+                    "{C:attention}+#1#{} hand size",
+                    "Cannot discard more than",
+                    "{C:attention}#2#{} cards at once"
                 },
             },
             j_rough_gem = {
                 text = {
-                    "Played cards with",
-                    "{C:diamonds}Diamond{} suit have",
-                    "{C:green}#1# in #2#{} chance to",
-                    "earn {C:money}$#3#{} when scored",
+                    "{C:green}#1# in #2#{} chance for",
+                    "played cards with",
+                    "{C:diamonds}Diamond{} suit to earn",
+                    "{C:money}$#3#{} when scored",
                 }
             },
             j_glass = {
@@ -176,8 +176,9 @@ return {
             },
             j_bootstraps = {
                 text = {
-                    "{C:mult}+#1#{} Mult,",
-                    "everything costs {C:money}$#2#{} more"
+                    "{C:mult}+#1#{} Mult",
+                    "All items in the {C:attention}shop{}",
+                    "cost {C:money}$#2#{} more"
                 }
             },
             j_red_card = {
@@ -190,7 +191,8 @@ return {
             },
             j_todo_list = {
                 text = {
-                    "Gains {X:mult,C:white}X#1#{} Mult the first time",
+                    "This Joker gains",
+                    "{X:mult,C:white}X#1#{} Mult the first time",
                     "{C:attention}poker hand{} is a {C:attention}#2#{} this round,",
                     "poker hand changes at end of round",
                     "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
@@ -220,6 +222,45 @@ return {
                     "a {C:attention}Three of a Kind",
                 }
             },
+            j_hack = {
+                name = "Hack",
+                text = { 
+                    "Retrigger",
+                    "each played",
+                    "{C:attention}2{}, {C:attention}3{}, {C:attention}4{}",
+                    "{C:attention}5{}, or {C:attention}6{}",
+                 }
+            },
+            j_green_joker={
+                name="Green Joker",
+                text={
+                    "{C:mult}+#1#{} Mult when playing a",
+                    "hand with {C:attention}4{} or more cards",
+                    "{C:mult}-#1#{} Mult if hand has",
+                    "{C:attention}3{} or less cards",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                },
+            },
+            j_ride_the_bus={
+                name="Ride the Bus",
+                text={
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "if hand contains no",
+                    "scoring {C:attention}Face{} cards",
+                    "{C:mult}-#2#{} Mult if hand contains",
+                    "a scoring {C:attention}Face{} card",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
+                },
+            },
+            j_hit_the_road = {
+                name = "Hit the Road",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "for every {C:attention}Face{} card",
+                    "discarded this round",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                }
+            },
             j_biasedBalance_PitifulJoker = {
                 name = "Pitiful Joker",
                 text = {
@@ -236,7 +277,6 @@ return {
                     "been {C:red}discarded{} this round",
                 }
             },
-            -- j_biasedBalance_Jumbo
             j_biasedBalance_Caviar = {
                 name = "Caviar",
                 text = { "{C:common}Common{} Jokers", "are less common" }
@@ -453,15 +493,6 @@ return {
                     "earn {C:gold}$#1#{}"
                  }
             },
-            j_hack = {
-                name = "Hack",
-                text = { 
-                    "Retrigger",
-                    "each played",
-                    "{C:attention}2{}, {C:attention}3{}, {C:attention}4{}",
-                    "{C:attention}5{}, or {C:attention}6{}",
-                 }
-            },
             j_biasedBalance_Toucan = {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
@@ -474,41 +505,6 @@ return {
                     "Any scoring hands with {C:attention}+5",
                     "cards or {C:chips}-#2#{} chips if not",
                     "Currently: {C:chips}+#3#{} Chips"
-                }
-            },
-            j_green_joker={
-                name="Green Joker",
-                text={
-                   "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
-                   "{C:mult}-#1#{} Mult if it does not",
-                  "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
-               },
-            },
-            j_flash={
-                name="Flash Card",
-                text={
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "per {C:attention}reroll{} in the shop",
-                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
-                },
-            },
-            j_ride_the_bus={
-                name="Ride the Bus",
-                text={
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "played without a",
-                    "scoring {C:attention}Face{} card",
-                    "{C:mult}-#2#{} Mult if it does not",
-                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
-                },
-            },
-            j_hit_the_road = {
-                name = "Hit the Road",
-                text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "for every {C:attention}Face Card{}",
-                    "discarded this round",
-                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
                 }
             },
             j_biasedBalance_Everhungry_Joker = {
@@ -857,12 +853,12 @@ return {
                     "{C:red}Destroys{} leftmost Joker,", "earn {C:money}$#1#"
                 }
             },
-            --c_biasedBalance_Vertigo = {
-               -- name = "Vertigo",
-               -- text = {
-               --     "Add a {C:attention}Teal Seal{} to 1 selected card"
-              --  }
-           -- },
+            c_biasedBalance_Vertigo = {
+               name = "Vertigo",
+               text = {
+                "Add a {C:attention}Teal Seal{} to 1 selected card"
+              }
+            },
         },
         Stake = {
             stake_blue = {

@@ -23,7 +23,6 @@ BiasedBalance.Enhancement_Tweaks = {
 }
 
 BiasedBalance.Joker_Tweaks = {
-	"bagel_joker_tweaks",
 	-- Common Jokers --
 	"joker",
 	"greedy_joker",
@@ -63,7 +62,7 @@ BiasedBalance.Joker_Tweaks = {
 	"acrobat",
 	"loyalty_card",
 	"steel_joker",
-	-- "seance",
+	"seance",
 	"troubadour",
 	"rough_gem",
 	"arrowhead",
@@ -99,7 +98,16 @@ BiasedBalance.Consumable_Tweaks = {
     "poker_hands",
 
 	-- Spectrals --
-	
+	-- "familiar",
+	-- "grim",
+	-- "incantation",
+	-- "aura",
+	-- "ankh",
+	-- "wraith",
+	-- "sigil",
+	-- "ouija",
+	-- "immolate",
+	-- "hex",
 }
 
 BiasedBalance.Rarity_Tweaks = {
@@ -285,16 +293,6 @@ BiasedBalance.Joker_Adds = {
 
 BiasedBalance.Spectral_Adds = {
 	"bagel_spectrals",
-	-- "familiar",
-	-- "grim",
-	-- "incantation",
-	-- "aura",
-	-- "ankh",
-	-- "wraith",
-	-- "sigil",
-	-- "ouija",
-	-- "immolate",
-	-- "hex",
 	-- "Conjuration",
 	-- "Phantom",
 	-- "Stain",

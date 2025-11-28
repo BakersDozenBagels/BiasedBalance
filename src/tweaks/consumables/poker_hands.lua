@@ -19,7 +19,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 local poker_hands = {
     -- ["High Card"] = { 1, 15 }, -- Pluto
-    -- ["Pair"] = { 1, 20 }, --Mercury
+    -- ["Pair"] = { 1, 20 }, -- Mercury
     ["Two Pair"] = { 2, 15 }, -- Uranus
     ["Three of a Kind"] = { 2, 20 }, -- Venus
     ["Straight"] = { 3, 40 }, -- Saturn
