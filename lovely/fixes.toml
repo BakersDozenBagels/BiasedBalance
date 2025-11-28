@@ -155,3 +155,48 @@ payload = '''
 if False
 '''
 match_indent = true
+
+# Patch for Square Joker
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Square Joker' and #context.full_hand == 4 and not context.blueprint then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Square Joker' then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+# Patch for Dusk
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "elseif self.ability.name == 'Dusk' then loc_vars = {self.ability.extra+1}"
+position = "at"
+payload = '''
+elseif self.ability.name == 'Dusk' then loc_vars = loc_vars
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Dusk' and G.GAME.current_round.hands_left == 0 then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+
+

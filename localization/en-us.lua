@@ -252,19 +252,38 @@ return {
                     "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
                 },
             },
+            j_dusk = {
+                name = "Dusk",
+                text = {
+                    "This Joker gains {C:mult}+#2#{} Mult",
+                    "for every scoring",
+                    "{C:spades}Spade{} or {C:clubs}Club{} card",
+                    "{C:mult}-#3#{} Mult instead if hand contains",
+                    "a scoring {C:hearts}Heart{} or {C:diamonds}Diamond{} card",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                },
+            },
             j_hit_the_road = {
                 name = "Hit the Road",
                 text = {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "for every {C:attention}Face{} card",
                     "discarded this round",
-                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{} {C:inactive} Mult)",
                 }
+            },
+            j_square = {
+                name = "Square Joker",
+                text = {
+                    "Retrigger played cards",
+                    "if played hand has",
+                    "exactly {C:attention}4{} cards",
+                },
             },
             j_biasedBalance_PitifulJoker = {
                 name = "Pitiful Joker",
                 text = {
-                    "{C:red}+#1#{} Mult",
+                    "{C:mult}+#1#{} Mult",
                     "if hand is played",
                     "with {C:money}$#2#{} or less",
                 }

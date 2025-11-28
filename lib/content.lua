@@ -76,8 +76,8 @@ BiasedBalance.Joker_Tweaks = {
 	"reduced_gratification",
 	"drivers_license",
 	"hit_the_road",
-	-- "dusk",
-	-- "square_joker",
+	"dusk",
+	"square_joker",
 
 	-- Rare Jokers --
 	"vagabond",
@@ -89,7 +89,7 @@ BiasedBalance.Joker_Tweaks = {
 	"stuntman",
 
 	-- Legendary Jokers --
-	-- "yorick",
+	"yorick",
 
 }
 
