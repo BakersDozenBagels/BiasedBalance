@@ -97,15 +97,15 @@ BiasedBalance.Consumable_Tweaks = {
     "poker_hands",
 
 	-- Spectrals --
-	-- "familiar",
+	"familiar",
 	"grim",
-	-- "incantation",
-	-- "aura",
-	-- "ankh",
-	-- "wraith",
-	-- "sigil",
-	-- "ouija",
-	-- "immolate",
+	"incantation",
+	"aura",
+	"ankh",
+	"wraith",
+	"sigil",
+	"ouija",
+	"immolate",
 	"hex",
 }
 

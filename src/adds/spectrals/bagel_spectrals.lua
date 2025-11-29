@@ -1,10 +1,3 @@
-local function lose_up_to(dollars)
-    local lose = math.max(0, math.min(G.GAME.dollars - G.GAME.bankrupt_at, dollars))
-    if lose ~= 0 then
-        ease_dollars(-lose, true)
-    end
-end
-
 SMODS.Consumable {
     key = 'Conjuration',
     set = 'Spectral',

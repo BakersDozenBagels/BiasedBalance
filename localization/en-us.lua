@@ -784,8 +784,8 @@ return {
             c_familiar = {
                 text = {
                     "Destroy {C:attention}#1#{} selected",
-                    "card in your hand, add",
-                    "{C:attention}#2#{} random {C:attention}Enhanced face",
+                    "card in your hand",
+                    "Add {C:attention}#2#{} random {C:attention}Enhanced face",
                     "{C:attention}cards{} to your hand",
                 }
             },
@@ -807,16 +807,16 @@ return {
             c_sigil = {
                 text = {
                     "Converts all cards in",
-                    "hand to {C:attention}selected suit,",
-                    "lose up to {C:money}$#1#",
+                    "hand to {C:attention}selected suit",
+                    "Lose {C:money}$#1#{}, cannot go below {C:money}$0",
                 },
             },
             c_ouija = {
                 text = {
                     "Select {C:attention}#1#{} cards,",
                     "convert the {C:attention}left #2#",
-                    "into the {C:attention}rightmost{} card,",
-                    "lose up to {C:money}$#3#",
+                    "into the {C:attention}rightmost{} card",
+                    "Lose {C:money}$#3#{}, cannot go below {C:money}$0",
                     "{C:inactive}(Drag to rearrange)",
                 },
             },
