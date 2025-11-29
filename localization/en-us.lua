@@ -108,7 +108,16 @@ return {
                 text = { 
                     "{C:chips}#1#{} extra chips" 
                 }
-            }
+            },
+            m_wild={
+                name="Wild Card",
+                text={
+                    "Can be used as",
+                    "any suit",
+                    "Immune to",
+                    "suit-debuffing {C:attention}Blinds{}",
+                },
+            },
         },
         Joker = {
             j_scary_face = {

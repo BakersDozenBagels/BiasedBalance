@@ -18,8 +18,7 @@ BiasedBalance.Edition_Tweaks = {
 }
 
 BiasedBalance.Enhancement_Tweaks = {
-    "enhance",
-	-- "wild",
+	"wild",
 }
 
 BiasedBalance.Joker_Tweaks = {
