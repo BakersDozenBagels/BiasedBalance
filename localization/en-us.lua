@@ -800,8 +800,8 @@ return {
             c_wraith = {
                 text = {
                     "Creates a random",
-                    "{C:red}Rare{C:attention} Joker{},",
-                    "lose up to {C:money}$#1#",
+                    "{C:red}Rare{C:attention} Joker{}",
+                    "Lose {C:money}$#1#{}, cannot go below {C:money}$0",
                 },
             },
             c_sigil = {
