@@ -830,7 +830,7 @@ return {
                 text = {
                     "Add {C:dark_edition}Polychrome{} to a",
                     "random {C:attention}Joker{},",
-                    "lose up to {C:money}$#1#",
+                    "destroy leftmost Joker",
                 }
             },
         c_biasedBalance_Sacrifice2 = {

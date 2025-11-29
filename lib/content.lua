@@ -98,7 +98,7 @@ BiasedBalance.Consumable_Tweaks = {
 
 	-- Spectrals --
 	-- "familiar",
-	-- "grim",
+	"grim",
 	-- "incantation",
 	-- "aura",
 	-- "ankh",
@@ -106,7 +106,7 @@ BiasedBalance.Consumable_Tweaks = {
 	-- "sigil",
 	-- "ouija",
 	-- "immolate",
-	-- "hex",
+	"hex",
 }
 
 BiasedBalance.Rarity_Tweaks = {
