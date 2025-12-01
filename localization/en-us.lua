@@ -926,6 +926,22 @@ return {
             },
         },
         Tag = {
+            tag_uncommon={
+                name="Uncommon Tag",
+                text={
+                    "Shop has a free",
+                    "{C:green}Uncommon Joker",
+                    "without {C:attention}Stickers{}"
+                },
+            },
+            tag_rare={
+                name="Rare Tag",
+                text={
+                    "Shop has a free",
+                    "{C:red}Rare Joker",
+                    "without {C:attention}Stickers{}"
+                },
+            },
             tag_meteor = {
                 text = { 
                     "{C:planet}Upgrades{} all", 

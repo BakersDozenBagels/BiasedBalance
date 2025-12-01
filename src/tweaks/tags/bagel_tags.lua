@@ -17,61 +17,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ]] --
 
-SMODS.Tag:take_ownership("uncommon", {
-    apply = function(self, tag, context)
-        if context.type ~= 'store_joker_create' or tag.triggered then return end
-        tag.triggered = true
-        local card = create_card('Joker', context.area, nil, 0.9, nil, nil, nil, 'uta')
-        create_shop_card_ui(card, 'Joker', context.area)
-        card.states.visible = false
-        if not G.GAME.modifiers.all_eternal then
-            card:set_eternal(false)
-        end
-        card:set_perishable(false)
-        card:set_rental(false)
-        tag:yep('+', G.C.GREEN, function()
-            card:start_materialize()
-            card.ability.couponed = true
-            card:set_cost()
-            return true
-        end)
-        return card
-    end
-})
 
-SMODS.Tag:take_ownership("rare", {
-    apply = function(self, tag, context)
-        if context.type ~= 'store_joker_create' or tag.triggered then return end
-        tag.triggered = true
-        local rares_in_possession = { 0 }
-        for k, v in ipairs(G.jokers.cards) do
-            if v.config.center.rarity == 3 and not rares_in_possession[v.config.center.key] then
-                rares_in_possession[1] = rares_in_possession[1] + 1
-                rares_in_possession[v.config.center.key] = true
-            end
-        end
 
-        if #G.P_JOKER_RARITY_POOLS[3] > rares_in_possession[1] then
-            local card = create_card('Joker', context.area, nil, 1, nil, nil, nil, 'rta')
-            create_shop_card_ui(card, 'Joker', context.area)
-            card.states.visible = false
-            if not G.GAME.modifiers.all_eternal then
-                card:set_eternal(false)
-            end
-            card:set_perishable(false)
-            card:set_rental(false)
-            tag:yep('+', G.C.RED, function()
-                card:start_materialize()
-                card.ability.couponed = true
-                card:set_cost()
-                return true
-            end)
-            return card
-        else
-            tag:nope()
-        end
-    end
-})
+
 
 SMODS.Tag:take_ownership("skip", { config = { type = 'immediate', skip_bonus = 8 } })
 
@@ -237,34 +185,6 @@ SMODS.Tag:take_ownership("juggle", {
 
         if context.type == 'eval' then
             tag.ability.cold = false
-        end
-    end
-})
-
-
-
-SMODS.Tag:take_ownership("economy", {
-    config = {
-        max = 50,
-        min = 6,
-    },
-    loc_vars = function(self, info_queue, tag)
-        return { vars = { self.config.max, self.config.min } }
-    end,
-    apply = function(self, tag, context)
-        if context.type == 'immediate' and not tag.triggered then
-            tag:yep('+', G.C.MONEY, function()
-                return true
-            end)
-            G.E_MANAGER:add_event(Event {
-                trigger = 'immediate',
-                func = function()
-                    ease_dollars(math.max(self.config.min, math.min(self.config.max, math.max(0, G.GAME.dollars))), true)
-                    return true
-                end
-            })
-            tag.triggered = true
-            return true
         end
     end
 })
