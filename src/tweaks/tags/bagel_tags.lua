@@ -21,7 +21,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
 
-SMODS.Tag:take_ownership("skip", { config = { type = 'immediate', skip_bonus = 8 } })
 
 local rare_sticker_tags = { "negative", "foil", "holo", "polychrome" }
 for _, tag_type in ipairs(rare_sticker_tags) do

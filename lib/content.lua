@@ -119,7 +119,7 @@ BiasedBalance.Stake_Tweaks = {
 BiasedBalance.Tag_Tweaks = {
 	"bagel_tags",
 	"economy",
-	-- "speed",
+	"speed",
 	"d6",
 	"handy",
 	"garbage",

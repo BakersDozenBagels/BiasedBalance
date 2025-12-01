@@ -934,6 +934,15 @@ return {
                     "without {C:attention}Stickers{}"
                 },
             },
+            tag_skip={
+                name="Speed Tag",
+                text={
+                    "Gives {C:money}$#2#{}, plus an additional",
+                    "{C:money}$#1#{} for every",
+                    "skipped Blind this run",
+                    "{C:inactive}(Will give {C:money}$#3#{C:inactive})",
+                },
+            },
             tag_rare={
                 name="Rare Tag",
                 text={
