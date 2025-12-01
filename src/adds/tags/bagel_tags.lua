@@ -102,7 +102,7 @@ SMODS.Consumable {
     in_pool = function() return false end,
     can_use = function()
         local count = #G.hand.highlighted
-        return count > 0 and count <= 4
+        return count == 4
     end,
     use = function(self, card)
         G.E_MANAGER:add_event(Event({

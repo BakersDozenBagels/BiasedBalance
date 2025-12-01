@@ -753,8 +753,8 @@ return {
             p_biasedBalance_GigaStandard = {
                 name = 'Giga Standard Pack',
                 text = {
-                    "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2# Playing{} cards to",
+                    "Choose {C:attention}#2#{} of up to",
+                    "{C:attention}#1# Playing{} cards to",
                     "add to your deck",
                 }
             },
@@ -834,7 +834,7 @@ return {
                 }
             },
         c_biasedBalance_Sacrifice2 = {
-                name = 'Sacrifice',
+                name = '...',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
                     "{C:red}destroy{} the left {C:attention}#2#{},",
@@ -942,7 +942,8 @@ return {
             tag_juggle = {
                 text = { 
                     "{C:attention}+#1#{} hand size for", 
-                    "the next {C:attention}#2#{} rounds" 
+                    "the next {C:attention}#2#{} rounds",
+                    "{C:inactive}({C:attention}#3#{C:inactive} rounds left)"
                 }
             },
             tag_garbage = {
