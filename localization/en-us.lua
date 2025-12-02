@@ -926,7 +926,7 @@ return {
             },
         },
         Tag = {
-            tag_uncommon={
+            tag_uncommon_sticker={
                 name="Uncommon Tag",
                 text={
                     "Shop has a free",
@@ -943,7 +943,7 @@ return {
                     "{C:inactive}(Will give {C:money}$#3#{C:inactive})",
                 },
             },
-            tag_rare={
+            tag_rare_sticker={
                 name="Rare Tag",
                 text={
                     "Shop has a free",

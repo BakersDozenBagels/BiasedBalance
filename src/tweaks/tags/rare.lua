@@ -1,4 +1,11 @@
 SMODS.Tag:take_ownership("rare", {
+    loc_vars = function(self, info_queue, card)
+        local vars = { vars = { } }
+        if G.GAME.modifiers.enable_eternals_in_shop then
+            vars.key = 'tag_rare_sticker'
+        end
+        return vars
+    end,
     apply = function(self, tag, context)
         if context.type ~= 'store_joker_create' or tag.triggered then return end
         tag.triggered = true
