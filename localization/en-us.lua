@@ -990,6 +990,42 @@ return {
                     "{C:attention}Giga Standard Pack",
                 }
             },
+            tag_negative_sticker={
+                name="Negative Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Negative",
+                },
+            },
+            tag_polychrome_sticker={
+                name="Polychrome Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Polychrome",
+                },
+            },
+            tag_holo_sticker={
+                name="Holographic Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Holographic",
+                },
+            },
+            tag_foil_sticker={
+                name="Foil Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Foil",
+                },
+            },
             tag_biasedBalance_Utility = {
                 name = 'Utility Tag',
                 text = {

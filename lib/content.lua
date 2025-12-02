@@ -123,7 +123,7 @@ BiasedBalance.Tag_Tweaks = {
 	"d6",
 	"handy",
 	"garbage",
-	-- "juggle",
+	"juggle",
 	-- "charm",
 	--"ethereal",
 	-- "standard",
@@ -131,10 +131,7 @@ BiasedBalance.Tag_Tweaks = {
 	-- "boss",
 	"uncommon",
 	"rare",
-	-- "negative",
-	-- "foil",
-	-- "holographic",
-	-- "polychrome",
+	"editions",
 	-- "buffoon",
 }
 BiasedBalance.Tarot_Tweaks = {
