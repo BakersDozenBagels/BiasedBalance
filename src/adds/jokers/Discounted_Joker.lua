@@ -2,7 +2,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Discounted_Joker",
     pos = {
-        x = 0,
+        x = 12,
         y = 0
     },
     rarity = 1,

@@ -1,9 +1,9 @@
 SMODS.Joker {
     atlas = "Joker",
-    key = "WallPaper",
+    key = "Wallpaper",
     pos = {
-        x = 0,
-        y = 4
+        x = 7,
+        y = 0
     },
     rarity = 1,
     cost = 6,

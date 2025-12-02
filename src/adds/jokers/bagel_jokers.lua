@@ -9,7 +9,7 @@ SMODS.Joker {
     key = "Ballerina",
     atlas = "Joker",
     pos = {
-        x = 0,
+        x = 8,
         y = 0
     },
     rarity = 1,
@@ -57,7 +57,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Practical_Perfectionist",
     pos = {
-        x = 1,
+        x = 9,
         y = 0
     },
     rarity = 1,
@@ -122,7 +122,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Jumbo",
     pos = {
-        x = 3,
+        x = 2,
         y = 0
     },
     rarity = 1,
@@ -151,7 +151,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Caviar",
     pos = {
-        x = 4,
+        x = 3,
         y = 0
     },
     rarity = 1,
@@ -165,8 +165,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "ImpatientJoker",
     pos = {
-        x = 0,
-        y = 1
+        x = 4,
+        y = 0
     },
     rarity = 1,
     cost = 5,
@@ -203,8 +203,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Jokester",
     pos = {
-        x = 1,
-        y = 1
+        x = 5,
+        y = 0
     },
     rarity = 1,
     cost = 4,
@@ -229,8 +229,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "RedSun",
     pos = {
-        x = 2,
-        y = 1
+        x = 8,
+        y = 2
     },
     rarity = 2,
     cost = 6,
@@ -269,8 +269,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Spooky",
     pos = {
-        x = 3,
-        y = 1
+        x = 9,
+        y = 2
     },
     rarity = 2,
     cost = 6,
@@ -328,8 +328,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "WhiteHole",
     pos = {
-        x = 4,
-        y = 1
+        x = 10,
+        y = 2
     },
     rarity = 2,
     cost = 7,
@@ -406,7 +406,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Cinemaphile",
     pos = {
-        x = 0,
+        x = 11,
         y = 2
     },
     rarity = 2,
@@ -431,7 +431,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Trinity",
     pos = {
-        x = 1,
+        x = 12,
         y = 2
     },
     rarity = 2,
@@ -486,8 +486,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Snob",
     pos = {
-        x = 2,
-        y = 2
+        x = 0,
+        y = 3
     },
     rarity = 2,
     cost = 6,
@@ -530,8 +530,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "AlienJoker",
     pos = {
-        x = 4,
-        y = 2
+        x = 1,
+        y = 3
     },
     rarity = 2,
     cost = 6,
@@ -558,7 +558,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "FreeLunch",
     pos = {
-        x = 2,
+        x = 3,
         y = 3
     },
     rarity = 2,
@@ -593,7 +593,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Osmosis",
     pos = {
-        x = 3,
+        x = 10,
         y = 3
     },
     rarity = 2,
@@ -653,8 +653,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Anchor",
     pos = {
-        x = 1,
-        y = 4
+        x = 5,
+        y = 3
     },
     rarity = 2,
     cost = 6,
@@ -831,8 +831,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Peafowl",
     pos = {
-        x = 3,
-        y = 2
+        x = 6,
+        y = 0
     },
     rarity = 1,
     cost = 3,
@@ -873,7 +873,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Chimera",
     pos = {
-        x = 1,
+        x = 2,
         y = 3
     },
     rarity = 2,
@@ -899,8 +899,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Poacher",
     pos = {
-        x = 3,
-        y = 4
+        x = 6,
+        y = 3
     },
     rarity = 2,
     cost = 8,
@@ -968,8 +968,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Toucan",
     pos = {
-        x = 4,
-        y = 4
+        x = 7,
+        y = 3
     },
     rarity = 2,
     cost = 5,
@@ -991,8 +991,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Rivals",
     pos = {
-        x = 0,
-        y = 5
+        x = 1,
+        y = 6
     },
     rarity = 3,
     cost = 8,
@@ -1019,8 +1019,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "BluntedImpact",
     pos = {
-        x = 1,
-        y = 5
+        x = 2,
+        y = 6
     },
     rarity = 3,
     cost = 8,
@@ -1065,8 +1065,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "DeathAndTaxes",
     pos = {
-        x = 2,
-        y = 5
+        x = 3,
+        y = 6
     },
     rarity = 3,
     cost = 7,
@@ -1125,8 +1125,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "FlavourfulJoker",
     pos = {
-        x = 3,
-        y = 5
+        x = 4,
+        y = 6
     },
     rarity = 3,
     cost = 9,
@@ -1189,7 +1189,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Bookworm",
     pos = {
-        x = 1,
+        x = 7,
         y = 6
     },
     rarity = 3,
@@ -1221,7 +1221,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Court",
     pos = {
-        x = 2,
+        x = 8,
         y = 6
     },
     rarity = 3,
@@ -1247,7 +1247,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Parvenu",
     pos = {
-        x = 3,
+        x = 9,
         y = 6
     },
     rarity = 3,
@@ -1273,7 +1273,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Skipper",
     pos = {
-        x = 4,
+        x = 10,
         y = 6
     },
     rarity = 3,
@@ -1300,8 +1300,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Minstrel",
     pos = {
-        x = 0,
-        y = 7
+        x = 11,
+        y = 6
     },
     rarity = 3,
     cost = 8,

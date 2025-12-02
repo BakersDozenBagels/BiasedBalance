@@ -3,7 +3,7 @@ SMODS.Joker {
     key = "Lingering_Resentment",
     pos = {
         x = 0,
-        y = 0
+        y = 5
     },
     rarity = 2,
     cost = 5,

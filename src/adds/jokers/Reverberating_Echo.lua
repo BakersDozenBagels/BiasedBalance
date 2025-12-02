@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Reverberating_Echo",
     pos = {
-        x = 0,
-        y = 0
+        x = 5,
+        y = 5
     },
     rarity = 2,
     cost = 6,

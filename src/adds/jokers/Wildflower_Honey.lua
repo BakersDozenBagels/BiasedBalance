@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Wildflower_Honey",
     pos = {
-        x = 0,
-        y = 0
+        x = 10,
+        y = 4
     },
     rarity = 2,
     cost = 8,

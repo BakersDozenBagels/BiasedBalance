@@ -317,7 +317,7 @@ return {
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)" }
             },
             j_biasedBalance_Jokester = {
-                name = "Terrace",
+                name = "Terrace Garden",
                 text = { "Earn {C:money}$#1#{} per Joker", "at end of round", "{C:inactive}(Will give {C:money}$#2#{C:inactive})" }
             },
             j_biasedBalance_RedSun = {
@@ -501,7 +501,7 @@ return {
                     "{C:attention}+#1#{} hand", "per round"
                 }
             },
-            j_biasedBalance_WallPaper = {
+            j_biasedBalance_Wallpaper = {
                 name = "Wallpaper",
                 text = { 
                     "{C:white,X:mult}X#1#{} Mult if all", 
