@@ -178,13 +178,13 @@ BiasedBalance.Blind_Adds = {-- check names later
 BiasedBalance.Joker_Adds = {
 	"bagel_jokers",
 	-- Common Jokers --
-	-- "Jumbo",
-	-- "Caviar",
-	-- "Impatient_Joker",
+	"Jumbo",
+	"Caviar",
+	"Impatient_Joker",
 	-- "Terrace_Garden",
 	-- "Peafowl",
 	"Wallpaper",
-	-- "Ballerina",
+	"Ballerina",
 	-- "Pratical_Perfectionist",
 	"Wisteria_Joker",
 	-- "Smurf",

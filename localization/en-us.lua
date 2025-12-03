@@ -104,11 +104,6 @@ return {
             },
         },
         Enhanced = {
-            m_bonus = {
-                text = { 
-                    "{C:chips}#1#{} extra chips" 
-                }
-            },
             m_wild={
                 name="Wild Card",
                 text={
