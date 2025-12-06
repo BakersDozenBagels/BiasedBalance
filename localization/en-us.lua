@@ -311,7 +311,7 @@ return {
                     "skipping a Blind",
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)" }
             },
-            j_biasedBalance_Jokester = {
+            j_biasedBalance_Terrace_Garden = {
                 name = "Terrace Garden",
                 text = { "Earn {C:money}$#1#{} per Joker", "at end of round", "{C:inactive}(Will give {C:money}$#2#{C:inactive})" }
             },

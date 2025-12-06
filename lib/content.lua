@@ -181,7 +181,7 @@ BiasedBalance.Joker_Adds = {
 	"Jumbo",
 	"Caviar",
 	"Impatient_Joker",
-	-- "Terrace_Garden",
+	"Terrace_Garden",
 	"Peafowl",
 	"Wallpaper",
 	"Ballerina",
