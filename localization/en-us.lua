@@ -500,10 +500,9 @@ return {
             j_biasedBalance_Wallpaper = {
                 name = "Wallpaper",
                 text = { 
-                    "{C:white,X:mult}X#1#{} Mult if all", 
-                    "cards played and held in hand", 
-                    "are the {C:attention}2{} most common", 
-                    "suits in your full deck" 
+                    "{C:white,X:mult}X#1#{} Mult if cards", 
+                    "held in hand contain", 
+                    "{C:attention}#2#{} suits or less", 
                 }
             },
             j_biasedBalance_Poacher = {

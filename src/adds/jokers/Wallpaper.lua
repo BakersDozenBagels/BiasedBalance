@@ -12,37 +12,51 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-            x_mult = 2 
+            x_mult = 2,
+            suits_allowed = 2
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.x_mult
+                card.ability.extra.x_mult,
+                card.ability.extra.suits_allowed
         } 
     }
     end,
     calculate = function(self, card, context)
-        local suit_checker = nil
-        if context.before then 
-            local suit_count = 0
-            for i, v in ipairs(context.scoring_hand) do
-                if v:is_suit("Hearts") then
-                    suit_count = suit_count + 1
-                elseif v:is_suit("Diamonds") then
-                     suit_count = suit_count + 1
-                elseif v:is_suit("Spades") then
-                    suit_count = suit_count + 1
-                elseif v:is_suit("Clubs") then
-                    suit_count = suit_count + 1
+        local suits = {}
+        for k, _ in pairs(SMODS.Suits) do
+            suits[k] = 0
+        end
+
+        if context.joker_main then
+            for _, card in ipairs(G.hand.cards) do
+                if not SMODS.has_any_suit(card) then
+                    for suit, count in pairs(suits) do
+                        if card:is_suit(suit) and count == 0 then
+                            suits[suit] = count + 1
+                            break
+                        end
+                    end
                 end
             end
-            if suit_count <= 2 then 
-                suit_checker = true
+            for _, card in ipairs(G.hand.cards) do
+                if SMODS.has_any_suit(card) then
+                    for suit, count in pairs(suits) do
+                        if card:is_suit(suit) and count == 0 then
+                            suits[suit] = count + 1
+                            break
+                        end
+                    end
+                end
             end
-        end
-        if context.joker_main then
-            if suit_checker then
+            local num_suits = 0
+
+            for _, v in pairs(suits) do
+                if v > 0 then num_suits = num_suits + 1 end
+            end
+            if num_suits <= card.ability.extra.suits_allowed then 
                 return {
                     xmult = card.ability.extra.x_mult
                 }
