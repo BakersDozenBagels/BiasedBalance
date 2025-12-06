@@ -487,7 +487,8 @@ return {
             j_biasedBalance_Peafowl = {
                 name = "Peafowl",
                 text = {
-                    "{C:attention}Enhancements{} are", "{C:attention}#1#%{} stronger"
+                    "{C:attention}Enhancements{} are", "{C:attention}#1#%{} stronger",
+                    "{C:inactive}(Rounded up)"
                 }
             },
             j_biasedBalance_Chimera = {

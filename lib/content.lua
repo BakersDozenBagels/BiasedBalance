@@ -182,7 +182,7 @@ BiasedBalance.Joker_Adds = {
 	"Caviar",
 	"Impatient_Joker",
 	-- "Terrace_Garden",
-	-- "Peafowl",
+	"Peafowl",
 	"Wallpaper",
 	"Ballerina",
 	-- "Pratical_Perfectionist",
