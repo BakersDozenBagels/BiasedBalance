@@ -178,6 +178,7 @@ BiasedBalance.Blind_Adds = {-- check names later
 BiasedBalance.Joker_Adds = {
 	"bagel_jokers",
 	-- Common Jokers --
+	"Pitiful_Joker",
 	"Jumbo",
 	"Caviar",
 	"Impatient_Joker",
@@ -212,9 +213,9 @@ BiasedBalance.Joker_Adds = {
 	-- "Monument",
 
 	-- Uncommon Jokers --
-	-- "Red_Sun",
+	"Red_Sun",
 	-- "Spooky_Joker",
-	-- "White_Hole",
+	"White_Hole",
 	-- "Cinemaphile",
 	-- "Trinity",
 	-- "Snob",

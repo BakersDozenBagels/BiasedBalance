@@ -1,84 +1,4 @@
 
-
-SMODS.Joker {
-    atlas = "Joker",
-    key = "PitifulJoker",
-    pos = {
-        x = 1,
-        y = 0
-    },
-    rarity = 1,
-    cost = 3,
-    blueprint_compat = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    config = {
-        extra = {
-            mult = 12,
-            money = 10
-        }
-    },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.mult, card.ability.extra.money } }
-    end,
-    calculate = function(self, card, context)
-        if context.joker_main and G.GAME.dollars <= card.ability.extra.money then
-            return {
-                mult = card.ability.extra.mult
-            }
-        end
-    end
-}
-
-
-
-
-
-
-
---#endregion
-
---#region Uncommon Jokers
-SMODS.Joker {
-    atlas = "Joker",
-    key = "RedSun",
-    pos = {
-        x = 8,
-        y = 2
-    },
-    rarity = 2,
-    cost = 6,
-    blueprint_compat = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    config = { extra = 2.5 },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra } }
-    end,
-    calculate = function(self, card, context)
-        if context.joker_main then
-            local h, d, w = 0, 0, 0
-            for k, v in pairs(context.scoring_hand) do
-                if SMODS.has_any_suit(v) or (v:is_suit("Diamonds") and v:is_suit("Hearts")) then
-                    w = w + 1
-                elseif v:is_suit("Diamonds") then
-                    d = 1
-                elseif v:is_suit("Hearts") then
-                    h = 1
-                elseif not SMODS.has_no_suit(v) then
-                    return
-                end
-            end
-            if h + d + w >= 2 then
-                return {
-                    x_mult = card.ability.extra
-                }
-            end
-        end
-    end
-}
-
-local edition_buffer = {}
 SMODS.Joker {
     atlas = "Joker",
     key = "Spooky",
@@ -98,120 +18,26 @@ SMODS.Joker {
     calculate = function(self, card, context)
         if context.before then
             if pseudorandom(pseudoseed 'j_biasedBalance_Spooky') < G.GAME.probabilities.normal / card.ability.extra then
-                local eligible = {}
-                for _, v in ipairs(context.scoring_hand) do
-                    if not v.edition and not edition_buffer[v] then
-                        eligible[#eligible + 1] = v
-                    end
-                end
-                if #eligible > 0 then
-                    local apply = pseudorandom_element(eligible, pseudoseed 'j_biasedBalance_Spooky')
+                    local cards = {}
                     local edition = poll_edition('j_biasedBalance_Spooky', nil, nil, true, {
                         { name = 'e_foil',       weight = 30 },
                         { name = 'e_holo',       weight = 22.5 },
                         { name = 'e_negative',   weight = 32.5 },
                         { name = 'e_polychrome', weight = 15 },
                     })
-                    edition_buffer[apply] = true
-                    juice_card(context.blueprint_card or card)
-                    apply:set_edition(edition, true, true)
-                    G.E_MANAGER:add_event(Event {
-                        blockable = false,
-                        blocking = false,
-                        func = function()
-                            apply:set_edition(nil, true, true)
-                            return true
+                    for i = 1, #context.scoring_hand do
+                        if context.scoring_hand[i]:get_edition() == nil then
+                            table.insert(cards, context.scoring_hand[i])
                         end
-                    })
-                    G.E_MANAGER:add_event(Event {
-                        func = function()
-                            apply:set_edition(edition, true)
-                            edition_buffer = {}
-                            return true
+                    end
+                    G.E_MANAGER:add_event(Event({trigger = 'after', func = function()
+                        if cards and #cards > 0 then
+                            --card:juice_up(0.7)
+                            cards[math.random(#cards)]:set_edition(edition, true)
                         end
-                    })
-                    delay(0.2)
+                    return true end}))
                 end
-            end
             return {}, true
-        end
-    end
-}
-
-SMODS.Joker {
-    atlas = "Joker",
-    key = "WhiteHole",
-    pos = {
-        x = 10,
-        y = 2
-    },
-    rarity = 2,
-    cost = 7,
-    blueprint_compat = true,
-    eternal_compat = false,
-    perishable_compat = true,
-    config = { extra = { rounds = 0, rounds_needed = 2 } },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.rounds_needed, card.ability.extra.rounds } }
-    end,
-    calculate = function(self, card, context)
-        if context.end_of_round and not context.individual and not context.repetition and not context.blueprint then
-            card.ability.extra.rounds = card.ability.extra.rounds + 1
-            if card.ability.extra.rounds == card.ability.extra.rounds_needed then
-                juice_card_until(card, function(x) return not x.REMOVED end, true)
-            end
-            return {
-                message = (card.ability.extra.rounds < card.ability.extra.rounds_needed) and
-                    (card.ability.extra.rounds .. '/' .. card.ability.extra.rounds_needed) or localize('k_active_ex'),
-                colour = G.C.FILTER
-            }
-        end
-        if context.selling_self and card.ability.extra.rounds >= card.ability.extra.rounds_needed and not context.blueprint then
-            update_hand_text({ sound = 'button', volume = 0.7, pitch = 0.8, delay = 0.3 },
-                { handname = localize('k_all_hands'), chips = '...', mult = '...', level = '' })
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after',
-                delay = 0.2,
-                func = function()
-                    play_sound('tarot1')
-                    card:juice_up(0.8, 0.5)
-                    G.TAROT_INTERRUPT_PULSE = true
-                    return true
-                end
-            }))
-            update_hand_text({ delay = 0 }, { mult = '+', StatusText = true })
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after',
-                delay = 0.9,
-                func = function()
-                    play_sound('tarot1')
-                    card:juice_up(0.8, 0.5)
-                    return true
-                end
-            }))
-            update_hand_text({ delay = 0 }, { chips = '+', StatusText = true })
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after',
-                delay = 0.9,
-                func = function()
-                    play_sound('tarot1')
-                    card:juice_up(0.8, 0.5)
-                    G.TAROT_INTERRUPT_PULSE = nil
-                    return true
-                end
-            }))
-            update_hand_text({ sound = 'button', volume = 0.7, pitch = 0.9, delay = 0 }, { level = '+1' })
-            delay(1.3)
-            for k, v in pairs(G.GAME.hands) do
-                level_up_hand(card, k, true)
-            end
-            update_hand_text({ sound = 'button', volume = 0.7, pitch = 1.1, delay = 0 },
-                { mult = 0, chips = 0, handname = '', level = '' })
-        end
-    end,
-    load = function(self, card, card_table, other_card)
-        if card_table.ability.extra.rounds >= card_table.ability.extra.rounds_needed then
-            juice_card_until(card, function(x) return not x.REMOVED end, true)
         end
     end
 }
