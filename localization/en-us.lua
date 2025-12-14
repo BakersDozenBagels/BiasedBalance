@@ -315,6 +315,16 @@ return {
                 name = "Terrace Garden",
                 text = { "Earn {C:money}$#1#{} per Joker", "at end of round", "{C:inactive}(Will give {C:money}$#2#{C:inactive})" }
             },
+            j_biasedBalance_Ballerina = {
+                name = "Ballerina",
+                text = {
+                    "Playing {C:attention}3{} consecutive hands with", 
+                    "{C:attention}#1#{} scoring cards without playing",
+                    "the same hand twice in a row",
+                    "gives {C:money}$#2#{} and upgrades level of",
+                    "one of those hands"
+                }
+            },
             j_biasedBalance_RedSun = {
                 name = "Red Sun",
                 text = { "{X:mult,C:white}X#1#{} Mult if played hand", "contains both a {C:diamonds}Diamond{} and {C:hearts}Heart", "card and no other suits" }
