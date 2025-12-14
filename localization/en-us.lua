@@ -522,8 +522,8 @@ return {
             j_biasedBalance_Practical_Perfectionist = {
                 name = "Practical Perfectionist",
                 text = { 
-                    "Any scoring hands with {C:attention}+5",
-                    "earn {C:gold}$#1#{}"
+                    "Playing a hand with {C:attention}5",
+                    "scoring cards gives {C:gold}$#1#{}"
                  }
             },
             j_biasedBalance_Toucan = {

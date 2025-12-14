@@ -186,7 +186,7 @@ BiasedBalance.Joker_Adds = {
 	"Peafowl",
 	"Wallpaper",
 	"Ballerina",
-	-- "Pratical_Perfectionist",
+	"Practical_Perfectionist",
 	"Wisteria_Joker",
 	-- "Smurf",
 	-- "Discounted_Joker",
