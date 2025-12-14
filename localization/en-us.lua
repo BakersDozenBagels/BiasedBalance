@@ -519,6 +519,11 @@ return {
                 name = "Poacher",
                 text = { "{C:green}#1# in #2#{} chance to", "enhance each", "scored card to {C:attention}Wild" }
             },
+            j_biasedBalance_Smurf = {
+                name = "Smurf",
+                text = { "Only {C:attention}Mega{} booster packs",
+                    "appear in the shop" }
+            },
             j_biasedBalance_Practical_Perfectionist = {
                 name = "Practical Perfectionist",
                 text = { 
