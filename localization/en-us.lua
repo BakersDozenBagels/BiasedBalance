@@ -526,19 +526,18 @@ return {
                     "scoring cards gives {C:gold}$#1#{}"
                  }
             },
-            j_biasedBalance_Toucan = {
-                name = "Toucan",
-                text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
-            },
             j_biasedBalance_Wisteria_Joker = {
                 name = "Wisteria Joker",
                 text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{C:chips}+#1#{} Chips if",
-                    "Any scoring hands with {C:attention}+5",
-                    "cards or {C:chips}-#2#{} chips if not",
-                    "Currently: {C:chips}+#3#{} Chips"
+                    "This {C:attention}Joker{} gains {C:chips}+#1#{} Chips",
+                    "if hand contains {C:attention}5{} scoring cards",
+                    "{C:chips}-#2#{} chips if not",
+                    "{C:inactive}(Currently: {C:chips}+#3#{C:inactive} Chips)"
                 }
+            },
+            j_biasedBalance_Toucan = {
+                name = "Toucan",
+                text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
             },
             j_biasedBalance_Everhungry_Joker = {
                 name = "Everhungry Joker",

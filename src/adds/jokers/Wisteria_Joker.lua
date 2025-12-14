@@ -27,16 +27,26 @@ SMODS.Joker {
         } }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and #context.full_hand == card.ability.extra.size then
-            card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
-        else
-            local prev_chips = card.ability.extra.chips
-            card.ability.extra.chips = math.max(0, card.ability.extra.chips - card.ability.extra.chip_lose)
-            if card.ability.extra.chips ~= prev_chips then
+        if context.joker_main then
+            if card.ability.extra.chips > 0 then
                 return {
-                   chips = card.ability.extra.chips
-                    }
+                    chips = card.ability.extra.chips
+                }
             end
+        end
+        if context.before and not context.blueprint and context.main_eval and #context.scoring_hand >= card.ability.extra.size then
+            card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_gain
+            return {
+                message = localize { type = 'variable', key = 'a_chips', vars = { card.ability.extra.chip_gain } },
+                colour = G.C.BLUE
+            }
+        end
+        if context.before and not context.blueprint and context.main_eval and #context.scoring_hand < card.ability.extra.size then
+            card.ability.extra.chips = math.max(0, card.ability.extra.chips - card.ability.extra.chip_lose)
+            return {
+                message = localize { type = 'variable', key = 'a_chips_minus', vars = { card.ability.extra.chip_lose } },
+                colour = G.C.BLUE
+            }
         end
     end
 }
