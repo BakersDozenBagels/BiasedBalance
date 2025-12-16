@@ -661,6 +661,14 @@ return {
                     "{C:attention}level{} of played hand"
                 }
             },
+            j_biasedBalance_Discounted_Joker = {
+                name = "Discounted Joker",
+                text = { 
+                    "Once per round, spending {C:money}$#1#{} in",
+                    "the shop creates a {C:tarot}Tarot{} card",
+                    "{C:inactive}(Currently {C:money}$#2#{C:inactive}/{C:money}$#1#{C:inactive})",
+                }
+            },
             j_biasedBalance_Solitude = {
                 name = "Solitude",
                 text = { 

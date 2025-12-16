@@ -189,7 +189,7 @@ BiasedBalance.Joker_Adds = {
 	"Practical_Perfectionist",
 	"Wisteria_Joker",
 	"Smurf",
-	-- "Discounted_Joker",
+	"Discounted_Joker",
 	-- "Jokerdex",
 	"Last_Dance",
 	"Everhungry_Joker",
