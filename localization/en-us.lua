@@ -657,8 +657,8 @@ return {
             j_biasedBalance_Hypernova = {
                 name = "Hypernova",
                 text = { 
-                    "This {C:attention}Joker gives",
-                    "{C:mult}+3{} Mult for every level of played hand"
+                    "{C:mult}+#1#{} Mult for every",
+                    "{C:attention}level{} of played hand"
                 }
             },
             j_biasedBalance_Solitude = {
