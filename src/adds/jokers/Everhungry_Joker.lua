@@ -28,8 +28,7 @@ SMODS.Joker {
         if context.using_consumeable then
             card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
             return {
-                message = "+1 Mult!",
-                colour = G.C.MULT
+                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_gain } }
             }
         end
         if context.joker_main then 

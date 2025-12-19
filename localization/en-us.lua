@@ -545,12 +545,12 @@ return {
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
             },
             j_biasedBalance_Everhungry_Joker = {
-                name = "Everhungry Joker",
+                name = "Ever-Hungry Joker",
                 text = { 
                     "This {C:attention}Joker{} gains",
-                    "{C:mult}+#1#{} Mult if",
-                    "Any consumable is used",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "{C:mult}+#1#{} Mult when a",
+                    "{C:attention}consumable{} is used",
+                    "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Last_Dance = {
