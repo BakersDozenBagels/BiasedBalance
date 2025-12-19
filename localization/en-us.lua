@@ -567,6 +567,15 @@ return {
                     "scoring hand has",
                 }
             },
+            j_biasedBalance_Conspiracy = {
+                name = "Conspiracy",
+                text = { 
+                    "After {C:attention}#1#{} round, sell this Joker to",
+                    "{C:attention}upgrade{} every secret poker hand",
+                    "and create a {C:spectral}Spectral{} card",
+                    "{C:inactive}(Currently {C:attention}#2#{C:inactive}/#1#, must have room)",
+                }
+            },
             j_biasedBalance_Kestrel = {
                 name = "Kestrel",
                 text = { 
