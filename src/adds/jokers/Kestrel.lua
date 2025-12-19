@@ -17,24 +17,21 @@ SMODS.Joker {
         } 
     },
     loc_vars = function(self, info_queue, card)
+        local driver_tally = 0
+        for _, playing_card in pairs(G.playing_cards or {}) do
+            if next(SMODS.get_enhancements(playing_card)) then driver_tally = driver_tally + 1 end
+        end
         return { 
             vars = { 
                 card.ability.extra.mult_gain,
-                card.ability.extra.mult
+                card.ability.extra.mult_gain * driver_tally
         } 
     }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
              for _, c in ipairs(G.playing_cards or {}) do
-                if SMODS.has_enhancement(c, 'm_bonus') or 
-                SMODS.has_enhancement(c, 'm_mult') or
-                SMODS.has_enhancement(c, 'm_wild') or
-                SMODS.has_enhancement(c, 'm_glass') or
-                SMODS.has_enhancement(c, 'm_steel') or
-                SMODS.has_enhancement(c, 'm_stone') or
-                SMODS.has_enhancement(c, 'm_gold') or
-                SMODS.has_enhancement(c, 'm_lucky') then
+                if next(SMODS.get_enhancements(c)) then
                     card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
                 end
             end

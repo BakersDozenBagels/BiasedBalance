@@ -562,9 +562,9 @@ return {
             j_biasedBalance_Kestrel = {
                 name = "Kestrel",
                 text = { 
-                    "{C:mult}+#1#{} Mult for every",
-                    "enhanced cards in deck",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "{C:mult}+#1#{} Mult for every {C:attention}Enhanced",
+                    "card in your full deck",
+                    "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Mystery_Box = {
