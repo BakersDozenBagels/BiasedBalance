@@ -739,8 +739,15 @@ return {
             j_biasedBalance_Joker_In_The_High_Castle = {
                 name = "Joker In The High Castle",
                 text = { 
-                    "Retrigger the first card {C:attention}2{} Times",
-                    "If it has an ability"
+                    "Retrigger the first card scoring {C:attention}2",
+                    "times if it has an ability"
+                }
+            },
+            j_biasedBalance_Short_Fuse = {
+                name = "Short Fuse",
+                text = { 
+                    "Retrigger the first {C:attention}scored{} card",
+                    "and first {C:attention}held in hand{} ability"
                 }
             },
             j_biasedBalance_Eldritch_Joker= {
