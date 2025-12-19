@@ -190,7 +190,7 @@ BiasedBalance.Joker_Adds = {
 	"Wisteria_Joker",
 	"Smurf",
 	"Discounted_Joker",
-	-- "Jokerdex",
+	"Jokerdex",
 	"Last_Dance",
 	"Everhungry_Joker",
 	"Hypernova",

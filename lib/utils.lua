@@ -7,6 +7,15 @@ function BiasedBalance.file_loader(items, path)
   end
 end
 
+local init_game_object_ref = Game.init_game_object
+function Game.init_game_object(self)
+  local ret = init_game_object_ref(self)
+  ret.Biased_Balance = {
+  }
+  return ret
+end
+
+
 -- Iterates over two tables in sequence
 local function two_pairs(a, b)
     local next, t, k = pairs(a)

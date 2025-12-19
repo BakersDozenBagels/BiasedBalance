@@ -669,6 +669,14 @@ return {
                     "{C:inactive}(Currently {C:money}$#2#{C:inactive}/{C:money}$#1#{C:inactive})",
                 }
             },
+            j_biasedBalance_Jokerdex = {
+                name = "Jokerdex",
+                text = { 
+                    "{C:red}+#1#{} Mult for every",
+                    "{C:attention}unique{} Joker purchased",
+                    "{C:inactive}(Currently {C:red}+#2#{C:inactive})",
+                }
+            },
             j_biasedBalance_Solitude = {
                 name = "Solitude",
                 text = { 
