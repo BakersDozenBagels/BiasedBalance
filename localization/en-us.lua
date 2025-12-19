@@ -559,6 +559,14 @@ return {
                     "Retrigger {C:attention}2{} last scoring cards"
                 }
             },
+            j_biasedBalance_Subversive_Joker = {
+                name = "Subversive Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every",
+                    "{C:attention}#2#{} chips your current",
+                    "scoring hand has",
+                }
+            },
             j_biasedBalance_Kestrel = {
                 name = "Kestrel",
                 text = { 

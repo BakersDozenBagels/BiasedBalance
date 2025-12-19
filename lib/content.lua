@@ -195,7 +195,7 @@ BiasedBalance.Joker_Adds = {
 	"Everhungry_Joker",
 	"Hypernova",
 	"Kestrel",
-	-- "Subversive_Joker",
+	"Subversive_Joker",
 	-- "Conspiracy",
 	-- "Short_Fuse",
 	-- "Eclectic_Joker",
