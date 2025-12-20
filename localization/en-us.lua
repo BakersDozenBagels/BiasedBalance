@@ -325,6 +325,16 @@ return {
                     "one of those hands"
                 }
             },
+            j_biasedBalance_Eclectic_Joker = {
+                name = "Eclectic Joker",
+                text = {
+                    "{C:mult}+#1#{} Mult per hand that isn't", 
+                    "the same as the previous",
+                    "{C:attention}2{} scored hands",
+                    "{C:mult}-#2#{} Mult otherwise",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_RedSun = {
                 name = "Red Sun",
                 text = { "{X:mult,C:white}X#1#{} Mult if played hand", "contains both a {C:diamonds}Diamond{} and {C:hearts}Heart", "card and no other suits" }
