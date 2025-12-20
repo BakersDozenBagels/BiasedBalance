@@ -9,7 +9,7 @@ SMODS.Joker {
     cost = 3,
     blueprint_compat = true,
     eternal_compat = true,
-    perishable_compat = true,
+    perishable_compat = false,
     config = {
         extra = {
             a_mult = 3,

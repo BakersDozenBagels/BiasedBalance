@@ -25,9 +25,14 @@ SMODS.Joker {
     }
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play then
+        if context.individual and context.cardarea == G.play and not context.blueprint then
             if context.other_card then
                 card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
+                return {
+                    message = localize('k_upgrade_ex'),
+                    colour = G.C.MULT,
+                    message_card = card
+                }
             end
         end
         if context.joker_main then
@@ -35,11 +40,10 @@ SMODS.Joker {
                 xmult = card.ability.extra.xmult
             }
         end
-        if context.end_of_round then
-           card.ability.extra.xmult = 0 
+        if context.end_of_round and context.game_over == false and context.main_eval then
+           card.ability.extra.xmult = 1
            return {
-                message = "Reset!",
-                colour = G.C.FILTER
+                message = localize('k_reset')
            }
         end
     end

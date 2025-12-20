@@ -199,7 +199,7 @@ BiasedBalance.Joker_Adds = {
 	"Conspiracy",
 	"Short_Fuse",
 	"Eclectic_Joker",
-	-- "Eldritch_Joker",
+	"Eldritch_Joker",
 	-- "Ominous_Concotion",
 	-- "Platinum_Joker",
 	-- "The_Missing_Piece",

@@ -763,10 +763,10 @@ return {
             j_biasedBalance_Eldritch_Joker= {
                 name = "Eldritch Joker",
                 text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{X:mult,C:white}X#1#{} Mult after every",
-                    "card scored in played hands",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "for every card scored during",
+                    "the round",
+                    "{C:inactive}Currently: {X:mult,C:white}X#2#{C:inactive} Mult"
                 }
             },
             j_biasedBalance_Lingering_Resentment= {
