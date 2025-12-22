@@ -766,7 +766,16 @@ return {
                     "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
                     "for every card scored during",
                     "the round",
-                    "{C:inactive}Currently: {X:mult,C:white}X#2#{C:inactive} Mult"
+                    "{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Ominous_Concoction= {
+                name = "Ominous Concoction",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:chips}-#2#{} Chips per ante",
+                    "{C:inactive}(Currently {C:chips}-#3#{C:inactive} Chips)",
+                    "{C:inactive}(Cannot reduce chips below {C:attention}5{C:inactive})"
                 }
             },
             j_biasedBalance_Lingering_Resentment= {
