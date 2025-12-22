@@ -31,6 +31,21 @@ local function two_pairs(a, b)
     end
 end
 
+-- Returns the number of redeemed vouchers in the current run
+function redeemed_voucher_count()
+    if G.GAME and G.GAME.used_vouchers then
+        local used_voucher = 0
+        for k, _ in pairs(G.GAME.used_vouchers) do
+            used_voucher = used_voucher + 1
+        end
+        if used_voucher > 0 then
+            return used_voucher
+        end
+    end
+    return 0
+end
+
+
 -- Used for Troubadour and Minstrel
 local raw_G_FUNCS_can_discard = G.FUNCS.can_discard
 function G.FUNCS.can_discard(e)

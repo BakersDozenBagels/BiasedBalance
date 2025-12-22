@@ -14,7 +14,8 @@
         "add_tag",
         "Tag",
         "peafowl_enhancement_calc",
-        "peafowl_original_values"
+        "peafowl_original_values",
+        "redeemed_voucher_count"
     ],
     "Lua.diagnostics.disable": [
         "empty-block"

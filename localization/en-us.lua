@@ -594,6 +594,14 @@ return {
                     "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_The_Missing_Piece = {
+                name = "The Missing Piece",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every {C:attention}Voucher",
+                    "redeemed this run",
+                    "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Mystery_Box = {
                 name = "Mystery Box",
                 text = { 
