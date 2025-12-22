@@ -778,6 +778,21 @@ return {
                     "{C:inactive}(Cannot reduce chips below {C:attention}5{C:inactive})"
                 }
             },
+            j_biasedBalance_Platinum_Joker= {
+                name = "Platinum Joker",
+                text = { 
+                    "Earn {C:gold}$#1#{} at the end of the round",
+                    "if you have at most {C:gold}$#2#{}"
+                }
+            },
+            j_biasedBalance_plat_collection = {
+                name = "Platinum Joker",
+                text = { 
+                    "Earn {C:gold}$#1#{} at the end of the round",
+                    "if you have less than or equal to",
+                    "your {C:gold}money{} when buying this Joker"
+                }
+            },
             j_biasedBalance_Lingering_Resentment= {
                 name = "Lingering Resentment",
                 text = { 
