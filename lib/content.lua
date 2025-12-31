@@ -204,7 +204,7 @@ BiasedBalance.Joker_Adds = {
 	"Platinum_Joker",
 	"The_Missing_Piece",
 	"Mystery_Box",
-	-- "Submarine_Joker",
+	"Submarine_Joker",
 	-- "Envious_Joker",
 	-- "Listless_Joker",
 	-- "Toolkit",

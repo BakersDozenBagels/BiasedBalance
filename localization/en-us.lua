@@ -547,7 +547,7 @@ return {
                     "This {C:attention}Joker{} gains {C:chips}+#1#{} Chips",
                     "if hand contains {C:attention}5{} scoring cards",
                     "{C:chips}-#2#{} chips if not",
-                    "{C:inactive}(Currently: {C:chips}+#3#{C:inactive} Chips)"
+                    "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)"
                 }
             },
             j_biasedBalance_Toucan = {
@@ -560,7 +560,7 @@ return {
                     "This {C:attention}Joker{} gains",
                     "{C:mult}+#1#{} Mult when a",
                     "{C:attention}consumable{} is used",
-                    "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Last_Dance = {
@@ -591,7 +591,7 @@ return {
                 text = { 
                     "{C:mult}+#1#{} Mult for every {C:attention}Enhanced",
                     "card in your full deck",
-                    "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_The_Missing_Piece = {
@@ -599,7 +599,7 @@ return {
                 text = { 
                     "{C:mult}+#1#{} Mult for every {C:attention}Voucher",
                     "redeemed this run",
-                    "{C:inactive}(Currently: {C:mult}+#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Mystery_Box = {
@@ -618,13 +618,21 @@ return {
                     "This {C:attention}Joker{} gains {C:gold}$1{} "
                 }
             },
+            j_biasedBalance_Submarine_Joker = {
+                name = "Submarine Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every unique",
+                    "hand played this round",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Stairs = {
                 name = "Stairs",
                 text = { 
                     "This Joker gives {X:mult,C:white}X#1#{} Mult",
                     "When a straight is discarded",
                      "only the first hand for each round",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "Currently {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_Dark_Forest = {
@@ -633,7 +641,7 @@ return {
                     "This Joker loses {X:mult,C:white}X#1#{} Mult",
                     "For every {C:hearts}Heart{} or {C:diamonds} Diamond",
                     "card in your deck",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "Currently {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_Crystal_Cave = {
@@ -642,7 +650,7 @@ return {
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
                     "For every {C:hearts}Heart{} or {C:diamonds}Diamond{} scored",
                     "Resets at end of round",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "Currently {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_End_Of_Days = {
@@ -657,7 +665,7 @@ return {
                 text = { 
                     "This Joker loses {X:mult,C:white}#1#{} Mult",
                     "for every reroll used",
-                    "Currently: {X:mult,C:white}#2#{} Mult"
+                    "Currently {X:mult,C:white}#2#{} Mult"
                 }
             },
             j_biasedBalance_Wildflower_Honey = {
@@ -726,7 +734,7 @@ return {
                     "This {C:attention}Joker{} gains",
                     "{X:mult,C:white}X#1#{} Mult every {C:attention}#3#{} times",
                     "A {C:attention}4 or 8{} is scored",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "Currently {X:mult,C:white}X#2#{} Mult"
                 }
             },
             j_biasedBalance_Gourmet = {
@@ -736,7 +744,7 @@ return {
                     "This {C:attention}Joker{} gains {C:mult}+#1#{} Mult",
                     "For every consumable used",
                     "Resets every {C:attention}Boss Blind",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "Currently {C:mult}+#2#{} Mult"
                 }
             },
             j_biasedBalance_Rhododendron = {
@@ -751,7 +759,7 @@ return {
                 text = { 
                     "{C:mult}+#1#{} Mult for every scored", 
                     "{C:}Face card in played hands",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "Currently {C:mult}+#2#{} Mult"
                 }
             },
             j_biasedBalance_Joker_In_The_High_Castle = {
@@ -774,7 +782,7 @@ return {
                     "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
                     "for every card scored during",
                     "the round",
-                    "{C:inactive}(Currently: {X:mult,C:white}X#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Ominous_Concoction= {
