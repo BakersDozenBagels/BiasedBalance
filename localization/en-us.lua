@@ -626,6 +626,15 @@ return {
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_Envious_Joker = {
+                name = "Envious Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult",
+                    "{C:mult}-#2#{} Mult for every",
+                    "Non-{C:blue}Common{} Joker owned",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Stairs = {
                 name = "Stairs",
                 text = { 
