@@ -786,6 +786,15 @@ return {
                     "times if it has an ability"
                 }
             },
+            j_biasedBalance_Toolkit = {
+                name = "Toolkit",
+                text = { 
+                    "Create a Utility {C:attention}Joker{}",
+                    "with an {C:dark_edition}Edition{} when a",
+                    "Blind is skipped",
+                    "{S:1.1,C:red,E:2}self destructs{}",
+                }
+            },
             j_biasedBalance_Short_Fuse = {
                 name = "Short Fuse",
                 text = { 
@@ -1230,6 +1239,7 @@ return {
             k_booster_group_p_biasedBalance_Sacrifice = 'Sacrifice',
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
             k_booster_group_p_biasedBalance_LowStickerBuffoon = 'Mega Buffoon Pack',
+            k_biasedBalance_utility = 'Utility!',
             k_biasedBalance_noRepeats = 'No repeat hand types',
             k_no_joker = "No Joker!",
             k_disabled = "Disabled!",

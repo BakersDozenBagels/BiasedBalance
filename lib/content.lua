@@ -230,7 +230,7 @@ BiasedBalance.Joker_Adds = {
 	"Submarine_Joker",
 	"Envious_Joker",
 	"Listless_Joker",
-	-- "Toolkit",
+	"Toolkit",
 	-- "Shy_Joker",
 	-- "Alchemist",
 	-- "Monument",
