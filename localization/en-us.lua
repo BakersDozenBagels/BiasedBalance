@@ -764,6 +764,15 @@ return {
                     "Currently {C:mult}+#2#{} Mult"
                 }
             },
+            j_biasedBalance_Shy_Joker = {
+                name = "Shy Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult", 
+                    "Discards all {C:attention}Face Cards{}",
+                    "held in hand when a hand",
+                    "is played"
+                }
+            },
             j_biasedBalance_Rhododendron = {
                 name = "Rhododendron",
                 text = { 
