@@ -232,7 +232,7 @@ BiasedBalance.Joker_Adds = {
 	"Listless_Joker",
 	"Toolkit",
 	"Shy_Joker",
-	-- "Alchemist",
+	"Alchemist",
 	-- "Monument",
 
 	-- Uncommon Jokers --

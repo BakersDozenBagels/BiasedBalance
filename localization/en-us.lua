@@ -773,6 +773,14 @@ return {
                     "is played"
                 }
             },
+            j_biasedBalance_Alchemist = {
+                name = "Alchemist",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "gain {C:blue}+#1#{} Hand and",
+                    "{C:red}-#2#{} Discard",
+                },
+            },
             j_biasedBalance_Rhododendron = {
                 name = "Rhododendron",
                 text = { 
@@ -1252,6 +1260,9 @@ return {
             k_biasedBalance_noRepeats = 'No repeat hand types',
             k_no_joker = "No Joker!",
             k_disabled = "Disabled!",
+        },
+        v_dictionary = {
+            a_biasedBalance_m_discards = "-#1# Discards",
         },
         text = {
             biasedBalance_none = "None"
