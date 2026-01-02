@@ -843,7 +843,7 @@ return {
             },
         },
         Other = {
-            p_biasedBalance_Utility = {
+            p_biasedBalance_UtilityPack = {
                 name = 'Utility Pack',
                 text = {
                     "Choose {C:attention}#1#{} of up to",

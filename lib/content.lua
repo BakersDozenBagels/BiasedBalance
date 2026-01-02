@@ -92,6 +92,24 @@ BiasedBalance.Joker_Tweaks = {
 
 }
 
+BiasedBalance.vanilla_utility = {
+	j_chaos = true,
+	j_space = true,
+	j_splash = true,
+	j_juggler = true,
+	j_drunkard = true,
+	j_four_fingers = true,
+	j_pareidolia = true,
+	j_burglar = true,
+	j_shortcut = true,
+	j_midas_mask = true,
+	j_troubadour = true,
+	j_smeared = true,
+	j_ring_master = true,
+	j_merry_andy = true,
+	j_oops = true,
+}
+
 BiasedBalance.Consumable_Tweaks = {
 	-- Planets --
     "poker_hands",
@@ -320,6 +338,7 @@ BiasedBalance.Voucher_Adds = {
 }
 
 BiasedBalance.Seal_Adds = {
+	"utilitypack",
 	--"Tangerine",
 	--"Teal",
 }

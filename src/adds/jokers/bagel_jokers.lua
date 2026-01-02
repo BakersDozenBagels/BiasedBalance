@@ -6,6 +6,9 @@ SMODS.Joker {
         x = 9,
         y = 2
     },
+    pools = {
+        Utility = true
+    },
     rarity = 2,
     cost = 6,
     blueprint_compat = true,
@@ -328,6 +331,9 @@ SMODS.Joker {
     },
     rarity = 2,
     cost = 7,
+    pools = {
+        Utility = true
+    },
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,

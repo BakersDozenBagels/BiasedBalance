@@ -1,11 +1,12 @@
 local b_std = SMODS.Booster {
     key = 'GigaStandard',
     no_collection = true,
-    pos = { x = 2, y = 7 },
     config = {
         extra = 8,
         choose = 4
     },
+    atlas = "Boosters",
+	pos = { x = 2, y = 0 },
     weight = 0,
     loc_vars = function()
         return { vars = { 8, 4 } }

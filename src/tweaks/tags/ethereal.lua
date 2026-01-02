@@ -5,7 +5,6 @@ SMODS.Tag:take_ownership("ethereal", {
         }
     },
     unlocked = true,
-    discovered = true,
     apply = function(self, tag, context)
 		if context.type == "new_blind_choice" then
             local lock = tag.ID

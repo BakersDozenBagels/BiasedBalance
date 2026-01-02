@@ -27,6 +27,15 @@ SMODS.load_file("lib/pools.lua")()
 -- Lovely Fixes
 SMODS.load_file("lovely/fixes.toml")
 
+-- Initialize Pool for Utility
+if not SMODS.ObjectTypes.Utility then
+  SMODS.ObjectType {
+    key = 'Utility',
+    default = 'j_chaos',
+    cards = copy_table(BiasedBalance.vanilla_utility),
+  }
+end
+
 -- TWEAKS
 BiasedBalance.file_loader(BiasedBalance.Back_Tweaks, "src/tweaks/backs")
 BiasedBalance.file_loader(BiasedBalance.Blind_Tweaks, "src/tweaks/blinds")
@@ -93,3 +102,10 @@ SMODS.Atlas {
   --  px = 71,
   --  py = 95
 --}
+
+SMODS.Atlas {
+    key = "Boosters",
+    path = "Boosters.png",
+    px = 71,
+    py = 95
+}
