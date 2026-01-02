@@ -788,6 +788,15 @@ return {
                     "contains at least {C:attention}#2#{} ranks"
                 }
             },
+            j_biasedBalance_Monument = {
+                name = "Monument",
+                text = { 
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "if played hand contains a", 
+                    "scoring {C:attention}Face{} card",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Esteemed_Audience = {
                 name = "Esteemed Audience",
                 text = { 
