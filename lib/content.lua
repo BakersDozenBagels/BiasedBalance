@@ -108,6 +108,11 @@ BiasedBalance.vanilla_utility = {
 	j_ring_master = true,
 	j_merry_andy = true,
 	j_oops = true,
+	j_hanging_chad = true,
+	j_mime = true,
+	j_hack = true,
+	j_seltzer = true,
+	j_sock_and_buskin = true,
 }
 
 BiasedBalance.Consumable_Tweaks = {
@@ -224,7 +229,7 @@ BiasedBalance.Joker_Adds = {
 	"Mystery_Box",
 	"Submarine_Joker",
 	"Envious_Joker",
-	-- "Listless_Joker",
+	"Listless_Joker",
 	-- "Toolkit",
 	-- "Shy_Joker",
 	-- "Alchemist",

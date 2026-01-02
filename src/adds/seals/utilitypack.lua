@@ -16,17 +16,3 @@ SMODS.Booster {
         return create_card("Utility", G.pack_cards, nil, nil, true, false, nil, "Utility_Pack")
     end
 }
---[[
-Chaos The Clown, 
-Splash, 
-Juggler, 
-Drunkard, 
-Four Fingers, 
-Pareidolia, 
-Burglar, 
-Shortcut, 
-Midas Mask, 
-Smeared Joker, 
-Showman, 
-Merry Andy, Oops! All 6s, Hanging Chad, Mime, Hack, Seltzer, Sock and Bustin, Minstrel, Poacher, 
-Burnt Joker, Astronomer, Spice, Granite Joker, Last Dance, Propitious Joker, Shape Shifter, Jester, Negative Norman, Negative Nancy, Smurf, Light in the tunnel]]

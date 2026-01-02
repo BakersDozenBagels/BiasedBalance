@@ -669,6 +669,14 @@ return {
                     "If your deck has {C:attention}10{} or less cards"
                 }
             },
+            j_biasedBalance_Listless_Joker = {
+                name = "Listless Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult if a {C:attention}Joker{}",
+                    "was not purchased during",
+                    "the previous shop"
+                }
+            },
             j_biasedBalance_Pierogi = {
                 name = "Pierogi",
                 text = { 
@@ -1224,6 +1232,7 @@ return {
             k_booster_group_p_biasedBalance_LowStickerBuffoon = 'Mega Buffoon Pack',
             k_biasedBalance_noRepeats = 'No repeat hand types',
             k_no_joker = "No Joker!",
+            k_disabled = "Disabled!",
         },
         text = {
             biasedBalance_none = "None"
