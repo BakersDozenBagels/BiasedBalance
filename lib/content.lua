@@ -237,9 +237,9 @@ BiasedBalance.Joker_Adds = {
 
 	-- Uncommon Jokers --
 	"Red_Sun",
-	-- "Spooky_Joker",
+	"Spooky_Joker",
 	"White_Hole",
-	-- "Cinemaphile",
+	"Cinemaphile",
 	-- "Trinity",
 	-- "Snob",
 	-- "Alien_Joker",

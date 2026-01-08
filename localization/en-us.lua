@@ -349,7 +349,7 @@ return {
             j_biasedBalance_Cinemaphile = {
                 name = "Cinemaphile",
                 text = { "Sell this card to",
-                    "add a {C:attention}Voucher{} to the shop", }
+                    "create a {C:attention}Voucher{} tag", }
             },
             j_biasedBalance_Trinity = {
                 name = "Trinity",
@@ -501,7 +501,7 @@ return {
                 text = {
                     "{C:green}#1# in #2#{} chance to",
                     "add a random {C:dark_edition}edition{}",
-                    "to a random played card"
+                    "to a random scored card"
                 }
             },
             j_biasedBalance_Peafowl = {

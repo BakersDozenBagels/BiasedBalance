@@ -24,9 +24,6 @@ SMODS.load_file("lib/content.lua")() -- Definitions
 SMODS.load_file("lib/utils.lua")() -- Utility functions built
 SMODS.load_file("lib/pools.lua")()
 
--- Lovely Fixes
-SMODS.load_file("lovely/fixes.toml")
-
 -- Initialize Pool for Utility
 if not SMODS.ObjectTypes.Utility then
   SMODS.ObjectType {
