@@ -14,6 +14,7 @@ SMODS.Joker {
     end
 }
 
+local unpack = table.unpack or unpack
 local raw_Card_set_cost = Card.set_cost
 function Card:set_cost(...)
     if self.config.center.key == 'j_biasedBalance_FreeLunch' then
@@ -30,5 +31,5 @@ function Card:set_cost(...)
         self.sell_cost_label = self.facing == 'back' and '?' or self.sell_cost
     end
 
-    return table.unpack(ret)
+    return unpack(ret)
 end

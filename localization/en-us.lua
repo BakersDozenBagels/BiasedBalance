@@ -400,8 +400,8 @@ return {
             j_biasedBalance_Anchor = {
                 name = "The Anchor",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult if current",
-                    "score has {C:chips}#2#{} Chips or more"
+                    "{X:mult,C:white}X#1#{} Mult if current score",
+                    "has {C:attention}#2#{} Chips or more"
                 }
             },
             j_biasedBalance_Rivals = {
@@ -575,7 +575,7 @@ return {
                 text = { 
                     "{C:mult}+#1#{} Mult for every",
                     "{C:attention}#2#{} chips your current",
-                    "scoring hand has",
+                    "score has",
                 }
             },
             j_biasedBalance_Conspiracy = {
