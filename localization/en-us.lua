@@ -514,7 +514,8 @@ return {
             j_biasedBalance_Chimera = {
                 name = "Chimera",
                 text = {
-                    "{C:attention}+#1#{} hand", "per round"
+                    "When {C:attention}Blind{} is selected,",
+                    "gain {C:blue}+#1#{} Hand",
                 }
             },
             j_biasedBalance_Wallpaper = {

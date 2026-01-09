@@ -1,42 +1,5 @@
 
 
-SMODS.Joker {
-    atlas = "Joker",
-    key = "Trinity",
-    pos = {
-        x = 12,
-        y = 2
-    },
-    rarity = 2,
-    cost = 6,
-    blueprint_compat = true,
-    eternal_compat = true,
-    perishable_compat = true,
-    config = { extra = { x_mult = 2, suits = 3 } },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.x_mult, card.ability.extra.suits } }
-    end,
-    calculate = function(self, card, context)
-        if context.joker_main then
-            local t = 0
-            local suits = {}
-            for _, v in pairs(context.scoring_hand) do
-                if SMODS.has_any_suit(v) then
-                    t = t + 1
-                elseif not suits[v.base.suit] then
-                    suits[v.base.suit] = true
-                    t = t + 1
-                end
-            end
-            if t >= card.ability.extra.suits then
-                return {
-                    x_mult = card.ability.extra.x_mult
-                }
-            end
-        end
-    end
-}
-
 local function count_snob()
     if not G.playing_cards then return 0 end
 
@@ -83,16 +46,12 @@ SMODS.Joker {
     end
 }
 
-local function big(x)
-    return to_big and to_big(x) or x
-end
-
 local function count_alien(level)
     if not G.GAME or not G.GAME.hands then return 0 end
 
     local count = 0
     for k, v in pairs(G.GAME.hands) do
-        if v.visible and big(v.level or 0) >= big(level) then
+        if v.visible and v.level or 0 >= level then
             count = count + 1
         end
     end
@@ -216,7 +175,7 @@ SMODS.Joker {
         return { vars = { card.ability.extra.x_mult, card.ability.extra.money } }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and not context.individual and big(G.GAME.dollars + (G.GAME.dollar_buffer or 0)) >= big(card.ability.extra.money) then
+        if context.joker_main and not context.individual and G.GAME.dollars + (G.GAME.dollar_buffer or 0) >= card.ability.extra.money then
             return { x_mult = card.ability.extra.x_mult }
         end
     end
@@ -244,7 +203,7 @@ SMODS.Joker {
         return { vars = { card.ability.extra.x_mult, card.ability.extra.chips } }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and not context.individual and big(hand_chips) >= big(card.ability.extra.chips) then
+        if context.joker_main and not context.individual and hand_chips >= card.ability.extra.chips then
             return { x_mult = card.ability.extra.x_mult }
         end
     end
@@ -252,34 +211,7 @@ SMODS.Joker {
 
 
 
-SMODS.Joker {
-    atlas = "Joker",
-    key = "Chimera",
-    pos = {
-        x = 2,
-        y = 3
-    },
-    rarity = 2,
-    cost = 7,
-    pools = {
-        Utility = true
-    },
-    blueprint_compat = false,
-    eternal_compat = true,
-    perishable_compat = true,
-    config = { extra = 1 },
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra } }
-    end,
-    add_to_deck = function(self, card)
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra
-        ease_hands_played(card.ability.extra)
-    end,
-    remove_from_deck = function(self, card)
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands - card.ability.extra
-        ease_hands_played(-card.ability.extra)
-    end
-}
+
 
 SMODS.Joker {
     atlas = "Joker",
