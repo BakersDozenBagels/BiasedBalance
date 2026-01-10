@@ -247,7 +247,7 @@ BiasedBalance.Joker_Adds = {
 	"Free_Lunch",
 	"Leprechaun",
 	"The_Anchor",
-	-- "Poacher",
+	"Poacher",
 	"Toucan",
 	"Esteemed_Audience",
 	"Shameless_Profit",

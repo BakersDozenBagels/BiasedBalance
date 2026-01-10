@@ -484,7 +484,7 @@ return {
             j_biasedBalance_Minstrel = {
                 name = "Minstrel",
                 text = {
-                    "{C:attention}+#1#{} discards,",
+                    "{C:red}+#1#{} discards,",
                     "discard at most {C:attention}#2#{}",
                     "cards at once"
                 }
@@ -528,7 +528,7 @@ return {
             },
             j_biasedBalance_Poacher = {
                 name = "Poacher",
-                text = { "{C:green}#1# in #2#{} chance to", "enhance each", "scored card to {C:attention}Wild" }
+                text = { "{C:green}#1# in #2#{} chance for", "unenhanced scored cards", "to become {C:attention}Wild{} Cards" }
             },
             j_biasedBalance_Smurf = {
                 name = "Smurf",
@@ -1270,6 +1270,7 @@ return {
             k_biasedBalance_noRepeats = 'No repeat hand types',
             k_no_joker = "No Joker!",
             k_disabled = "Disabled!",
+            k_biasedBalance_pow = "BANG!",
         },
         v_dictionary = {
             a_biasedBalance_m_discards = "-#1# Discards",
