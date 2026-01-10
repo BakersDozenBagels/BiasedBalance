@@ -7,35 +7,32 @@ SMODS.Joker {
     },
     rarity = 2,
     cost = 7,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     config = { 
         extra = { 
-            money = 3
+            money = 3,
+            money_add = 1
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.money
+                card.ability.extra.money, card.ability.extra.money_add
         } 
     }
     end,
     calculate = function(self, card, context)
         if context.skip_blind then
-            card.ability.extra.money = card.ability.extra.money + 1
+            card.ability.extra.money = card.ability.extra.money + card.ability.extra.money_add
             return {
-                message = "+$1",
-                colour = G.C.GOLD
-            }
-        end
-        if context.end_of_round and context.cardarea == G.jokers then
-            ease_dollars((G.GAME.skips or 0) *card.ability.extra.money)
-            return {
-                message = "+$" .. card.ability.extra.money,
-                colour = G.C.GOLD
+                message = localize('k_upgrade_ex'),
+                colour = G.C.MONEY
             }
         end
     end,
+    calc_dollar_bonus = function(self, card)
+        return card.ability.extra.money
+    end
 }
