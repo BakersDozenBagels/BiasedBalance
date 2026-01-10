@@ -803,7 +803,7 @@ return {
                 text = { 
                     "{C:mult}+#1#{} Mult for every scored", 
                     "{C:}Face card in played hands",
-                    "Currently {C:mult}+#2#{} Mult"
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Joker_In_The_High_Castle = {
