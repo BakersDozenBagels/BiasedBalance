@@ -21,7 +21,8 @@ SMODS.Joker {
         return { 
             vars = { 
                 card.ability.extra.mult_gain,
-                card.ability.extra.mult
+                card.ability.extra.mult,
+                card.ability.extra.slots
         } 
     }
     end,
@@ -35,8 +36,7 @@ SMODS.Joker {
         if context.using_consumeable then
             card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
             return {
-                message = "+3 Mult!",
-                colour = G.C.FILTER
+                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
             }
         end
         if context.joker_main then
@@ -44,12 +44,14 @@ SMODS.Joker {
                 mult = card.ability.extra.mult
             }
         end
-        if context.round_eval and G.GAME.last_blind and G.GAME.last_blind.boss then
-            card.ability.extra.mult = 0
-            return {
-                message = "Reset!",
-                colour = G.C.FILTER
-            }
+        if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+            if G.GAME.blind.boss and card.ability.extra.mult > 0 then
+                card.ability.extra.mult = 0
+                return {
+                    message = localize('k_reset'),
+                    colour = G.C.RED
+                }
+            end
         end
     end
 }

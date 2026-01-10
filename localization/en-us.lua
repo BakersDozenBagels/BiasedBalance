@@ -759,11 +759,11 @@ return {
             j_biasedBalance_Gourmet = {
                 name = "Gourmet",
                 text = { 
-                    "{C:attention}+1{} Consumable Slot",
+                    "{C:attention}+#3#{} Consumable Slot",
                     "This {C:attention}Joker{} gains {C:mult}+#1#{} Mult",
-                    "For every consumable used",
+                    "for every consumable used",
                     "Resets every {C:attention}Boss Blind",
-                    "Currently {C:mult}+#2#{} Mult"
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Shy_Joker = {
