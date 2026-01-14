@@ -12,31 +12,41 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-            xmult = 3,
-            xmult_gain = .07
+            xmult_base = 3,
+            xmult_gain = .07,
+            xmult = 3
         } 
     },
     loc_vars = function(self, info_queue, card)
+        card.ability.extra.xmult = card.ability.extra.xmult_base
+        if G.playing_cards then
+            for _, c in ipairs(G.playing_cards) do
+                if c:is_suit("Diamonds") and not SMODS.has_any_suit(card) then
+                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                elseif c:is_suit("Hearts") and not SMODS.has_any_suit(card) then
+                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                end
+            end
+        end
         return { 
             vars = { 
                 card.ability.extra.xmult_gain,
-                card.ability.extra.xmult
-        } 
+                math.max(1, card.ability.extra.xmult)
+            } 
     }
     end,
     calculate = function(self, card, context)
-        if context.before then
-        for _, c in ipairs(G.playing_cards or {}) do
-            if c:is_suit("Diamonds") then
-                card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
-            elseif c:is_suit("Hearts") then
-                card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
-            end
-        end
-        end
         if context.joker_main then
+            card.ability.extra.xmult = card.ability.extra.xmult_base
+            for _, c in ipairs(G.playing_cards or {}) do
+                if c:is_suit("Diamonds") and not SMODS.has_any_suit(card) then
+                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                elseif c:is_suit("Hearts") and not SMODS.has_any_suit(card) then
+                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                end
+            end
             return {
-                xmult = card.ability.extra.xmult
+                xmult = math.max(1, card.ability.extra.xmult)
             }
         end
     end

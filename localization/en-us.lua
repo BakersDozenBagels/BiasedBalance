@@ -651,9 +651,9 @@ return {
                 name = "Dark Forest",
                 text = { 
                     "This Joker loses {X:mult,C:white}X#1#{} Mult",
-                    "For every {C:hearts}Heart{} or {C:diamonds} Diamond",
-                    "card in your deck",
-                    "Currently {X:mult,C:white}X#2#{} Mult"
+                    "for every {C:hearts}Heart{} or {C:diamonds}Diamond",
+                    "card in your full deck",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Crystal_Cave = {
