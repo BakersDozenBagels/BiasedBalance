@@ -257,7 +257,7 @@ BiasedBalance.Joker_Adds = {
 	"Dark_Forest",
 	"Crystal_Cave",
 	-- "Stage_Fright",
-	-- "Dusk",
+	"Dawn",
 	"End_Of_Days",
 	-- "Unusual_Joker",
 	-- "Joker_In_A_High_Castle",
