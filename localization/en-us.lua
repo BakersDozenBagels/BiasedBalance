@@ -660,9 +660,9 @@ return {
                 name = "Crystal Cave",
                 text = { 
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
-                    "For every {C:hearts}Heart{} or {C:diamonds}Diamond{} scored",
-                    "Resets at end of round",
-                    "Currently {X:mult,C:white}X#2#{} Mult"
+                    "for every {C:hearts}Heart{} or {C:diamonds}Diamond{}",
+                    "scored this round",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_End_Of_Days = {
