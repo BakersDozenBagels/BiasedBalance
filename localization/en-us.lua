@@ -638,12 +638,13 @@ return {
                 }
             },
             j_biasedBalance_Stairs = {
-                name = "Stairs",
+                name = "The Stairs",
                 text = { 
-                    "This Joker gives {X:mult,C:white}X#1#{} Mult",
-                    "When a straight is discarded",
-                     "only the first hand for each round",
-                    "Currently {X:mult,C:white}X#2#{} Mult"
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "when a discard contains",
+                    "a {C:attention}Straight",
+                    "{C:inactive}(Once per round)",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Dark_Forest = {
@@ -744,7 +745,7 @@ return {
                 text = { 
                     "This {C:attention}Joker{} gives",
                     "{X:mult,C:white}X#1#{} Mult if",
-                    "Scoring hand doesn't contain a {C:attention}Pair"
+                    "scoring hand doesn't contain a {C:attention}Pair"
                 }
             },
             j_biasedBalance_Ouroboros = {
