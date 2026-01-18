@@ -378,6 +378,16 @@ return {
                     "{C:inactive}Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_StageFright = {
+                name = "Stage Fright",
+                text = {
+                    "During {C:attention}first hand{} of round",
+                    "this Joker gains {C:chips}+#1#{} Chips",
+                    "for every {C:attention}Face{} card",
+                    "held in hand",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                },
+            },
             j_biasedBalance_AlienJoker = {
                 name = "Alien Joker",
                 text = {

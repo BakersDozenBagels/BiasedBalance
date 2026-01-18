@@ -256,7 +256,7 @@ BiasedBalance.Joker_Adds = {
 	"Gourmet",
 	"Dark_Forest",
 	"Crystal_Cave",
-	-- "Stage_Fright",
+	"Stage_Fright",
 	"Dawn",
 	"End_Of_Days",
 	-- "Unusual_Joker",
