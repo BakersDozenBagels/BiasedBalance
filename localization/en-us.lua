@@ -739,6 +739,14 @@ return {
                     "{X:mult,C:white}#1#{} Mult for every scoring card"
                 }
             },
+            j_biasedBalance_Unusual_Joker = {
+                name = "Unusual Joker",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult for every",
+                    "{C:blue}Common{} Joker owned",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Hypernova = {
                 name = "Hypernova",
                 text = { 
