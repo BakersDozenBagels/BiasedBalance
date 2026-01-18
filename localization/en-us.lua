@@ -690,7 +690,8 @@ return {
                 name = "End Of Days",
                 text = { 
                     "Create a random {C:dark_edition}Spectral{} card",
-                    "If your deck has {C:attention}10{} or less cards"
+                    "after defeating a blind on",
+                    "final {C:attention}hand{} of round"
                 }
             },
             j_biasedBalance_Listless_Joker = {
