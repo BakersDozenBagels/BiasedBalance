@@ -388,6 +388,14 @@ return {
                     "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
                 },
             },
+            j_biasedBalance_Chisel = {
+                name = "Chisel",
+                text = {
+                    "During {C:attention}first hand{} of round",
+                    "a random played and {C:attention}unscoring{}",
+                    "card becomes a {C:attention}Stone{} card",
+                },
+            },
             j_biasedBalance_AlienJoker = {
                 name = "Alien Joker",
                 text = {
@@ -1305,6 +1313,7 @@ return {
             k_no_joker = "No Joker!",
             k_disabled = "Disabled!",
             k_biasedBalance_pow = "BANG!",
+            k_biasedBalance_stone = "Stone!",
         },
         v_dictionary = {
             a_biasedBalance_m_discards = "-#1# Discards",
