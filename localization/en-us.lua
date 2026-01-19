@@ -713,9 +713,9 @@ return {
             j_biasedBalance_Pierogi = {
                 name = "Pierogi",
                 text = { 
-                    "This Joker loses {X:mult,C:white}#1#{} Mult",
+                    "This Joker loses {X:mult,C:white}X#1#{} Mult",
                     "for every reroll used",
-                    "Currently {X:mult,C:white}#2#{} Mult"
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Wildflower_Honey = {
