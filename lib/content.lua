@@ -260,7 +260,7 @@ BiasedBalance.Joker_Adds = {
 	"Dawn",
 	"End_Of_Days",
 	"Unusual_Joker",
-	-- "Joker_In_A_High_Castle",
+	"Joker_In_The_High_Castle",
 	-- "Chisel",
 	-- "Granite_Joker",
 	"Pierogi",

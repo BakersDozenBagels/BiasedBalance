@@ -839,10 +839,12 @@ return {
                 }
             },
             j_biasedBalance_Joker_In_The_High_Castle = {
-                name = "Joker In The High Castle",
+                name = "Joker In A High Castle",
                 text = { 
-                    "Retrigger the first card scoring {C:attention}2",
-                    "times if it has an ability"
+                    "Retrigger {C:attention}first{} card with",
+                    "an ability held in hand",
+                    "{C:attention}#1#{} additional times",
+                    "if it has an ability"
                 }
             },
             j_biasedBalance_Toolkit = {
