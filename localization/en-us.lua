@@ -730,9 +730,9 @@ return {
             j_biasedBalance_Wildflower_Honey = {
                 name = "Wildflower Honey",
                 text = { 
-                    "Gain {C:gold}$#1#{} every skipped",
-                    "{C:attention}Blind{} or end of round",
-                    "Decreases $ each time trigger"
+                    "{C:gold}$#1#{} at end of round",
+                    "or when {C:attention}Blind{} is skipped",
+                    "{C:gold}-$#1#{} when triggered"
                 }
             },
             j_biasedBalance_Haunted_House = {
