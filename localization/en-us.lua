@@ -710,6 +710,15 @@ return {
                     "the previous shop"
                 }
             },
+            j_biasedBalance_Granite_Joker = {
+                name = "Granite Joker",
+                text = { 
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "whenever a {C:attention}Stone{} card is",
+                    "enhanced or added to your deck",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Pierogi = {
                 name = "Pierogi",
                 text = { 

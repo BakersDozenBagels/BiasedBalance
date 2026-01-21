@@ -262,7 +262,7 @@ BiasedBalance.Joker_Adds = {
 	"Unusual_Joker",
 	"Joker_In_The_High_Castle",
 	"Chisel",
-	-- "Granite_Joker",
+	"Granite_Joker",
 	"Pierogi",
 	"Wildflower_Honey",
 	-- "Spare_Joker",
