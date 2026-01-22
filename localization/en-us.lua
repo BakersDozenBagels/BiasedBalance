@@ -580,6 +580,15 @@ return {
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)"
                 }
             },
+            j_biasedBalance_Spare_Joker = {
+                name = "Spare Joker",
+                text = { 
+                    "{C:chips}+#1#{} Chips if hand contains an",
+                    "{C:attention}unscoring{} card",
+                    "{C:chips}+#2#{} additional Chips for every",
+                    "additional {C:attention}unscoring{} card",
+                }
+            },
             j_biasedBalance_Toucan = {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
