@@ -747,9 +747,9 @@ return {
             j_biasedBalance_Haunted_House = {
                 name = "Haunted House",
                 text = { 
-                    "When a {C:attention}Full House{} is scored",
                     "{C:green}#1# in #2#{} chance to create",
-                    "A random {C:dark_edition}Spectral{} card"
+                    "a random {C:dark_edition}Spectral{} card",
+                    "when a {C:attention}Full House{} is played",
                 }
             },
             j_biasedBalance_Negative_Norman = {
