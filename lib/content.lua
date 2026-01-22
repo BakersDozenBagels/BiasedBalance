@@ -199,7 +199,6 @@ BiasedBalance.Blind_Adds = {-- check names later
 }
 
 BiasedBalance.Joker_Adds = {
-	"bagel_jokers",
 	-- Common Jokers --
 	"Pitiful_Joker",
 	"Jumbo",
@@ -283,17 +282,17 @@ BiasedBalance.Joker_Adds = {
 	-- "Mecha_Joker",
 
 	-- Rare Jokers --
-	-- "The_Rivals",
-	-- "Blunted_Impact",
-	-- "Death_And_Taxes",
-	-- "Flavourful_Joker",
+	"The_Rivals",
+	"Blunted_Impact",
+	"Death_And_Taxes",
+	"Flavourful_Joker",
 	-- "Melancholic_Joker",
-	-- "Brash_Gambler",
-	-- "Bookworm",
-	-- "The_Court",
-	-- "The_Parvenu",
-	-- "Skipper",
-	-- "Minstrel",
+	"Brash_Gambler",
+	"Bookworm",
+	"The_Court",
+	"The_Parvenu",
+	"Skipper",
+	"Minstrel",
 	-- "Spice",
 	-- "Yodeller",
 	-- "Singularity",
