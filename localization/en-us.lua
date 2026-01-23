@@ -399,9 +399,10 @@ return {
             j_biasedBalance_AlienJoker = {
                 name = "Alien Joker",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult per Poker Hand",
-                    "leveled {C:attention}#2#{} or higher",
-                    "{C:inactive}Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
+                    "{X:mult,C:white}X#1#{} Mult for every",
+                    "unique {C:planet}Planet{} used",
+                    "twice this run",
+                    "{C:inactive}Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_FreeLunch = {
