@@ -765,7 +765,7 @@ return {
                 name = "Negative Norman",
                 text = { 
                     "When a {C:attention}Boss Blind{} is defeated",
-                    "Create a {C:attention}Negative tag"
+                    "create a {C:attention}#1#"
                 }
             },
             j_biasedBalance_Reverberating_Echo = {

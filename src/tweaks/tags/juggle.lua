@@ -2,7 +2,7 @@ SMODS.Tag:take_ownership("juggle", {
     config = {
         h_size = 2,
         rounds = 3,
-        base_rounds = 2
+        base_rounds = 3
     },
     loc_vars = function(self, info_queue, tag)
         return { vars = { self.config.h_size, self.config.base_rounds, tag.ability and tag.ability.rounds or self.config.rounds } }
