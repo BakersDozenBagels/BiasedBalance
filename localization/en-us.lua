@@ -396,6 +396,14 @@ return {
                     "card becomes a {C:attention}Stone{} card",
                 },
             },
+            j_biasedBalance_Negative_Nancy = {
+                name = "Negative Nancy",
+                text = {
+                    "This Joker gives {C:dark_edition}Negative{} edition",
+                    "to a random card in played hand",
+                    "after scoring {C:attention}#1#{C:inactive} [#2#] cards"
+                },
+            },
             j_biasedBalance_AlienJoker = {
                 name = "Alien Joker",
                 text = {
@@ -1328,6 +1336,7 @@ return {
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
             k_booster_group_p_biasedBalance_LowStickerBuffoon = 'Mega Buffoon Pack',
             k_biasedBalance_utility = 'Utility!',
+            k_biasedBalance_negative = 'Negative!',
             k_biasedBalance_noRepeats = 'No repeat hand types',
             k_no_joker = "No Joker!",
             k_disabled = "Disabled!",
