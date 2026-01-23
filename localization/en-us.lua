@@ -780,7 +780,8 @@ return {
             j_biasedBalance_Reverberating_Echo = {
                 name = "Reverberating Echo",
                 text = { 
-                    "{X:mult,C:white}#1#{} Mult for every scoring card"
+                    "Played cards give",
+                    "{X:mult,C:white}X#1#{} Mult when scored"
                 }
             },
             j_biasedBalance_Unusual_Joker = {
@@ -825,10 +826,10 @@ return {
             j_biasedBalance_Ouroboros = {
                 name = "Ouroboros",
                 text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{X:mult,C:white}X#1#{} Mult every {C:attention}#3#{} times",
-                    "A {C:attention}4 or 8{} is scored",
-                    "Currently {X:mult,C:white}X#2#{} Mult"
+                    "This Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "every {C:attention}#4#{C:inactive} [#3#]{} times",
+                    "a {C:attention}4 {}or {C:attention}8{} is scored",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Gourmet = {
