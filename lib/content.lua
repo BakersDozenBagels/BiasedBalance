@@ -270,7 +270,7 @@ BiasedBalance.Joker_Adds = {
 	"Knave",
 	"Negative_Nancy",
 	"Negative_Norman",
-	-- "Rhyme_Time",
+	"Rhyme_Time",
 	"Reverberating_Echo",
 	"Ouroboros",
 	"Solitude",
