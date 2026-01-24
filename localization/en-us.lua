@@ -617,7 +617,16 @@ return {
                     "This Joker{} gains",
                     "{C:mult}+#1#{} Mult when a",
                     "{C:attention}consumable{} is used",
-                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                    "{C:inactive}(Currently {C:money}$#2#{C:inactive})"
+                }
+            },
+            j_biasedBalance_Cietrzew = {
+                name = "Cietrzew",
+                text = { 
+                    "Earn {C:money}$#1#{} at end of",
+                    "round for every unique",
+                    "{C:attention}Enhancement{} in your full deck",
+                    "{C:inactive}(Will give {C:money}$#2#{C:inactive})"
                 }
             },
             j_biasedBalance_Star_Fall = {
