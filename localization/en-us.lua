@@ -422,6 +422,15 @@ return {
                     "{C:inactive}Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_Yodeller = {
+                name = "Yodeller",
+                text = {
+                    "{C:attention}+#1#{} hand size for every hand",
+                    "at level {C:planet}5{} or higher",
+                    "{C:inactive}(max +#3# hand size)",
+                    "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size)",
+                }
+            },
             j_biasedBalance_FreeLunch = {
                 name = '"Free" Lunch',
                 text = {

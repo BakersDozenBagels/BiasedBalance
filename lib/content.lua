@@ -294,7 +294,7 @@ BiasedBalance.Joker_Adds = {
 	"Skipper",
 	"Minstrel",
 	"Spice",
-	-- "Yodeller",
+	"Yodeller",
 	-- "Singularity",
 	-- "Prehistoric_Joker",
 	-- "Shapeshifter",
@@ -303,7 +303,6 @@ BiasedBalance.Joker_Adds = {
 	-- "Propitious_Joker",
 	-- "Light_In_The_Tunnel",
 	-- "Aristocrat",
-
 
 	-- Legendary Jokers --
 	-- "Pippi_Panini",
