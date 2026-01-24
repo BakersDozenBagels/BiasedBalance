@@ -907,6 +907,14 @@ return {
                     "deck with the same rank",
                 }
             },
+            j_biasedBalance_Mecha_Joker = {
+                name = "Mecha-Joker",
+                text = { 
+                    "Once per ante, create a",
+                    "{C:attention}#1#{} at",
+                    "end of shop"
+                }
+            },
             j_biasedBalance_Joker_In_The_High_Castle = {
                 name = "Joker In A High Castle",
                 text = { 

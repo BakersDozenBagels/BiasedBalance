@@ -279,7 +279,7 @@ BiasedBalance.Joker_Adds = {
 	"Cietrzew",
 	"Platinum_Ticket",
 	"Strength_In_Numbers",
-	-- "Mecha_Joker",
+	"Mecha_Joker",
 
 	-- Rare Jokers --
 	"The_Rivals",
