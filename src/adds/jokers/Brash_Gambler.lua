@@ -2,7 +2,7 @@ SMODS.Joker {
     atlas = "Joker",
     key = "BrashGambler",
     pos = {
-        x = 0,
+        x = 6,
         y = 6
     },
     rarity = 3,
@@ -23,12 +23,10 @@ SMODS.Joker {
                 }
             end
             if pseudorandom('j_biasedBalance_BrashGambler') * card.ability.extra.odds1 < G.GAME.probabilities.normal then
-                res = {
-                    x_mult = card.ability.extra.mult1,
-                    extra = res
-                }
+                res = res or {}
+                res.x_mult = (res.x_mult or 1) * card.ability.extra.mult1
             end
-            return res, true
+            return res
         end
     end
 }
