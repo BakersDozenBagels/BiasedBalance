@@ -6,7 +6,7 @@ SMODS.Joker {
         y = 6
     },
     rarity = 3,
-    cost = 7,
+    cost = 9,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -23,7 +23,7 @@ SMODS.Joker {
             card.ability.extra.active = true
             juice_card_until(card, function() return card.ability.extra.active end, true)
             return {
-                message = localize 'k_active'
+                message = localize('k_active_ex')
             }
         end
 
@@ -35,25 +35,5 @@ SMODS.Joker {
         if card_table.ability.extra.active then
             juice_card_until(card, function() return card.ability.extra.active end, true)
         end
-    end,
-    add_to_deck = function(self, card, from_debuff)
-        G.E_MANAGER:add_event(Event({
-            func = function()
-                for k, v in pairs(G.I.CARD) do
-                    if v.set_cost then v:set_cost() end
-                end
-                return true
-            end
-        }))
-    end,
-    remove_from_deck = function(self, card, from_debuff)
-        G.E_MANAGER:add_event(Event({
-            func = function()
-                for k, v in pairs(G.I.CARD) do
-                    if v.set_cost then v:set_cost() end
-                end
-                return true
-            end
-        }))
     end
 }

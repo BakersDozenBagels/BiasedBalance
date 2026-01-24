@@ -26,10 +26,5 @@ function Card:set_cost(...)
 
     local ret = { raw_Card_set_cost(self, ...) }
 
-    if self.config.center.set == 'Joker' and next(SMODS.find_card 'j_biasedBalance_DeathAndTaxes') then
-        self.sell_cost = 0
-        self.sell_cost_label = self.facing == 'back' and '?' or self.sell_cost
-    end
-
     return unpack(ret)
 end

@@ -472,8 +472,7 @@ return {
                 name = "Death and Taxes",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if a Joker",
-                    "was sold this round,",
-                    "Jokers sell for {C:money}$0"
+                    "was {C:attention}sold{} this round",
                 }
             },
             j_biasedBalance_FlavourfulJoker = {

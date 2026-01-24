@@ -15,7 +15,7 @@ SMODS.Joker {
                 end
             end
         end
-        return { vars = { card.ability.extra.xmult, card.ability.extra.xmult + card.ability.extra.xmult_mod * #common_jokers } }
+        return { vars = { card.ability.extra.xmult_mod, card.ability.extra.xmult + card.ability.extra.xmult_mod * #common_jokers } }
     end,
     calculate = function(self, card, context)
         if context.joker_main then
