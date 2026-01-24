@@ -16,6 +16,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = {  } }
     end,
+    pools = {
+        Utility = true
+    },
     calculate = function(self, card, context)
         if context.first_hand_drawn then
             card.ability.extra.hand_active = true

@@ -19,6 +19,9 @@ SMODS.Joker {
         } 
     }
     end,
+    pools = {
+        Utility = true
+    },
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play and not context.blueprint then
             card.ability.extra.cards_scored = card.ability.extra.cards_scored - 1

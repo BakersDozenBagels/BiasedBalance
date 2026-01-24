@@ -15,6 +15,9 @@ SMODS.Joker {
             repetitions = 1 
         } 
     },
+    pools = {
+        Utility = true
+    },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 

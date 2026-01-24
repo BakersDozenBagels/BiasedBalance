@@ -5,6 +5,9 @@ SMODS.Joker {
         x = 11,
         y = 0
     },
+    pools = {
+        Utility = true
+    },
     rarity = 1,
     cost = 3,
     blueprint_compat = false,
