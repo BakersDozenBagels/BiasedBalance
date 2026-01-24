@@ -445,6 +445,15 @@ return {
                     "contains an {C:attention}unscoring{} card",
                 }
             },
+            j_biasedBalance_Prehistoric_Joker = {
+                name = "Prehistoric Joker",
+                text = {
+                    "{C:attention}-#1#{} Ante after",
+                    "{C:attention}#2#{} rounds",
+                    "{S:1.1,C:red,E:2}self destructs{}",
+                    "{C:inactive}(Currently {C:attention}#3#{C:inactive}/#2#)",
+                }
+            },
             j_biasedBalance_Osmosis = {
                 name = 'Osmosis',
                 text = {
@@ -1418,6 +1427,7 @@ return {
             k_disabled = "Disabled!",
             k_biasedBalance_pow = "BANG!",
             k_biasedBalance_stone = "Stone!",
+            k_biasedBalance_ante = "-1 Ante",
         },
         v_dictionary = {
             a_biasedBalance_m_discards = "-#1# Discards",
