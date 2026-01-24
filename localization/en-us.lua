@@ -504,8 +504,8 @@ return {
                 name = "Bookworm",
                 text = {
                     "{C:chips}+#1#{} Chips if played",
-                    "{C:attention}poker hand{} is {C:red}not",
-                    "your most played"
+                    "{C:attention}poker hand{} is not",
+                    "most played"
                 }
             },
             j_biasedBalance_Court = {
@@ -519,7 +519,7 @@ return {
                 name = "The Parvenu",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if played hand",
-                    "contains {C:red}no{} {C:attention}Face Cards"
+                    "contains no {C:attention}Face Cards"
                 }
             },
             j_biasedBalance_Skipper = {
@@ -667,6 +667,13 @@ return {
                     "{C:mult}+#1#{} Mult for every {C:attention}Enhanced",
                     "card in your full deck",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Spice = {
+                name = "Spice",
+                text = { 
+                    "Retrigger all played",
+                    "{V:1}#1#{} cards",
                 }
             },
             j_biasedBalance_The_Missing_Piece = {

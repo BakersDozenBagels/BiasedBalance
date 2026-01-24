@@ -293,7 +293,7 @@ BiasedBalance.Joker_Adds = {
 	"The_Parvenu",
 	"Skipper",
 	"Minstrel",
-	-- "Spice",
+	"Spice",
 	-- "Yodeller",
 	-- "Singularity",
 	-- "Prehistoric_Joker",
