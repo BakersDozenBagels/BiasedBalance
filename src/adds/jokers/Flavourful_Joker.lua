@@ -1,6 +1,6 @@
 SMODS.Joker {
     atlas = "Joker",
-    key = "FlavourfulJoker",
+    key = "FlavorfulJoker",
     pos = {
         x = 4,
         y = 6
@@ -12,7 +12,13 @@ SMODS.Joker {
     perishable_compat = true,
     config = { extra = { chips = 75 } },
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.chips } }
+        local count = 0
+        if G.jokers then
+            for i = 1, #G.jokers.cards do
+                if G.jokers.cards[i].edition then count = count + 1 end
+            end
+        end
+        return { vars = { card.ability.extra.chips, count * card.ability.extra.chips } }
     end,
     calculate = function(self, card, context)
         if context.joker_main then

@@ -475,11 +475,12 @@ return {
                     "was {C:attention}sold{} this round",
                 }
             },
-            j_biasedBalance_FlavourfulJoker = {
-                name = "Flavourful Joker",
+            j_biasedBalance_FlavorfulJoker = {
+                name = "Flavorful Joker",
                 text = {
                     "{C:chips}+#1#{} Chips per Joker",
-                    "with an {C:dark_edition}Edition"
+                    "with an {C:dark_edition}Edition",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
                 }
             },
             j_biasedBalance_MelancholicJoker = {
