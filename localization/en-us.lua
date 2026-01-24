@@ -620,6 +620,14 @@ return {
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_Star_Fall = {
+                name = "Star Fall",
+                text = {
+                    "{C:chips}+#1#{} Chips per {C:planet}Planet{}",
+                    "card used this run",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                },
+            },
             j_biasedBalance_Last_Dance = {
                 name = "Last Dance",
                 text = { 
