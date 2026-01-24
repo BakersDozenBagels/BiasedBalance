@@ -286,7 +286,7 @@ BiasedBalance.Joker_Adds = {
 	"Blunted_Impact",
 	"Death_And_Taxes",
 	"Flavourful_Joker",
-	-- "Melancholic_Joker",
+	"Melancholic_Joker",
 	"Brash_Gambler",
 	"Bookworm",
 	"The_Court",
