@@ -614,7 +614,7 @@ return {
             j_biasedBalance_Everhungry_Joker = {
                 name = "Ever-Hungry Joker",
                 text = { 
-                    "This {C:attention}Joker{} gains",
+                    "This Joker{} gains",
                     "{C:mult}+#1#{} Mult when a",
                     "{C:attention}consumable{} is used",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
@@ -818,9 +818,8 @@ return {
             j_biasedBalance_Solitude = {
                 name = "Solitude",
                 text = { 
-                    "This {C:attention}Joker{} gives",
-                    "{X:mult,C:white}X#1#{} Mult if",
-                    "scoring hand doesn't contain a {C:attention}Pair"
+                    "{X:mult,C:white}X#1#{} Mult if played hand",
+                    "does not contain a {C:attention}Pair"
                 }
             },
             j_biasedBalance_Ouroboros = {
