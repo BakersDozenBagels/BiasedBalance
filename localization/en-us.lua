@@ -895,8 +895,16 @@ return {
                 name = "Esteemed Audience",
                 text = { 
                     "{C:mult}+#1#{} Mult for every scored", 
-                    "{C:}Face card in played hands",
+                    "Face card in played hands",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Strength_In_Numbers = {
+                name = "Strength In Numbers",
+                text = { 
+                    "Played number cards give {C:mult}+#1#{} Mult", 
+                    "for every card above {C:attention}4{} in your",
+                    "deck with the same rank",
                 }
             },
             j_biasedBalance_Joker_In_The_High_Castle = {
@@ -911,7 +919,7 @@ return {
             j_biasedBalance_Toolkit = {
                 name = "Toolkit",
                 text = { 
-                    "Create a Utility {C:attention}Joker{}",
+                    "Create a {C:attention}Utility{} Joker",
                     "with an {C:dark_edition}Edition{} when a",
                     "Blind is skipped",
                     "{S:1.1,C:red,E:2}self destructs{}",
