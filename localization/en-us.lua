@@ -942,6 +942,16 @@ return {
                     "{C:inactive}(Cannot reduce chips below {C:attention}5{C:inactive})"
                 }
             },
+            j_biasedBalance_Platinum_Ticket= {
+                name = "Platinum Ticket",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult and {C:gold}$#3#{}",
+                    "for every {C:attention}Voucher{}",
+                    "redeemed this run",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                    "{C:inactive}(Currently {C:gold}$#4#{C:inactive})"
+                }
+            },
             j_biasedBalance_Platinum_Joker= {
                 name = "Platinum Joker",
                 text = { 
