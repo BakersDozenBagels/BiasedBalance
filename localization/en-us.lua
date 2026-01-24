@@ -438,6 +438,13 @@ return {
                     "Sells for {C:money}-$#2#"
                 }
             },
+            j_biasedBalance_Singularity = {
+                name = "Singularity",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult if played hand",
+                    "contains an {C:attention}unscoring{} card",
+                }
+            },
             j_biasedBalance_Osmosis = {
                 name = 'Osmosis',
                 text = {

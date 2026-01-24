@@ -295,7 +295,7 @@ BiasedBalance.Joker_Adds = {
 	"Minstrel",
 	"Spice",
 	"Yodeller",
-	-- "Singularity",
+	"Singularity",
 	-- "Prehistoric_Joker",
 	-- "Shapeshifter",
 	"Velvet_Choker",
