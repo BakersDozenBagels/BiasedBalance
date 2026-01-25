@@ -6,7 +6,7 @@ SMODS.Back {
         x = 1,
         y = 0
     },
-    config = { x_mult = 2 },
+    config = { x_mult = 3 },
     loc_vars = function(self, info_queue, back)
         return {
             vars = { self.config.x_mult }

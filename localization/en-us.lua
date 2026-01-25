@@ -39,6 +39,7 @@ return {
                 text = {
                     "{X:mult,C:white}X#1#{} Mult",
                     "No repeat hand types",
+                    "during a round"
                 }
             },
             b_yellow={
