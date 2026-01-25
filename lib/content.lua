@@ -305,7 +305,7 @@ BiasedBalance.Joker_Adds = {
 	"Aristocrat",
 
 	-- Legendary Jokers --
-	-- "Pippi_Panini",
+	"Pippi_Panini",
 	"Bittergiggle",
 }
 

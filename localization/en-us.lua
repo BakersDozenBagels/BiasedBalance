@@ -1038,6 +1038,14 @@ return {
                     "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
                 }
             },
+            j_biasedBalance_Pippi_Panini = {
+                name = "Pippi Panini",
+                text = { 
+                    "When an {C:attention}enhanced{} card",
+                    "is scored, the card gains",
+                    "a {C:attention}Seal{} and an {C:dark_edition}Edition{}"
+                }
+            },
             j_biasedBalance_Platinum_Ticket= {
                 name = "Platinum Ticket",
                 text = { 
