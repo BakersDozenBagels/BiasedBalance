@@ -1,8 +1,8 @@
 BiasedBalance.Back_Tweaks = {
-	-- "green",
-	-- "yellow",
+	"green",
+	"yellow",
     "black",
-	-- "ghost",
+	"ghost",
 }
 
 BiasedBalance.Blind_Tweaks = {

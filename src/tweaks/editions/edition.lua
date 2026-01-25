@@ -6,7 +6,7 @@ SMODS.Edition:take_ownership("negative", {
     get_weight = function(self)
         local mul = polling_playing and 7 or 1
         if G.GAME.selected_back.effect.center.key == "b_black" then
-            mul = mul * 4
+            mul = mul * 3
         end
         return raw_get_weight(self) * mul
     end,

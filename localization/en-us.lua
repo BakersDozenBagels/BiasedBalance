@@ -8,7 +8,7 @@ return {
                     "every round",
                     "",
                     "{C:dark_edition}Negative{} is",
-                    "{C:green}4X{} more common" }
+                    "{C:green}3X{} more common" }
             },
             b_ghost = {
                 text = {

@@ -18,16 +18,4 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ]]                                     --
 
 SMODS.Back:take_ownership("black", {}) -- Tweak in editions.lua
-SMODS.Back:take_ownership("ghost", {})
-SMODS.Back:take_ownership("yellow", {
- config = {dollars = 12}
-})
 
-SMODS.Booster:take_ownership_by_kind('Spectral', {
-    get_weight = function(self)
-        if G.GAME.selected_back.effect.center.key == "b_ghost" then
-            return self.weight * 3
-        end
-        return self.weight
-    end
-}, true)
