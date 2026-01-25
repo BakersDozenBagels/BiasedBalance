@@ -895,6 +895,14 @@ return {
                     "-{C:money}$#1#{} Reroll cost",
                 }
             },
+            j_biasedBalance_Bittergiggle = {
+                name = "Bittergiggle",
+                text = { 
+                    "{E:2}Your {C:blue,E:2}Common{E:2} Jokers",
+                    "{E:2}trigger twice.",
+                    "{E:2}I am {C:dark_edition,E:2}Negative."
+                }
+            },
             j_biasedBalance_Gourmet = {
                 name = "Gourmet",
                 text = { 

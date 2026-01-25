@@ -306,7 +306,7 @@ BiasedBalance.Joker_Adds = {
 
 	-- Legendary Jokers --
 	-- "Pippi_Panini",
-	-- "Bittergiggle",
+	"Bittergiggle",
 }
 
 BiasedBalance.Spectral_Adds = {

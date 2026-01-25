@@ -19,6 +19,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 BiasedBalance = {}
 
+SMODS.current_mod.optional_features = {
+    retrigger_joker = true,
+}
+
 --Load Lib Files
 SMODS.load_file("lib/content.lua")() -- Definitions 
 SMODS.load_file("lib/utils.lua")() -- Utility functions built
