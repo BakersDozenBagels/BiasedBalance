@@ -917,6 +917,13 @@ return {
                     "into the {C:attention}rightmost{} card"
                 },
             },
+            j_biasedBalance_Opportunity_Cost = {
+                name = "Opportunity Cost",
+                text = {
+                    "Copies ability of most",
+                    "recently bought {C:attention}Joker{}",
+                },
+            },
             j_biasedBalance_Rhododendron = {
                 name = "Rhododendron",
                 text = { 

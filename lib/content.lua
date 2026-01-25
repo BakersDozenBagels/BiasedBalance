@@ -299,7 +299,7 @@ BiasedBalance.Joker_Adds = {
 	"Prehistoric_Joker",
 	"Shapeshifter",
 	"Velvet_Choker",
-	-- "Opportunity_Cost",
+	"Opportunity_Cost",
 	-- "Propitious_Joker",
 	-- "Light_In_The_Tunnel",
 	-- "Aristocrat",
