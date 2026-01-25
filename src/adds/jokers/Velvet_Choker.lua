@@ -5,8 +5,8 @@ SMODS.Joker {
         x = 4,
         y = 7
     },
-    rarity = 2,
-    cost = 5,
+    rarity = 3,
+    cost = 8,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
@@ -26,13 +26,13 @@ SMODS.Joker {
     add_to_deck = function(self, card, from_debuff)
         G.GAME.round_resets.discards = G.GAME.round_resets.discards - card.ability.extra.d_size
         G.GAME.round_resets.hands = G.GAME.round_resets.hands - card.ability.extra.d_size
-        ease_discard(card.ability.extra.d_size)
-        ease_hands_played(card.ability.extra.d_size)
+        ease_discard(-card.ability.extra.d_size)
+        ease_hands_played(-card.ability.extra.d_size)
     end,
     remove_from_deck = function(self, card, from_debuff)
         G.GAME.round_resets.discards = G.GAME.round_resets.discards + card.ability.extra.d_size
-        G.GAME.round_resets.hands = G.GAME.round_resets.hands - card.ability.extra.d_size
-        ease_discard(-card.ability.extra.d_size)
+        G.GAME.round_resets.hands = G.GAME.round_resets.hands + card.ability.extra.d_size
+        ease_discard(card.ability.extra.d_size)
         ease_hands_played(card.ability.extra.d_size)
     end,
     calculate = function(self, card, context)
