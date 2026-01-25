@@ -889,6 +889,12 @@ return {
                     "when a {C:attention}Lucky 7{} is scored",
                 }
             },
+            j_biasedBalance_Light_In_The_Tunnel = {
+                name = "Light In The Tunnel",
+                text = { 
+                    "-{C:money}$#1#{} Reroll cost",
+                }
+            },
             j_biasedBalance_Gourmet = {
                 name = "Gourmet",
                 text = { 
