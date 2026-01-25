@@ -881,6 +881,14 @@ return {
                     "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_Propitious_Joker = {
+                name = "Propitious Joker",
+                text = { 
+                    "Scored {C:attention}7s{} become {C:attention}Lucky{} cards",
+                    "Random scoring card becomes {C:attention}Lucky{}",
+                    "when a {C:attention}Lucky 7{} is scored",
+                }
+            },
             j_biasedBalance_Gourmet = {
                 name = "Gourmet",
                 text = { 
@@ -1444,6 +1452,7 @@ return {
             k_biasedBalance_pow = "BANG!",
             k_biasedBalance_stone = "Stone!",
             k_biasedBalance_ante = "-1 Ante",
+            k_biasedBalance_lucky = "Lucky!",
         },
         v_dictionary = {
             a_biasedBalance_m_discards = "-#1# Discards",
