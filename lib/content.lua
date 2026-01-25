@@ -302,7 +302,7 @@ BiasedBalance.Joker_Adds = {
 	"Opportunity_Cost",
 	"Propitious_Joker",
 	"Light_In_The_Tunnel",
-	-- "Aristocrat",
+	"Aristocrat",
 
 	-- Legendary Jokers --
 	-- "Pippi_Panini",

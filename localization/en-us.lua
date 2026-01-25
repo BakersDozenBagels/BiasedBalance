@@ -1029,6 +1029,15 @@ return {
                     "{C:inactive}(Cannot reduce chips below {C:attention}5{C:inactive})"
                 }
             },
+            j_biasedBalance_Aristocrat = {
+                name = "Aristocrat",
+                text = { 
+                    "{C:chips}+#1#{} Chips for every",
+                    "{C:attention}Face{} card in your",
+                    "full deck",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                }
+            },
             j_biasedBalance_Platinum_Ticket= {
                 name = "Platinum Ticket",
                 text = { 
