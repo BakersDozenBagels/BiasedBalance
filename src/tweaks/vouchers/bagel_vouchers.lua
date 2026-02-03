@@ -92,6 +92,7 @@ SMODS.Voucher:take_ownership('planet_merchant', {
 
 SMODS.Voucher:take_ownership('planet_tycoon', {
     config = {
+            extra = 12/4,
             planet_create = 5
         },
     loc_vars = function(self, info_queue, card)
@@ -104,19 +105,19 @@ SMODS.Voucher:take_ownership('planet_tycoon', {
     calculate = function(self, card, context)
         if context.using_consumeable and context.consumeable.ability.set == 'Planet' then
             card.ability.planet_create = card.ability.planet_create - 1
-        if card.ability.planet_create == 0 then 
+        if card.ability.planet_create == 0 and #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then 
             card.ability.planet_create = 5
-             G.E_MANAGER:add_event(Event({
-                    trigger = 'after',
-                    delay = 0.4,
+                G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                G.E_MANAGER:add_event(Event({
                     func = function()
-                        local chosen_planet = pseudorandom_element(BiasedBalance.Planet_Pool, pseudoseed('choice'))
-                        local planet = create_card("Planet", G.consumeables, nil, nil, nil, nil, 'c_'.. chosen_planet)
-                        planet:add_to_deck()
-                        G.consumeables:emplace(planet)
-                        card:juice_up(0.3, 0.5)
+                        SMODS.add_card {
+                            set = 'Planet',
+                            key_append = 'planetTycoon' -- Optional, useful for manipulating the random seed and checking the source of the creation in `in_pool`.'
+                        }
+                        G.GAME.consumeable_buffer = 0
                         return true
-                end}))
+                    end
+                }))
         end
     end
 end

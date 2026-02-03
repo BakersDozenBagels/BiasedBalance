@@ -1453,7 +1453,7 @@ return {
                 name="Planet Tycoon",
                 text={
                     "Every {C:attention}#1#{} {C:planet}Planet{} cards",
-                    "Create a random {C:planet}Planet{} card"
+                    "create a random {C:planet}Planet{} card"
                 }
             },
             v_biasedBalance_recipe={

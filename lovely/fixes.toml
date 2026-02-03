@@ -238,6 +238,17 @@ payload = '''
 '''
 match_indent = true
 
+# Patch for Planet Tycoon
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if center_table.name == 'Planet Merchant' or center_table.name == 'Planet Tycoon' then"
+position = "at"
+payload = '''
+if center_table.name == 'Planet Merchant' then
+'''
+match_indent = true
+
 # Patch for Shy Joker
 [[patches]]
 [patches.pattern]
