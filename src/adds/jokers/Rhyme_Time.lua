@@ -5,27 +5,29 @@ SMODS.Joker {
         x = 4,
         y = 5
     },
-    rarity = 2,
-    cost = 6,
+    rarity = 1,
+    cost = 4,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     config = { 
         extra = { 
-            xmult = 2.5,
-            required_count = 2
+            mult = 0,
+            a_mult = 10,
+            required_count = 3
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.xmult,
-                card.ability.extra.required_count
+                card.ability.extra.mult,
+                card.ability.extra.required_count,
+                card.ability.extra.a_mult
         } 
     }
     end,
     calculate = function(self, card, context)
-        if context.joker_main then
+        if context.before and not context.blueprint then
             local cards = {
                 ['Evens'] = {},
                 ['Odds'] = {},
@@ -37,7 +39,7 @@ SMODS.Joker {
                 local is_even = id <= 10 and id >= 0 and id % 2 == 0
                 local is_odd  = (id <= 10 and id >= 0 and id % 2 == 1) or id == 14
 
-                if not seen[id] then
+                --if not seen[id] then
                     if is_even then
                         table.insert(cards['Evens'], v)
                         seen[id] = true
@@ -45,13 +47,19 @@ SMODS.Joker {
                         table.insert(cards['Odds'], v)
                         seen[id] = true
                     end
-                end
+                --end
             end
             if #cards['Evens'] >= card.ability.extra.required_count or #cards['Odds'] >= card.ability.extra.required_count then
+                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.a_mult
                 return {
-                    xmult = card.ability.extra.xmult
+                    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.a_mult } }
                 }
             end
+        end
+        if context.joker_main then
+            return {
+                mult = card.ability.extra.mult
+            }
         end
     end
 }
