@@ -1429,6 +1429,13 @@ return {
                     "{C:dark_edition}Edition{}, and/or a {C:attention}Seal{}",
                 }
             },
+            v_retcon = {
+                text = {
+                    "{C:attention}Once per ante{}, rerolling",
+                    "the shop also rerolls",
+                    "{C:attention}Booster Packs{} and {C:attention}Vouchers",
+                }
+            },
             v_hone = {
                 text = {
                     "{C:dark_edition}Editioned{} cards",

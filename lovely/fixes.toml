@@ -249,6 +249,18 @@ if center_table.name == 'Planet Merchant' then
 '''
 match_indent = true
 
+# Patch for Retcon
+[[patches]]
+[patches.pattern]
+target = "button_callbacks.lua"
+pattern = "(G.GAME.used_vouchers[\"v_retcon\"] or"
+position = "at"
+payload = '''
+(
+'''
+match_indent = true
+
+
 # Patch for Shy Joker
 [[patches]]
 [patches.pattern]
