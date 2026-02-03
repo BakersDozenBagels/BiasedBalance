@@ -53,8 +53,9 @@ return {
             b_biasedBalance_Teal = {
                 name = "Teal Deck",
                 text = {
-                    "Whenever you leave shop",
-                    "Create a random {C:tarot}Tarot{} card"
+                    "Create a random",
+                    "{C:tarot}Tarot{} card",
+                    "at {C:attention}end of shop",
                 }
             },
         },
