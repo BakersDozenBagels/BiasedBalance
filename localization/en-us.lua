@@ -1281,10 +1281,11 @@ return {
                     "{C:attention}#2#",
                 },
             },
-            c_strength = {
+            c_biasedBalance_antistrength = {
+                name="Anti-Strength",
                 text = {
-                    "Increases rank of",
-                    "up to {C:attention}3{} selected",
+                    "Decreases rank of",
+                    "up to {C:attention}#1#{} selected",
                     "cards by {C:attention}1",
                 }
             },
