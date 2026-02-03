@@ -29,8 +29,9 @@ return {
             b_biasedBalance_White = {
                 name = "White Deck",
                 text = {
-                    "At the end of each round",
-                    "Create a {C:blue}Common{C:attention} Joker",
+                    "At the start of",
+                    "{C:attention}Small{} and {C:attention}Big Blind",
+                    "create a {C:blue}Common{C:attention} Joker",
                     "{C:inactive}(Must have room)",
                 }
             },
