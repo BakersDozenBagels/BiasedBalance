@@ -60,12 +60,14 @@ function G.FUNCS.reroll_shop(e)
             G.E_MANAGER:add_event(Event({
                 trigger = 'immediate',
                 func = function()
+                    local num = #G.shop_vouchers.cards 
                     if #G.shop_vouchers.cards > 0 then
                         for i = #G.shop_vouchers.cards, 1, -1 do
                             local c = G.shop_vouchers:remove_card(G.shop_vouchers.cards[i])
                             c:remove()
                             c = nil
                         end
+                    for i = 1, num do
                         G.ARGS.voucher_tag = G.ARGS.voucher_tag or {}
                         local voucher_key = get_next_voucher_key(true)
                         G.ARGS.voucher_tag[voucher_key] = true
@@ -76,6 +78,7 @@ function G.FUNCS.reroll_shop(e)
                         card:start_materialize()
                         G.shop_vouchers:emplace(card)
                         G.ARGS.voucher_tag = nil
+                    end
                         
                     end
                 return true
