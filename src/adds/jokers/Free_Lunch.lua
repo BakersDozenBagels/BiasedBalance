@@ -6,15 +6,22 @@ SMODS.Joker {
         y = 3
     },
     rarity = 2,
+    cost = 6,
     blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = false,
     loc_vars = function(self, info_queue, card)
-        return { vars = { 30, 35 } }
+        return { vars = { 36, 36 } }
+    end,
+    add_to_deck = function(self, card, from_debuff)
+        ease_dollars(36)
+    end,
+    remove_from_deck = function(self, card, from_debuff)
+        ease_dollars(-36)
     end
 }
 
-local unpack = table.unpack or unpack
+local unpack = table.unpack or unpack--[[
 local raw_Card_set_cost = Card.set_cost
 function Card:set_cost(...)
     if self.config.center.key == 'j_biasedBalance_FreeLunch' then
@@ -27,4 +34,4 @@ function Card:set_cost(...)
     local ret = { raw_Card_set_cost(self, ...) }
 
     return unpack(ret)
-end
+end]]

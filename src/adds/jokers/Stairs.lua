@@ -13,7 +13,7 @@ SMODS.Joker {
     config = { 
         extra = { 
             xmult = 1,
-            xmult_gain = .3,
+            xmult_gain = .4,
             first_trigger = true
         } 
     },

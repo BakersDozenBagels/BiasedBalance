@@ -463,8 +463,10 @@ return {
             j_biasedBalance_FreeLunch = {
                 name = '"Free" Lunch',
                 text = {
-                    "Costs {C:money}-$#1#",
-                    "Sells for {C:money}-$#2#"
+                    "Gain {C:money}$#1# on",
+                    "purchase",
+                    "Lose {C:money}$#2# when",
+                    "removed"
                 }
             },
             j_biasedBalance_Singularity = {

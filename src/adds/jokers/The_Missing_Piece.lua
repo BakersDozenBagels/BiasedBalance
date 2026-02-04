@@ -5,7 +5,7 @@ SMODS.Joker{
     atlas = "Joker",
     pos = {x = 12, y = 1},
     cost = 4,
-    config = {extra = {mult_mod = 9}},
+    config = {extra = {mult_mod = 10}},
     loc_vars = function(self, info_queue, card)
         return {vars = {card.ability.extra.mult_mod, redeemed_voucher_count() * card.ability.extra.mult_mod}}
     end,
