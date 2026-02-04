@@ -58,6 +58,14 @@ return {
                     "at {C:attention}end of shop",
                 }
             },
+            b_biasedBalance_Hibiscus = {
+                name = "Hibiscus Deck",
+                text = {
+                    "Start run with",
+                    "{C:attention,T:v_biasedBalance_recipe}#1#{} and",
+                    "{C:attention,T:v_biasedBalance_trade_secret}#2#{}",
+                }
+            },
         },
         Blind = {
             bl_biasedBalance_Epsilon = {

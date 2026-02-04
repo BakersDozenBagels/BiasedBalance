@@ -7,6 +7,7 @@ SMODS.Voucher {
         return { vars = { card.ability.extra.pack_size } }
     end,
     redeem = function(self, card)
+        if G.STATE == G.STATES.SHOP then
         G.E_MANAGER:add_event(Event({
                 trigger = 'immediate',
                 func = function()
@@ -36,6 +37,7 @@ SMODS.Voucher {
                 return true
                 end
             }))
+        end
     end
 }
 
