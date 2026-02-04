@@ -184,7 +184,7 @@ BiasedBalance.Back_Adds = {
 	"Pink",
 	"Teal",
 	"Hibiscus",
-	-- "Legendary",
+	"Legendary",
 	-- "Engineer",
 	-- "Vainglory",
 }

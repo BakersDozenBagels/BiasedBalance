@@ -66,6 +66,15 @@ return {
                     "{C:attention,T:v_biasedBalance_trade_secret}#2#{}",
                 }
             },
+            b_biasedBalance_Legendary = {
+                name = "Legendary Deck",
+                text = {
+                    "Start run with a",
+                    "{C:legendary,E:1}Legendary{} Joker",
+                    "{C:blue}#2#{} hand every round",
+                    "{C:attention}#1#{} Joker slot",
+                }
+            },
         },
         Blind = {
             bl_biasedBalance_Epsilon = {
