@@ -1476,15 +1476,19 @@ return {
             v_biasedBalance_recipe={
                 name= "Recipe",
                 text={
-                   "Booster Packs contain {C:attention}1{}",
-                   "extra card to choose from"
+                   "Booster Packs contain",
+                   "{C:attention}#1#{} additional card",
+                   "to choose from",
+                   "{C:inactive}(Rerolls Booster Packs)"
                 }
             },
-            v_biasedBalanced_trade_secret={
+            v_biasedBalance_trade_secret={
                 name = "Trade Secret",
                 text = {
-                    "Booster Packs contain {C:attention}2{}",
-                    "extra card to choose from"
+                    "{C:attention}#1#{} more card",
+                    "can be chosen from",
+                    "Booster Packs",
+                    "{C:inactive}(Rerolls Booster Packs)"
                 }
             },
         },

@@ -97,12 +97,12 @@ SMODS.Atlas {
     py = 28
 }
 
---SMODS.Atlas {
-  --  key = "Vouchers",
-  --  path = "Vouchers.png",
-  --  px = 71,
-  --  py = 95
---}
+SMODS.Atlas {
+    key = "Vouchers",
+    path = "Vouchers.png",
+    px = 71,
+    py = 95
+}
 
 SMODS.Atlas {
     key = "Boosters",

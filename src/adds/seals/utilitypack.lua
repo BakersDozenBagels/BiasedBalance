@@ -9,8 +9,8 @@ SMODS.Booster {
     },
     cost = 5,
     weight = 1.5,
-    loc_vars = function()
-        return { vars = { 1, 2 } }
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.ability.choose, card.ability.extra } }
     end,
     create_card = function(self, pack, i)
         return create_card("Utility", G.pack_cards, nil, nil, true, false, nil, "Utility_Pack")

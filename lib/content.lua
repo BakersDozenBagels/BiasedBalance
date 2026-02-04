@@ -335,8 +335,8 @@ BiasedBalance.Tag_Adds = {
 }
 
 BiasedBalance.Voucher_Adds = {
-	--"recipe"
-	--"trade_secret",
+	"recipe",
+	"trade_secret",
 }
 
 BiasedBalance.Seal_Adds = {
