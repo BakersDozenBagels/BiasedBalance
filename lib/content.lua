@@ -171,10 +171,10 @@ BiasedBalance.Voucher_Tweaks = {
 	"omen_globe",
 	"magic_trick",
 	"illusion",
-	-- "hone",
-	-- "glow_up",
-	-- "reroll_surplus",
-	-- "reroll_glut",
+	"hone",
+	"glow_up",
+	"reroll_surplus",
+	"reroll_glut",
 
 }
 

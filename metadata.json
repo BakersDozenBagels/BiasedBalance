@@ -1,8 +1,8 @@
 {
   "id": "biasedBalance",
   "name": "Biased Balance",
-  "author": ["BakersDozenBagels", "Serenos", "Mills-44"],
-  "description": "Mod design by Serenos, code by BakersDozenBagels, Art by Mills",
+  "author": ["BakersDozenBagels", "Serenos", "Mills-44", "InfinityPlus05"],
+  "description": "Mod design by Serenos, code by InfinityPlus05 and BakersDozenBagels, Art by Mills",
   "prefix": "biasedBalance",
   "main_file": "src/main.lua",
   "priority": 0,

@@ -1465,6 +1465,14 @@ return {
                     "create a random {C:planet}Planet{} card"
                 }
             },
+            v_reroll_surplus_blue={
+                name="Reroll Surplus",
+                text={
+                    "Rerolls cost {C:money}$#1#{}",
+                    "less and increase",
+                    "by {C:money}$#1#{} less",
+                }
+            },
             v_biasedBalance_recipe={
                 name= "Recipe",
                 text={
