@@ -75,6 +75,14 @@ return {
                     "{C:attention}#1#{} Joker slot",
                 }
             },
+            b_biasedBalance_Engineer = {
+                name = "Engineer Deck",
+                text = {
+                    "Start run with a",
+                    "{C:uncommon}Uncommon{} or",
+                    "{C:rare}Rare{} {C:attention}Utility{} Joker",
+                }
+            },
         },
         Blind = {
             bl_biasedBalance_Epsilon = {
