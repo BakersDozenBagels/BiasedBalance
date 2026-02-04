@@ -12,6 +12,7 @@ function Game.init_game_object(self)
   local ret = init_game_object_ref(self)
   ret.Biased_Balance = {
     prehistoric_joker_in_pool = true,
+    can_reroll_shop = true,
   }
   return ret
 end

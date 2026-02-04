@@ -252,7 +252,7 @@ match_indent = true
 # Patch for Retcon
 [[patches]]
 [patches.pattern]
-target = "button_callbacks.lua"
+target = "functions/button_callbacks.lua"
 pattern = "(G.GAME.used_vouchers[\"v_retcon\"] or"
 position = "at"
 payload = '''

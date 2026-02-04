@@ -163,12 +163,11 @@ BiasedBalance.Tarot_Tweaks = {
 }
 
 BiasedBalance.Voucher_Tweaks = {
-	"bagel_vouchers",
 	"planet_merchant",
 	"planet_tycoon",
 	"blank",
 	"antimatter",
-	-- "retcon",
+	"retcon",
 	"omen_globe",
 	"magic_trick",
 	"illusion",
