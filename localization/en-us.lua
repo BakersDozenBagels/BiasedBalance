@@ -58,6 +58,14 @@ return {
                     "at {C:attention}end of shop",
                 }
             },
+            b_biasedBalance_Vainglory = {
+                name = "Vainglory Deck",
+                text = {
+                    "{C:attention}Vouchers{} are",
+                    "restocked",
+                    "every shop"
+                }
+            },
             b_biasedBalance_Hibiscus = {
                 name = "Hibiscus Deck",
                 text = {

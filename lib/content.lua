@@ -186,7 +186,7 @@ BiasedBalance.Back_Adds = {
 	"Hibiscus",
 	"Legendary",
 	"Engineer",
-	-- "Vainglory",
+	"Vainglory",
 }
 
 BiasedBalance.Blind_Adds = {-- check names later
