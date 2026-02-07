@@ -1158,6 +1158,14 @@ return {
                     "add to your deck",
                 }
             },
+            p_biasedBalance_HyperArcana = {
+                name = 'Hyper Arcana Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:tarot} Tarot{} cards to",
+                    "be used immediately",
+                }
+            },
             biasedBalance_Teal_seal = {
                 name = "Teal Seal",
                 text = {
@@ -1391,6 +1399,12 @@ return {
                     "{C:attention}Giga Standard Pack",
                 }
             },
+            tag_charm= {
+                text = {
+                    "Gives a free",
+                    "{C:tarot}Hyper Arcana Pack",
+                }
+            },
             tag_negative_sticker={
                 name="Negative Tag",
                 text={
@@ -1533,6 +1547,7 @@ return {
             k_booster_group_p_biasedBalance_Utility = 'Utility Pack',
             k_booster_group_p_biasedBalance_Sacrifice = 'Sacrifice',
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
+            k_booster_group_p_biasedBalance_HyperArcana = 'Hyper Arcana Pack',
             k_booster_group_p_biasedBalance_LowStickerBuffoon = 'Mega Buffoon Pack',
             k_biasedBalance_utility = 'Utility!',
             k_biasedBalance_negative = 'Negative!',

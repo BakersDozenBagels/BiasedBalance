@@ -1,32 +1,53 @@
 local b_std = SMODS.Booster {
-    key = 'GigaStandard',
+    key = 'HyperArcana',
     no_collection = true,
+    draw_hand = true,
     config = {
-        extra = 8,
-        choose = 4
+        extra = 5,
+        choose = 3
     },
     atlas = "Boosters",
-	pos = { x = 2, y = 0 },
+	pos = { x = 1, y = 0 },
     weight = 0,
     loc_vars = function()
-        return { vars = { 8, 4 } }
+        return { vars = { 3, 5 } }
     end,
     ease_background_colour = function(self)
-        ease_background_colour_blind(G.STATES.STANDARD_PACK)
+        ease_background_colour_blind(G.STATES.TAROT_PACK)
     end,
     create_card = function(self, card, i)
-        return G.P_CENTERS.p_standard_normal_1:create_card(card, i)
+        local _card
+        if G.GAME.used_vouchers.v_omen_globe and pseudorandom('omen_globe') > 0.8 then
+            _card = {
+                set = "Spectral",
+                area = G.pack_cards,
+                skip_materialize = true,
+                soulable = true,
+                key_append =
+                "vremade_ar2"
+            }
+        else
+            _card = {
+                set = "Tarot",
+                area = G.pack_cards,
+                skip_materialize = true,
+                soulable = true,
+                key_append =
+                "vremade_ar2"
+            }
+        end
+        return _card
     end,
     in_pool = function() return false end
 }
 
-SMODS.Tag:take_ownership("standard", {
+SMODS.Tag:take_ownership("charm", {
     config = {
-        choose = 4,
-        from = 8,
+        choose = 3,
+        from = 5,
     },
     loc_vars = function(self, info_queue, tag)
-        info_queue[#info_queue + 1] = G.P_CENTERS.p_biasedBalance_GigaStandard
+        info_queue[#info_queue + 1] = G.P_CENTERS.p_biasedBalance_HyperArcana
         return { vars = { self.config.choose, self.config.from } }
     end,
     apply = function(self, tag, context)
