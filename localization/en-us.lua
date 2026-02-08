@@ -1352,6 +1352,13 @@ return {
                     "{C:inactive}(Will give {C:money}$#3#{C:inactive})",
                 },
             },
+            tag_ethereal={
+                name="Ethereal Tag",
+                text={
+                    "Gives a free",
+                    "{C:spectral}Mega Spectral Pack",
+                },
+            },
             tag_rare_sticker={
                 name="Rare Tag",
                 text={

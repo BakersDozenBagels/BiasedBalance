@@ -148,7 +148,7 @@ BiasedBalance.Tag_Tweaks = {
 	"garbage",
 	"juggle",
 	"charm",
-	--"ethereal",
+	"ethereal",
 	"standard",
 	-- "meteor",
 	-- "boss",
