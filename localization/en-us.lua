@@ -1282,6 +1282,15 @@ return {
                     "lose up to {C:money}$#2#"
                 }
             },
+            c_biasedBalance_Transmutation = {
+                name = "Transmutation",
+                text = {
+                    "{C:red}-#1#{} discard",
+                    "each round",
+                    "{C:attention}+#2#{} hand size",
+                    "Earn {C:money}$#3#{}"
+                }
+            },
             c_biasedBalance_Awakening = {
                 name = "Awakening",
                 text = {
