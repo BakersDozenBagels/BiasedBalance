@@ -140,7 +140,6 @@ BiasedBalance.Stake_Tweaks = {
 	"blue"
 }
 BiasedBalance.Tag_Tweaks = {
-	"bagel_tags",
 	"economy",
 	"speed",
 	"d6",
@@ -150,12 +149,12 @@ BiasedBalance.Tag_Tweaks = {
 	"charm",
 	"ethereal",
 	"standard",
-	-- "meteor",
-	-- "boss",
+	"meteor",
+	"boss",
 	"uncommon",
 	"rare",
 	"editions",
-	-- "buffoon",
+	"buffoon",
 }
 BiasedBalance.Tarot_Tweaks = {
 	"lovers",
@@ -329,9 +328,9 @@ BiasedBalance.Stake_Adds = {
 
 BiasedBalance.Tag_Adds = {
 	"bagel_tags",
-	-- "utility",
+	"utility",
 	-- "tagsacrifice",
-	--"hone"
+	--"Hone"
 }
 
 BiasedBalance.Voucher_Adds = {

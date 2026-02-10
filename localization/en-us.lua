@@ -1142,11 +1142,18 @@ return {
                     "{C:attention}#2#{} Utility {C:joker}Jokers",
                 }
             },
+            p_biasedBalance_UtilityPack_Mega = {
+                name = 'Mega Utility Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
             p_biasedBalance_Sacrifice = {
                 name = 'Sacrifice Pack',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "destroy the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
                 }
             },
@@ -1451,8 +1458,8 @@ return {
             tag_biasedBalance_Utility = {
                 name = 'Utility Tag',
                 text = {
-                    "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                    "Gives a free",
+                    "{C:attention}Mega Utility Pack",
                 }
             },
             tag_biasedBalance_Sacrifice = {
@@ -1552,6 +1559,7 @@ return {
     misc = {
         dictionary = {
             k_booster_group_p_biasedBalance_Utility = 'Utility Pack',
+            k_booster_group_p_biasedBalance_MegaUtility = 'Mega Utility Pack',
             k_booster_group_p_biasedBalance_Sacrifice = 'Sacrifice',
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
             k_booster_group_p_biasedBalance_HyperArcana = 'Hyper Arcana Pack',

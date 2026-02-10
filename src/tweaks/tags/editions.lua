@@ -27,7 +27,7 @@ for _, tag_type in ipairs(rare_sticker_tags) do
                 local choice = pseudorandom("sticker_tag_" .. tag_type)
                 if choice < 0.1 and G.GAME.modifiers.enable_eternals_in_shop then
                     context.card:set_eternal(true)
-                elseif choice < 0.2 and G.GAME.modifiers.enable_perishables_in_shop then
+                elseif choice < 0.2 and G.GAME.modifiers.enable_perishables_in_shop and not context.card.ability.eternal then
                     context.card:set_perishable(true)
                 end
 
