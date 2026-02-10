@@ -1285,9 +1285,19 @@ return {
             c_biasedBalance_Awakening = {
                 name = "Awakening",
                 text = {
-                    "Select {C:attention}2{} cards",
-                    "increase rank by {C:attention}1{}",
-                    "Uses {C:attention}#1#"
+                    "Increases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
+                    "{C:inactive}Can be used {C:attention}twice)",
+                    "{C:inactive}(Must have room)",
+                }
+            },
+            c_biasedBalance_Awakening2 = {
+                name = "Awakening",
+                text = {
+                    "Increases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
                 }
             },
             c_biasedBalance_Sacrifice = {
