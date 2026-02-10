@@ -1288,16 +1288,23 @@ return {
                     "Increases rank of",
                     "up to {C:attention}#1#{} selected",
                     "cards by {C:attention}1",
-                    "{C:inactive}Can be used {C:attention}twice)",
+                    "{C:inactive}Can be used {C:attention}twice{C:inactive})",
                     "{C:inactive}(Must have room)",
                 }
             },
             c_biasedBalance_Awakening2 = {
                 name = "Awakening",
                 text = {
-                    "Increases rank of",
-                    "up to {C:attention}#1#{} selected",
-                    "cards by {C:attention}1",
+                    "Add a random {C:attention}Seal", "to up to {C:attention}#1#{} selected", "playing cards,",
+                    "lose up to {C:money}$#2#"
+                }
+            },
+            c_biasedBalance_Mania = {
+                name = "Mania",
+                text = {
+                    "Create {C:attention}#1# {C:green}Uncommon{C:attention} Jokers{},",
+                    "lose up to {C:money}$#2#",
+                    "{C:inactive}(Must have room)",
                 }
             },
             c_biasedBalance_Sacrifice = {

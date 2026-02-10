@@ -314,7 +314,7 @@ BiasedBalance.Spectral_Adds = {
 	"Crossroads",
 	"Sacrifice",
 	"Awakening",
-	-- "Mania",
+	"Mania",
 	-- "Transmutation",
 	-- "Anguish",
 	-- "Vertigo",
