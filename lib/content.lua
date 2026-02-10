@@ -308,13 +308,12 @@ BiasedBalance.Joker_Adds = {
 }
 
 BiasedBalance.Spectral_Adds = {
-	"bagel_spectrals",
-	-- "Conjuration",
-	-- "Phantom",
-	-- "Stain",
-	-- "Crossroads",
-	-- "Sacrifice",
-	-- "Awakening",
+	"Conjuration",
+	"Phantom",
+	"Stain",
+	"Crossroads",
+	"Sacrifice",
+	"Awakening",
 	-- "Mania",
 	-- "Transmutation",
 	-- "Anguish",
