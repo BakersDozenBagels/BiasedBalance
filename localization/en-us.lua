@@ -1473,9 +1473,9 @@ return {
             tag_biasedBalance_Hone = {
                 name = 'Hone Tag',
                 text = {
-                    "A random {C:attention}Joker",
-                    "gains {C:dark_edition}Foil/Holographic/Polychrome",
-                    "at random if no edition applied"
+                    "Add {C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
+                    "or {C:dark_edition}Polychrome{} to a ",
+                    "random {C:attention}Joker"
                 }
             },
         },
