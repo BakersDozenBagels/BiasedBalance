@@ -563,6 +563,14 @@ return {
                     "{C:money}50%{} less",
                 }
             },
+            j_biasedBalance_Downwards_Spiral = {
+                name = "Downwards Spiral",
+                text = {
+                    "{C:mult}+#1#{} Mult",
+                    "{C:chips}-#2#{} Chips per level",
+                    "of played hand"
+                }
+            },
             j_biasedBalance_BrashGambler = {
                 name = "Brash Gambler",
                 text = {
