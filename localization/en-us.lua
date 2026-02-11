@@ -556,6 +556,13 @@ return {
                     "{C:inactive}(Currently {C:attention}#2#{C:inactive}/#1#)",
                 }
             },
+            j_biasedBalance_Green_Card = {
+                name = "Green Card",
+                text = {
+                    "Booster Packs cost",
+                    "{C:money}50%{} less",
+                }
+            },
             j_biasedBalance_BrashGambler = {
                 name = "Brash Gambler",
                 text = {
