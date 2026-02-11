@@ -564,6 +564,14 @@ return {
                     "{X:mult,C:white}X#5#{} Mult",
                 }
             },
+            j_biasedBalance_HopelessGambler = {
+                name = "Hopeless Gambler",
+                text = {
+                    "{C:green}#1# in #2#{} chance for {C:mult}+#5#{} Mult",
+                    "{C:green}#1# in #3#{} chance for {C:mult}+#5#{} Mult",
+                    "{C:green}#1# in #4#{} chance for {C:mult}+#5#{} Mult",
+                }
+            },
             j_biasedBalance_Bookworm = {
                 name = "Bookworm",
                 text = {

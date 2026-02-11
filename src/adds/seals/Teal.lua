@@ -21,7 +21,7 @@ SMODS.Seal {
                 colour = G.C.GREEN,
             }
         end
-        if context.after then
+        if context.after and context.cardarea == G.play then
                 G.GAME.probabilities.normal = G.GAME.probabilities.normal / card.ability.seal.extra.num_scored
                 card.ability.seal.extra.num_scored = 1
                 return {
