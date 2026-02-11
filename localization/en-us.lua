@@ -571,6 +571,13 @@ return {
                     "of played hand"
                 }
             },
+            j_biasedBalance_Parachutist = {
+                name = "Parachutist",
+                text = {
+                    "{C:mult}+#1#{} Mult",
+                    "{C:dark_edition}+#2#{} Joker slot",
+                }
+            },
             j_biasedBalance_BrashGambler = {
                 name = "Brash Gambler",
                 text = {

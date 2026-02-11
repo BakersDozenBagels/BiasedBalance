@@ -1,40 +1,33 @@
 SMODS.Joker {
     atlas = "Joker",
-    key = "Downwards_Spiral",
+    key = "Parachutist",
     pos = {
-        x = 1,
+        x = 2,
         y = 8
     },
     rarity = 2,
-    cost = 5,
+    cost = 8,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     config = { 
+        card_limit = 1,
         extra = { 
-            mult = 20,
-            chips = 10
+            mult = 8,
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
                 card.ability.extra.mult,
-                card.ability.extra.chips
+                card.ability.card_limit
         } 
     }
     end,
     calculate = function(self, card, context)
         if context.joker_main then 
-        local chips = (G.GAME.hands[context.scoring_name].level) * card.ability.extra.chips
-        local current_hand_chips = hand_chips
-        if chips >= current_hand_chips - 5 then
-            chips = current_hand_chips - 5
-        end
-        
             return {
                 mult = card.ability.extra.mult,
-                chips = -chips
             }
         end
     end
