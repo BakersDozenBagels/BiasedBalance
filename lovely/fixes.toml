@@ -17,6 +17,31 @@
 version = "1.0.0"
 priority = 999
 
+# Adds colors
+[[patches]]
+[patches.pattern]
+target = "globals.lua"
+pattern = "RENTAL = HEX('b18f43'),"
+position = "after"
+match_indent = true
+payload = '''
+BIASEDBALANCE_TEAL = HEX('79bbc3'),
+BIASEDBALANCE_TANGERINE= HEX('fd8d3c'),
+
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = "G.ARGS.LOC_COLOURS = G.ARGS.LOC_COLOURS or {"
+position = "after"
+match_indent = true
+payload = '''
+  biasedbalance_teal = G.C.BIASEDBALANCE_TEAL,
+  biasedbalance_tangerine = G.C.BIASEDBALANCE_TANGERINE,
+  
+'''
+
 # Omen Globe tweak
 [[patches]]
 [patches.pattern]

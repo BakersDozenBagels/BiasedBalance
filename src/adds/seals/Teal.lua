@@ -1,18 +1,33 @@
 SMODS.Seal {
     key = 'Teal',
-    badge_colour = HEX("008080"),
-    --atlas = 'seals',
+    name = "Teal",
+    badge_colour = G.C.BIASEDBALANCE_TEAL,
+    atlas = 'seals',
     pos = {
         x = 0,
         y = 0
     },
-calculate = function(self, card, context)
-        if context.main_scoring and context.cardarea == G.hand then
-            if context.mod_probability and not context.blueprint then
+    config = {
+        extra = {
+            num_scored = 1,
+        }
+    },
+    calculate = function(self, card, context)
+        if context.main_scoring and context.cardarea == G.play then
+                G.GAME.probabilities.normal = G.GAME.probabilities.normal * 2
+                card.ability.seal.extra.num_scored = card.ability.seal.extra.num_scored * 2
+            return {
+                message = localize('k_biasedBalance_probs'),
+                colour = G.C.GREEN,
+            }
+        end
+        if context.after then
+                G.GAME.probabilities.normal = G.GAME.probabilities.normal / card.ability.seal.extra.num_scored
+                card.ability.seal.extra.num_scored = 1
                 return {
-                    numerator = context.numerator * 2
+                    message = localize('k_reset'),
+                    colour = G.C.GREEN,
                 }
-            end
         end
     end,
 }

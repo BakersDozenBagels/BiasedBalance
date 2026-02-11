@@ -317,7 +317,7 @@ BiasedBalance.Spectral_Adds = {
 	"Mania",
 	"Transmutation",
 	-- "Anguish",
-	-- "Vertigo",
+	"Vertigo",
 }
 
 BiasedBalance.Stake_Adds = {
@@ -339,5 +339,5 @@ BiasedBalance.Voucher_Adds = {
 BiasedBalance.Seal_Adds = {
 	"utilitypack",
 	--"Tangerine",
-	--"Teal",
+	"Teal",
 }

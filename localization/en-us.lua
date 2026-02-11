@@ -1173,11 +1173,15 @@ return {
                     "be used immediately",
                 }
             },
-            biasedBalance_Teal_seal = {
+            biasedbalance_teal_seal = {
+                label = "Teal Seal",
                 name = "Teal Seal",
                 text = {
-                    "When held in hand",
-                    "Double all listed Probabilities"
+                    "Doubles all {C:attention}listed",
+                    "{C:green,E:1,S:1.1}probabilities",
+                    "for played hand",
+                    "when scored",
+                    "{C:inactive}(ex: {C:green}1 in 3{C:inactive} -> {C:green}2 in 3{C:inactive})",
                 }
             },
         },
@@ -1325,8 +1329,10 @@ return {
             c_biasedBalance_Vertigo = {
                name = "Vertigo",
                text = {
-                "Add a {C:attention}Teal Seal{} to 1 selected card"
-              }
+                    "Add a {V:1}Teal Seal{}",
+                    "to {C:attention}1{} selected",
+                    "card in your hand",
+                },
             },
         },
         Stake = {
@@ -1346,7 +1352,7 @@ return {
                 text = {
                     "All cards in shop",
                     "besides Playing Cards",
-                    "Cost $1 more"
+                    "cost $1 more"
                 }
             },
         },
@@ -1599,6 +1605,7 @@ return {
             k_biasedBalance_stone = "Stone!",
             k_biasedBalance_ante = "-1 Ante",
             k_biasedBalance_lucky = "Lucky!",
+            k_biasedBalance_probs = "X2 Probabilities",
         },
         v_dictionary = {
             a_biasedBalance_m_discards = "-#1# Discards",
@@ -1607,7 +1614,8 @@ return {
             biasedBalance_none = "None"
         },
         labels={
-            biasedBalance_Teal_seal = "Teal Seal",
+            biasedbalance_teal_seal = "Teal Seal",
+            biasedbalance_tangerine_seal = "Tangerine Seal",
         },
     }
 }
