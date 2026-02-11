@@ -1,46 +1,43 @@
 SMODS.Consumable {
-    object_type = "Consumable",
     key = 'Anguish',
     set = 'Spectral',
-    atlas = 'Anguish',
-	config = {
-		max_highlighted = 1
-	},
+    atlas = 'Spectrals',
+	config = { extra = { seal = 'biasedBalance_Tangerine' }, max_highlighted = 1 },
+    loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_SEALS[card.ability.extra.seal]
+        return { vars = { card.ability.max_highlighted, colours = {HEX('F28500') } } }
+    end,
     pos = {
         x = 0,
-        y = 0
+        y = 2
     },
-    cost = 4,
-    discovered = true,
-    unlocked = true,
-	can_use = function(self)
-        return #G.hand.highlighted == self.config.max_highlighted
-    end,
-	use = function(self, card, area)
-        local highlighted = G.hand.highlighted[1]
-    
-        if highlighted then
-            highlighted:set_seal("BiasedBalance_Tangerine")  
-            highlighted:juice_up(0.4, 0.5)
-            G.hand:remove_from_highlighted(highlighted)
-        else
-            G.STATE_ARGS.selecting_card = true
-            G:select_cards({
-                amount = 1,
-                prompt = "Adds Tangerine Seal!",
-                must_have = true,
-                filter = function(c)
-                    return c:can_have_seal()
-                end,
-                callback = function(selected)
-                    for _, c in ipairs(selected) do
-                        c:set_seal("BiasedBalance_Tangerine") 
-                        c:juice_up(0.4, 0.5)
-                    end
-                end
-            })
-        end
-    
-        return true
+	use = function(self, card, area, copier)
+        local conv_card = G.hand.highlighted[1]
+        G.E_MANAGER:add_event(Event({
+            func = function()
+                play_sound('tarot1')
+                card:juice_up(0.3, 0.5)
+                return true
+            end
+        }))
+
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = 0.1,
+            func = function()
+                conv_card:set_seal(card.ability.extra.seal, nil, true)
+                return true
+            end
+        }))
+
+        delay(0.5)
+        G.E_MANAGER:add_event(Event({
+            trigger = 'after',
+            delay = 0.2,
+            func = function()
+                G.hand:unhighlight_all()
+                return true
+            end
+        }))
     end,
 }

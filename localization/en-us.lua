@@ -1184,6 +1184,18 @@ return {
                     "{C:inactive}(ex: {C:green}1 in 3{C:inactive} -> {C:green}2 in 3{C:inactive})",
                 }
             },
+            biasedbalance_tangerine_seal = {
+                label = "Tangerine Seal",
+                name = "Tangerine Seal",
+                text = {
+                    "Gives {C:mult}+#1#{} Mult",
+                    "when scored",
+                    "or held in hand",
+                    "Gains {C:mult}+#2#{} Mult",
+                    "if hand contains",
+                    "{C:attention}#3#{} scoring cards",
+                    }
+            },
         },
         Spectral = {
             c_ankh = {
@@ -1330,6 +1342,14 @@ return {
                name = "Vertigo",
                text = {
                     "Add a {V:1}Teal Seal{}",
+                    "to {C:attention}1{} selected",
+                    "card in your hand",
+                },
+            },
+            c_biasedBalance_Anguish = {
+               name = "Anguish",
+               text = {
+                    "Add a {V:1}Tangerine Seal{}",
                     "to {C:attention}1{} selected",
                     "card in your hand",
                 },
