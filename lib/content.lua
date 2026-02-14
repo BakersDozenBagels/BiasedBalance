@@ -8,7 +8,7 @@ BiasedBalance.Back_Tweaks = {
 BiasedBalance.Blind_Tweaks = {
 	-- "crimson_heart",
 	-- "the_acorn",
-	-- "the_leaf",
+	"the_leaf",
 }
 
 BiasedBalance.Edition_Tweaks = {
@@ -190,7 +190,6 @@ BiasedBalance.Back_Adds = {
 
 BiasedBalance.Blind_Adds = {-- check names later
 	
-	"Epsilon",
 	--"Omega",
 	"Sigma",
 	--"Delta",
