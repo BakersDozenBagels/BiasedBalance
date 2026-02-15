@@ -1,6 +1,6 @@
 SMODS.Blind {
-    key = "Epsilon",
-    --atlas = "blinds",
+    key = "leaf",
+    atlas = "blinds",
     pos = {
         x = 0,
         y = 0
@@ -8,7 +8,7 @@ SMODS.Blind {
     discovered = false,
     unlocked = true,
     order = 1,
-    boss_colour = HEX("870f52"),
+    boss_colour = HEX("56a786"),
     boss = {
 		min = 4,
 	},
@@ -31,3 +31,7 @@ SMODS.Blind {
         end
     end
 }
+
+SMODS.Blind:take_ownership("final_leaf", { 
+    no_collection = true,
+	boss = { showdown = false, min = 999 }, })

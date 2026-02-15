@@ -93,8 +93,8 @@ return {
             },
         },
         Blind = {
-            bl_biasedBalance_Epsilon = {
-                name = "Epsilon",
+            bl_biasedBalance_leaf = {
+                name = "The Leaf",
                 text = {
                     "All cards debuffed",
                     "until 1 Joker sold",
