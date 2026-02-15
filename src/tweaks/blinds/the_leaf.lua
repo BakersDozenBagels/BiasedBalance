@@ -7,7 +7,6 @@ SMODS.Blind {
     },
     discovered = false,
     unlocked = true,
-    order = 1,
     boss_colour = HEX("56a786"),
     boss = {
 		min = 4,

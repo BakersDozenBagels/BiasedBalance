@@ -7,7 +7,7 @@ BiasedBalance.Back_Tweaks = {
 
 BiasedBalance.Blind_Tweaks = {
 	-- "crimson_heart",
-	-- "the_acorn",
+	"the_acorn",
 	"the_leaf",
 }
 

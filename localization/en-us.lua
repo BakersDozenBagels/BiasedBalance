@@ -100,6 +100,13 @@ return {
                     "until 1 Joker sold",
                 }
             },
+            bl_biasedBalance_acorn = {
+                name = "The Acorn",
+                text = {
+                    "Flips and shuffles",
+                    "all Joker cards",
+                },
+            },
             bl_biasedBalance_Delta = {
                 name = "Delta",
                 text = {
