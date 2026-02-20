@@ -7,7 +7,7 @@ SMODS.Back {
         y = 0
     },
     calculate = function(self, card, context)
-        if context.setting_blind and not G.GAME.blind.boss and
+        if ((context.setting_blind and not G.GAME.blind.boss) or context.skip_blind) and
         #G.jokers.cards + G.GAME.joker_buffer < G.jokers.config.card_limit then 
             G.GAME.joker_buffer = G.GAME.joker_buffer + 1
             G.E_MANAGER:add_event(Event({

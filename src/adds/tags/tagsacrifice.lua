@@ -10,12 +10,12 @@ SMODS.Consumable {
     pos = { x = 1, y = 1 },
     no_collection = true,
     loc_vars = function()
-        return { vars = { 4, 2 } }
+        return { vars = { 5, 2 } }
     end,
     in_pool = function() return false end,
     can_use = function()
         local count = #G.hand.highlighted
-        return count == 4
+        return count >= 4
     end,
     use = function(self, card)
         G.E_MANAGER:add_event(Event({
@@ -35,7 +35,7 @@ SMODS.Consumable {
             delay = 0.2,
             func = function()
                 for i, v in ipairs(cards) do
-                    if i <= 2 then
+                    if i <= #G.hand.highlighted - 2 then
                         if SMODS.shatters(cards[i]) then
                             cards[i]:shatter()
                         else
@@ -67,7 +67,7 @@ local b_sac = SMODS.Booster {
     weight = 0,
     draw_hand = true,
     loc_vars = function()
-        return { vars = { 4, 2 } }
+        return { vars = { 5, 2 } }
     end,
     create_card = function(self, card, i)
         return { key = 'c_biasedBalance_Sacrifice2' }
@@ -81,7 +81,7 @@ SMODS.Tag {
     pos = { x = 0, y = 0 },
     min_ante = 0,
     loc_vars = function()
-        return { vars = { 4, 2 } }
+        return { vars = { 5, 2 } }
     end,
     apply = function(self, card, context)
         if context.type == 'new_blind_choice' then

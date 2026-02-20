@@ -6,14 +6,14 @@ SMODS.Joker {
         y = 4
     },
     rarity = 3,
-    cost = 5,
+    cost = 8,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
     config = { 
         extra = { 
-            chips = 90,
-            a_chips = 25,
+            chips = 125,
+            a_chips = 35,
         } 
     },
     loc_vars = function(self, info_queue, card)

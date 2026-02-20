@@ -29,9 +29,9 @@ return {
             b_biasedBalance_White = {
                 name = "White Deck",
                 text = {
-                    "At the start of",
-                    "{C:attention}Small{} and {C:attention}Big Blind",
-                    "create a {C:blue}Common{C:attention} Joker",
+                    "Selecting or Skipping a",
+                    "{C:attention}Non-Boss Blind{} creates",
+                    "a {C:blue}Common{C:attention} Joker",
                     "{C:inactive}(Must have room)",
                 }
             },
@@ -93,6 +93,13 @@ return {
             },
         },
         Blind = {
+            --[[bl_final_heart = {
+                name = "Crimson Heart",
+                text = {
+                    "#1# random #2#",
+                    "disabled every hand",
+                },
+            },]]
             bl_biasedBalance_leaf = {
                 name = "The Leaf",
                 text = {
@@ -805,7 +812,7 @@ return {
             j_biasedBalance_Submarine_Joker = {
                 name = "Submarine Joker",
                 text = { 
-                    "{C:mult}+#1#{} Mult for every unique",
+                    "{C:mult}+#1#{} Mult for every",
                     "hand played this round",
                     "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
@@ -982,7 +989,6 @@ return {
             j_biasedBalance_Gourmet = {
                 name = "Gourmet",
                 text = { 
-                    "{C:attention}+#3#{} Consumable Slot",
                     "This {C:attention}Joker{} gains {C:mult}+#1#{} Mult",
                     "for every consumable used",
                     "Resets every {C:attention}Boss Blind",
@@ -1229,7 +1235,8 @@ return {
                     "when scored",
                     "or held in hand",
                     "Gains {C:mult}+#2#{} Mult",
-                    "if hand contains",
+                    "if scored in",
+                    "hand containing",
                     "{C:attention}#3#{} scoring cards",
                     }
             },
@@ -1305,7 +1312,7 @@ return {
                 name = '...',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "destroy the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
                 },
             },
@@ -1439,15 +1446,6 @@ return {
                     "without {C:attention}Stickers{}"
                 },
             },
-            tag_skip={
-                name="Speed Tag",
-                text={
-                    "Gives {C:money}$#2#{}, plus an additional",
-                    "{C:money}$#1#{} for every",
-                    "skipped Blind this run",
-                    "{C:inactive}(Will give {C:money}$#3#{C:inactive})",
-                },
-            },
             tag_ethereal={
                 name="Ethereal Tag",
                 text={
@@ -1555,7 +1553,7 @@ return {
                 name = 'Sacrifice Tag',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "destroy the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
                 }
             },

@@ -44,7 +44,7 @@ BiasedBalance.Joker_Tweaks = {
 	"walkie_talkie",
 	"golden_ticket",
 	"ride_the_bus",
-	"castle",
+	"throwback",
 	"space_joker",
 	"hiker",
 	"erosion",
@@ -85,7 +85,7 @@ BiasedBalance.Joker_Tweaks = {
 	"the_tribe",
 	"card_sharp",
 	"the_trio",
-	"stuntman",
+	--"stuntman", change discarded
 
 	-- Legendary Jokers --
 	"yorick",
@@ -173,7 +173,7 @@ BiasedBalance.Voucher_Tweaks = {
 	"hone",
 	"glow_up",
 	"reroll_surplus",
-	"reroll_glut",
+	-- "reroll_glut", change discarded
 
 }
 

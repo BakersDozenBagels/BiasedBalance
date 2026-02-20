@@ -5,12 +5,12 @@ SMODS.Joker {
         x = 4,
         y = 6
     },
-    rarity = 3,
+    rarity = 2,
     cost = 9,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = true,
-    config = { extra = { chips = 75 } },
+    config = { extra = { chips = 70 } },
     loc_vars = function(self, info_queue, card)
         local count = 0
         if G.jokers then

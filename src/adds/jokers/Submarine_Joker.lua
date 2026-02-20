@@ -20,12 +20,12 @@ SMODS.Joker {
         end
         if context.before and not context.blueprint then
             local hand_not_in_list = true
-            for _, hand_name in ipairs(card.ability.extra.hands_played) do
+            --[[for _, hand_name in ipairs(card.ability.extra.hands_played) do
                 if hand_name == context.scoring_name then
                     hand_not_in_list = false
                     break
                 end
-            end
+            end]]
             if hand_not_in_list then
                 card.ability.extra.hands_played[#card.ability.extra.hands_played+1] = context.scoring_name
             end

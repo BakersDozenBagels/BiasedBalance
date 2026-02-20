@@ -13,10 +13,16 @@ function Game.init_game_object(self)
   ret.Biased_Balance = {
     prehistoric_joker_in_pool = true,
     can_reroll_shop = true,
+    jokers_held_at_ante = 0
   }
   return ret
 end
 
+local ease_ante_ref = ease_ante
+function ease_ante(mod)
+  G.GAME.Biased_Balance.jokers_held_at_ante = G.jokers and #G.jokers.cards
+  return ease_ante_ref(mod)
+end
 
 -- Iterates over two tables in sequence
 local function two_pairs(a, b)
@@ -122,7 +128,7 @@ end
 
 function BiasedBalance.is_even(card)
     if not card.base then return false end
-    return (BiasedBalance.is_numbered(card) and card.base.nominal%2 == 0) or card:get_id() == 14
+    return (BiasedBalance.is_numbered(card) and card.base.nominal%2 == 0)
 end
 
 function BiasedBalance.reroll_scale()

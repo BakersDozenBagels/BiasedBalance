@@ -18,7 +18,7 @@ SMODS.Seal {
         return { vars = { card.ability.seal.extra.mult, card.ability.seal.extra.a_mult, card.ability.seal.extra.num_cards } }
     end,
     calculate = function(self, card, context)
-        if context.before and #context.scoring_hand >= card.ability.seal.extra.num_cards then
+        if context.before and #context.scoring_hand >= card.ability.seal.extra.num_cards and context.cardarea == G.play then
             card.ability.seal.extra.mult = card.ability.seal.extra.mult + card.ability.seal.extra.a_mult
             return {
                 message = localize("k_upgrade_ex"),

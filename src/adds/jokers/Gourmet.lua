@@ -5,7 +5,7 @@ SMODS.Joker {
         x = 12,
         y = 3
     },
-    rarity = 2,
+    rarity = 1,
     cost = 6,
     blueprint_compat = true,
     eternal_compat = true,
@@ -22,15 +22,8 @@ SMODS.Joker {
             vars = { 
                 card.ability.extra.mult_gain,
                 card.ability.extra.mult,
-                card.ability.extra.slots
         } 
     }
-    end,
-    add_to_deck = function(self, card, from_debuff)
-        G.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.extra.slots
-    end,
-    remove_from_deck = function(self, card, from_debuff)
-        G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra.slots
     end,
     calculate = function(self, card, context)
         if context.using_consumeable then
