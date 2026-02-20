@@ -1111,6 +1111,22 @@ return {
                     "{C:inactive}(Cannot reduce chips below {C:attention}5{C:inactive})"
                 }
             },
+            j_biasedBalance_Risotto= {
+                name = "Risotto",
+                text = { 
+                    "Gain a {C:attention}Joker{}-related",
+                    "tag when exiting the shop",
+                    "{C:inactive}({C:attention}#1#{C:inactive} tags remaining)"
+                }
+            },
+            j_biasedBalance_BeansAndSausage= {
+                name = "Beans and Sausage",
+                text = { 
+                    "Gain a {C:attention}Pack{}-related",
+                    "tag when exiting the shop",
+                    "{C:inactive}({C:attention}#1#{C:inactive} tags remaining)"
+                }
+            },
             j_biasedBalance_Aristocrat = {
                 name = "Aristocrat",
                 text = { 
