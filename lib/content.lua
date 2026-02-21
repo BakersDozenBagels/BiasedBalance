@@ -192,6 +192,7 @@ BiasedBalance.Blind_Adds = {-- check names later
 	
 	--"Delta",
 	"Omega", -- The Ruby
+	"Beta", -- The Diamond
 	"Sigma", -- The Pearl
 	"Cunning_Curry",
 	"Olive_Garden",

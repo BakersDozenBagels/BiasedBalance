@@ -165,6 +165,14 @@ return {
                     "of score requirement"
                 }
             },
+            bl_biasedBalance_Beta = {
+                name = "The Diamond",
+                text = {
+                    "After play, all",
+                    "cards in hand",
+                    "are debuffed"
+                }
+            },
             bl_biasedBalance_Theta = {
                 name = "Theta",
                 text = {
