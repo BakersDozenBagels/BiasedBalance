@@ -101,13 +101,13 @@ return {
             },
         },
         Blind = {
-            --[[bl_final_heart = {
+            bl_final_heart = {
                 name = "Crimson Heart",
                 text = {
                     "#1# random #2#",
                     "disabled every hand",
                 },
-            },]]
+            },
             bl_biasedBalance_leaf = {
                 name = "The Leaf",
                 text = {

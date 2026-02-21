@@ -51,7 +51,7 @@ SMODS.Blind:take_ownership("final_heart", {
                     end
                     if #jokers == 0 then jokers = fallback_jokers end
                     local _selected = {}
-                    local picks = math.floor((G.GAME.Biased_Balance.jokers_held_at_ante - 5) / 2)
+                    local picks = 1 + math.floor((G.GAME.Biased_Balance.jokers_held_at_ante - 5) / 2)
                     for i = 1, picks do
                         if #jokers == 0 then break end
                         local _card = pseudorandom_element(jokers, 'bb_crimson_heart')
