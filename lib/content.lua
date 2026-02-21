@@ -194,7 +194,8 @@ BiasedBalance.Blind_Adds = {-- check names later
 	"Sigma",
 	--"Delta",
 	"Cunning_Curry",
-	"Olive_Garden"
+	"Olive_Garden",
+	"Bane_of_Simplicity"
 }
 
 BiasedBalance.Joker_Adds = {

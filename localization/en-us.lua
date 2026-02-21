@@ -122,6 +122,13 @@ return {
                     "are debuffed",
                 }
             },
+            bl_biasedBalance_final_bane = {
+                name = "Bane of Simplicity",
+                text = {
+                    "Reduce Chips of scored hand",
+                    "by 225 after scoring"
+                }
+            },
             bl_biasedBalance_final_garden = {
                 name = "Olive Garden",
                 text = {
