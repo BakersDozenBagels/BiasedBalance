@@ -190,9 +190,9 @@ BiasedBalance.Back_Adds = {
 
 BiasedBalance.Blind_Adds = {-- check names later
 	
-	--"Omega",
 	"Sigma",
 	--"Delta",
+	"Omega",
 	"Cunning_Curry",
 	"Olive_Garden",
 	"Bane_of_Simplicity"

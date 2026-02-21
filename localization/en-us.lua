@@ -126,7 +126,7 @@ return {
                 name = "Bane of Simplicity",
                 text = {
                     "Reduce Chips of scored hand",
-                    "by 225 after scoring"
+                    "by #1# after scoring"
                 }
             },
             bl_biasedBalance_final_garden = {
@@ -151,12 +151,10 @@ return {
                 }
             },
             bl_biasedBalance_Omega = {
-                name = "Omega",
+                name = "The Ruby",
                 text = {
-                    "Reduce Chips by X at the end of scoring",
-                    "Cannot go below 5 Chips",
-                    "(X Value - 5 = 110, 6=125",
-                    "7=140, ante 8+ = 155"
+                    "Reduce Chips of scored hand",
+                    "by #1# after scoring"
                 }
             },
             bl_biasedBalance_Sigma = {

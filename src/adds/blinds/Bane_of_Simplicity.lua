@@ -7,7 +7,10 @@ SMODS.Blind {
     atlas = "blinds",
     boss = { showdown = true },
     loc_vars = function(self)
-        
+        return { vars = { 225 } }
+    end,
+    collection_loc_vars = function(self)
+        return { vars = { 225 } }
     end,
     boss_colour = HEX("4f6367"),
     calculate = function(self, blind, context)
