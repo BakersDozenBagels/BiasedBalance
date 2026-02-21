@@ -12,6 +12,7 @@ SMODS.Edition:take_ownership("negative", {
     end,
 })
 
+
 local raw_get_weight = G.P_CENTERS.e_foil.get_weight
 SMODS.Edition:take_ownership("foil", {
     config = setmetatable({ chips = 65 }, {

@@ -5,14 +5,17 @@ SMODS.Stake {
         y = 0 
     },
 	atlas = "stakes",
+	above_stake = "gold",
 	applied_stakes = { 
         "gold" 
     },
+	sticker_pos = {x = 0, y = 0},
+	sticker_atlas = 'stickers',
+	prefix_config = {above_stake = { mod = false },applied_stakes = { mod = false }},
 	modifiers = function()
-		G.GAME.win_ante = 9
-		if G.GAME.ante == 1 and G.GAME.blind.boss then
-			showdown = true
-		end
+		G.GAME.starting_params.hands = G.GAME.starting_params.hands - 1
+		G.GAME.modifiers.money_per_hand = 2
+		G.GAME.starting_params.dollars = G.GAME.starting_params.dollars + 1
 	end,
 	shiny = true,
 	order = 9,

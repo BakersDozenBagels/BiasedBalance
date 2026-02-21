@@ -326,8 +326,8 @@ BiasedBalance.Spectral_Adds = {
 }
 
 BiasedBalance.Stake_Adds = {
-	--"silver",
-	--"pink"
+	"silver",
+	"pink"
 }
 
 BiasedBalance.Tag_Adds = {

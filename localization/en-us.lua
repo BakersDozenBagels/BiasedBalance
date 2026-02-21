@@ -2,11 +2,19 @@ return {
     descriptions = {
        Back = {
             b_black = {
-                text = { "{C:attention}+#1#{} Joker slot",
-                    "",
-                    "{C:blue}-#2#{} hand",
+                text = { "{C:attention}+1{} Joker slot",
+                    "{C:blue}-1{} hand",
                     "every round",
-                    "",
+                    "{C:dark_edition}Negative{} is",
+                    "{C:green}3X{} more common" }
+            },
+            b_black_pink = {
+                name = "Black Deck",
+                text = { "{C:attention}+1{} Joker slot",
+                    "{C:red}-1{} discard",
+                    "every round",
+                    "Start with",
+                    "extra {C:money}$1",
                     "{C:dark_edition}Negative{} is",
                     "{C:green}3X{} more common" }
             },
@@ -1423,16 +1431,21 @@ return {
                 },
             },
             stake_biasedBalance_pink = {
+                name = "Pink Stake",
                 text = {
-                    "Run ends at Ante 9",
-                    "{C:inactive}(Ante 8 & 9 have Finisher Blinds)"
+                    "{C:blue}-1{} Hand per round",
+                    "Start with extra {C:money}$1",
+                    "{C:money}$2{} per remaining {C:blue}Hand",
+                    "at end of round",
+                    "{s:0.8}Applies all previous Stakes",
                 }
             },
             stake_biasedBalance_silver = {
+                name = "Silver Stake",
                 text = {
-                    "All cards in shop",
-                    "besides Playing Cards",
-                    "cost $1 more"
+                    "Run ends at Ante {C:attention}9",
+                    "{C:inactive}(Ante 8 & 9 have Finisher Blinds)",
+                    "{s:0.8}Applies all previous Stakes",
                 }
             },
         },
