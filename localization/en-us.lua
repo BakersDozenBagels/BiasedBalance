@@ -122,6 +122,13 @@ return {
                     "are debuffed",
                 }
             },
+            bl_biasedBalance_final_garden = {
+                name = "Olive Garden",
+                text = {
+                    "Cannot play",
+                    "a #1#",
+                },
+            },
             bl_biasedBalance_acorn = {
                 name = "The Acorn",
                 text = {
