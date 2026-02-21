@@ -115,6 +115,13 @@ return {
                     "until 1 Joker sold",
                 }
             },
+            bl_biasedBalance_final_curry = {
+                name = "Cunning Curry",
+                text = {
+                    "#1# in 4 cards",
+                    "are debuffed",
+                }
+            },
             bl_biasedBalance_acorn = {
                 name = "The Acorn",
                 text = {
