@@ -13,7 +13,10 @@ function Game.init_game_object(self)
   ret.Biased_Balance = {
     prehistoric_joker_in_pool = true,
     can_reroll_shop = true,
-    jokers_held_at_ante = 0
+    jokers_held_at_ante = 0,
+    most_common_ranks_at_ante = {},
+    most_common_rank = nil,
+    second_most_common_rank = nil,
   }
   return ret
 end
@@ -21,6 +24,36 @@ end
 local ease_ante_ref = ease_ante
 function ease_ante(mod)
   G.GAME.Biased_Balance.jokers_held_at_ante = G.jokers and #G.jokers.cards
+
+    local valid_cards = {}
+    local rank_counts = {}
+    for _, playing_card in ipairs(G.playing_cards) do
+        if not SMODS.has_no_rank(playing_card) then
+            valid_cards[#valid_cards + 1] = playing_card
+            local rank = playing_card.base.value
+            rank_counts[rank] = (rank_counts[rank] or 0) + 1
+        end
+    end
+    
+    table.sort(valid_cards, function(a, b)
+        return (rank_counts[a.base.value] or 0) > (rank_counts[b.base.value] or 0)
+    end)
+
+    -- adding two more just in case only one or zero rank in deck
+    rank_counts[2] = rank_counts[2] or 0
+    rank_counts[3] = rank_counts[3] or 0
+    
+    G.GAME.Biased_Balance.most_common_ranks_at_ante = rank_counts
+
+    local sorted_ranks = {}
+    for rank, count in pairs(rank_counts) do
+        table.insert(sorted_ranks, {rank = rank, count = count})
+    end
+    table.sort(sorted_ranks, function(a, b) return a.count > b.count end)
+
+    G.GAME.Biased_Balance.most_common_rank = sorted_ranks[1].rank
+    G.GAME.Biased_Balance.second_most_common_rank = sorted_ranks[2].rank
+    
   return ease_ante_ref(mod)
 end
 

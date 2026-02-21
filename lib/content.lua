@@ -188,10 +188,10 @@ BiasedBalance.Back_Adds = {
 	"Vainglory",
 }
 
-BiasedBalance.Blind_Adds = {-- check names later
+BiasedBalance.Blind_Adds = {
 	
-	--"Delta",
 	"Omega", -- The Ruby
+	"Alpha", -- The Sapphire
 	"Beta", -- The Diamond
 	"Sigma", -- The Pearl
 	"Cunning_Curry",

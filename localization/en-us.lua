@@ -173,6 +173,14 @@ return {
                     "are debuffed"
                 }
             },
+            bl_biasedBalance_Alpha = {
+                name = "The Sapphire",
+                text = {
+                    "#1#s and",
+                    "#2#s are",
+                    "debuffed"
+                }
+            },
             bl_biasedBalance_Theta = {
                 name = "Theta",
                 text = {
