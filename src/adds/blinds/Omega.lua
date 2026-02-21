@@ -27,7 +27,7 @@ SMODS.Blind {
         else x_value = 155 end
         return { vars = { x_value } }
     end,
-    boss_colour = HEX("883a3b"),
+    boss_colour = HEX("e23539"),
     boss = {
 		min = 5,
 	},

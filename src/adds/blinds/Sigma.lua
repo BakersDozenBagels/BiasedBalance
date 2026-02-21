@@ -1,16 +1,13 @@
 SMODS.Blind {
     key = "Sigma",
-    --atlas = "blinds",
+    atlas = "blinds",
     pos = {
         x = 0,
-        y = 0
+        y = 8
     },
-    discovered = false,
-    unlocked = true,
-    order = 1,
-    boss_colour = HEX("883a3b"),
+    boss_colour = HEX("bb89ba"),
     boss = {
-		min = 5,
+		min = 4,
 	},
     calculate = function(self, card, context)
         if context.final_scoring_step then

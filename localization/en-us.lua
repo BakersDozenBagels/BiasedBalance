@@ -158,11 +158,11 @@ return {
                 }
             },
             bl_biasedBalance_Sigma = {
-                name = "Sigma",
+                name = "The Pearl",
                 text = {
-                    "If score is over",
-                    "Half of total",
-                    "Reduces to half"
+                    "Hand cannot score",
+                    "more than half",
+                    "of score requirement"
                 }
             },
             bl_biasedBalance_Theta = {
