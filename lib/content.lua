@@ -192,8 +192,11 @@ BiasedBalance.Blind_Adds = {
 	
 	"Omega", -- The Ruby
 	"Alpha", -- The Sapphire
+	"Delta", -- The Emerald
 	"Beta", -- The Diamond
 	"Sigma", -- The Pearl
+	--"Kappa", -- The Platinum
+	-- "Gamma", -- The Uranium
 	"Cunning_Curry",
 	"Olive_Garden",
 	"Bane_of_Simplicity"

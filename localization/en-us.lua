@@ -144,10 +144,11 @@ return {
                 },
             },
             bl_biasedBalance_Delta = {
-                name = "Delta",
+                name = "The Emerald",
                 text = {
-                    "After every scoring hand",
-                    "Debuff all cards in hand"
+                    "If played hand contains",
+                    "an XMult effect, increase",
+                    "required score by 30%"
                 }
             },
             bl_biasedBalance_Omega = {
