@@ -18,7 +18,7 @@ BiasedBalance.Edition_Tweaks = {
 }
 
 BiasedBalance.Enhancement_Tweaks = {
-	"wild",
+	--"wild", discarded change
 }
 
 BiasedBalance.Joker_Tweaks = {
@@ -196,7 +196,7 @@ BiasedBalance.Blind_Adds = {
 	"Beta", -- The Diamond
 	"Sigma", -- The Pearl
 	--"Kappa", -- The Platinum
-	-- "Gamma", -- The Uranium
+	--"Gamma", -- The Uranium
 	"Cunning_Curry",
 	"Olive_Garden",
 	"Bane_of_Simplicity"

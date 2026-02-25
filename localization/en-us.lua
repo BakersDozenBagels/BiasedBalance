@@ -151,6 +151,14 @@ return {
                     "required score by 30%"
                 }
             },
+            bl_biasedBalance_Gamma = {
+                name = "The Uranium",
+                text = {
+                    "Scoring Enhancements,",
+                    "Seals, and Editions",
+                    "are disabled"
+                }
+            },
             bl_biasedBalance_Omega = {
                 name = "The Ruby",
                 text = {
@@ -204,7 +212,7 @@ return {
                     "Can be used as",
                     "any suit",
                     "Immune to",
-                    "suit-debuffing {C:attention}Blinds{}",
+                    "suit-debuffing effects",
                 },
             },
         },
