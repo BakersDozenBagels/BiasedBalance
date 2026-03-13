@@ -159,6 +159,13 @@ return {
                     "are disabled"
                 }
             },
+            bl_biasedBalance_Kappa = {
+                name = "The Platinum",
+                text = {
+                    "Joker values",
+                    "reduced by half",
+                }
+            },
             bl_biasedBalance_Omega = {
                 name = "The Ruby",
                 text = {
@@ -188,20 +195,6 @@ return {
                     "#1#s and",
                     "#2#s are",
                     "debuffed"
-                }
-            },
-            bl_biasedBalance_Theta = {
-                name = "Theta",
-                text = {
-                    "All cards with Odd",
-                    "rank are debuffed"
-                }
-            },
-            bl_biasedBalance_Zeta = {
-                name = "Zeta",
-                text = {
-                    "All cards with Even",
-                    "rank are debuffed"
                 }
             },
         },

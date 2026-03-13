@@ -28,60 +28,7 @@ SMODS.Joker {
         end
     end
 }
---[[
-local updateref = Card.update
-function Card:update(dt)
-  local ref = updateref(self, dt)
-  if not next(SMODS.find_card("j_biasedBalance_Peafowl")) or self.config.center == G.P_CENTERS.c_base then
-    return ref
-  end
 
-  local current_count = 0
-  if self.area == G.play and G.play then
-    for _, c in ipairs(G.play.cards) do
-      if next(SMODS.find_card("j_biasedBalance_Peafowl"))and not c.debuff then
-        current_count = #SMODS.find_card("j_biasedBalance_Peafowl")
-      end
-    end
-  end
-  if self.area == G.hand and G.hand then
-    local is_highlighted = {}
-    for _, c in ipairs(G.hand.highlighted) do
-      is_highlighted[c] = true
-    end
-    local self_is_highlighted = is_highlighted[self]
-
-    for _, c in ipairs(G.hand.cards) do
-      if next(SMODS.find_card("j_biasedBalance_Peafowl")) and not c.debuff then
-        if is_highlighted[c] == self_is_highlighted then
-          current_count = #SMODS.find_card("j_biasedBalance_Peafowl")
-        end
-      end
-    end
-  end
-
-  local applied = self.ability.biasedBalance_peafowl_applied or {}
-  self.ability.biasedBalance_peafowl_applied = applied
-  local prev_factor = applied.factor or 1
-  local factor = 1 + (0.5*current_count)
-  local diff = factor/prev_factor
-  if diff ~= 1 then
-    peafowl_enhancement_calc(
-      self, -- card
-      "*", -- equation
-      diff, -- extra_value
-      -- exclusions VVV
-      { h_x_chips = 1, Xmult = 1, x_chips = 1, x_mult = 1, extra_value=true, card_limit=true },
-      nil, -- inclusions
-      true, -- do_round
-      false, -- only
-      "ability" -- extra_search
-    )
-    applied.factor = factor
-  end
-  return ref
-end
-]]
 local updateref = Card.update
 function Card:update(dt)
   local ref = updateref(self, dt)
