@@ -15,8 +15,20 @@ SMODS.Joker {
         return { vars = { card.ability.extra.mult } }
     end,
     calculate = function(self, card, context)
-        if context.before and not context.blueprint then
-            
+        if context.press_play and not context.blueprint then
+            G.E_MANAGER:add_event(Event({ trigger = "after", delay = 0.5, func = function()
+				local any_selected = nil
+				for i = 1, #G.hand.cards do
+					local selected_card = G.hand.cards[i]
+					if selected_card:is_face() then 
+						G.hand.highlighted[#G.hand.highlighted+1] = selected_card
+            			selected_card:highlight(true)
+						any_selected = true
+						play_sound('card1', 1)
+					end
+				end
+				if any_selected then G.FUNCS.discard_cards_from_highlighted(nil, true) end
+			return true end })) 
         end
         if context.joker_main then
             return {
@@ -25,3 +37,4 @@ SMODS.Joker {
         end
     end
 }
+
