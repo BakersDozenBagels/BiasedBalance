@@ -356,9 +356,9 @@ BiasedBalance.Seal_Adds = {
 
 BiasedBalance.Extra_Credit = {
 	-- changes
-	-- "Joka_Lisa",
-	-- "Prideful_Joker",
-	-- "Turtle",
+	"Joka_Lisa",
+	"Prideful_Joker",
+	"Turtle",
 
 	-- adds to utility
 	"Forklift",

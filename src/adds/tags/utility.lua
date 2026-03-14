@@ -29,7 +29,7 @@ local b_ut = SMODS.Booster {
                     card:set_perishable(true)
                 end
 
-        if pseudorandom 'LowStickerBuffoon' < 0.1 then
+        if pseudorandom 'LowStickerBuffoon' < 0.1 and G.GAME.modifiers.enable_rentals_in_shop then
             card:set_rental(true)
         end
         return card
