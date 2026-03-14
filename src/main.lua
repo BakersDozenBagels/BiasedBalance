@@ -60,6 +60,10 @@ BiasedBalance.file_loader(BiasedBalance.Tag_Adds, "src/adds/tags")
 BiasedBalance.file_loader(BiasedBalance.Voucher_Adds, "src/adds/vouchers")
 BiasedBalance.file_loader(BiasedBalance.Seal_Adds, "src/adds/seals")
 
+if next(SMODS.find_mod('extracredit')) then
+    BiasedBalance.file_loader(BiasedBalance.Extra_Credit, "src/tweaks/extracredit")
+end
+
 -- ||           ATLAS           ||
 
 SMODS.Atlas {

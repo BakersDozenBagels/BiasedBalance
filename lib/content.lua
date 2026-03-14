@@ -353,3 +353,24 @@ BiasedBalance.Seal_Adds = {
 	"Tangerine",
 	"Teal",
 }
+
+BiasedBalance.Extra_Credit = {
+	-- changes
+	-- "Joka_Lisa",
+	-- "Prideful_Joker",
+	-- "Turtle",
+
+	-- adds to utility
+	"Forklift",
+	"Starfruit",
+	"Permanent_Marker",
+	"Tuxedo",
+	"Joker_Of_The_Year",
+	"Coupon_Sheet",
+	"Passport",
+	"Lucky_7",
+
+	-- removed
+	-- "",
+	-- "",
+}
