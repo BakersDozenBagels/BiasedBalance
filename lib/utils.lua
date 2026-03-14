@@ -10,6 +10,7 @@ end
 local init_game_object_ref = Game.init_game_object
 function Game.init_game_object(self)
   local ret = init_game_object_ref(self)
+  ret.modifiers.extra_boosters = (ret.modifiers.extra_boosters or 0) + 1
   ret.Biased_Balance = {
     prehistoric_joker_in_pool = true,
     can_reroll_shop = true,
@@ -17,6 +18,7 @@ function Game.init_game_object(self)
     most_common_ranks_at_ante = {},
     most_common_rank = nil,
     second_most_common_rank = nil,
+    silver_stake_active = false,
   }
   return ret
 end

@@ -144,6 +144,21 @@ match_indent = true
 times = 1
 payload = "* (BiasedBalance and BiasedBalance.reroll_scale() or 1)"
 
+# Silver Stake
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''elseif not v.boss.showdown and (v.boss.min <= math.max(1, G.GAME.round_resets.ante) and ((math.max(1, G.GAME.round_resets.ante))%G.GAME.win_ante ~= 0 or G.GAME.round_resets.ante < 2)) then
+    eligible_bosses[k] = res and true or nil'''
+position = "at"
+payload = '''
+elseif v.boss.showdown and G.GAME.Biased_Balance.silver_stake_active and (G.GAME.round_resets.ante % 8 == 0) then
+    eligible_bosses[k] = res and true or nil
+elseif not v.boss.showdown and not (G.GAME.Biased_Balance.silver_stake_active and (G.GAME.round_resets.ante % 8 == 0)) 
+and (v.boss.min <= math.max(1, G.GAME.round_resets.ante) and ((math.max(1, G.GAME.round_resets.ante))%G.GAME.win_ante ~= 0 
+or G.GAME.round_resets.ante < 2)) then
+    eligible_bosses[k] = res and true or nil'''
+match_indent = true
 
 
 # Jumbo
