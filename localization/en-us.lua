@@ -1727,6 +1727,7 @@ return {
             k_biasedBalance_ante = "-1 Ante",
             k_biasedBalance_lucky = "Lucky!",
             k_biasedBalance_probs = "X2 Probabilities",
+            k_biasedBalance_allhands = "All Secret Hands"
         },
         v_dictionary = {
             a_biasedBalance_m_discards = "-#1# Discards",

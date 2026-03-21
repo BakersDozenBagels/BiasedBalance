@@ -10,6 +10,10 @@ end
 local init_game_object_ref = Game.init_game_object
 function Game.init_game_object(self)
   local ret = init_game_object_ref(self)
+  local secrets = {}
+  for k, v in pairs(SMODS.PokerHands) do
+    if (type(v.visible) == 'function' and not v:visible()) or v.visible == false then table.insert(secrets, k) end
+  end
   ret.modifiers.extra_boosters = (ret.modifiers.extra_boosters or 0) + 1
   ret.Biased_Balance = {
     prehistoric_joker_in_pool = true,
@@ -19,6 +23,7 @@ function Game.init_game_object(self)
     most_common_rank = nil,
     second_most_common_rank = nil,
     silver_stake_active = false,
+    secret_hands = secrets,
   }
   return ret
 end
