@@ -802,7 +802,7 @@ return {
                 text = { 
                     "{C:mult}+#1#{} Mult for every",
                     "{C:attention}#2#{} chips your current",
-                    "score has",
+                    "hand will score",
                 }
             },
             j_biasedBalance_Conspiracy = {
