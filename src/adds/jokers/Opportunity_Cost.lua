@@ -53,7 +53,7 @@ SMODS.Joker {
         table.sort(jokers, function(a, b)
             return a.ability.timelapse_order < b.ability.timelapse_order
         end)
-        return SMODS.blueprint_effect(card, jokers[#jokers], context) or {}
+        return SMODS.blueprint_effect(card, jokers[#jokers], context) or nil
     end,
 }
 

@@ -937,7 +937,7 @@ return {
                 text = { 
                     "{C:gold}$#1#{} at end of round",
                     "or when {C:attention}Blind{} is skipped",
-                    "{C:gold}-$#1#{} when triggered"
+                    "{C:gold}-$#2#{} when triggered"
                 }
             },
             j_biasedBalance_Haunted_House = {
