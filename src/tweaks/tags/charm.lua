@@ -3,14 +3,14 @@ local b_std = SMODS.Booster {
     no_collection = true,
     draw_hand = true,
     config = {
-        extra = 5,
+        extra = 6,
         choose = 3
     },
     atlas = "Boosters",
 	pos = { x = 1, y = 0 },
     weight = 0,
     loc_vars = function()
-        return { vars = { 3, 5 } }
+        return { vars = { 3, 6 } }
     end,
     ease_background_colour = function(self)
         ease_background_colour_blind(G.STATES.TAROT_PACK)
@@ -44,7 +44,7 @@ local b_std = SMODS.Booster {
 SMODS.Tag:take_ownership("charm", {
     config = {
         choose = 3,
-        from = 5,
+        from = 6,
     },
     loc_vars = function(self, info_queue, tag)
         info_queue[#info_queue + 1] = G.P_CENTERS.p_biasedBalance_HyperArcana
