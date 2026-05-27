@@ -19,13 +19,12 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.money, card.ability.extra.money_add
+                card.ability.extra.money + card.ability.extra.money_add * (G.GAME.skips or 0) , card.ability.extra.money_add
         } 
     }
     end,
     calculate = function(self, card, context)
         if context.skip_blind then
-            card.ability.extra.money = card.ability.extra.money + card.ability.extra.money_add
             return {
                 message = localize('k_upgrade_ex'),
                 colour = G.C.MONEY
@@ -33,6 +32,6 @@ SMODS.Joker {
         end
     end,
     calc_dollar_bonus = function(self, card)
-        return card.ability.extra.money
+        return card.ability.extra.money + card.ability.extra.money_add * (G.GAME.skips or 0)
     end
 }

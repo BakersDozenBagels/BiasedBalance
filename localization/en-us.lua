@@ -851,7 +851,8 @@ return {
                     "Earn {C:gold}$#1#{} at",
                     "end of round",
                     "Payout increases by {C:gold}$#2#{}",
-                    "when {C:attention}Blind{} is skipped",
+                    "for every skipped {C:attention}Blind{}",
+                    "this run"
                 }
             },
             j_biasedBalance_Submarine_Joker = {
