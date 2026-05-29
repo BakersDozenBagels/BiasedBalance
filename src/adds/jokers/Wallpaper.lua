@@ -41,16 +41,6 @@ SMODS.Joker {
                     end
                 end
             end
-            for _, card in ipairs(G.hand.cards) do
-                if SMODS.has_any_suit(card) then
-                    for suit, count in pairs(suits) do
-                        if card:is_suit(suit) and count == 0 then
-                            suits[suit] = count + 1
-                            break
-                        end
-                    end
-                end
-            end
             local num_suits = 0
 
             for _, v in pairs(suits) do

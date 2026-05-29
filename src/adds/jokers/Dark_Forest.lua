@@ -21,10 +21,12 @@ SMODS.Joker {
         card.ability.extra.xmult = card.ability.extra.xmult_base
         if G.playing_cards then
             for _, c in ipairs(G.playing_cards) do
-                if c:is_suit("Diamonds") and not SMODS.has_any_suit(card) then
-                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
-                elseif c:is_suit("Hearts") and not SMODS.has_any_suit(card) then
-                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                if not SMODS.has_any_suit(c) then
+                    if c:is_suit("Diamonds") then
+                        card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                    elseif c:is_suit("Hearts") then
+                        card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                    end
                 end
             end
         end
@@ -39,10 +41,12 @@ SMODS.Joker {
         if context.joker_main then
             card.ability.extra.xmult = card.ability.extra.xmult_base
             for _, c in ipairs(G.playing_cards or {}) do
-                if c:is_suit("Diamonds") and not SMODS.has_any_suit(card) then
-                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
-                elseif c:is_suit("Hearts") and not SMODS.has_any_suit(card) then
-                    card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                if not SMODS.has_any_suit(c) then
+                    if c:is_suit("Diamonds") then
+                        card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                    elseif c:is_suit("Hearts") then
+                        card.ability.extra.xmult = card.ability.extra.xmult - card.ability.extra.xmult_gain
+                    end
                 end
             end
             return {
