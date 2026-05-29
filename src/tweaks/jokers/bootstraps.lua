@@ -13,7 +13,7 @@ SMODS.Joker:take_ownership("bootstraps", {
         end
     end,
     add_to_deck = function(self, card, from_debuff)
-        card.ability.extra_value = -2
+        --card.ability.extra_value = -2
         G.GAME.inflation = G.GAME.inflation + card.ability.extra.dollars
         G.E_MANAGER:add_event(Event({
             func = function()
