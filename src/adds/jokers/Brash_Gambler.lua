@@ -16,17 +16,18 @@ SMODS.Joker {
     end,
     calculate = function(self, card, context)
         if context.joker_main then
-            local res = nil
             if pseudorandom('j_biasedBalance_BrashGambler') * card.ability.extra.odds2 < G.GAME.probabilities.normal then
-                res = {
-                    x_mult = card.ability.extra.mult2
+                SMODS.calculate_effect {
+                    x_mult = card.ability.extra.mult2,
+                    card = card,
                 }
             end
             if pseudorandom('j_biasedBalance_BrashGambler') * card.ability.extra.odds1 < G.GAME.probabilities.normal then
-                res = res or {}
-                res.x_mult = (res.x_mult or 1) * card.ability.extra.mult1
+                SMODS.calculate_effect {
+                    x_mult = card.ability.extra.mult1,
+                    card = card,
+                }
             end
-            return res
         end
     end
 }

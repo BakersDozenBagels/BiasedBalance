@@ -641,8 +641,7 @@ return {
                 name = "Brash Gambler",
                 text = {
                     "{C:green}#1# in #2#{} chance for {X:mult,C:white}X#3#{} Mult",
-                    "{C:green}#1# in #4#{} chance for an additional",
-                    "{X:mult,C:white}X#5#{} Mult",
+                    "{C:green}#1# in #4#{} chance for {X:mult,C:white}X#5#{} Mult",
                 }
             },
             j_biasedBalance_HopelessGambler = {

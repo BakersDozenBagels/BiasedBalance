@@ -11,7 +11,7 @@ SMODS.Blind {
     boss_colour = HEX("4da28e"),
     
 }
-
+--[[
 local scie = SMODS.calculate_individual_effect
 		function SMODS.calculate_individual_effect(effect, scored_card, key, amount, from_edition)
 			local ret = scie(effect, scored_card, key, amount, from_edition)
@@ -53,4 +53,4 @@ local scie = SMODS.calculate_individual_effect
                 end
 			end
 			return ret
-		end
+		end]]
