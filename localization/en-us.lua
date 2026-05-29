@@ -6,7 +6,7 @@ return {
                     "{C:blue}-1{} hand",
                     "every round",
                     "{C:dark_edition}Negative{} is",
-                    "{C:green}3X{} more common" }
+                    "{C:green}4X{} more common" }
             },
             b_black_pink = {
                 name = "Black Deck",
@@ -16,7 +16,7 @@ return {
                     "Start with",
                     "extra {C:money}$1",
                     "{C:dark_edition}Negative{} is",
-                    "{C:green}3X{} more common" }
+                    "{C:green}4X{} more common" }
             },
             b_ghost = {
                 text = {
