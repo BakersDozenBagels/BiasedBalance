@@ -9,7 +9,21 @@ SMODS.Blind {
 		min = 6,
 	},
     boss_colour = HEX("4da28e"),
-    
+    disable = function(self)
+        G.GAME.blind.chips = get_blind_amount(G.GAME.round_resets.ante) * G.GAME.starting_params.ante_scaling
+		G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+    end,
+    --[[calculate = function(self, card, context)
+        if context.post_trigger then
+            local other_ret = context.other_ret.jokers or {}
+            if other_ret.x_mult or other_ret.xmult or other_ret.Xmult_mod 
+            or other_ret.Xmult or other_ret.x_mult_mod then
+                return {
+                    xblindsize = 1.3
+                }
+            end
+        end
+    end]]
 }
 --[[
 local scie = SMODS.calculate_individual_effect

@@ -21,6 +21,7 @@ BiasedBalance = {}
 
 SMODS.current_mod.optional_features = {
     retrigger_joker = true,
+    post_trigger = true,
 }
 
 --Load Lib Files
