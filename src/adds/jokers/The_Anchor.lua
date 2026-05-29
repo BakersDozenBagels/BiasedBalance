@@ -20,7 +20,7 @@ SMODS.Joker {
         return { vars = { card.ability.extra.x_mult, card.ability.extra.chips } }
     end,
     calculate = function(self, card, context)
-        if context.joker_main and not context.individual and G.GAME.chips >= card.ability.extra.chips then
+        if context.joker_main and not context.individual and hand_chips >= card.ability.extra.chips then
             return { x_mult = card.ability.extra.x_mult }
         end
     end

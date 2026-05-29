@@ -184,8 +184,8 @@ return {
             bl_biasedBalance_Beta = {
                 name = "The Diamond",
                 text = {
-                    "After play, all",
-                    "cards in hand",
+                    "All cards",
+                    "held in hand",
                     "are debuffed"
                 }
             },
@@ -569,8 +569,9 @@ return {
             j_biasedBalance_Anchor = {
                 name = "The Anchor",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult if current score",
-                    "has {C:attention}#2#{} Chips or more"
+                    "{X:mult,C:white}X#1#{} Mult if current",
+                    "scoring hand has",
+                    "{C:attention}#2#{} Chips or more"
                 }
             },
             j_biasedBalance_Rivals = {
