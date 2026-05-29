@@ -1425,8 +1425,10 @@ return {
             c_biasedBalance_Awakening2 = {
                 name = "Awakening",
                 text = {
-                    "Add a random {C:attention}Seal", "to up to {C:attention}#1#{} selected", "playing cards,",
-                    "lose up to {C:money}$#2#"
+                    "Increases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
+                    "{C:inactive}(Must have room)",
                 }
             },
             c_biasedBalance_Mania = {

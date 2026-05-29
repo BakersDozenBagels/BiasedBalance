@@ -46,6 +46,11 @@ SMODS.Joker {
                             colour = G.C.SECONDARY_SET.Spectral,
                         }
                     end
+                else
+                    return {
+                        message = localize('k_nope_ex'),
+                        colour = G.C.SECONDARY_SET.Spectral,
+                    }
                 end
             end
         end
