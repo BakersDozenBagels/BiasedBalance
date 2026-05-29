@@ -15,10 +15,8 @@ SMODS.Joker {
     end,
     add_to_deck = function(self, card, from_debuff)
         ease_dollars(36)
+        card.sell_cost = -36
     end,
-    remove_from_deck = function(self, card, from_debuff)
-        ease_dollars(-36)
-    end
 }
 
 local unpack = table.unpack or unpack--[[
