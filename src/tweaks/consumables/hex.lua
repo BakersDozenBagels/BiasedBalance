@@ -10,9 +10,6 @@ SMODS.Consumable:take_ownership('c_hex', {
             trigger = 'after',
             delay = 0.4,
             func = function()
-                local eligible_card = pseudorandom_element(editionless_jokers, 'hex')
-                eligible_card:set_edition({ polychrome = true })
-
                 local _first_dissolve = nil
                 for _, joker in pairs(G.jokers.cards) do
                     if (not joker.ability.eternal) then
@@ -21,6 +18,9 @@ SMODS.Consumable:take_ownership('c_hex', {
                         break
                     end
                 end
+
+                local eligible_card = pseudorandom_element(editionless_jokers, 'hex')
+                eligible_card:set_edition({ polychrome = true })
 
                 card:juice_up(0.3, 0.5)
                 return true
