@@ -21,24 +21,35 @@ SMODS.Joker {
         return { 
         vars = { 
             card.ability.extra.a_mult,
-            card.ability.extra.mult,
+            card.ability.extra.mult + G.GAME.num_jokers_this_run and (card.ability.extra.a_mult * G.GAME.num_jokers_this_run) or 0,
         } 
     }
     end,
     calculate = function(self, card, context)
+        G.GAME.num_jokers_this_run = G.GAME.num_jokers_this_run or 0
         if context.joker_main then
             return {
-                mult = card.ability.extra.mult
+                mult = card.ability.extra.a_mult * G.GAME.num_jokers_this_run
             }
         end
-        if context.buying_card and context.card.ability.set == "Joker" and context.card ~= card and not context.blueprint then
-            if not card.ability.extra.seen[context.card.label] then
-                card.ability.extra.seen[context.card.label] = true
-                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.a_mult
-                return {
-                    message = localize('k_upgrade_ex'),
-                }
-            end
+        if context.added_unique_joker then
+            return {
+                message = localize('k_upgrade_ex')
+            }
         end
     end
 }
+
+local addref = Card.add_to_deck
+function Card:add_to_deck(from_debuff)
+    addref(self, from_debuff)
+    if self.ability.set == 'Joker' then
+        G.GAME.jokers_this_run = G.GAME.jokers_this_run or {}
+        G.GAME.num_jokers_this_run = G.GAME.num_jokers_this_run or 0
+        if not G.GAME.jokers_this_run[self.config.center.key] then
+            G.GAME.jokers_this_run[self.config.center.key] = true
+            G.GAME.num_jokers_this_run = G.GAME.num_jokers_this_run + 1
+            SMODS.calculate_context({added_unique_joker = true})
+        end
+    end
+end

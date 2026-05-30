@@ -989,7 +989,8 @@ return {
                 name = "Jokerdex",
                 text = { 
                     "{C:red}+#1#{} Mult for every",
-                    "{C:attention}unique{} Joker purchased",
+                    "{C:attention}unique{} Joker obtained",
+                    "this run",
                     "{C:inactive}(Currently {C:red}+#2#{C:inactive})",
                 }
             },
