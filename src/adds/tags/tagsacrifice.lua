@@ -43,10 +43,10 @@ SMODS.Consumable {
                         end
                     else
                         cards[i]:set_edition(poll_edition('Sacrifice', nil, nil, true, {
-                            { name = 'e_foil',       weight = 30 },
-                            { name = 'e_holo',       weight = 22.5 },
-                            { name = 'e_negative',   weight = 32.5 },
-                            { name = 'e_polychrome', weight = 15 },
+                            { name = 'e_foil',       weight = 40 },
+                        { name = 'e_holo',       weight = 30 },
+                        { name = 'e_negative',   weight = 15 },
+                        { name = 'e_polychrome', weight = 15 }
                         }), true)
                     end
                 end
