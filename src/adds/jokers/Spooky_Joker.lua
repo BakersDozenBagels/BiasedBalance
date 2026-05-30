@@ -33,9 +33,9 @@ SMODS.Joker {
                         )then
                     local cards = {}
                     local edition = poll_edition('j_biasedBalance_Spooky', nil, nil, true, {
-                        { name = 'e_foil',       weight = 30 },
-                        { name = 'e_holo',       weight = 22.5 },
-                        { name = 'e_negative',   weight = 32.5 },
+                        { name = 'e_foil',       weight = 40 },
+                        { name = 'e_holo',       weight = 30 },
+                        { name = 'e_negative',   weight = 15 },
                         { name = 'e_polychrome', weight = 15 },
                     })
                     for i = 1, #context.scoring_hand do

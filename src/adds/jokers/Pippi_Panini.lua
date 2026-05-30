@@ -28,7 +28,10 @@ SMODS.Joker {
                     if not scored_card.edition then
                         scored_card:set_edition(
 								poll_edition('panini', nil, true, true,
-                { 'e_polychrome', 'e_holo', 'e_foil', 'e_negative' })
+                        { name = 'e_foil',       weight = 40 },
+                        { name = 'e_holo',       weight = 30 },
+                        { name = 'e_negative',   weight = 15 },
+                        { name = 'e_polychrome', weight = 15 })
 							)
                     end
                     G.E_MANAGER:add_event(Event({

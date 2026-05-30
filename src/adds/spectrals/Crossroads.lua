@@ -37,10 +37,10 @@ SMODS.Consumable {
                 delay = 0.1,
                 func = function()
                     local edition = poll_edition('aura', nil, nil, true, {
-                        { name = 'e_foil',       weight = 25 },
-                        { name = 'e_holo',       weight = 35 },
-                        { name = 'e_negative',   weight = 25 },
-                        { name = 'e_polychrome', weight = 15 },
+                        { name = 'e_foil',       weight = 40 },
+                        { name = 'e_holo',       weight = 30 },
+                        { name = 'e_negative',   weight = 15 },
+                        { name = 'e_polychrome', weight = 15 }
                     })
                     v:set_edition(edition, true)
                     return true

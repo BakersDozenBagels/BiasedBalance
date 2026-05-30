@@ -6,10 +6,10 @@ SMODS.Consumable:take_ownership('c_aura', {
             func = function()
                 local over = false
                 local edition = poll_edition('aura', nil, nil, true, {
-                    { name = 'e_foil',       weight = 30 },
-                    { name = 'e_holo',       weight = 22.5 },
-                    { name = 'e_negative',   weight = 32.5 },
-                    { name = 'e_polychrome', weight = 15 },
+                    { name = 'e_foil',       weight = 40 },
+                        { name = 'e_holo',       weight = 30 },
+                        { name = 'e_negative',   weight = 15 },
+                        { name = 'e_polychrome', weight = 15 }
                 })
                 local aura_card = G.hand.highlighted[1]
                 aura_card:set_edition(edition, true)

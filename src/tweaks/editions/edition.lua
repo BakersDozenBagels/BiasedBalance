@@ -2,7 +2,7 @@ local polling_playing = false
 
 local raw_get_weight = G.P_CENTERS.e_negative.get_weight
 SMODS.Edition:take_ownership("negative", {
-    weight = .4,
+    weight = .8,
     get_weight = function(self)
         local mul = polling_playing and 7 or 1
         if G.GAME.selected_back.effect.center.key == "b_black" then
@@ -27,7 +27,7 @@ SMODS.Edition:take_ownership("foil", {
             rawset(t, k, v)
         end,
     }),
-    weight = 1.75,
+    weight = 8.75,
     get_weight = function(self)
         local mul = polling_playing and 2 or 1
         return raw_get_weight(self) * mul
@@ -36,7 +36,7 @@ SMODS.Edition:take_ownership("foil", {
 
 local raw_get_weight = G.P_CENTERS.e_holo.get_weight
 SMODS.Edition:take_ownership("holo", {
-    weight = 1.75,
+    weight = 8.75,
     get_weight = function(self)
         local mul = polling_playing and 2 or 1
         return raw_get_weight(self) * mul
@@ -45,7 +45,7 @@ SMODS.Edition:take_ownership("holo", {
 
 local raw_get_weight = G.P_CENTERS.e_polychrome.get_weight
 SMODS.Edition:take_ownership("polychrome", {
-    weight = .5,
+    weight = 2,
     get_weight = function(self)
         local mul = polling_playing and 2.8 or 1
         return raw_get_weight(self) * mul
