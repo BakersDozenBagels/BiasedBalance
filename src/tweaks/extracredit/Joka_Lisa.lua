@@ -55,25 +55,24 @@ SMODS.Joker:take_ownership("ExtraCredit_jokalisa", {
         if context.before and not context.blueprint then
             local activated = false
             for _, playing_card in ipairs(context.scoring_hand) do
-                for k, v in pairs(SMODS.get_enhancements(playing_card)) do
-                    if v then
-                        if not contains(card.ability.extra.enhancements_scored, k) then
-                            card.ability.extra.enhancements_scored[#card.ability.extra.enhancements_scored+1] = k
-                            activated = true
-                        end
+                local enhancement = playing_card.ability.set == 'Enhanced' and playing_card.config.center or nil
+                if enhancement then
+                    if not contains(card.ability.extra.enhancements_scored, enhancement) then
+                        card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod)
+                        add_unique_value(card.ability.extra.enhancements_scored, enhancement)
+                        activated = true
                     end
                 end
             end
             if activated then
-                card.ability.extra.Xmult = card.ability.extra.Xmult + (card.ability.extra.Xmult_mod*#card.ability.extra.enhancements_scored)
                 return {
                     message = localize{type='variable',key='a_xmult',vars={card.ability.extra.Xmult}},
                     card = card,
                     colour = G.C.RED
                 }
             end
-
-        elseif context.cardarea == G.jokers and context.joker_main and card.ability.extra.Xmult > 1 then
+        end
+        if context.cardarea == G.jokers and context.joker_main and card.ability.extra.Xmult > 1 then
             return{
                 message = localize{type='variable',key='a_xmult',vars={card.ability.extra.Xmult}},
                 Xmult_mod = card.ability.extra.Xmult
