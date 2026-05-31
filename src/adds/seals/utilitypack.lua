@@ -10,7 +10,7 @@ SMODS.Booster {
     cost = 4,
     weight = 0.3,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.choose, card.ability.extra } }
+        return { vars = { card.ability.choose + (G.GAME.modifiers.booster_choice_mod or 0), card.ability.extra + (G.GAME.modifiers.booster_size_mod or 0) } }
     end,
     create_card = function(self, pack, i)
         return create_card("Utility", G.pack_cards, nil, nil, true, false, nil, "Utility_Pack")
@@ -28,7 +28,7 @@ SMODS.Booster {
     cost = 4,
     weight = 0.3,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.choose, card.ability.extra } }
+        return { vars = { card.ability.choose + (G.GAME.modifiers.booster_choice_mod or 0), card.ability.extra + (G.GAME.modifiers.booster_size_mod or 0) } }
     end,
     create_card = function(self, pack, i)
         return create_card("Utility", G.pack_cards, nil, nil, true, false, nil, "Utility_Pack")
@@ -46,7 +46,7 @@ SMODS.Booster {
     cost = 6,
     weight = 0.3,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.choose, card.ability.extra } }
+        return { vars = { card.ability.choose + (G.GAME.modifiers.booster_choice_mod or 0), card.ability.extra + (G.GAME.modifiers.booster_size_mod or 0) } }
     end,
     create_card = function(self, pack, i)
         return create_card("Utility", G.pack_cards, nil, nil, true, false, nil, "Utility_Pack")
@@ -64,7 +64,7 @@ SMODS.Booster {
     cost = 8,
     weight = 0.07,
     loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.choose, card.ability.extra } }
+        return { vars = { card.ability.choose + (G.GAME.modifiers.booster_choice_mod or 0), card.ability.extra + (G.GAME.modifiers.booster_size_mod or 0) } }
     end,
     create_card = function(self, pack, i)
         return create_card("Utility", G.pack_cards, nil, nil, true, false, nil, "Utility_Pack")

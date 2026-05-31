@@ -1710,7 +1710,6 @@ return {
                    "Booster Packs contain",
                    "{C:attention}#1#{} additional card",
                    "to choose from",
-                   "{C:inactive}(Rerolls Booster Packs)"
                 }
             },
             v_biasedBalance_trade_secret={
@@ -1719,7 +1718,6 @@ return {
                     "{C:attention}#1#{} more card",
                     "can be chosen from",
                     "Booster Packs",
-                    "{C:inactive}(Rerolls Booster Packs)"
                 }
             },
         },
