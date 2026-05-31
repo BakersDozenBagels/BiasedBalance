@@ -494,11 +494,9 @@ return {
             j_biasedBalance_Rhyme_Time = {
                 name = "Rhyme Time",
                 text = {
-                    "This Joker gains {C:mult}+#3#{} Mult",
-                    "if hand contains {C:attention}#2#{}",
-                    "scoring even cards or {C:attention}#2#{}",
-                    "scoring odd cards",
-                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                    "{C:mult}+#3#{} Mult if hand contains",
+                    "{C:attention}#2#{} scoring even cards or",
+                    "{C:attention}#2#{} scoring odd cards",
                 },
             },
             j_biasedBalance_Negative_Nancy = {

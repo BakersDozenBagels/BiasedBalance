@@ -14,7 +14,8 @@ SMODS.Joker {
         extra = { 
             mult = 0,
             a_mult = 10,
-            required_count = 3
+            required_count = 3,
+            active = true
         } 
     },
     loc_vars = function(self, info_queue, card)
@@ -50,16 +51,20 @@ SMODS.Joker {
                 --end
             end
             if #cards['Evens'] >= card.ability.extra.required_count or #cards['Odds'] >= card.ability.extra.required_count then
-                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.a_mult
-                return {
-                    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.a_mult } }
-                }
+                --card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.a_mult
+                --return {
+                --    message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.a_mult } }
+                --}
+                card.ability.extra.active = true
             end
         end
-        if context.joker_main then
+        if context.joker_main and card.ability.extra.active then
             return {
-                mult = card.ability.extra.mult
+                mult = card.ability.extra.a_mult
             }
+        end
+        if context.after then
+            card.ability.extra.active = false
         end
     end
 }
