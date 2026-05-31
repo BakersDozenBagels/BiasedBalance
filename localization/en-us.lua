@@ -800,8 +800,8 @@ return {
                 name = "Subversive Joker",
                 text = { 
                     "{C:mult}+#1#{} Mult for every",
-                    "{C:attention}#2#{} chips your current",
-                    "hand will score",
+                    "{C:attention}#2#{} chips from your",
+                    "current scoring hand",
                 }
             },
             j_biasedBalance_Conspiracy = {
