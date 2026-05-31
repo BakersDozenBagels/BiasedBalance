@@ -1,4 +1,4 @@
-local b_ut = SMODS.Booster {
+--[[local b_ut = SMODS.Booster {
     key = 'UtilityPack_Mega',
     group_key = "k_booster_group_p_biasedBalance_Utility",
     atlas = 'Boosters',
@@ -34,7 +34,7 @@ local b_ut = SMODS.Booster {
         end
         return card
     end
-}
+}]]
 
 SMODS.Tag {
     key = 'Utility',
@@ -46,19 +46,22 @@ SMODS.Tag {
         from = 4,
     },
     loc_vars = function(self, info_queue, card)
-        info_queue[#info_queue + 1] = G.P_CENTERS.p_biasedBalance_UtilityPack_Mega
+        info_queue[#info_queue + 1] = G.P_CENTERS.p_biasedBalance_UtilityPackMega
         return { vars = { self.config.choose, self.config.from } }
     end,
     apply = function(self, card, context)
         if context.type == 'new_blind_choice' then
             card:yep('+', G.C.PURPLE, function()
-                local booster = Card(G.play.T.x + G.play.T.w / 2 - G.CARD_W * 1.27 / 2,
-                    G.play.T.y + G.play.T.h / 2 - G.CARD_H * 1.27 / 2, G.CARD_W * 1.27, G.CARD_H * 1.27, G.P_CARDS.empty,
-                    b_ut, { bypass_discovery_center = true, bypass_discovery_ui = true })
+                local booster = SMODS.create_card { key = 'p_biasedBalance_UtilityPackMega', area = G.play }
+                booster.T.x = G.play.T.x + G.play.T.w / 2 - G.CARD_W * 1.27 / 2
+                booster.T.y = G.play.T.y + G.play.T.h / 2 - G.CARD_H * 1.27 / 2
+                booster.T.w = G.CARD_W * 1.27
+                booster.T.h = G.CARD_H * 1.27
                 booster.cost = 0
                 booster.from_tag = true
                 G.FUNCS.use_card({ config = { ref_table = booster } })
                 booster:start_materialize()
+                G.CONTROLLER.locks[lock] = nil
                 return true
             end)
             card.triggered = true

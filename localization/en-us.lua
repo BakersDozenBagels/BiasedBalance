@@ -1247,8 +1247,22 @@ return {
                     "{C:attention}#2#{} Utility {C:joker}Jokers",
                 }
             },
-            p_biasedBalance_UtilityPack_Mega = {
+            p_biasedBalance_UtilityPack2 = {
+                name = 'Utility Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
+            p_biasedBalance_UtilityPackMega = {
                 name = 'Mega Utility Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
+            p_biasedBalance_UtilityPackJumbo = {
+                name = 'Jumbo Utility Pack',
                 text = {
                     "Choose {C:attention}#1#{} of up to",
                     "{C:attention}#2#{} Utility {C:joker}Jokers",
@@ -1715,6 +1729,7 @@ return {
     misc = {
         dictionary = {
             k_booster_group_p_biasedBalance_Utility = 'Utility Pack',
+            k_booster_group_p_biasedBalance_JumboUtility = 'Jumbo Utility Pack',
             k_booster_group_p_biasedBalance_MegaUtility = 'Mega Utility Pack',
             k_booster_group_p_biasedBalance_Sacrifice = 'Sacrifice',
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
