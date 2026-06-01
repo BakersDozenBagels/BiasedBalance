@@ -1,4 +1,4 @@
-SMODS.Blind {
+--[[SMODS.Blind {
     key = "acorn",
     atlas = "blinds",
     pos = {
@@ -56,7 +56,7 @@ SMODS.Blind {
             end
         end
     end
-}
+}]]
 
 SMODS.Blind:take_ownership("final_acorn", { 
     no_collection = true,
