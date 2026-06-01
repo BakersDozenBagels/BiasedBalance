@@ -8,6 +8,7 @@ SMODS.Blind {
     boss = {
 		min = 4,
 	},
+    mult = 1.5,
     boss_colour = HEX("e5c563"),
     
 }
@@ -30,7 +31,7 @@ local kappa_half = function(card)
                     card,
                     "/", 
                     2,
-                    { x_chips = 1, x_mult = 1, extra_value = true, rarity = true, card_limit = true },
+                    { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1, extra_value = true, rarity = true, card_limit = true },
                     nil, false, nil, "ability"
                 )
             end
@@ -41,7 +42,7 @@ local kappa_half = function(card)
                 peafowl_enhancement_calc(
                     card,
                     "*", 2,
-                    { x_chips = 1, x_mult = 1, extra_value = true, rarity = true, card_limit = true },
+                    {h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1, extra_value = true, rarity = true, card_limit = true },
                     nil, false, nil, "ability"
                 )
             end

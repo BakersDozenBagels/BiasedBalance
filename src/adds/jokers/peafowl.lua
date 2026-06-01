@@ -51,7 +51,7 @@ function Card:update(dt)
           "*", -- equation
           1.5, -- extra_value
           -- exclusions VVV
-          { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, extra_value=true, card_limit=true },
+          { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1, extra_value=true, card_limit=true },
           nil, -- inclusions
           true, -- do_round
           false, -- only
@@ -65,7 +65,7 @@ function Card:update(dt)
           "/", -- equation
           1.5, -- extra_value
           -- exclusions VVV
-          { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, extra_value=true, card_limit=true },
+          { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1, extra_value=true, card_limit=true },
           nil, -- inclusions
           true, -- do_round
           false, -- only
