@@ -18,10 +18,13 @@ SMODS.Joker {
         } 
     },
     loc_vars = function(self, info_queue, card)
+        if G.GAME.num_jokers_this_run then
+            card.ability.extra.mult = (card.ability.extra.a_mult * G.GAME.num_jokers_this_run)
+        end
         return { 
         vars = { 
             card.ability.extra.a_mult,
-            card.ability.extra.mult + G.GAME.num_jokers_this_run and (card.ability.extra.a_mult * G.GAME.num_jokers_this_run) or 0,
+            card.ability.extra.mult
         } 
     }
     end,
