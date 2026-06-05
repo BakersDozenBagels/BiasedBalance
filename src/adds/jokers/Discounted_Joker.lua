@@ -35,13 +35,13 @@ SMODS.Joker {
                 card.ability.extra.active = false
         end
 
-        if context.money_altered and context.from_shop and card.ability.extra.active and not context.blueprint then
+        if context.money_altered and (context.from_shop or context.reroll_shop) and card.ability.extra.active and not context.blueprint then
             if context.amount < 0 then
                 card.ability.extra.current_amount = card.ability.extra.current_amount - context.amount
             end
         end
 
-        if context.money_altered and context.from_shop and card.ability.extra.active then
+        if context.money_altered and (context.from_shop or context.reroll_shop) and card.ability.extra.active then
             if card.ability.extra.active and card.ability.extra.current_amount >= card.ability.extra.shop_spend then
                 if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
                     card.ability.extra.current_amount = card.ability.extra.shop_spend
