@@ -85,6 +85,8 @@ return {
                     "Start run with",
                     "{C:attention,T:v_biasedBalance_recipe}#1#{} and",
                     "{C:attention,T:v_biasedBalance_trade_secret}#2#{}",
+                    "{C:attention}Booster Packs{} are",
+                    "more expensive"
                 }
             },
             b_biasedBalance_Legendary = {
@@ -92,7 +94,7 @@ return {
                 text = {
                     "Start run with a",
                     "{C:legendary,E:1}Legendary{} Joker",
-                    "{C:blue}#2#{} hand every round",
+                    "{C:blue}#2#{} hand per round",
                     "{C:attention}#1#{} Joker slot",
                 }
             },

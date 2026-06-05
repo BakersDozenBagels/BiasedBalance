@@ -14,7 +14,21 @@ SMODS.Back {
             }
         }
     end,
-    calculate = function(self, card, context) 
-    
-    end
+    apply = function(self)
+		G.GAME.modifiers.bbalance_booster_increase1 = 1
+        G.GAME.modifiers.bbalance_booster_increase2 = 2
+	end,
 }
+local sc = Card.set_cost_value
+function Card:set_cost_value()
+	sc(self)
+
+	if self.ability.set == "Booster" and G.GAME.modifiers.bbalance_booster_increase1 then
+        if string.match(self.config.center.key, "mega") or string.match(self.config.center.key, "jumbo") then
+		    self.cost = math.floor(self.cost + G.GAME.modifiers.bbalance_booster_increase2)
+        else
+            self.cost = math.floor(self.cost + G.GAME.modifiers.bbalance_booster_increase1)
+        end
+	end
+
+end
