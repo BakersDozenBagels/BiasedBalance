@@ -46,7 +46,9 @@ return {
             b_biasedBalance_Purple = {
                 name = "Purple Deck",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:blue}+#1#{} hand",
+                    "per round,",
+                    "{C:attention}+#2#{} hand size,",
                     "No repeat hand types",
                     "during a round"
                 }
