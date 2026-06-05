@@ -1100,7 +1100,7 @@ return {
             j_biasedBalance_Strength_In_Numbers = {
                 name = "Strength In Numbers",
                 text = { 
-                    "Played number cards give {C:mult}+#1#{} Mult", 
+                    "Non-face cards give {C:mult}+#1#{} Mult", 
                     "for every card above {C:attention}4{} in your",
                     "deck with the same rank",
                 }
