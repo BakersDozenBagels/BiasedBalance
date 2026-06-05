@@ -184,8 +184,8 @@ return {
             bl_biasedBalance_Beta = {
                 name = "The Diamond",
                 text = {
-                    "All cards",
-                    "held in hand",
+                    "All cards held in",
+                    "hand after scoring",
                     "are debuffed"
                 }
             },

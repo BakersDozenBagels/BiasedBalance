@@ -35,7 +35,7 @@ SMODS.Consumable {
             delay = 0.2,
             func = function()
                 for i, v in ipairs(cards) do
-                    if i <= #G.hand.highlighted - 2 then
+                    if i <= #G.hand.highlighted - 3 then
                         if SMODS.shatters(cards[i]) then
                             cards[i]:shatter()
                         else
