@@ -72,8 +72,11 @@ return {
                 name = "Vainglory Deck",
                 text = {
                     "{C:attention}Vouchers{} are",
-                    "restocked",
-                    "every shop"
+                    "restocked every shop",
+                    "{C:attention}Vouchers{} cost",
+                    "{C:money}$5{} more per",
+                    "voucher bought",
+                    "this ante"
                 }
             },
             b_biasedBalance_Hibiscus = {
