@@ -155,6 +155,7 @@ BiasedBalance.Tag_Tweaks = {
 	"rare",
 	"editions",
 	"buffoon",
+	"voucher"
 }
 BiasedBalance.Tarot_Tweaks = {
 	"lovers",

@@ -1588,6 +1588,13 @@ return {
                     "{C:tarot}Hyper Arcana Pack",
                 }
             },
+            tag_voucher= {
+                text = {
+                    "Adds one {C:voucher}Voucher",
+                    "to the next shop",
+                    "that costs {C:money}$5{} less"
+                }
+            },
             tag_negative_sticker={
                 name="Negative Tag",
                 text={
