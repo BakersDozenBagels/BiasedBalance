@@ -26,7 +26,7 @@ SMODS.Joker {
         if context.skip_blind then
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    card:remove()
+                    SMODS.destroy_cards(card, nil, nil, true)
                 return true
                 end}))
             if #G.jokers.cards + G.GAME.joker_buffer <= G.jokers.config.card_limit then
@@ -61,9 +61,8 @@ SMODS.Joker {
                     }))
             end
             end
-            if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
-            local cards_to_create = math.min(card.ability.extra.creates, G.consumeables.config.card_limit - (#G.consumeables.cards + G.GAME.consumeable_buffer))
-            G.GAME.consumeables_buffer = G.GAME.consumeables_buffer + cards_to_create
+            if #G.consumeables.cards < G.consumeables.config.card_limit then
+            local cards_to_create = math.min(card.ability.extra.creates, G.consumeables.config.card_limit - (#G.consumeables.cards))
             G.E_MANAGER:add_event(Event({
                 trigger = 'after',
                 delay = 0.4,
@@ -73,11 +72,13 @@ SMODS.Joker {
                                 set = 'Tarot',
                                 key_append = 'Mystery_Box',
                             }
-                        G.GAME.consumeables_buffer = 0
                     end
                     return true
                 end
                 }))
+                return {
+                        message = localize('k_mysteryBox_open')
+                    }
             end
         end
     end,

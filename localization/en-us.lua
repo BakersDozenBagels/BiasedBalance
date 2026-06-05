@@ -838,8 +838,9 @@ return {
                 name = "Mystery Box",
                 text = { 
                     "When a {C:attention}Blind{} is skipped",
-                    "Destroy this {C:attention}Joker and",
-                    "create a random {C:attention}Rare Joker"
+                    "destroy this {C:attention}Joker{} and",
+                    "create a random {C:rare}Rare {C:attention}Joker",
+                    "and {C:attention}#1#{} random {C:tarot}Tarot{} cards"
                 }
             },
             j_biasedBalance_Shameless_Profit = {
@@ -1736,6 +1737,7 @@ return {
             k_biasedBalance_noRepeats = 'No repeat hand types',
             k_no_joker = "No Joker!",
             k_disabled = "Disabled!",
+            k_mysteryBox_open = "Opened!",
             k_biasedBalance_pow = "BANG!",
             k_biasedBalance_stone = "Stone!",
             k_biasedBalance_ante = "-1 Ante",
