@@ -1034,6 +1034,15 @@ return {
                     "{C:dark_edition}-#4#{} Joker slot"
                 },
             },
+            j_biasedBalance_Outdated_Meme = {
+                name = "Outdated Meme",
+                text = {
+                    "{C:blue}+#1#{} hands",
+                    "each round",
+                    "{C:blue}-#2#{} Chips multiplied",
+                    "by {C:attention}Ante{} each round"
+                },
+            },
             j_biasedBalance_Light_In_The_Tunnel = {
                 name = "Light In The Tunnel",
                 text = { 
