@@ -7,7 +7,7 @@ SMODS.Consumable {
         y = 0
     },
     cost = 4,
-    config = { extra = { pay = 5 } },
+    config = { extra = { pay = 10 } },
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_TAGS.tag_voucher
         return { vars = { card.ability.extra.pay } }
