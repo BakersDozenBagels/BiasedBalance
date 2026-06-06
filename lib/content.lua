@@ -291,6 +291,8 @@ BiasedBalance.Joker_Adds = {
 	"Parachutist",
 	"Risotto",
 	"BeansAndSausage",
+	"Ego",
+	"Outdated_Meme",
 
 	-- Rare Jokers --
 	"The_Rivals",

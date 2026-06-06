@@ -1024,6 +1024,16 @@ return {
                     "when a {C:attention}Lucky 7{} is scored",
                 }
             },
+            j_biasedBalance_Ego = {
+                name = "Ego",
+                text = {
+                    "{C:red}+#1#{} discard",
+                    "each round","{C:blue}+#2#{} hand",
+                    "each round",
+                    "{C:attention}+#3#{} hand size",
+                    "{C:dark_edition}-#4#{} Joker slot"
+                },
+            },
             j_biasedBalance_Light_In_The_Tunnel = {
                 name = "Light In The Tunnel",
                 text = { 
