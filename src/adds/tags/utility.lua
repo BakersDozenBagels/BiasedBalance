@@ -61,7 +61,7 @@ SMODS.Tag {
                 booster.from_tag = true
                 G.FUNCS.use_card({ config = { ref_table = booster } })
                 booster:start_materialize()
-                G.CONTROLLER.locks[lock] = nil
+                --G.CONTROLLER.locks[lock] = nil
                 return true
             end)
             card.triggered = true
