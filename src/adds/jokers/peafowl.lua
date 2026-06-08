@@ -50,8 +50,8 @@ function Card:update(dt)
           self, -- card
           "*", -- equation
           1.5, -- extra_value
-          -- exclusions VVV
-          { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1, extra_value=true, card_limit=true },
+          -- exclusions VVVh_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1,
+          {  extra_value=true, card_limit=true },
           nil, -- inclusions
           true, -- do_round
           false, -- only
@@ -64,8 +64,8 @@ function Card:update(dt)
           self, -- card
           "/", -- equation
           1.5, -- extra_value
-          -- exclusions VVV
-          { h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1, extra_value=true, card_limit=true },
+          -- exclusions VVVh_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1,
+          {  extra_value=true, card_limit=true },
           nil, -- inclusions
           true, -- do_round
           false, -- only
@@ -105,10 +105,26 @@ peafowl_enhancement_calc = function(card, equation, extra_value, exclusions, inc
     end
   end
 
-  local function process_value(val, base_val)
+  local function process_value(val, base_val, key)
     if type(val) == "number" then
       local delta = val - base_val
-      local result = operators[equation](base_val, extra_value) + delta
+      local operator_base = base_val
+      --h_x_chips = 1, h_x_mult = 1, Xmult = 1, Xchips = 1, x_chips = 1, x_mult = 1, xchips = 1, xmult = 1,
+      local special = (key == "x_mult" or key == "x_chips" or key == "h_x_chips" or key == "h_x_mult" or key == "Xmult" or key == "Xchips"
+      or key == "xmult" or key == "xchips") and base_val >= 1
+
+      if special then
+        operator_base = operator_base - 1
+      end
+
+      local result = operators[equation](operator_base, extra_value)
+
+      if special then
+        result = result + 1
+      end
+
+      result = result + delta
+
       if do_round then
         if base_val % 1 ~= 0 then
           return round_hundredth(result)
@@ -146,7 +162,7 @@ peafowl_enhancement_calc = function(card, equation, extra_value, exclusions, inc
     for key, value in pairs(t) do
       if value ~= nil and should_process(key, value) then
         if type(value) == "number" then
-          t[key] = process_value(value, base_table[key] or 0)
+          t[key] = process_value(value, base_table[key] or 0, key)
         elseif type(value) == "table" and type(base_table[key]) == "table" then
           process_table(value, base_table[key])
         end

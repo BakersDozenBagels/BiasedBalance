@@ -184,3 +184,34 @@ function BiasedBalance.on_set_blind(blind)
     end
 
   end
+
+local function reset_bbalance_ancient_card()
+    G.GAME.current_round.bbalance_ancient_card = G.GAME.current_round.bbalance_ancient_card or { suit = 'Spades' }
+    local ancient_suits = {}
+    for k, v in ipairs({ 'Spades', 'Hearts', 'Clubs', 'Diamonds' }) do
+        if v ~= G.GAME.current_round.bbalance_ancient_card.suit then ancient_suits[#ancient_suits + 1] = v end
+    end
+    local ancient_card = pseudorandom_element(ancient_suits, 'bbalance_ancient' .. G.GAME.round_resets.ante)
+    G.GAME.current_round.bbalance_ancient_card.suit = ancient_card
+end
+
+ local function reset_bbalance_idol_card()
+    G.GAME.current_round.bbalance_idol_card = { rank = 'Ace', suit = 'Spades' }
+    local valid_idol_cards = {}
+    for _, playing_card in ipairs(G.playing_cards) do
+        if not SMODS.has_no_suit(playing_card) and not SMODS.has_no_rank(playing_card) then
+            valid_idol_cards[#valid_idol_cards + 1] = playing_card
+        end
+    end
+    local idol_card = pseudorandom_element(valid_idol_cards, 'bbalance_idol' .. G.GAME.round_resets.ante)
+    if idol_card then
+        G.GAME.current_round.bbalance_idol_card.rank = idol_card.base.value
+        G.GAME.current_round.bbalance_idol_card.suit = idol_card.base.suit
+        G.GAME.current_round.bbalance_idol_card.id = idol_card.base.id
+    end
+end
+
+function SMODS.current_mod.reset_game_globals(run_start)
+    reset_bbalance_idol_card()
+    reset_bbalance_ancient_card()
+end

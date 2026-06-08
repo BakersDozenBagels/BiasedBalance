@@ -77,6 +77,8 @@ BiasedBalance.Joker_Tweaks = {
 	"hit_the_road",
 	"dusk",
 	"square_joker",
+	"idol",
+	"blackboard",
 
 	-- Rare Jokers --
 	"vagabond",
@@ -86,9 +88,14 @@ BiasedBalance.Joker_Tweaks = {
 	"card_sharp",
 	"the_trio",
 	--"stuntman", change discarded
+	"baseball",
+	"baron",
+	"ancient_joker",
 
 	-- Legendary Jokers --
 	"yorick",
+	"triboulet",
+	"canio",
 
 }
 
