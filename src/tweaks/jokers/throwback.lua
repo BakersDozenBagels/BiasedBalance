@@ -1,0 +1,1 @@
+SMODS.Joker:take_ownership("throwback", { rarity = 1, cost = 4 })

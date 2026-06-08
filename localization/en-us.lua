@@ -2,11 +2,19 @@ return {
     descriptions = {
        Back = {
             b_black = {
-                text = { "{C:attention}+#1#{} Joker slot",
-                    "",
-                    "{C:blue}-#2#{} hand",
+                text = { "{C:attention}+1{} Joker slot",
+                    "{C:blue}-1{} hand",
                     "every round",
-                    "",
+                    "{C:dark_edition}Negative{} is",
+                    "{C:green}4X{} more common" }
+            },
+            b_black_pink = {
+                name = "Black Deck",
+                text = { "{C:attention}+1{} Joker slot",
+                    "{C:red}-1{} discard",
+                    "every round",
+                    "Start with",
+                    "extra {C:money}$1",
                     "{C:dark_edition}Negative{} is",
                     "{C:green}4X{} more common" }
             },
@@ -29,16 +37,20 @@ return {
             b_biasedBalance_White = {
                 name = "White Deck",
                 text = {
-                    "At the end of each round",
-                    "Create a {C:blue}Common{C:attention} Joker",
+                    "Selecting or Skipping a",
+                    "{C:attention}Non-Boss Blind{} creates",
+                    "a {C:blue}Common{C:attention} Joker",
                     "{C:inactive}(Must have room)",
                 }
             },
             b_biasedBalance_Purple = {
                 name = "Purple Deck",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:blue}+#1#{} hand",
+                    "per round,",
+                    "{C:attention}+#2#{} hand size,",
                     "No repeat hand types",
+                    "during a round"
                 }
             },
             b_yellow={
@@ -51,64 +63,158 @@ return {
             b_biasedBalance_Teal = {
                 name = "Teal Deck",
                 text = {
-                    "Whenever you leave shop",
-                    "Create a random {C:tarot}Tarot{} card"
+                    "Create a random",
+                    "{C:tarot}Tarot{} card",
+                    "at {C:attention}end of shop",
+                }
+            },
+            b_biasedBalance_Vainglory = {
+                name = "Vainglory Deck",
+                text = {
+                    "{C:attention}Vouchers{} are",
+                    "restocked every shop",
+                    "{C:attention}Vouchers{} cost",
+                    "{C:money}$5{} more per",
+                    "voucher bought",
+                    "this ante"
+                }
+            },
+            b_biasedBalance_Hibiscus = {
+                name = "Hibiscus Deck",
+                text = {
+                    "Start run with",
+                    "{C:attention,T:v_biasedBalance_recipe}#1#{} and",
+                    "{C:attention,T:v_biasedBalance_trade_secret}#2#{}",
+                    "{C:attention}Booster Packs{} are",
+                    "more expensive"
+                }
+            },
+            b_biasedBalance_Legendary = {
+                name = "Legendary Deck",
+                text = {
+                    "Start run with a",
+                    "{C:legendary,E:1}Legendary{} Joker",
+                    "{C:blue}#2#{} hand per round",
+                    "{C:attention}#1#{} Joker slot",
+                }
+            },
+            b_biasedBalance_Engineer = {
+                name = "Engineer Deck",
+                text = {
+                    "Start run with a",
+                    "{C:uncommon}Uncommon{} or",
+                    "{C:rare}Rare{} {C:attention}Utility{} Joker",
                 }
             },
         },
         Blind = {
-            bl_biasedBalance_Epsilon = {
-                name = "Epsilon",
+            bl_final_heart = {
+                name = "Crimson Heart",
+                text = {
+                    "#1# random #2#",
+                    "disabled every hand",
+                },
+            },
+            bl_biasedBalance_leaf = {
+                name = "The Leaf",
                 text = {
                     "All cards debuffed",
                     "until 1 Joker sold",
                 }
             },
-            bl_biasedBalance_Delta = {
-                name = "Delta",
+            bl_biasedBalance_final_curry = {
+                name = "Cunning Curry",
                 text = {
-                    "After every scoring hand",
-                    "Debuff all cards in hand"
+                    "#1# in 4 cards",
+                    "are debuffed",
+                }
+            },
+            bl_biasedBalance_final_bane = {
+                name = "Bane of Simplicity",
+                text = {
+                    "Reduce Chips of scored hand",
+                    "by #1# after scoring"
+                }
+            },
+            bl_biasedBalance_final_garden = {
+                name = "Olive Garden",
+                text = {
+                    "Cannot play",
+                    "a #1#",
+                },
+            },
+            bl_biasedBalance_acorn = {
+                name = "The Acorn",
+                text = {
+                    "Flips and shuffles",
+                    "all Joker cards",
+                },
+            },
+            bl_biasedBalance_Delta = {
+                name = "The Emerald",
+                text = {
+                    "If played hand contains",
+                    "an XMult effect, increase",
+                    "required score by 30%"
+                }
+            },
+            bl_biasedBalance_Gamma = {
+                name = "The Uranium",
+                text = {
+                    "Scoring Enhancements,",
+                    "Seals, and Editions",
+                    "are disabled"
+                }
+            },
+            bl_biasedBalance_Kappa = {
+                name = "The Platinum",
+                text = {
+                    "Joker values",
+                    "reduced by half",
                 }
             },
             bl_biasedBalance_Omega = {
-                name = "Omega",
+                name = "The Ruby",
                 text = {
-                    "Reduce Chips by X at the end of scoring",
-                    "Cannot go below 5 Chips",
-                    "(X Value - 5 = 110, 6=125",
-                    "7=140, ante 8+ = 155"
+                    "Reduce Chips of scored hand",
+                    "by #1# after scoring"
                 }
             },
             bl_biasedBalance_Sigma = {
-                name = "Sigma",
+                name = "The Pearl",
                 text = {
-                    "If score is over",
-                    "Half of total",
-                    "Reduces to half"
+                    "Hand cannot score",
+                    "more than half",
+                    "of score requirement"
                 }
             },
-            bl_biasedBalance_Theta = {
-                name = "Theta",
+            bl_biasedBalance_Beta = {
+                name = "The Diamond",
                 text = {
-                    "All cards with Odd",
-                    "rank are debuffed"
+                    "Cards left in hand",
+                    "become debuffed when",
+                    "a hand is played"
                 }
             },
-            bl_biasedBalance_Zeta = {
-                name = "Zeta",
+            bl_biasedBalance_Alpha = {
+                name = "The Sapphire",
                 text = {
-                    "All cards with Even",
-                    "rank are debuffed"
+                    "#1#s and",
+                    "#2#s are",
+                    "debuffed"
                 }
             },
         },
         Enhanced = {
-            m_bonus = {
-                text = { 
-                    "{C:chips}#1#{} extra chips" 
-                }
-            }
+            m_wild={
+                name="Wild Card",
+                text={
+                    "Can be used as",
+                    "any suit",
+                    "Immune to",
+                    "suit-debuffing effects",
+                },
+            },
         },
         Joker = {
             j_scary_face = {
@@ -119,11 +225,19 @@ return {
                     "when scored",
                 }
             },
+            j_hologram = {
+                text={
+                    "This Joker gains {X:mult,C:white} X#3# {} Mult",
+                    "every time a {C:attention}playing card{}",
+                    "is added to your deck",
+                    "{C:inactive}(Currently {X:mult,C:white} X#4# {C:inactive} Mult)",
+                },
+            },
             j_delayed_grat = {
                 name = "Reduced Gratification",
                 text = {
                     "Earn {C:money}$#1#{} when",
-                    "{C:red}discarding {C:attention}#2#",
+                    "you discard {C:attention}#2#",
                     "or fewer cards"
                 }
             },
@@ -133,7 +247,7 @@ return {
                     "{C:mult}+#1#{} Mult and {C:chips}+#2#{} Chips",
                     "if played hand contains",
                     "a {C:attention}#3#",
-                    "{C:inactive}(Currently {C:red}+#4#{C:inactive} Mult and {C:chips}+#5#{C:inactive} Chips)",
+                    "{C:inactive}(Currently {C:mult}+#4#{C:inactive} Mult and {C:chips}+#5#{C:inactive} Chips)",
                 },
             },
             j_seance = {
@@ -141,22 +255,22 @@ return {
                     "Replace a random held",
                     "{C:tarot}Tarot{} card with",
                     "a {C:spectral}Spectral{} card",
-                    "at end of round"
+                    "at end of the {C:attention}shop"
                 }
             },
             j_troubadour = {
                 text = {
-                    "{C:attention}+#1#{} hand size,",
-                    "discard at most {C:attention}#2#{}",
-                    "cards at once"
+                    "{C:attention}+#1#{} hand size",
+                    "Cannot discard more than",
+                    "{C:attention}#2#{} cards at once"
                 },
             },
             j_rough_gem = {
                 text = {
-                    "Played cards with",
-                    "{C:diamonds}Diamond{} suit have",
-                    "{C:green}#1# in #2#{} chance to",
-                    "earn {C:money}$#3#{} when scored",
+                    "{C:green}#1# in #2#{} chance for",
+                    "played cards with",
+                    "{C:diamonds}Diamond{} suit to earn",
+                    "{C:money}$#3#{} when scored",
                 }
             },
             j_glass = {
@@ -168,8 +282,9 @@ return {
             },
             j_bootstraps = {
                 text = {
-                    "{C:mult}+#1#{} Mult,",
-                    "everything costs {C:money}$#2#{} more"
+                    "{C:mult}+#1#{} Mult",
+                    "All items in the {C:attention}shop{}",
+                    "cost {C:money}$#2#{} more"
                 }
             },
             j_red_card = {
@@ -182,7 +297,8 @@ return {
             },
             j_todo_list = {
                 text = {
-                    "Gains {X:mult,C:white}X#1#{} Mult the first time",
+                    "This Joker gains",
+                    "{X:mult,C:white}X#1#{} Mult the first time",
                     "{C:attention}poker hand{} is a {C:attention}#2#{} this round,",
                     "poker hand changes at end of round",
                     "{C:inactive}(Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
@@ -212,10 +328,79 @@ return {
                     "a {C:attention}Three of a Kind",
                 }
             },
+            j_hack = {
+                name = "Hack",
+                text = { 
+                    "Retrigger",
+                    "each played",
+                    "{C:attention}2{}, {C:attention}3{}, {C:attention}4{}",
+                    "{C:attention}5{}, or {C:attention}6{}",
+                 }
+            },
+            j_green_joker={
+                name="Green Joker",
+                text={
+                    "{C:mult}+#1#{} Mult when playing a",
+                    "hand with {C:attention}4{} or more cards",
+                    "{C:mult}-#1#{} Mult if hand has",
+                    "{C:attention}3{} or less cards",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
+                },
+            },
+            j_ride_the_bus={
+                name="Ride the Bus",
+                text={
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "if hand contains no",
+                    "scoring {C:attention}Face{} cards",
+                    "{C:mult}-#2#{} Mult if hand contains",
+                    "a scoring {C:attention}Face{} card",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
+                },
+            },
+            j_dusk = {
+                name = "Dusk",
+                text = {
+                    "This Joker gains {C:mult}+#2#{} Mult",
+                    "for every scoring",
+                    "{C:spades}Spade{} or {C:clubs}Club{} card",
+                    "{C:mult}-#3#{} Mult instead if hand contains",
+                    "a scoring {C:hearts}Heart{} or {C:diamonds}Diamond{} card",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                },
+            },
+            j_biasedBalance_Dawn = {
+                name = "Dawn",
+                text = {
+                    "This Joker gains {C:mult}+#2#{} Mult",
+                    "for every scoring",
+                    "{C:hearts}Heart{} or {C:diamonds}Diamond{} card",
+                    "{C:mult}-#3#{} Mult instead if hand contains",
+                    "a scoring {C:spades}Spade{} or {C:clubs}Club{} card",
+                    "{C:inactive}(Currently {C:mult}+#1#{C:inactive} Mult)",
+                },
+            },
+            j_hit_the_road = {
+                name = "Hit the Road",
+                text = {
+                    "This Joker gains {X:mult,C:white}X#1#{} Mult",
+                    "for every {C:attention}Face{} card",
+                    "discarded this round",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{} {C:inactive} Mult)",
+                }
+            },
+            j_square = {
+                name = "Square Joker",
+                text = {
+                    "Retrigger played cards",
+                    "if played hand has",
+                    "exactly {C:attention}4{} cards",
+                },
+            },
             j_biasedBalance_PitifulJoker = {
                 name = "Pitiful Joker",
                 text = {
-                    "{C:red}+#1#{} Mult",
+                    "{C:mult}+#1#{} Mult",
                     "if hand is played",
                     "with {C:money}$#2#{} or less",
                 }
@@ -228,7 +413,6 @@ return {
                     "been {C:red}discarded{} this round",
                 }
             },
-            -- j_biasedBalance_Jumbo
             j_biasedBalance_Caviar = {
                 name = "Caviar",
                 text = { "{C:common}Common{} Jokers", "are less common" }
@@ -240,9 +424,29 @@ return {
                     "skipping a Blind",
                     "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)" }
             },
-            j_biasedBalance_Jokester = {
-                name = "Terrace",
+            j_biasedBalance_Terrace_Garden = {
+                name = "Terrace Garden",
                 text = { "Earn {C:money}$#1#{} per Joker", "at end of round", "{C:inactive}(Will give {C:money}$#2#{C:inactive})" }
+            },
+            j_biasedBalance_Ballerina = {
+                name = "Ballerina",
+                text = {
+                    "Playing {C:attention}3{} consecutive hands with", 
+                    "{C:attention}#1#{} scoring cards without playing",
+                    "the same hand twice in a row",
+                    "gives {C:money}$#2#{} and upgrades level of",
+                    "one of those hands"
+                }
+            },
+            j_biasedBalance_Eclectic_Joker = {
+                name = "Eclectic Joker",
+                text = {
+                    "{C:mult}+#1#{} Mult per hand that isn't", 
+                    "the same as the previous",
+                    "{C:attention}2{} scored hands",
+                    "{C:mult}-#2#{} Mult otherwise",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
+                }
             },
             j_biasedBalance_RedSun = {
                 name = "Red Sun",
@@ -258,7 +462,7 @@ return {
             j_biasedBalance_Cinemaphile = {
                 name = "Cinemaphile",
                 text = { "Sell this card to",
-                    "add a {C:attention}Voucher{} to the shop", }
+                    "create a {C:attention}Voucher{} tag", }
             },
             j_biasedBalance_Trinity = {
                 name = "Trinity",
@@ -276,19 +480,80 @@ return {
                     "{C:inactive}Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
                 }
             },
+            j_biasedBalance_StageFright = {
+                name = "Stage Fright",
+                text = {
+                    "During {C:attention}first hand{} of round",
+                    "this Joker gains {C:chips}+#1#{} Chips",
+                    "for every {C:attention}Face{} card",
+                    "held in hand",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                },
+            },
+            j_biasedBalance_Chisel = {
+                name = "Chisel",
+                text = {
+                    "During {C:attention}first hand{} of round",
+                    "a random played and {C:attention}unscoring{}",
+                    "card becomes a {C:attention}Stone{} card",
+                },
+            },
+            j_biasedBalance_Rhyme_Time = {
+                name = "Rhyme Time",
+                text = {
+                    "{C:mult}+#3#{} Mult if hand contains",
+                    "{C:attention}#2#{} scoring even cards or",
+                    "{C:attention}#2#{} scoring odd cards",
+                },
+            },
+            j_biasedBalance_Negative_Nancy = {
+                name = "Negative Nancy",
+                text = {
+                    "This Joker gives {C:dark_edition}Negative{} edition",
+                    "to a random card in played hand",
+                    "after scoring {C:attention}#1#{C:inactive} [#2#] cards"
+                },
+            },
             j_biasedBalance_AlienJoker = {
                 name = "Alien Joker",
                 text = {
-                    "{X:mult,C:white}X#1#{} Mult per Poker Hand",
-                    "leveled {C:attention}#2#{} or higher",
-                    "{C:inactive}Currently {X:mult,C:white}X#3#{C:inactive} Mult)"
+                    "{X:mult,C:white}X#1#{} Mult for every",
+                    "unique {C:planet}Planet{} used",
+                    "twice this run",
+                    "{C:inactive}Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Yodeller = {
+                name = "Yodeller",
+                text = {
+                    "{C:attention}+#1#{} hand size for every hand",
+                    "at level {C:planet}5{} or higher",
+                    "{C:inactive}(max +#3# hand size)",
+                    "{C:inactive}(Currently {C:attention}+#2#{C:inactive} hand size)",
                 }
             },
             j_biasedBalance_FreeLunch = {
                 name = '"Free" Lunch',
                 text = {
-                    "Costs {C:money}-$#1#",
-                    "Sells for {C:money}-$#2#"
+                    "Gain {C:money}$#1#{} on",
+                    "purchase",
+                    "Sells for -{C:money}$#2#{}",
+                }
+            },
+            j_biasedBalance_Singularity = {
+                name = "Singularity",
+                text = {
+                    "{X:mult,C:white}X#1#{} Mult if played hand",
+                    "contains an {C:attention}unscoring{} card",
+                }
+            },
+            j_biasedBalance_Prehistoric_Joker = {
+                name = "Prehistoric Joker",
+                text = {
+                    "{C:attention}-#1#{} Ante after",
+                    "{C:attention}#2#{} rounds",
+                    "{S:1.1,C:red,E:2}self destructs{}",
+                    "{C:inactive}(Currently {C:attention}#3#{C:inactive}/#2#)",
                 }
             },
             j_biasedBalance_Osmosis = {
@@ -310,7 +575,8 @@ return {
                 name = "The Anchor",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if current",
-                    "score has {C:chips}#2#{} Chips or more"
+                    "scoring hand has",
+                    "{C:attention}#2#{} Chips or more"
                 }
             },
             j_biasedBalance_Rivals = {
@@ -334,15 +600,15 @@ return {
                 name = "Death and Taxes",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if a Joker",
-                    "was sold this round,",
-                    "Jokers sell for {C:money}$0"
+                    "was {C:attention}sold{} this round",
                 }
             },
-            j_biasedBalance_FlavourfulJoker = {
-                name = "Flavourful Joker",
+            j_biasedBalance_FlavorfulJoker = {
+                name = "Flavorful Joker",
                 text = {
                     "{C:chips}+#1#{} Chips per Joker",
-                    "with an {C:dark_edition}Edition"
+                    "with an {C:dark_edition}Edition",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
                 }
             },
             j_biasedBalance_MelancholicJoker = {
@@ -354,19 +620,49 @@ return {
                     "{C:inactive}(Currently {C:attention}#2#{C:inactive}/#1#)",
                 }
             },
+            j_biasedBalance_Green_Card = {
+                name = "Green Card",
+                text = {
+                    "Booster Packs cost",
+                    "{C:money}50%{} less",
+                }
+            },
+            j_biasedBalance_Downwards_Spiral = {
+                name = "Downwards Spiral",
+                text = {
+                    "{C:mult}+#1#{} Mult",
+                    "{C:chips}-#2#{} Chips per level",
+                    "of played hand"
+                }
+            },
+            j_biasedBalance_Parachutist = {
+                name = "Parachutist",
+                text = {
+                    "{C:mult}+#1#{} Mult",
+                    "{C:dark_edition}+#2#{} Joker slot",
+                }
+            },
             j_biasedBalance_BrashGambler = {
                 name = "Brash Gambler",
                 text = {
-                    "{C:green}#1# in #2#{} chance for {X:mult,C:white}X#3#{} Mult,",
+                    "{C:green}#1# in #2#{} chance for {X:mult,C:white}X#3#{} Mult",
                     "{C:green}#1# in #4#{} chance for {X:mult,C:white}X#5#{} Mult",
+                }
+            },
+            j_biasedBalance_HopelessGambler = {
+                name = "Hopeless Gambler",
+                text = {
+                    "{C:green}#1# in #2#{} chance for {C:mult}+#5#{} Mult",
+                    "{C:green}#1# in #3#{} chance for {C:mult}+#5#{} Mult",
+                    "{C:green}#1# in #4#{} chance for {C:mult}+#5#{} Mult",
                 }
             },
             j_biasedBalance_Bookworm = {
                 name = "Bookworm",
                 text = {
                     "{C:chips}+#1#{} Chips if played",
-                    "{C:attention}poker hand{} is {C:red}not",
-                    "your most played"
+                    "{C:attention}poker hand{} is not",
+                    "most played"
                 }
             },
             j_biasedBalance_Court = {
@@ -380,7 +676,7 @@ return {
                 name = "The Parvenu",
                 text = {
                     "{X:mult,C:white}X#1#{} Mult if played hand",
-                    "contains {C:red}no{} {C:attention}Face Cards"
+                    "contains no {C:attention}Face Cards"
                 }
             },
             j_biasedBalance_Skipper = {
@@ -393,7 +689,7 @@ return {
             j_biasedBalance_Minstrel = {
                 name = "Minstrel",
                 text = {
-                    "{C:attention}+#1#{} discards,",
+                    "{C:red}+#1#{} discards,",
                     "discard at most {C:attention}#2#{}",
                     "cards at once"
                 }
@@ -410,107 +706,94 @@ return {
                 text = {
                     "{C:green}#1# in #2#{} chance to",
                     "add a random {C:dark_edition}edition{}",
-                    "to a random played card"
+                    "to a random scored card"
                 }
             },
             j_biasedBalance_Peafowl = {
                 name = "Peafowl",
                 text = {
-                    "{C:attention}Enhancements{} are", "{C:attention}#1#%{} stronger"
+                    "{C:attention}Enhancements{} are", "{C:attention}#1#%{} stronger",
+                    "{C:inactive}(Rounded up)"
                 }
             },
             j_biasedBalance_Chimera = {
                 name = "Chimera",
                 text = {
-                    "{C:attention}+#1#{} hand", "per round"
+                    "When {C:attention}Blind{} is selected,",
+                    "gain {C:blue}+#1#{} Hand",
                 }
             },
-            j_biasedBalance_WallPaper = {
+            j_biasedBalance_Wallpaper = {
                 name = "Wallpaper",
                 text = { 
-                    "{C:white,X:mult}X#1#{} Mult if all", 
-                    "cards played and held in hand", 
-                    "are the {C:attention}2{} most common", 
-                    "suits in your full deck" 
+                    "{C:white,X:mult}X#1#{} Mult if cards", 
+                    "held in hand contain", 
+                    "{C:attention}#2#{} suits or less", 
                 }
             },
             j_biasedBalance_Poacher = {
                 name = "Poacher",
-                text = { "{C:green}#1# in #2#{} chance to", "enhance each", "scored card to {C:attention}Wild" }
+                text = { "{C:green}#1# in #2#{} chance for", "unenhanced scored cards", "to become {C:attention}Wild{} Cards" }
+            },
+            j_biasedBalance_Smurf = {
+                name = "Smurf",
+                text = { "Only {C:attention}Mega{} booster packs",
+                    "appear in the shop" }
             },
             j_biasedBalance_Practical_Perfectionist = {
                 name = "Practical Perfectionist",
                 text = { 
-                    "Any scoring hands with {C:attention}+5",
-                    "earn {C:gold}$#1#{}"
+                    "Playing a hand with {C:attention}5",
+                    "scoring cards gives {C:gold}$#1#{}"
                  }
             },
-            j_hack = {
-                name = "Hack",
+            j_biasedBalance_Wisteria_Joker = {
+                name = "Wisteria Joker",
                 text = { 
-                    "Retrigger",
-                    "each played",
-                    "{C:attention}2{}, {C:attention}3{}, {C:attention}4{}",
-                    "{C:attention}5{}, or {C:attention}6{}",
-                 }
+                    "This {C:attention}Joker{} gains {C:chips}+#1#{} Chips",
+                    "if hand contains {C:attention}5{} scoring cards",
+                    "{C:chips}-#2#{} chips if not",
+                    "{C:inactive}(Currently {C:chips}+#3#{C:inactive} Chips)"
+                }
+            },
+            j_biasedBalance_Spare_Joker = {
+                name = "Spare Joker",
+                text = { 
+                    "{C:chips}+#1#{} Chips if hand contains an",
+                    "{C:attention}unscoring{} card",
+                    "{C:chips}+#2#{} additional Chips for every",
+                    "additional {C:attention}unscoring{} card",
+                }
             },
             j_biasedBalance_Toucan = {
                 name = "Toucan",
                 text = { "Retrigger all played", "{C:attention}enhanced{} cards" }
             },
-            j_biasedBalance_Wysteria_Joker = {
-                name = "Wysteria Joker",
-                text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{C:chips}+#1#{} Chips if",
-                    "Any scoring hands with {C:attention}+5",
-                    "cards or {C:chips}-#2#{} chips if not",
-                    "Currently: {C:chips}+#3#{} Chips"
-                }
-            },
-            --j_green_joker={
-                --name="Green Joker",
-                --text={
-                   -- "{C:mult}+#1#{} Mult per scoring hands with {C:attention}+4",
-                   -- "{C:mult}-#1#{} Mult if it does not",
-                  --  "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
-                --},
-            --},
-            j_flash={
-                name="Flash Card",
-                text={
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "per {C:attention}reroll{} in the shop",
-                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)",
-                },
-            },
-            j_ride_the_bus={
-                name="Ride the Bus",
-                text={
-                    "This Joker gains {C:mult}+#1#{} Mult",
-                    "played without a",
-                    "scoring {C:attention}Face{} card",
-                    "{C:mult}-#2#{} Mult if it does not",
-                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)",
-                },
-            },
-            j_hit_the_road = {
-                name = "Hit the Road",
-                text = {
-                    "This Joker gains {X:mult,C:white} X#1# {} Mult",
-                    "for every {C:attention}Face Card{}",
-                    "discarded this round",
-                    "{C:inactive}(Currently {X:mult,C:white} X#2# {C:inactive} Mult)",
-                }
-            },
             j_biasedBalance_Everhungry_Joker = {
-                name = "Everhungry Joker",
+                name = "Ever-Hungry Joker",
                 text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{C:mult}+#1#{} Mult if",
-                    "Any consumable is used",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "This Joker{} gains",
+                    "{C:mult}+#1#{} Mult when a",
+                    "{C:attention}consumable{} is used",
+                    "{C:inactive}(Currently {C:money}$#2#{C:inactive})"
                 }
+            },
+            j_biasedBalance_Cietrzew = {
+                name = "Cietrzew",
+                text = { 
+                    "Earn {C:money}$#1#{} at end of",
+                    "round for every unique",
+                    "{C:attention}Enhancement{} in your full deck",
+                    "{C:inactive}(Will give {C:money}$#2#{C:inactive})"
+                }
+            },
+            j_biasedBalance_Star_Fall = {
+                name = "Star Fall",
+                text = {
+                    "{C:chips}+#1#{} Chips per {C:planet}Planet{}",
+                    "card used this run",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                },
             },
             j_biasedBalance_Last_Dance = {
                 name = "Last Dance",
@@ -518,134 +801,303 @@ return {
                     "Retrigger {C:attention}2{} last scoring cards"
                 }
             },
+            j_biasedBalance_Subversive_Joker = {
+                name = "Subversive Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every",
+                    "{C:attention}#2#{} chips from your",
+                    "current scoring hand",
+                }
+            },
+            j_biasedBalance_Conspiracy = {
+                name = "Conspiracy",
+                text = { 
+                    "After {C:attention}#1#{} round, sell this Joker to",
+                    "{C:attention}upgrade{} every secret poker hand",
+                    "and create a {C:spectral}Spectral{} card",
+                    "{C:inactive}(Currently {C:attention}#2#{C:inactive}/#1#, must have room)",
+                }
+            },
             j_biasedBalance_Kestrel = {
                 name = "Kestrel",
                 text = { 
-                    "{C:mult}+#1#{} Mult for every",
-                    "enhanced cards in deck",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "{C:mult}+#1#{} Mult for every {C:attention}Enhanced",
+                    "card in your full deck",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Spice = {
+                name = "Spice",
+                text = { 
+                    "Retrigger all played",
+                    "{V:1}#1#{} cards",
+                }
+            },
+            j_biasedBalance_The_Missing_Piece = {
+                name = "The Missing Piece",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every {C:attention}Voucher",
+                    "redeemed this run",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Mystery_Box = {
                 name = "Mystery Box",
                 text = { 
                     "When a {C:attention}Blind{} is skipped",
-                    "Destroy this {C:attention}Joker and",
-                    "create a random {C:attention}Rare Joker"
+                    "destroy this {C:attention}Joker{} and",
+                    "create a random {C:rare}Rare {C:attention}Joker",
+                    "and {C:attention}#1#{} random {C:tarot}Tarot{} cards"
                 }
             },
             j_biasedBalance_Shameless_Profit = {
                 name = "Shameless Profit",
                 text = { 
-                    "Earn {C:gold}$#1#{} at the end of the round or",
-                    "When a {C:attention}Blind{} is skipped",
-                    "This {C:attention}Joker{} gains {C:gold}$1{} "
+                    "Earn {C:gold}$#1#{} at",
+                    "end of round",
+                    "Payout increases by {C:gold}$#2#{}",
+                    "for every skipped {C:attention}Blind{}",
+                    "this run"
+                }
+            },
+            j_biasedBalance_Submarine_Joker = {
+                name = "Submarine Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult for every",
+                    "hand played this round",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Envious_Joker = {
+                name = "Envious Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult",
+                    "{C:mult}-#2#{} Mult for every",
+                    "Non-{C:blue}Common{} Joker owned",
+                    "{C:inactive}(Currently {C:mult}+#3#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Stairs = {
-                name = "Stairs",
+                name = "The Stairs",
                 text = { 
-                    "This Joker gives {X:mult,C:white}X#1#{} Mult",
-                    "When a straight is discarded",
-                     "only the first hand for each round",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "when a discard contains",
+                    "a {C:attention}Straight",
+                    "{C:inactive}(Once per round)",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Dark_Forest = {
                 name = "Dark Forest",
                 text = { 
                     "This Joker loses {X:mult,C:white}X#1#{} Mult",
-                    "For every {C:hearts}Heart{} or {C:diamonds} Diamond",
-                    "card in your deck",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "for every {C:hearts}Heart{} or {C:diamonds}Diamond",
+                    "card in your full deck",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Crystal_Cave = {
                 name = "Crystal Cave",
                 text = { 
                     "This Joker gains {X:mult,C:white}X#1#{} Mult",
-                    "For every {C:hearts}Heart{} or {C:diamonds}Diamond{} scored",
-                    "Resets at end of round",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "for every {C:hearts}Heart{} or {C:diamonds}Diamond{}",
+                    "scored this round",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_End_Of_Days = {
                 name = "End Of Days",
                 text = { 
                     "Create a random {C:dark_edition}Spectral{} card",
-                    "If your deck has {C:attention}10{} or less cards"
+                    "after defeating a blind on",
+                    "final {C:attention}hand{} of round"
+                }
+            },
+            j_biasedBalance_Listless_Joker = {
+                name = "Listless Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult if a {C:attention}Joker{}",
+                    "was not purchased during",
+                    "the previous shop"
+                }
+            },
+            j_biasedBalance_Granite_Joker = {
+                name = "Granite Joker",
+                text = { 
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "whenever a {C:attention}Stone{} card is",
+                    "enhanced or added to your deck",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Pierogi = {
                 name = "Pierogi",
                 text = { 
-                    "This Joker loses {X:mult,C:white}#1#{} Mult",
+                    "This Joker loses {X:mult,C:white}X#1#{} Mult",
                     "for every reroll used",
-                    "Currently: {X:mult,C:white}#2#{} Mult"
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Wildflower_Honey = {
                 name = "Wildflower Honey",
                 text = { 
-                    "Gain {C:gold}$#1#{} every skipped",
-                    "{C:attention}Blind{} or end of round",
-                    "Decreases $ each time trigger"
+                    "{C:gold}$#1#{} at end of round",
+                    "or when {C:attention}Blind{} is skipped",
+                    "{C:gold}-$#2#{} when triggered"
                 }
             },
             j_biasedBalance_Haunted_House = {
                 name = "Haunted House",
                 text = { 
-                    "When a {C:attention}Full House{} is scored",
                     "{C:green}#1# in #2#{} chance to create",
-                    "A random {C:dark_edition}Spectral{} card"
+                    "a random {C:dark_edition}Spectral{} card",
+                    "when a {C:attention}Full House{} is played",
                 }
             },
             j_biasedBalance_Negative_Norman = {
                 name = "Negative Norman",
                 text = { 
                     "When a {C:attention}Boss Blind{} is defeated",
-                    "Create a {C:attention}Negative tag"
+                    "create a {C:attention}#1#"
                 }
             },
             j_biasedBalance_Reverberating_Echo = {
                 name = "Reverberating Echo",
                 text = { 
-                    "{X:mult,C:white}#1#{} Mult for every scoring card"
+                    "Played cards give",
+                    "{X:mult,C:white}X#1#{} Mult when scored"
+                }
+            },
+            j_biasedBalance_Unusual_Joker = {
+                name = "Unusual Joker",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult for every",
+                    "{C:blue}Common{} Joker owned",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
             j_biasedBalance_Hypernova = {
                 name = "Hypernova",
                 text = { 
-                    "This {C:attention}Joker gives",
-                    "{C:mult}+3{} Mult for every level of played hand"
+                    "{C:mult}+#1#{} Mult for every",
+                    "{C:attention}level{} of played hand"
+                }
+            },
+            j_biasedBalance_Discounted_Joker = {
+                name = "Discounted Joker",
+                text = { 
+                    "Once per round, spending {C:money}$#1#{} in",
+                    "the shop creates a {C:tarot}Tarot{} card",
+                    "{C:inactive}(Currently {C:money}$#2#{C:inactive}/{C:money}$#1#{C:inactive})",
+                }
+            },
+            j_biasedBalance_Jokerdex = {
+                name = "Jokerdex",
+                text = { 
+                    "{C:red}+#1#{} Mult for every",
+                    "{C:attention}unique{} Joker obtained",
+                    "this run",
+                    "{C:inactive}(Currently {C:red}+#2#{C:inactive})",
                 }
             },
             j_biasedBalance_Solitude = {
                 name = "Solitude",
                 text = { 
-                    "This {C:attention}Joker{} gives",
-                    "{X:mult,C:white}X#1#{} Mult if",
-                    "Scoring hand doesn't contain a {C:attention}Pair"
+                    "{X:mult,C:white}X#1#{} Mult if played hand",
+                    "does not contain a {C:attention}Pair"
                 }
             },
             j_biasedBalance_Ouroboros = {
                 name = "Ouroboros",
                 text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{X:mult,C:white}X#1#{} Mult every {C:attention}#3#{} times",
-                    "A {C:attention}4 or 8{} is scored",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "This Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "every {C:attention}#4#{C:inactive} [#3#]{} times",
+                    "a {C:attention}4 {}or {C:attention}8{} is scored",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Propitious_Joker = {
+                name = "Propitious Joker",
+                text = { 
+                    "Scored {C:attention}7s{} become {C:attention}Lucky{} cards",
+                    "Random scoring card becomes {C:attention}Lucky{}",
+                    "when a {C:attention}Lucky 7{} is scored",
+                }
+            },
+            j_biasedBalance_Ego = {
+                name = "Ego",
+                text = {
+                    "{C:red}+#1#{} discard",
+                    "each round","{C:blue}+#2#{} hand",
+                    "each round",
+                    "{C:attention}+#3#{} hand size",
+                    "{C:dark_edition}-#4#{} Joker slot"
+                },
+            },
+            j_biasedBalance_Outdated_Meme = {
+                name = "Outdated Meme",
+                text = {
+                    "{C:blue}+#1#{} hands",
+                    "each round",
+                    "{C:blue}-#2#{} Chips multiplied",
+                    "by {C:attention}Ante{} each round"
+                },
+            },
+            j_biasedBalance_Light_In_The_Tunnel = {
+                name = "Light In The Tunnel",
+                text = { 
+                    "-{C:money}$#1#{} Reroll cost",
+                }
+            },
+            j_biasedBalance_Bittergiggle = {
+                name = "Bittergiggle",
+                text = { 
+                    "{E:2}Your {C:blue,E:2}Common{E:2} Jokers",
+                    "{E:2}trigger twice.",
+                    "{E:2}I am {C:dark_edition,E:2}Negative."
                 }
             },
             j_biasedBalance_Gourmet = {
                 name = "Gourmet",
                 text = { 
-                    "{C:attention}+1{} Consumable Slot",
                     "This {C:attention}Joker{} gains {C:mult}+#1#{} Mult",
-                    "For every consumable used",
+                    "for every consumable used",
                     "Resets every {C:attention}Boss Blind",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
                 }
+            },
+            j_biasedBalance_Shy_Joker = {
+                name = "Shy Joker",
+                text = { 
+                    "{C:mult}+#1#{} Mult", 
+                    "Discards all {C:attention}Face Cards{}",
+                    "held in hand when a hand",
+                    "is played"
+                }
+            },
+            j_biasedBalance_Alchemist = {
+                name = "Alchemist",
+                text = {
+                    "When {C:attention}Blind{} is selected,",
+                    "gain {C:blue}+#1#{} Hand and",
+                    "{C:red}-#2#{} Discard",
+                },
+            },
+            j_biasedBalance_Shapeshifter = {
+                name = "Shapeshifter",
+                text = {
+                    "If {C:attention}first hand{} of round",
+                    "contains {C:attention}5{} scoring cards,",
+                    "convert the {C:attention}leftmost{} card" ,
+                    "into the {C:attention}rightmost{} card"
+                },
+            },
+            j_biasedBalance_Opportunity_Cost = {
+                name = "Opportunity Cost",
+                text = {
+                    "Copies ability of most",
+                    "recently bought {C:attention}Joker{}",
+                },
             },
             j_biasedBalance_Rhododendron = {
                 name = "Rhododendron",
@@ -654,28 +1106,138 @@ return {
                     "contains at least {C:attention}#2#{} ranks"
                 }
             },
+            j_biasedBalance_Monument = {
+                name = "Monument",
+                text = { 
+                    "This Joker gains {C:mult}+#1#{} Mult",
+                    "if played hand contains a", 
+                    "scoring {C:attention}Face{} card",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
             j_biasedBalance_Esteemed_Audience = {
                 name = "Esteemed Audience",
                 text = { 
                     "{C:mult}+#1#{} Mult for every scored", 
-                    "{C:}Face card in played hands",
-                    "Currently: {C:mult}+#2#{} Mult"
+                    "Face card in played hands",
+                    "{C:inactive}(Currently {C:mult}+#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Strength_In_Numbers = {
+                name = "Strength In Numbers",
+                text = { 
+                    "Non-face cards give {C:mult}+#1#{} Mult", 
+                    "for every card above {C:attention}4{} in your",
+                    "deck with the same rank",
+                }
+            },
+            j_biasedBalance_Mecha_Joker = {
+                name = "Mecha-Joker",
+                text = { 
+                    "Once per ante, create a",
+                    "{C:attention}#1#{} at",
+                    "end of shop"
                 }
             },
             j_biasedBalance_Joker_In_The_High_Castle = {
-                name = "Joker In The High Castle",
+                name = "Joker In A High Castle",
                 text = { 
-                    "Retrigger the first card {C:attention}2{} Times",
-                    "If it has an ability"
+                    "Retrigger {C:attention}first{} card with",
+                    "an ability held in hand",
+                    "{C:attention}#1#{} additional times",
+                    "if it has an ability"
+                }
+            },
+            j_biasedBalance_Toolkit = {
+                name = "Toolkit",
+                text = { 
+                    "Create a {C:attention}Utility{} Joker",
+                    "with an {C:dark_edition}Edition{} when a",
+                    "Blind is skipped",
+                    "{S:1.1,C:red,E:2}self destructs{}",
+                }
+            },
+            j_biasedBalance_Short_Fuse = {
+                name = "Short Fuse",
+                text = { 
+                    "Retrigger the first {C:attention}scored{} card",
+                    "and first {C:attention}held in hand{} ability"
                 }
             },
             j_biasedBalance_Eldritch_Joker= {
                 name = "Eldritch Joker",
                 text = { 
-                    "This {C:attention}Joker{} gains",
-                    "{X:mult,C:white}X#1#{} Mult after every",
-                    "card scored in played hands",
-                    "Currently: {X:mult,C:white}X#2#{} Mult"
+                    "This {C:attention}Joker{} gains {X:mult,C:white}X#1#{} Mult",
+                    "for every card scored during",
+                    "the round",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
+                }
+            },
+            j_biasedBalance_Ominous_Concoction= {
+                name = "Ominous Concoction",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult",
+                    "{C:chips}-#2#{} Chips per ante",
+                    "{C:inactive}(Currently {C:chips}-#3#{C:inactive} Chips)",
+                    "{C:inactive}(Cannot reduce chips below {C:attention}5{C:inactive})"
+                }
+            },
+            j_biasedBalance_Risotto= {
+                name = "Risotto",
+                text = { 
+                    "Gain a {C:attention}Joker{}-related",
+                    "tag when exiting the shop",
+                    "{C:inactive}({C:attention}#1#{C:inactive} tags remaining)"
+                }
+            },
+            j_biasedBalance_BeansAndSausage= {
+                name = "Beans and Sausage",
+                text = { 
+                    "Gain a {C:attention}Pack{}-related",
+                    "tag when exiting the shop",
+                    "{C:inactive}({C:attention}#1#{C:inactive} tags remaining)"
+                }
+            },
+            j_biasedBalance_Aristocrat = {
+                name = "Aristocrat",
+                text = { 
+                    "{C:chips}+#1#{} Chips for every",
+                    "{C:attention}Face{} card in your",
+                    "full deck",
+                    "{C:inactive}(Currently {C:chips}+#2#{C:inactive} Chips)",
+                }
+            },
+            j_biasedBalance_Pippi_Panini = {
+                name = "Pippi Panini",
+                text = { 
+                    "When an {C:attention}enhanced{} card",
+                    "is scored, the card gains",
+                    "a {C:attention}Seal{} and an {C:dark_edition}Edition{}"
+                }
+            },
+            j_biasedBalance_Platinum_Ticket= {
+                name = "Platinum Ticket",
+                text = { 
+                    "{X:mult,C:white}X#1#{} Mult and {C:gold}$#3#{}",
+                    "for every {C:attention}Voucher{}",
+                    "redeemed this run",
+                    "{C:inactive}(Currently {X:mult,C:white}X#2#{C:inactive} Mult)",
+                    "{C:inactive}(Currently {C:gold}$#4#{C:inactive})"
+                }
+            },
+            j_biasedBalance_Platinum_Joker= {
+                name = "Platinum Joker",
+                text = { 
+                    "Earn {C:gold}$#1#{} at the end of the round",
+                    "if you have at most {C:gold}$#2#{}"
+                }
+            },
+            j_biasedBalance_plat_collection = {
+                name = "Platinum Joker",
+                text = { 
+                    "Earn {C:gold}$#1#{} at the end of the round",
+                    "if you have less than or equal to",
+                    "your {C:gold}money{} when buying this Joker"
                 }
             },
             j_biasedBalance_Lingering_Resentment= {
@@ -703,8 +1265,29 @@ return {
             },
         },
         Other = {
-            p_biasedBalance_Utility = {
+            p_biasedBalance_UtilityPack = {
                 name = 'Utility Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
+            p_biasedBalance_UtilityPack2 = {
+                name = 'Utility Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
+            p_biasedBalance_UtilityPackMega = {
+                name = 'Mega Utility Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                }
+            },
+            p_biasedBalance_UtilityPackJumbo = {
+                name = 'Jumbo Utility Pack',
                 text = {
                     "Choose {C:attention}#1#{} of up to",
                     "{C:attention}#2#{} Utility {C:joker}Jokers",
@@ -714,24 +1297,49 @@ return {
                 name = 'Sacrifice Pack',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "destroy the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
                 }
             },
             p_biasedBalance_GigaStandard = {
                 name = 'Giga Standard Pack',
                 text = {
-                    "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2# Playing{} cards to",
+                    "Choose {C:attention}#2#{} of up to",
+                    "{C:attention}#1# Playing{} cards to",
                     "add to your deck",
                 }
             },
-            biasedBalance_Teal_seal = {
+            p_biasedBalance_HyperArcana = {
+                name = 'Hyper Arcana Pack',
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:tarot} Tarot{} cards to",
+                    "be used immediately",
+                }
+            },
+            biasedbalance_teal_seal = {
+                label = "Teal Seal",
                 name = "Teal Seal",
                 text = {
-                    "When held in hand",
-                    "Double all listed Probabilities"
+                    "Doubles all {C:attention}listed",
+                    "{C:green,E:1,S:1.1}probabilities",
+                    "for played hand",
+                    "when scored",
+                    "{C:inactive}(ex: {C:green}1 in 3{C:inactive} -> {C:green}2 in 3{C:inactive})",
                 }
+            },
+            biasedbalance_tangerine_seal = {
+                label = "Tangerine Seal",
+                name = "Tangerine Seal",
+                text = {
+                    "Gives {C:mult}+#1#{} Mult",
+                    "when scored",
+                    "or held in hand",
+                    "Gains {C:mult}+#2#{} Mult",
+                    "if scored in",
+                    "hand containing",
+                    "{C:attention}#3#{} scoring cards",
+                    }
             },
         },
         Spectral = {
@@ -752,8 +1360,8 @@ return {
             c_familiar = {
                 text = {
                     "Destroy {C:attention}#1#{} selected",
-                    "card in your hand, add",
-                    "{C:attention}#2#{} random {C:attention}Enhanced face",
+                    "card in your hand",
+                    "Add {C:attention}#2#{} random {C:attention}Enhanced face",
                     "{C:attention}cards{} to your hand",
                 }
             },
@@ -768,23 +1376,23 @@ return {
             c_wraith = {
                 text = {
                     "Creates a random",
-                    "{C:red}Rare{C:attention} Joker{},",
-                    "lose up to {C:money}$#1#",
+                    "{C:red}Rare{C:attention} Joker{}",
+                    "Lose {C:money}$#1#{}, cannot go below {C:money}$0",
                 },
             },
             c_sigil = {
                 text = {
                     "Converts all cards in",
-                    "hand to {C:attention}selected suit,",
-                    "lose up to {C:money}$#1#",
+                    "hand to {C:attention}selected suit",
+                    "Lose {C:money}$#1#{}, cannot go below {C:money}$0",
                 },
             },
             c_ouija = {
                 text = {
                     "Select {C:attention}#1#{} cards,",
                     "convert the {C:attention}left #2#",
-                    "into the {C:attention}rightmost{} card,",
-                    "lose up to {C:money}$#3#",
+                    "into the {C:attention}rightmost{} card",
+                    "Lose {C:money}$#3#{}, cannot go below {C:money}$0",
                     "{C:inactive}(Drag to rearrange)",
                 },
             },
@@ -798,14 +1406,14 @@ return {
                 text = {
                     "Add {C:dark_edition}Polychrome{} to a",
                     "random {C:attention}Joker{},",
-                    "lose up to {C:money}$#1#",
+                    "destroy leftmost Joker",
                 }
             },
         c_biasedBalance_Sacrifice2 = {
-                name = 'Sacrifice',
+                name = '...',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "destroy the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
                 },
             },
@@ -835,12 +1443,40 @@ return {
                     "lose up to {C:money}$#2#"
                 }
             },
+            c_biasedBalance_Transmutation = {
+                name = "Transmutation",
+                text = {
+                    "{C:red}-#1#{} discard",
+                    "each round",
+                    "{C:attention}+#2#{} hand size",
+                    "Earn {C:money}$#3#{}"
+                }
+            },
             c_biasedBalance_Awakening = {
                 name = "Awakening",
                 text = {
-                    "Select {C:attention}2{} cards",
-                    "increase rank by {C:attention}1{}",
-                    "Uses {C:attention}#1#"
+                    "Increases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
+                    "{C:inactive}Can be used {C:attention}twice{C:inactive})",
+                    "{C:inactive}(Must have room)",
+                }
+            },
+            c_biasedBalance_Awakening2 = {
+                name = "Awakening",
+                text = {
+                    "Increases rank of",
+                    "up to {C:attention}#1#{} selected",
+                    "cards by {C:attention}1",
+                    "{C:inactive}(Must have room)",
+                }
+            },
+            c_biasedBalance_Mania = {
+                name = "Mania",
+                text = {
+                    "Create {C:attention}#1# {C:green}Uncommon{C:attention} Jokers{},",
+                    "lose up to {C:money}$#2#",
+                    "{C:inactive}(Must have room)",
                 }
             },
             c_biasedBalance_Sacrifice = {
@@ -849,12 +1485,22 @@ return {
                     "{C:red}Destroys{} leftmost Joker,", "earn {C:money}$#1#"
                 }
             },
-            --c_biasedBalance_Vertigo = {
-               -- name = "Vertigo",
-               -- text = {
-               --     "Add a {C:attention}Teal Seal{} to 1 selected card"
-              --  }
-           -- },
+            c_biasedBalance_Vertigo = {
+               name = "Vertigo",
+               text = {
+                    "Add a {V:1}Teal Seal{}",
+                    "to {C:attention}1{} selected",
+                    "card in your hand",
+                },
+            },
+            c_biasedBalance_Anguish = {
+               name = "Anguish",
+               text = {
+                    "Add a {V:1}Tangerine Seal{}",
+                    "to {C:attention}1{} selected",
+                    "card in your hand",
+                },
+            },
         },
         Stake = {
             stake_blue = {
@@ -864,16 +1510,21 @@ return {
                 },
             },
             stake_biasedBalance_pink = {
+                name = "Pink Stake",
                 text = {
-                    "Run ends at Ante 9",
-                    "{C:inactive}(Ante 8 & 9 have Finisher Blinds)"
+                    "{C:blue}-1{} Hand per round",
+                    "Start with extra {C:money}$1",
+                    "{C:money}$2{} per remaining {C:blue}Hand",
+                    "at end of round",
+                    "{s:0.8}Applies all previous Stakes",
                 }
             },
             stake_biasedBalance_silver = {
+                name = "Silver Stake",
                 text = {
-                    "All cards in shop",
-                    "besides Playing Cards",
-                    "Cost $1 more"
+                    "Run ends at Ante {C:attention}9",
+                    "{C:inactive}(Ante 8 & 9 have Finisher Blinds)",
+                    "{s:0.8}Applies all previous Stakes",
                 }
             },
         },
@@ -885,15 +1536,39 @@ return {
                     "{C:attention}#2#",
                 },
             },
-            c_strength = {
+            c_biasedBalance_antistrength = {
+                name="Anti-Strength",
                 text = {
-                    "Increases rank of",
-                    "up to {C:attention}3{} selected",
+                    "Decreases rank of",
+                    "up to {C:attention}#1#{} selected",
                     "cards by {C:attention}1",
                 }
             },
         },
         Tag = {
+            tag_uncommon_sticker={
+                name="Uncommon Tag",
+                text={
+                    "Shop has a free",
+                    "{C:green}Uncommon Joker",
+                    "without {C:attention}Stickers{}"
+                },
+            },
+            tag_ethereal={
+                name="Ethereal Tag",
+                text={
+                    "Gives a free",
+                    "{C:spectral}Mega Spectral Pack",
+                },
+            },
+            tag_rare_sticker={
+                name="Rare Tag",
+                text={
+                    "Shop has a free",
+                    "{C:red}Rare Joker",
+                    "without {C:attention}Stickers{}"
+                },
+            },
             tag_meteor = {
                 text = { 
                     "{C:planet}Upgrades{} all", 
@@ -910,7 +1585,8 @@ return {
             tag_juggle = {
                 text = { 
                     "{C:attention}+#1#{} hand size for", 
-                    "the next {C:attention}#2#{} rounds" 
+                    "the next {C:attention}#2#{} rounds",
+                    "{C:inactive}({C:attention}#3#{C:inactive} rounds left)"
                 }
             },
             tag_garbage = {
@@ -932,27 +1608,76 @@ return {
                     "{C:attention}Giga Standard Pack",
                 }
             },
+            tag_charm= {
+                text = {
+                    "Gives a free",
+                    "{C:tarot}Hyper Arcana Pack",
+                }
+            },
+            tag_voucher= {
+                text = {
+                    "Adds one {C:voucher}Voucher",
+                    "to the next shop",
+                    "that costs {C:money}$5{} less"
+                }
+            },
+            tag_negative_sticker={
+                name="Negative Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Negative",
+                },
+            },
+            tag_polychrome_sticker={
+                name="Polychrome Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Polychrome",
+                },
+            },
+            tag_holo_sticker={
+                name="Holographic Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Holographic",
+                },
+            },
+            tag_foil_sticker={
+                name="Foil Tag",
+                text={
+                    "Next base edition shop",
+                    "Joker is free, has a",
+                    "reduced chance for {C:attention}Stickers{}, and",
+                    "becomes {C:dark_edition}Foil",
+                },
+            },
             tag_biasedBalance_Utility = {
                 name = 'Utility Tag',
                 text = {
-                    "Choose {C:attention}#1#{} of up to",
-                    "{C:attention}#2#{} Utility {C:joker}Jokers",
+                    "Gives a free",
+                    "{C:attention}Mega Utility Pack",
                 }
             },
             tag_biasedBalance_Sacrifice = {
                 name = 'Sacrifice Tag',
                 text = {
                     "Choose {C:attention}#1#{} cards,",
-                    "{C:red}destroy{} the left {C:attention}#2#{},",
+                    "destroy the left {C:attention}#2#{},",
                     "give the rest a random {C:dark_edition}edition"
                 }
             },
             tag_biasedBalance_Hone = {
                 name = 'Hone Tag',
                 text = {
-                    "A random {C:attention}Joker",
-                    "gains {C:dark_edition}Foil/Holographic/Polychrome",
-                    "at random if no edition applied"
+                    "Add {C:dark_edition}Foil{}, {C:dark_edition}Holographic{},",
+                    "or {C:dark_edition}Polychrome{} to a ",
+                    "random {C:attention}Joker"
                 }
             },
         },
@@ -969,6 +1694,13 @@ return {
                     "{C:attention}Playing cards{} in shop",
                     "always have an {C:enhanced}Enhancement{},",
                     "{C:dark_edition}Edition{}, and/or a {C:attention}Seal{}",
+                }
+            },
+            v_retcon = {
+                text = {
+                    "{C:attention}Once per ante{}, rerolling",
+                    "the shop also rerolls",
+                    "{C:attention}Booster Packs{} and {C:attention}Vouchers",
                 }
             },
             v_hone = {
@@ -995,21 +1727,31 @@ return {
                 name="Planet Tycoon",
                 text={
                     "Every {C:attention}#1#{} {C:planet}Planet{} cards",
-                    "Create a random {C:planet}Planet{} card"
+                    "create a random {C:planet}Planet{} card"
+                }
+            },
+            v_reroll_surplus_blue={
+                name="Reroll Surplus",
+                text={
+                    "Rerolls cost {C:money}$#1#{}",
+                    "less and increase",
+                    "by {C:money}$#1#{} less",
                 }
             },
             v_biasedBalance_recipe={
                 name= "Recipe",
                 text={
-                   "Booster Packs contain {C:attention}1{}",
-                   "extra card to choose from"
+                   "Booster Packs contain",
+                   "{C:attention}#1#{} additional card",
+                   "to choose from",
                 }
             },
-            v_biasedBalanced_trade_secret={
+            v_biasedBalance_trade_secret={
                 name = "Trade Secret",
                 text = {
-                    "Booster Packs contain {C:attention}2{}",
-                    "extra card to choose from"
+                    "{C:attention}#1#{} more card",
+                    "can be chosen from",
+                    "Booster Packs",
                 }
             },
         },
@@ -1017,16 +1759,34 @@ return {
     misc = {
         dictionary = {
             k_booster_group_p_biasedBalance_Utility = 'Utility Pack',
+            k_booster_group_p_biasedBalance_JumboUtility = 'Jumbo Utility Pack',
+            k_booster_group_p_biasedBalance_MegaUtility = 'Mega Utility Pack',
             k_booster_group_p_biasedBalance_Sacrifice = 'Sacrifice',
             k_booster_group_p_biasedBalance_GigaStandard = 'Giga Standard Pack',
+            k_booster_group_p_biasedBalance_HyperArcana = 'Hyper Arcana Pack',
             k_booster_group_p_biasedBalance_LowStickerBuffoon = 'Mega Buffoon Pack',
+            k_biasedBalance_utility = 'Utility!',
+            k_biasedBalance_negative = 'Negative!',
             k_biasedBalance_noRepeats = 'No repeat hand types',
+            k_no_joker = "No Joker!",
+            k_disabled = "Disabled!",
+            k_mysteryBox_open = "Opened!",
+            k_biasedBalance_pow = "BANG!",
+            k_biasedBalance_stone = "Stone!",
+            k_biasedBalance_ante = "-1 Ante",
+            k_biasedBalance_lucky = "Lucky!",
+            k_biasedBalance_probs = "X2 Probabilities",
+            k_biasedBalance_allhands = "All Secret Hands"
+        },
+        v_dictionary = {
+            a_biasedBalance_m_discards = "-#1# Discards",
         },
         text = {
             biasedBalance_none = "None"
         },
         labels={
-            biasedBalance_Teal_seal = "Teal Seal",
+            biasedbalance_teal_seal = "Teal Seal",
+            biasedbalance_tangerine_seal = "Tangerine Seal",
         },
     }
 }

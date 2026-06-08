@@ -1,26 +1,70 @@
 SMODS.Blind {
     key = "Delta",
-    --atlas = "blinds",
+    atlas = "blinds",
     pos = {
         x = 0,
-        y = 0
+        y = 7
     },
-    discovered = false,
-    unlocked = true,
-    order = 1,
-    boss_colour = HEX("870f52"),
     boss = {
-		min = 4,
+		min = 6,
 	},
-   calculate = function(self, blind, context)
-    if not blind.disabled then
-        if context.main_scoring then
-            if context.debuff_card and context.debuff_card.area ~= G.hand then
+    boss_colour = HEX("4da28e"),
+    disable = function(self)
+        G.GAME.blind.chips = get_blind_amount(G.GAME.round_resets.ante) * G.GAME.starting_params.ante_scaling
+		G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+    end,
+    --[[calculate = function(self, card, context)
+        if context.post_trigger then
+            local other_ret = context.other_ret.jokers or {}
+            if other_ret.x_mult or other_ret.xmult or other_ret.Xmult_mod 
+            or other_ret.Xmult or other_ret.x_mult_mod then
                 return {
-                    debuff = true
+                    xblindsize = 1.3
                 }
             end
         end
-        end
-    end
+    end]]
 }
+--[[
+local scie = SMODS.calculate_individual_effect
+		function SMODS.calculate_individual_effect(effect, scored_card, key, amount, from_edition)
+			local ret = scie(effect, scored_card, key, amount, from_edition)
+			if
+				(
+					key == "x_mult"
+					or key == "xmult"
+					or key == "Xmult"
+					or key == "x_mult_mod"
+					or key == "xmult_mod"
+					or key == "Xmult_mod"
+				)
+				and amount ~= 1
+				and mult
+			then
+                if not G.GAME.blind.disabled and G.GAME.blind.name == 'bl_biasedBalance_Delta' then
+                    local final_chips = (G.GAME.blind.chips / 100) * (130)
+                    local chip_mod -- iterate over ~120 ticks
+                    chip_mod = math.ceil((final_chips - G.GAME.blind.chips) / 120)
+                    local step = 0
+                    G.E_MANAGER:add_event( Event ({
+                        trigger = 'after', 
+                        blocking = true, 
+                        func = function()
+                        G.GAME.blind.chips = G.GAME.blind.chips + G.SETTINGS.GAMESPEED * chip_mod
+                        if G.GAME.blind.chips < final_chips then
+                            G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+                            if step % 5 == 0 then
+                                play_sound('chips1', 0.8 + (step * 0.005))
+                            end
+                            step = step + 1
+                        else
+                            G.GAME.blind.chips = final_chips
+                            G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+                            G.GAME.blind:wiggle()
+                            return true
+                        end
+                    end}))
+                end
+			end
+			return ret
+		end]]

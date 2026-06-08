@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Knave",
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 5
     },
     rarity = 2,
     cost = 7,
@@ -12,7 +12,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-            chips = 120,
+            chips = 100,
         } 
     },
     loc_vars = function(self, info_queue, card)

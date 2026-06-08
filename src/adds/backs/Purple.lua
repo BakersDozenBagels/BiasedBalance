@@ -6,12 +6,12 @@ SMODS.Back {
         x = 1,
         y = 0
     },
-    config = { x_mult = 2 },
+    config = { hands = 1, hand_size = 1 },
     loc_vars = function(self, info_queue, back)
         return {
-            vars = { self.config.x_mult }
+            vars = { self.config.hands, self.config.hand_size },
         }
-    end,
+    end,--[[
     calculate = function(self, back, args)
         if args.context == 'final_scoring_step' then
             args.mult = args.mult * self.config.x_mult
@@ -51,7 +51,7 @@ SMODS.Back {
 
             return args.chips, args.mult
         end
-    end
+    end]]
 }
 
 local raw_Blind_debuff_hand = Blind.debuff_hand

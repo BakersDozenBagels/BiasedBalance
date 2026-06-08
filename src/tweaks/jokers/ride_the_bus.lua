@@ -1,5 +1,6 @@
 SMODS.Joker:take_ownership("ride_the_bus", { 
     rarity = 1,  
+    perishable_compat = false,
     config = {
         multloss = { 
             mult = 3,

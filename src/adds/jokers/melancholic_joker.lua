@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "MelancholicJoker",
     pos = {
-        x = 4,
-        y = 5
+        x = 5,
+        y = 6
     },
     rarity = 3,
     cost = 9,
@@ -25,7 +25,7 @@ SMODS.Joker {
             end
             if #jokers > 0 then
                 card_eval_status_text(card, 'extra', nil, nil, nil,
-                    { message = localize('negative', 'labels') })
+                    { message = localize('k_biasedBalance_negative') })
                 local chosen_joker = pseudorandom_element(jokers, pseudoseed('melancholic'))
                 chosen_joker:set_edition('e_negative', true)
                 return nil, true

@@ -2,11 +2,11 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Everhungry_Joker",
     pos = {
-        x = 0,
-        y = 0
+        x = 2,
+        y = 1
     },
-    rarity = 1,
-    cost = 4,
+    rarity = 2,
+    cost = 6,
     blueprint_compat = true,
     eternal_compat = true,
     perishable_compat = false,
@@ -28,8 +28,7 @@ SMODS.Joker {
         if context.using_consumeable then
             card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
             return {
-                message = "+1 Mult!",
-                colour = G.C.MULT
+                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult_gain } }
             }
         end
         if context.joker_main then 

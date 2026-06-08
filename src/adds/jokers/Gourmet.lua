@@ -2,10 +2,10 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Gourmet",
     pos = {
-        x = 0,
-        y = 0
+        x = 12,
+        y = 3
     },
-    rarity = 2,
+    rarity = 1,
     cost = 6,
     blueprint_compat = true,
     eternal_compat = true,
@@ -21,22 +21,15 @@ SMODS.Joker {
         return { 
             vars = { 
                 card.ability.extra.mult_gain,
-                card.ability.extra.mult
+                card.ability.extra.mult,
         } 
     }
-    end,
-    add_to_deck = function(self, card, from_debuff)
-        G.consumeables.config.card_limit = G.consumeables.config.card_limit + card.ability.extra.slots
-    end,
-    remove_from_deck = function(self, card, from_debuff)
-        G.consumeables.config.card_limit = G.consumeables.config.card_limit - card.ability.extra.slots
     end,
     calculate = function(self, card, context)
         if context.using_consumeable then
             card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.mult_gain
             return {
-                message = "+3 Mult!",
-                colour = G.C.FILTER
+                message = localize { type = 'variable', key = 'a_mult', vars = { card.ability.extra.mult } },
             }
         end
         if context.joker_main then
@@ -44,12 +37,14 @@ SMODS.Joker {
                 mult = card.ability.extra.mult
             }
         end
-        if context.round_eval and G.GAME.last_blind and G.GAME.last_blind.boss then
-            card.ability.extra.mult = 0
-            return {
-                message = "Reset!",
-                colour = G.C.FILTER
-            }
+        if context.end_of_round and context.game_over == false and context.main_eval and not context.blueprint then
+            if G.GAME.blind.boss and card.ability.extra.mult > 0 then
+                card.ability.extra.mult = 0
+                return {
+                    message = localize('k_reset'),
+                    colour = G.C.RED
+                }
+            end
         end
     end
 }

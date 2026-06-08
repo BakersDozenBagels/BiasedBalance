@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Last_Dance",
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 1
     },
     rarity = 1,
     cost = 4,
@@ -14,6 +14,9 @@ SMODS.Joker {
         extra = { 
             repetitions = 1 
         } 
+    },
+    pools = {
+        Utility = true
     },
     loc_vars = function(self, info_queue, card)
         return { 

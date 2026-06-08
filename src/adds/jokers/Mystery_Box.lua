@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Mystery_Box",
     pos = {
-        x = 2,
-        y = 0
+        x = 0,
+        y = 2
     },
     rarity = 1,
     cost = 6,
@@ -12,56 +12,74 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-        
+            creates = 2
         } 
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-
-        } 
+            card.ability.extra.creates
+            } 
     }
     end,
     calculate = function(self, card, context)
         if context.skip_blind then
             G.E_MANAGER:add_event(Event({
                 func = function()
-                    for i, c in ipairs(G.jokers.cards) do
-                        if c == card then
-                            c:start_dissolve()
-                        break
-                        end
-                    end
+                    SMODS.destroy_cards(card, nil, nil, true)
                 return true
                 end}))
-            G.E_MANAGER:add_event(Event({
-                trigger = 'after',
-                delay = 0.4,
-                func = function()
-                    local chosen_joker = pseudorandom_element(BiasedBalance.Rare_Jokers, pseudoseed('choice'))
-                    local rare = create_card("Joker", G.jokers, nil, nil, nil, nil, 'j_'.. chosen_joker)
-                    rare:add_to_deck()
-                    G.jokers:emplace(rare)
-                    return true
-                end
+            if #G.jokers.cards + G.GAME.joker_buffer <= G.jokers.config.card_limit then
+                G.GAME.joker_buffer = G.GAME.joker_buffer + 1
+                if pseudorandom('LEGENDARYCHANCE!!') <= 0.01 then
+                    G.E_MANAGER:add_event(Event({
+                    trigger = 'after',
+                    delay = 0.4,
+                    func = function()
+                        SMODS.add_card {
+                            set = 'Joker',
+                            legendary = true,
+                            key_append = 'Mystery_Box'
+                        }
+                        G.GAME.joker_buffer = 0
+                        return true
+                    end
                 }))
+                else
+                    G.E_MANAGER:add_event(Event({
+                        trigger = 'after',
+                        delay = 0.4,
+                        func = function()
+                            SMODS.add_card {
+                                set = 'Joker',
+                                rarity = 'Rare',
+                                key_append = 'Mystery_Box'
+                            }
+                            G.GAME.joker_buffer = 0
+                            return true
+                        end
+                    }))
+            end
+            end
+            if #G.consumeables.cards < G.consumeables.config.card_limit then
+            local cards_to_create = math.min(card.ability.extra.creates, G.consumeables.config.card_limit - (#G.consumeables.cards))
             G.E_MANAGER:add_event(Event({
                 trigger = 'after',
                 delay = 0.4,
                 func = function()
-                    if G.consumeables.config.card_limit > #G.consumeables.cards then
-                    local chosen_tarot1 = pseudorandom_element(BiasedBalance.Tarots, pseudoseed('choice'))
-                    local chosen_tarot2 = pseudorandom_element(BiasedBalance.Tarots, pseudoseed('choice'))
-                    local tarot1 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_' .. chosen_tarot1 )
-                    local tarot2 = create_card("Tarot", G.consumeables, nil, nil, nil, nil, 'c_' .. chosen_tarot2)
-                    tarot1:add_to_deck()
-                    tarot2:add_to_deck()
-                    G.consumeables:emplace(tarot1)
-                    G.consumeables:emplace(tarot2)
+                    for _ = 1, cards_to_create do
+                        SMODS.add_card {
+                                set = 'Tarot',
+                                key_append = 'Mystery_Box',
+                            }
                     end
                     return true
                 end
                 }))
+                return {
+                        message = localize('k_mysteryBox_open')
+                    }
+            end
         end
     end,
 }

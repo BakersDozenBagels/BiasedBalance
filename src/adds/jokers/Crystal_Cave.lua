@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Crystal_Cave",
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 4
     },
     rarity = 2,
     cost = 7,
@@ -35,10 +35,10 @@ SMODS.Joker {
                 xmult = card.ability.extra.xmult
             }
         end
-        if context.end_of_round then
+        if context.end_of_round and context.game_over == false and context.main_eval then
             card.ability.extra.xmult = 1.15
             return {
-                message = "Reset!",
+                message = localize('k_reset'),
                 colour = G.C.FILTER
             }
         end

@@ -17,6 +17,52 @@
 version = "1.0.0"
 priority = 999
 
+
+# Adds colors
+[[patches]]
+[patches.pattern]
+target = "globals.lua"
+pattern = "RENTAL = HEX('b18f43'),"
+position = "after"
+match_indent = true
+payload = '''
+BIASEDBALANCE_TEAL = HEX('79bbc3'),
+BIASEDBALANCE_TANGERINE= HEX('fd8d3c'),
+
+'''
+
+[[patches]]
+[patches.pattern]
+target = "functions/misc_functions.lua"
+pattern = "G.ARGS.LOC_COLOURS = G.ARGS.LOC_COLOURS or {"
+position = "after"
+match_indent = true
+payload = '''
+  biasedbalance_teal = G.C.BIASEDBALANCE_TEAL,
+  biasedbalance_tangerine = G.C.BIASEDBALANCE_TANGERINE,
+  
+'''
+
+# Wild Card tweak
+[[patches]]
+[patches.pattern]
+target = 'blind.lua'
+pattern = "if self.debuff.suit and card:is_suit(self.debuff.suit, true) then"
+position = 'at' 
+payload = "if self.debuff.suit and card:is_suit(self.debuff.suit, true) and card.ability.name ~= 'Wild Card' then"
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = 'self.debuff = should_debuff'
+position = 'after'
+match_indent = true
+payload = '''
+if not self.debuff then self.debuffed_by_blind = false end
+'''
+
+
 # Omen Globe tweak
 [[patches]]
 [patches.pattern]
@@ -98,6 +144,23 @@ match_indent = true
 times = 1
 payload = "* (BiasedBalance and BiasedBalance.reroll_scale() or 1)"
 
+# Silver Stake
+[[patches]]
+[patches.pattern]
+target = "functions/common_events.lua"
+pattern = '''elseif not v.boss.showdown and (v.boss.min <= math.max(1, G.GAME.round_resets.ante) and ((math.max(1, G.GAME.round_resets.ante))%G.GAME.win_ante ~= 0 or G.GAME.round_resets.ante < 2)) then
+    eligible_bosses[k] = res and true or nil'''
+position = "at"
+payload = '''
+elseif v.boss.showdown and G.GAME.Biased_Balance.silver_stake_active and (G.GAME.round_resets.ante % 8 == 0) then
+    eligible_bosses[k] = res and true or nil
+elseif not v.boss.showdown and not (G.GAME.Biased_Balance.silver_stake_active and (G.GAME.round_resets.ante % 8 == 0)) 
+and (v.boss.min <= math.max(1, G.GAME.round_resets.ante) and ((math.max(1, G.GAME.round_resets.ante))%G.GAME.win_ante ~= 0 
+or G.GAME.round_resets.ante < 2)) then
+    eligible_bosses[k] = res and true or nil'''
+match_indent = true
+
+
 # Jumbo
 [[patches]]
 [patches.regex]
@@ -106,7 +169,7 @@ pattern = "card\\.edition and card\\.edition\\.card_limit or 0"
 position = "at"
 root_capture = "0"
 times = 4
-payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0)"
+payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0) + (card.config.center.key == 'j_biasedBalance_Ego' and -1 or 0)"
 
 [[patches]]
 [patches.regex]
@@ -115,21 +178,145 @@ pattern = "card\\.edition and card\\.edition\\.card_limit or 0"
 position = "at"
 root_capture = "0"
 times = 1
-payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0)"
+payload = "(card.edition and card.edition.card_limit or 0) + (card.config.center.key == 'j_biasedBalance_Jumbo' and -1 or 0) + (card.config.center.key == 'j_biasedBalance_Ego' and -1 or 0)"
 
-# Patch For Recipe and Trade Secret
+# Patch for Red Card
 [[patches]]
 [patches.pattern]
 target = "card.lua"
-pattern = "G.GAME.pack_choices = self.ability.choose or self.config.center.config.choose or 1"
+pattern = "if self.ability.name == 'Red Card' and not context.blueprint then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+# Patch for Hologram
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Hologram' and (not context.blueprint)"
+position = "at"
+payload = '''
+if False
+'''
+match_indent = true
+
+# Patch for Square Joker
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Square Joker' and #context.full_hand == 4 and not context.blueprint then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Square Joker' then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+# Patch for Dusk
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "elseif self.ability.name == 'Dusk' then loc_vars = {self.ability.extra+1}"
+position = "at"
+payload = '''
+elseif self.ability.name == 'Dusk' then loc_vars = loc_vars
+'''
+match_indent = true
+
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if self.ability.name == 'Dusk' and G.GAME.current_round.hands_left == 0 then"
+position = "at"
+payload = '''
+if False then
+'''
+match_indent = true
+
+# Patch for Ankh
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = '''if self.ability.name == 'Ankh' then 
+        if #G.jokers.cards >= G.jokers.config.card_limit then  '''
+position = "at"
+payload = '''
+if self.ability.name == 'Ankh' then 
+    if #G.jokers.cards - 1 >= G.jokers.config.card_limit then 
+'''
+match_indent = true
+
+# Patch for Smurf
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS _ "src/overrides.lua"]'''
+pattern = '''
+	local temp_in_pool = {}
+    for k, v in ipairs(G.P_CENTER_POOLS['Booster']) do
+'''
+position = "at"
+payload = '''
+	local temp_in_pool = {}
+	
+	local booster_pool = {}
+	if #SMODS.find_card('j_biasedBalance_Smurf') > 0 then
+		for k, v in ipairs(G.P_CENTER_POOLS['Booster']) do
+			if string.match(v.key, "mega") then
+				booster_pool[#booster_pool + 1] = v
+			end
+		end
+	else
+		booster_pool = G.P_CENTER_POOLS['Booster']
+	end
+	
+    for k, v in ipairs(booster_pool) do
+'''
+match_indent = true
+
+# Patch for Planet Tycoon
+[[patches]]
+[patches.pattern]
+target = "card.lua"
+pattern = "if center_table.name == 'Planet Merchant' or center_table.name == 'Planet Tycoon' then"
+position = "at"
+payload = '''
+if center_table.name == 'Planet Merchant' then
+'''
+match_indent = true
+
+# Patch for Retcon
+[[patches]]
+[patches.pattern]
+target = "functions/button_callbacks.lua"
+pattern = "(G.GAME.used_vouchers[\"v_retcon\"] or"
+position = "at"
+payload = '''
+(
+'''
+match_indent = true
+
+# Patch for The Emerald
+[[patches]]
+[patches.pattern]
+target = '''=[SMODS _ "src/game_object.lua"]'''
+pattern = '''if (key == 'x_mult' or key == 'xmult' or key == 'Xmult' or key == 'x_mult_mod' or key == 'Xmult_mod') and amount ~= 1 then'''
 position = "after"
 payload = '''
-if G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret then
-    self.ability.extra = self.ability.extra + (G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret)
-    G.GAME.pack_choices = G.GAME.pack_choices + (G.GAME.v_biasedBalance_recipe or G.GAME.v_biasedBalance_trade_secret)
-    G.GAME.v_biasedBalance_recipe = nil
-    G.GAME.v_biasedBalance_trade_secret = nil
+if not G.GAME.blind.disabled and G.GAME.blind.name == 'bl_biasedBalance_Delta' then
+    G.GAME.blind.chips = math.floor(G.GAME.blind.chips + (get_blind_amount(G.GAME.round_resets.ante) * G.GAME.starting_params.ante_scaling) * 0.3)
+    G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
+    G.GAME.blind:wiggle()
 end
-G.GAME.pack_size = self.ability.extra
 '''
 match_indent = true

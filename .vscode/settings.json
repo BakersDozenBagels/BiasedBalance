@@ -12,7 +12,10 @@
         "ease_dollars",
         "pseudorandom",
         "add_tag",
-        "Tag"
+        "Tag",
+        "peafowl_enhancement_calc",
+        "peafowl_original_values",
+        "redeemed_voucher_count"
     ],
     "Lua.diagnostics.disable": [
         "empty-block"

@@ -19,13 +19,24 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 BiasedBalance = {}
 
+SMODS.current_mod.optional_features = {
+    retrigger_joker = true,
+    post_trigger = true,
+}
+
 --Load Lib Files
 SMODS.load_file("lib/content.lua")() -- Definitions 
 SMODS.load_file("lib/utils.lua")() -- Utility functions built
 SMODS.load_file("lib/pools.lua")()
 
--- Lovely Fixes
-SMODS.load_file("lovely/fixes.toml")
+-- Initialize Pool for Utility
+if not SMODS.ObjectTypes.Utility then
+  SMODS.ObjectType {
+    key = 'Utility',
+    default = 'j_chaos',
+    cards = copy_table(BiasedBalance.vanilla_utility),
+  }
+end
 
 -- TWEAKS
 BiasedBalance.file_loader(BiasedBalance.Back_Tweaks, "src/tweaks/backs")
@@ -33,7 +44,7 @@ BiasedBalance.file_loader(BiasedBalance.Blind_Tweaks, "src/tweaks/blinds")
 BiasedBalance.file_loader(BiasedBalance.Edition_Tweaks, "src/tweaks/editions")
 BiasedBalance.file_loader(BiasedBalance.Enhancement_Tweaks, "src/tweaks/enhancements")
 BiasedBalance.file_loader(BiasedBalance.Joker_Tweaks, "src/tweaks/jokers")
-BiasedBalance.file_loader(BiasedBalance.Planet_Tweaks, "src/tweaks/consumables")
+BiasedBalance.file_loader(BiasedBalance.Consumable_Tweaks, "src/tweaks/consumables")
 BiasedBalance.file_loader(BiasedBalance.Rarity_Tweaks, "src/tweaks/rarities")
 BiasedBalance.file_loader(BiasedBalance.Stake_Tweaks, "src/tweaks/stakes")
 BiasedBalance.file_loader(BiasedBalance.Tag_Tweaks, "src/tweaks/tags")
@@ -49,6 +60,10 @@ BiasedBalance.file_loader(BiasedBalance.Stake_Adds, "src/adds/stakes")
 BiasedBalance.file_loader(BiasedBalance.Tag_Adds, "src/adds/tags")
 BiasedBalance.file_loader(BiasedBalance.Voucher_Adds, "src/adds/vouchers")
 BiasedBalance.file_loader(BiasedBalance.Seal_Adds, "src/adds/seals")
+
+if next(SMODS.find_mod('extracredit')) then
+    BiasedBalance.file_loader(BiasedBalance.Extra_Credit, "src/tweaks/extracredit")
+end
 
 -- ||           ATLAS           ||
 
@@ -83,13 +98,42 @@ SMODS.Atlas {
 SMODS.Atlas {
     key = "stakes",
     path = "stakes.png",
-    px = 28,
-    py = 28
+    px = 29,
+    py = 29
 }
 
---SMODS.Atlas {
-  --  key = "Vouchers",
-  --  path = "Vouchers.png",
-  --  px = 71,
-  --  py = 95
---}
+SMODS.Atlas {
+    key = "Vouchers",
+    path = "Vouchers.png",
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = "Boosters",
+    path = "Boosters.png",
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = "seals",
+    path = "seals.png",
+    px = 71,
+    py = 95
+}
+SMODS.Atlas {
+    key = "stickers",
+    path = "stickers.png",
+    px = 71,
+    py = 95
+}
+
+SMODS.Atlas {
+    key = "blinds",
+    path = "blinds.png",
+    px = 34,
+    py = 34,
+    frames = 21,
+    atlas_table = 'ANIMATION_ATLAS'
+}

@@ -2,8 +2,8 @@ SMODS.Joker {
     atlas = "Joker",
     key = "Ouroboros",
     pos = {
-        x = 0,
-        y = 0
+        x = 6,
+        y = 5
     },
     rarity = 2,
     cost = 8,
@@ -14,7 +14,8 @@ SMODS.Joker {
         extra = { 
             xmult = 1,
             xmult_gain = .25,
-            tracker = 8
+            tracker = 8,
+            base_tracker = 8
         } 
     },
     loc_vars = function(self, info_queue, card)
@@ -22,7 +23,8 @@ SMODS.Joker {
             vars = { 
                 card.ability.extra.xmult_gain,
                 card.ability.extra.xmult,
-                card.ability.extra.tracker
+                card.ability.extra.tracker,
+                card.ability.extra.base_tracker,
         } 
     }
     end,
@@ -33,6 +35,11 @@ SMODS.Joker {
                 if card.ability.extra.tracker == 0 then
                     card.ability.extra.tracker = 8
                     card.ability.extra.xmult = card.ability.extra.xmult + card.ability.extra.xmult_gain
+                    return {
+                        message = localize { type = 'variable', key = 'a_xmult', vars = { card.ability.extra.xmult } },
+                        colour = G.C.RED,
+                        message_card = card
+                    }
                 end
             end
         end
