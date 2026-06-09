@@ -14,6 +14,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.d_size, card.ability.extra.hands, card.ability.extra.h_size, card.ability.extra.slots } }
     end,
+    pools = {
+        Utility = true
+    },
     add_to_deck = function(self, card, from_debuff)
         G.GAME.round_resets.discards = G.GAME.round_resets.discards + card.ability.extra.d_size
         ease_discard(card.ability.extra.d_size)
