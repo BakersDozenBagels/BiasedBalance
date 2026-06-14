@@ -47,9 +47,4 @@ SMODS.Joker {
             }
         end
     end,
-    load = function(self, card, card_table, other_card)
-        if card_table.ability.invis_rounds >= card_table.ability.extra.rounds then
-            juice_card_until(card, function(x) return not x.REMOVED end, true)
-        end
-    end
 }
