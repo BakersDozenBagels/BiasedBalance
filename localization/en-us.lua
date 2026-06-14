@@ -519,7 +519,7 @@ return {
                 text = {
                     "{X:mult,C:white}X#1#{} Mult for every",
                     "unique {C:planet}Planet{} used",
-                    "twice this run",
+                    "{C:attention}#3#{} times this run",
                     "{C:inactive}Currently {X:mult,C:white}X#2#{C:inactive} Mult)"
                 }
             },
@@ -1163,6 +1163,14 @@ return {
                     "Retrigger the first {C:attention}scored{} card",
                     "and first {C:attention}held in hand{} ability"
                 }
+            },
+            j_drivers_license = {
+                text = {
+                    "{X:mult,C:white} X#1# {} Mult if you have",
+                    "at least {C:attention}#2#{} Enhanced",
+                    "cards in your full deck",
+                    "{C:inactive}(Currently {C:attention}#3#{C:inactive})",
+                },
             },
             j_biasedBalance_Eldritch_Joker= {
                 name = "Eldritch Joker",
