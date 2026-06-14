@@ -15,18 +15,22 @@ SMODS.Tag {
             local jokers = {}
             for k, v in ipairs(G.jokers.cards) do
                 if not v.edition then 
-                    jokers[#jokers + 1] = v                
+                    if not v.will_be_editioned then
+                        jokers[#jokers + 1] = v      
+                    end
                 end
             end
             if #jokers > 0 then
                 local lock = tag.ID
 				G.CONTROLLER.locks[lock] = true
                 local joker = pseudorandom_element(jokers, pseudoseed('hone_tag'))
+                joker.will_be_editioned = true
                 tag:yep("+", G.C.BLUE, function()
 					local edition = pseudorandom_element(BiasedBalance.Hone_Tag_Editions, pseudoseed('choice'))
                     joker:set_edition(edition, nil, true)
                     joker:juice_up()
 					G.CONTROLLER.locks[lock] = nil
+                    joker.will_be_editioned = nil
 					return true
 				end)
             else
