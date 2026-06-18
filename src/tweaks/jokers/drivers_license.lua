@@ -1,5 +1,6 @@
 SMODS.Joker:take_ownership("drivers_license", { 
-     config = { extra = { xmult = 3, driver_amount = 16 } },
+     config = { extra = { xmult = 2.5, driver_amount = 16 } },
+     rarity = 2,
     loc_vars = function(self, info_queue, card)
         local driver_tally = 0
         for _, playing_card in pairs(G.playing_cards or {}) do
