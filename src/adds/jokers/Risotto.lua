@@ -14,6 +14,9 @@ SMODS.Joker {
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.tags } }
     end,
+    pools = {
+        Utility = true
+    },
     calculate = function(self, card, context)
         if context.ending_shop then
             G.E_MANAGER:add_event(Event({
