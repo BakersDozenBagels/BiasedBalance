@@ -8,6 +8,24 @@ local function get_level_five_hands()
     return count
 end
 
+local function sync_hand_size(card, add)
+    local target_hand_size = math.min(get_level_five_hands() * card.ability.extra.hand_size, card.ability.extra.max)
+    local current_hand_size = card.ability.extra.current_hand_size or 0
+
+    if add then
+        local delta = target_hand_size - current_hand_size
+        if delta ~= 0 then
+            G.hand:change_size(delta)
+            card.ability.extra.current_hand_size = target_hand_size
+        end
+    else
+        if current_hand_size ~= 0 then
+            G.hand:change_size(-current_hand_size)
+            card.ability.extra.current_hand_size = 0
+        end
+    end
+end
+
 SMODS.Joker {
     atlas = "Joker",
     key = "Yodeller",
@@ -26,33 +44,13 @@ SMODS.Joker {
     end,
     update = function(self, card, dt)
         if card.area == G.jokers then
-            local level_five_hands = get_level_five_hands()
-            local new_hand_size = math.min(level_five_hands * card.ability.extra.hand_size, card.ability.extra.max)
-            if new_hand_size ~= card.ability.extra.current_hand_size then
-                card.ability.extra.current_hand_size = new_hand_size
-            end
-            if card.ability.extra.previous_hand_size ~= card.ability.extra.current_hand_size then
-                card.ability.extra.previous_hand_size = card.ability.extra.current_hand_size
-                G.hand:change_size(1)
-            end
+            sync_hand_size(card, true)
         end
     end,
     add_to_deck = function(self, card, from_debuff)
-        local level_five_hands = get_level_five_hands()
-        local new_hand_size = math.min(level_five_hands * card.ability.extra.hand_size, card.ability.extra.max)
-        if new_hand_size ~= card.ability.extra.current_hand_size then
-            G.hand:change_size(new_hand_size - card.ability.extra.current_hand_size)
-            card.ability.extra.current_hand_size = new_hand_size
-        end
-        G.hand:change_size(card.ability.extra.current_hand_size)
+        sync_hand_size(card, true)
     end,
     remove_from_deck = function(self, card, from_debuff)
-        local level_five_hands = get_level_five_hands()
-        local new_hand_size = math.min(level_five_hands * card.ability.extra.hand_size, card.ability.extra.max)
-        if new_hand_size ~= card.ability.extra.current_hand_size then
-            G.hand:change_size(new_hand_size - card.ability.extra.current_hand_size)
-            card.ability.extra.current_hand_size = new_hand_size
-        end
-        G.hand:change_size(-card.ability.extra.current_hand_size)
+        sync_hand_size(card, false)
     end,
 }
