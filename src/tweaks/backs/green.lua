@@ -2,12 +2,10 @@ SMODS.Back:take_ownership("green", {
     config = { fake_extra_hand_bonus = 2, fake_extra_discard_bonus = 1, },
     loc_vars = function(self, info_queue, back)
         local vars = { self.config.fake_extra_hand_bonus, self.config.fake_extra_discard_bonus } 
-        vars.key = 'b_green'
         if G.GAME.Biased_Balance.pink_stake_active then
             vars = { self.config.fake_extra_hand_bonus + 1, self.config.fake_extra_discard_bonus } 
-            vars.key = 'b_green_pink'
         end
-        return vars
+        return { key = G.GAME.Biased_Balance.pink_stake_active and 'b_green_pink' or 'b_green', vars = vars }
     end,
     
     apply = function(self, back)

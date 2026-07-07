@@ -23,12 +23,10 @@ SMODS.Back:take_ownership("black", {
         local vars = nil
         if G.GAME.Biased_Balance.pink_stake_active then
             vars = { self.config.fake_joker_slot, self.config.fake_hands, self.config.fake_money } 
-            vars.key = 'b_black_pink'
         else 
             vars = { self.config.fake_joker_slot, self.config.fake_hands } 
-            vars.key = 'b_black'
         end
-        return vars
+        return { key = G.GAME.Biased_Balance.pink_stake_active and 'b_black_pink' or 'b_black', vars = vars }
     end,
     apply = function(self, back)
         if G.GAME.Biased_Balance.pink_stake_active then

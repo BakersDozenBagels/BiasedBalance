@@ -2,18 +2,18 @@ return {
     descriptions = {
        Back = {
             b_black = {
-                text = { "{C:attention}+1{} Joker slot",
-                    "{C:blue}-1{} hand",
+                text = { "{C:attention}+#1#{} Joker slot",
+                    "{C:blue}#2#{} hand",
                     "every round",
                     "{C:dark_edition}Negative{} is",
                     "{C:green}4X{} more common" }
             },
             b_black_pink = {
                 name = "Black Deck",
-                text = { "{C:attention}+1{} Joker slot",
-                    "{C:red}-1{} discard",
+                text = { "{C:attention}+#1#{} Joker slot",
+                    "{C:red}#2#{} discard",
                     "every round",
-                    "Start with {C:money}-$1",
+                    "Start with {C:money}-$#3#",
                     "{C:dark_edition}Negative{} is",
                     "{C:green}4X{} more common",
                     "{s:0.8}Modified by Pink Stake" }
