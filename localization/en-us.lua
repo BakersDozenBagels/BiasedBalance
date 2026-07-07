@@ -13,10 +13,10 @@ return {
                 text = { "{C:attention}+1{} Joker slot",
                     "{C:red}-1{} discard",
                     "every round",
-                    "Start with",
-                    "extra {C:money}$1",
+                    "Start with {C:money}-$1",
                     "{C:dark_edition}Negative{} is",
-                    "{C:green}4X{} more common" }
+                    "{C:green}4X{} more common",
+                    "{s:0.8}Modified by Pink Stake" }
             },
             b_ghost = {
                 text = {
@@ -1524,6 +1524,7 @@ return {
                     "Start with extra {C:money}$1",
                     "{C:money}$2{} per remaining {C:blue}Hand",
                     "at end of round",
+                    "{s:0.8}Some decks and vouchers are modified",
                     "{s:0.8}Applies all previous Stakes",
                 }
             },

@@ -16,6 +16,7 @@ SMODS.Stake {
 		G.GAME.starting_params.hands = G.GAME.starting_params.hands - 1
 		G.GAME.modifiers.money_per_hand = 2
 		G.GAME.starting_params.dollars = G.GAME.starting_params.dollars + 1
+		G.GAME.Biased_Balance.pink_stake_active = true
 	end,
 	shiny = true,
 	order = 9,

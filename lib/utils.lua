@@ -23,6 +23,7 @@ function Game.init_game_object(self)
     most_common_rank = nil,
     second_most_common_rank = nil,
     silver_stake_active = false,
+    pink_stake_active = false,
     secret_hands = secrets,
   }
   return ret
