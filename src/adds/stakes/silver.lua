@@ -5,9 +5,9 @@ SMODS.Stake {
         y = 0 
     },
 	atlas = "stakes",
-	above_stake = "biasedBalance_pink",
+	above_stake = "gold",
 	applied_stakes = { 
-        "biasedBalance_pink" 
+        "gold" 
     },
 	sticker_pos = {x = 1, y = 0},
 	sticker_atlas = 'stickers',
