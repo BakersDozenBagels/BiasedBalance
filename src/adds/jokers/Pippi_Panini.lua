@@ -26,12 +26,9 @@ SMODS.Joker {
 							)
                     end
                     if not scored_card.edition then
+                        local edition = SMODS.poll_edition { key = "pippi", guaranteed = true }
                         scored_card:set_edition(
-								poll_edition('panini', nil, true, true,
-                        { name = 'e_foil',       weight = 40 },
-                        { name = 'e_holo',       weight = 30 },
-                        { name = 'e_negative',   weight = 15 },
-                        { name = 'e_polychrome', weight = 15 })
+								edition, true
 							)
                     end
                     G.E_MANAGER:add_event(Event({
