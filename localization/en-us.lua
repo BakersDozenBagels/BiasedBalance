@@ -18,6 +18,23 @@ return {
                     "{C:green}4X{} more common",
                     "{s:0.8}Modified by Pink Stake" }
             },
+            b_green = {
+                name = "Green Deck",
+                text = {
+                    "At end of each Round:",
+                    "{C:money}$2{s:0.85} per remaining {C:blue}Hand",
+                    "{C:money}$1{s:0.85} per remaining {C:red}Discard",
+                    "Earn no {C:attention}Interest",
+                },
+            },
+            b_green_pink = {
+                name = "Green Deck",
+                text = { "At end of each Round:",
+                    "{C:money}$3{s:0.85} per remaining {C:blue}Hand",
+                    "{C:money}$2{s:0.85} per remaining {C:red}Discard",
+                    "Earn no {C:attention}Interest",
+                    "{s:0.8}Modified by Pink Stake" }
+            },
             b_ghost = {
                 text = {
                     "{C:spectral}Spectral{} cards may",
