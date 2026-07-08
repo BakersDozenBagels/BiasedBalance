@@ -1708,6 +1708,40 @@ return {
             },
         },
         Voucher = {
+            v_hieroglyph = {
+                name = "Hieroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "{C:blue}-#1#{} hand",
+                    "each round",
+                },
+            },
+            v_hieroglyph_pink = {
+                name = "Hieroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "{C:red}-#1#{} discard",
+                    "each round",
+                    "{s:0.8}Modified by Pink Stake",
+                },
+            },
+            v_petroglyph = {
+                name = "Petroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "{C:red}-#1#{} discard",
+                    "each round",
+                },
+            },
+            v_petroglyph_pink = {
+                name = "Petroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "Decrease level of",
+                    "all {C:attention}poker hands",
+                    "{s:0.8}Modified by Pink Stake",
+                },
+            },
             v_omen_globe = {
                 text = {
                     "{C:spectral}Spectral{} cards may",

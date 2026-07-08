@@ -182,6 +182,8 @@ BiasedBalance.Voucher_Tweaks = {
 	"glow_up",
 	"reroll_surplus",
 	-- "reroll_glut", change discarded
+	"hieroglyph",
+	"petroglyph",
 
 }
 
