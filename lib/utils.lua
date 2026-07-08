@@ -25,6 +25,7 @@ function Game.init_game_object(self)
     silver_stake_active = false,
     pink_stake_active = false,
     secret_hands = secrets,
+    has_peafowl = false,
   }
   return ret
 end

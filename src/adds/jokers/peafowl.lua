@@ -6,7 +6,7 @@ SMODS.Joker {
         y = 0
     },
     rarity = 1,
-    cost = 3,
+    cost = 6,
     pools = {
         Utility = true
     },
@@ -19,16 +19,17 @@ SMODS.Joker {
     end,
     add_to_deck = function(self, card)
         for _, v in pairs(G.playing_cards) do
-            v:update(v.real_dt)
+            G.GAME.Biased_Balance.has_peafowl = true
         end
     end,
     remove_from_deck = function(self, card)
         for _, v in pairs(G.playing_cards) do
-            v:update(v.real_dt)
+            G.GAME.Biased_Balance.has_peafowl = false
         end
     end
 }
 
+--[[
 local updateref = Card.update
 function Card:update(dt)
   local ref = updateref(self, dt)
@@ -284,4 +285,4 @@ peafowl_original_values = function(card, equation, extra_value, exclusions, incl
   end
 
   return keys, values
-end
+end]]

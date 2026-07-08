@@ -448,11 +448,9 @@ return {
             j_biasedBalance_Ballerina = {
                 name = "Ballerina",
                 text = {
-                    "Playing {C:attention}3{} consecutive hands with", 
-                    "{C:attention}#1#{} scoring cards without playing",
-                    "the same hand twice in a row",
-                    "gives {C:money}$#2#{} and upgrades level of",
-                    "one of those hands"
+                    "Playing {C:attention}#2#{} consecutive poker",
+                    "hands gives {C:money}$#1#{} and {C:attention}upgrades{}",
+                    "one of the played hands"
                 }
             },
             j_biasedBalance_Eclectic_Joker = {
@@ -729,8 +727,9 @@ return {
             j_biasedBalance_Peafowl = {
                 name = "Peafowl",
                 text = {
-                    "{C:attention}Enhancements{} are", "{C:attention}#1#%{} stronger",
-                    "{C:inactive}(Rounded up)"
+                    "{C:attention}Enhancements{} and",
+                    "{C:dark_edition}Editions{} have",
+                    "increased effects"
                 }
             },
             j_biasedBalance_Chimera = {
