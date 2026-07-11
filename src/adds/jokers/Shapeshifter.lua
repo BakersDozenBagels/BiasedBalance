@@ -18,9 +18,9 @@ SMODS.Joker {
         return { vars = {  } }
     end,
     calculate = function(self, card, context)
-        if context.after and #context.scoring_hand >= 5 and not context.blueprint and G.GAME.current_round.hands_played == 0 then
-            local left_card = context.scoring_hand[1]
-            local right_card = context.scoring_hand[#context.scoring_hand]
+        if context.after and #context.full_hand >= 5 and not context.blueprint and G.GAME.current_round.hands_played == 0 then
+            local left_card = context.full_hand[1]
+            local right_card = context.full_hand[#context.full_hand]
             G.E_MANAGER:add_event(Event({
                     trigger = 'after',
                     delay = 0.4,

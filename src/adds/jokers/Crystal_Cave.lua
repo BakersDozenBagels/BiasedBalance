@@ -12,7 +12,7 @@ SMODS.Joker {
     perishable_compat = true,
     config = { 
         extra = { 
-            xmult = 1.15,
+            xmult = 1,
             xmult_gain = .15
         } 
     },
@@ -36,7 +36,7 @@ SMODS.Joker {
             }
         end
         if context.end_of_round and context.game_over == false and context.main_eval then
-            card.ability.extra.xmult = 1.15
+            card.ability.extra.xmult = 1
             return {
                 message = localize('k_reset'),
                 colour = G.C.FILTER

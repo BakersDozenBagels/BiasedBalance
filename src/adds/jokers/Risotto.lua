@@ -10,7 +10,7 @@ SMODS.Joker {
     blueprint_compat = true,
     eternal_compat = false,
     perishable_compat = true,
-    config = { extra = { tags = 4, tagpool = {'tag_uncommon', 'tag_rare', 'tag_foil', 'tag_holo', 'tag_polychrome', 'tag_negative'} } },
+    config = { extra = { tags = 5, tagpool = {'tag_uncommon', 'tag_rare', 'tag_foil', 'tag_holo', 'tag_polychrome', 'tag_negative'} } },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.tags } }
     end,

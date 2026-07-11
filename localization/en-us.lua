@@ -1125,7 +1125,7 @@ return {
                 name = "Shapeshifter",
                 text = {
                     "If {C:attention}first hand{} of round",
-                    "contains {C:attention}5{} scoring cards,",
+                    "contains {C:attention}5{} cards,",
                     "convert the {C:attention}leftmost{} card" ,
                     "into the {C:attention}rightmost{} card"
                 },
