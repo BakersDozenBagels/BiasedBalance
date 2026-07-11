@@ -232,6 +232,28 @@ return {
                     "suit-debuffing effects",
                 },
             },
+            m_bonus={
+                name="Bonus Card",
+                text={
+                    "{C:chips}#1#{} Extra Chips"
+                },
+            },
+            m_stone={
+                name="Stone Card",
+                text={
+                    "{C:chips}#1#{} Chips",
+                    "no rank or suit",
+                },
+            },
+            m_lucky = {
+                name = "Lucky Card",
+                text = {
+                    "{C:green}#1# in #4#{} chance",
+                    "for {C:mult}+#3#{} Mult",
+                    "{C:green}#2# in #6#{} chance",
+                    "to win {C:money}$#5#",
+                },
+            },
         },
         Joker = {
             j_scary_face = {
