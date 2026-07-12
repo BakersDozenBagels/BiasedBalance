@@ -27,11 +27,21 @@ SMODS.Edition:take_ownership("foil", {
             rawset(t, k, v)
         end,
     }),
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.edition.chips + (G.GAME.Biased_Balance.has_peafowl and 35 or 0) } }
+    end,
     weight = 8.75,
     get_weight = function(self)
         local mul = polling_playing and 2 or 1
         return raw_get_weight(self) * mul
     end,
+    calculate = function(self, card, context)
+        if context.pre_joker or (context.main_scoring and context.cardarea == G.play) then
+            return {
+                chips = card.edition.chips + (G.GAME.Biased_Balance.has_peafowl and 35 or 0)
+            }
+        end
+    end
 })
 
 local raw_get_weight = G.P_CENTERS.e_holo.get_weight
@@ -41,6 +51,16 @@ SMODS.Edition:take_ownership("holo", {
         local mul = polling_playing and 2 or 1
         return raw_get_weight(self) * mul
     end,
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.edition.mult + (G.GAME.Biased_Balance.has_peafowl and 5 or 0) } }
+    end,
+    calculate = function(self, card, context)
+        if context.pre_joker or (context.main_scoring and context.cardarea == G.play) then
+            return {
+                mult = card.edition.mult + (G.GAME.Biased_Balance.has_peafowl and 5 or 0)
+            }
+        end
+    end
 })
 
 local raw_get_weight = G.P_CENTERS.e_polychrome.get_weight
@@ -50,6 +70,16 @@ SMODS.Edition:take_ownership("polychrome", {
         local mul = polling_playing and 2.8 or 1
         return raw_get_weight(self) * mul
     end,
+    loc_vars = function(self, info_queue, card)
+        return { vars = { card.edition.x_mult + (G.GAME.Biased_Balance.has_peafowl and .25 or 0) } }
+    end,
+    calculate = function(self, card, context)
+        if context.pre_joker or (context.main_scoring and context.cardarea == G.play) then
+            return {
+                x_mult = card.edition.x_mult + (G.GAME.Biased_Balance.has_peafowl and .25 or 0)
+            }
+        end
+    end
 })
 
 local raw_poll_edition = poll_edition

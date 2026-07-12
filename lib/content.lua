@@ -18,7 +18,7 @@ BiasedBalance.Edition_Tweaks = {
 }
 
 BiasedBalance.Enhancement_Tweaks = {
-	--"wild", discarded change
+	"wild",
 }
 
 BiasedBalance.Joker_Tweaks = {
@@ -182,6 +182,8 @@ BiasedBalance.Voucher_Tweaks = {
 	"glow_up",
 	"reroll_surplus",
 	-- "reroll_glut", change discarded
+	"hieroglyph",
+	"petroglyph",
 
 }
 

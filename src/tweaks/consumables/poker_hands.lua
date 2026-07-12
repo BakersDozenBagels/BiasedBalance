@@ -22,14 +22,14 @@ local poker_hands = {
     -- ["Pair"] = { 1, 20 }, -- Mercury
     ["Two Pair"] = { 2, 15 }, -- Uranus
     ["Three of a Kind"] = { 2, 20 }, -- Venus
-    ["Straight"] = { 3, 40 }, -- Saturn
+    ["Straight"] = { 4, 35 }, -- Saturn
     ["Flush"] = { 2, 20 }, -- Jupiter
     ["Full House"] = { 3, 25 }, -- Earth
-    ["Four of a Kind"] = { 3, 40 }, -- Mars
-    ["Straight Flush"] = { 5, 50, 8, 125 }, -- Neptune
-    ["Five of a Kind"] = { 4, 50, 16, 160 }, --Planet X
-    ["Flush House"] = { 5, 40, 18, 175 }, -- Ceres
-    ["Flush Five"] = { 5, 60, 20, 200 }, -- Eris
+    ["Four of a Kind"] = { 3, 35 }, -- Mars
+    ["Straight Flush"] = { 5, 55, 12, 125 }, -- Neptune
+    ["Five of a Kind"] = { 4, 45, 15, 135 }, --Planet X
+    ["Flush House"] = { 5, 40, 16, 140 }, -- Ceres
+    ["Flush Five"] = { 5, 55, 20, 200 }, -- Eris
 }
 
 local raw_Game_init_game_object = Game.init_game_object

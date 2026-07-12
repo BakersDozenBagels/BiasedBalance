@@ -5,18 +5,19 @@ SMODS.Back {
         x = 0,
         y = 1
     },
-    config = { vouchers = { 'v_biasedBalance_recipe', 'v_biasedBalance_trade_secret' } },
+    config = { vouchers = { 'v_biasedBalance_recipe', 'v_biasedBalance_trade_secret' }, extra = { cost = 1 } },
     unlocked = true,
     loc_vars = function(self, info_queue, back)
         return {
             vars = { localize { type = 'name_text', key = self.config.vouchers[1], set = 'Voucher' },
-                localize { type = 'name_text', key = self.config.vouchers[2], set = 'Voucher' },
+                localize { type = 'name_text', key = self.config.vouchers[2], set = 'Voucher' }, self.config.extra.cost
             }
         }
     end,
     apply = function(self)
 		G.GAME.modifiers.bbalance_booster_increase1 = 1
         G.GAME.modifiers.bbalance_booster_increase2 = 2
+        G.GAME.starting_params.reroll_cost = G.GAME.starting_params.reroll_cost + self.config.extra.cost
 	end,
 }
 local sc = Card.set_cost_value

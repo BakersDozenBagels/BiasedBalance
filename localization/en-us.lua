@@ -2,21 +2,38 @@ return {
     descriptions = {
        Back = {
             b_black = {
-                text = { "{C:attention}+1{} Joker slot",
-                    "{C:blue}-1{} hand",
+                text = { "{C:attention}+#1#{} Joker slot",
+                    "{C:blue}#2#{} hand",
                     "every round",
                     "{C:dark_edition}Negative{} is",
                     "{C:green}4X{} more common" }
             },
             b_black_pink = {
                 name = "Black Deck",
-                text = { "{C:attention}+1{} Joker slot",
-                    "{C:red}-1{} discard",
+                text = { "{C:attention}+#1#{} Joker slot",
+                    "{C:red}#2#{} discard",
                     "every round",
-                    "Start with",
-                    "extra {C:money}$1",
+                    "Start with {C:money}-$#3#",
                     "{C:dark_edition}Negative{} is",
-                    "{C:green}4X{} more common" }
+                    "{C:green}4X{} more common",
+                    "{s:0.8}Modified by Pink Stake" }
+            },
+            b_green = {
+                name = "Green Deck",
+                text = {
+                    "At end of each Round:",
+                    "{C:money}$2{s:0.85} per remaining {C:blue}Hand",
+                    "{C:money}$1{s:0.85} per remaining {C:red}Discard",
+                    "Earn no {C:attention}Interest",
+                },
+            },
+            b_green_pink = {
+                name = "Green Deck",
+                text = { "At end of each Round:",
+                    "{C:money}$3{s:0.85} per remaining {C:blue}Hand",
+                    "{C:money}$2{s:0.85} per remaining {C:red}Discard",
+                    "Earn no {C:attention}Interest",
+                    "{s:0.8}Modified by Pink Stake" }
             },
             b_ghost = {
                 text = {
@@ -86,7 +103,9 @@ return {
                     "{C:attention,T:v_biasedBalance_recipe}#1#{} and",
                     "{C:attention,T:v_biasedBalance_trade_secret}#2#{}",
                     "{C:attention}Booster Packs{} are",
-                    "more expensive"
+                    "more expensive",
+                    "{C:attention}Rerolls{} cost",
+                    "{C:money}$#3#{} more"
                 }
             },
             b_biasedBalance_Legendary = {
@@ -155,7 +174,7 @@ return {
                 text = {
                     "If played hand contains",
                     "an XMult effect, increase",
-                    "required score by 30%"
+                    "required score by X0.5"
                 }
             },
             bl_biasedBalance_Gamma = {
@@ -213,6 +232,28 @@ return {
                     "any suit",
                     "Immune to",
                     "suit-debuffing effects",
+                },
+            },
+            m_bonus={
+                name="Bonus Card",
+                text={
+                    "{C:chips}#1#{} Extra Chips"
+                },
+            },
+            m_stone={
+                name="Stone Card",
+                text={
+                    "{C:chips}#1#{} Chips",
+                    "no rank or suit",
+                },
+            },
+            m_lucky = {
+                name = "Lucky Card",
+                text = {
+                    "{C:green}#1# in #4#{} chance",
+                    "for {C:mult}+#3#{} Mult",
+                    "{C:green}#2# in #6#{} chance",
+                    "to win {C:money}$#5#",
                 },
             },
         },
@@ -431,11 +472,9 @@ return {
             j_biasedBalance_Ballerina = {
                 name = "Ballerina",
                 text = {
-                    "Playing {C:attention}3{} consecutive hands with", 
-                    "{C:attention}#1#{} scoring cards without playing",
-                    "the same hand twice in a row",
-                    "gives {C:money}$#2#{} and upgrades level of",
-                    "one of those hands"
+                    "Playing {C:attention}#2#{} consecutive poker",
+                    "hands gives {C:money}$#1#{} and {C:attention}upgrades{}",
+                    "one of the played hands"
                 }
             },
             j_biasedBalance_Eclectic_Joker = {
@@ -712,8 +751,9 @@ return {
             j_biasedBalance_Peafowl = {
                 name = "Peafowl",
                 text = {
-                    "{C:attention}Enhancements{} are", "{C:attention}#1#%{} stronger",
-                    "{C:inactive}(Rounded up)"
+                    "{C:attention}Enhancements{} and",
+                    "{C:dark_edition}Editions{} have",
+                    "increased effects"
                 }
             },
             j_biasedBalance_Chimera = {
@@ -1087,7 +1127,7 @@ return {
                 name = "Shapeshifter",
                 text = {
                     "If {C:attention}first hand{} of round",
-                    "contains {C:attention}5{} scoring cards,",
+                    "contains {C:attention}5{} cards,",
                     "convert the {C:attention}leftmost{} card" ,
                     "into the {C:attention}rightmost{} card"
                 },
@@ -1524,6 +1564,7 @@ return {
                     "Start with extra {C:money}$1",
                     "{C:money}$2{} per remaining {C:blue}Hand",
                     "at end of round",
+                    "{s:0.8}Some decks and vouchers are modified",
                     "{s:0.8}Applies all previous Stakes",
                 }
             },
@@ -1690,6 +1731,40 @@ return {
             },
         },
         Voucher = {
+            v_hieroglyph = {
+                name = "Hieroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "{C:blue}-#1#{} hand",
+                    "each round",
+                },
+            },
+            v_hieroglyph_pink = {
+                name = "Hieroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "{C:red}-#1#{} discard",
+                    "each round",
+                    "{s:0.8}Modified by Pink Stake",
+                },
+            },
+            v_petroglyph = {
+                name = "Petroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "{C:red}-#1#{} discard",
+                    "each round",
+                },
+            },
+            v_petroglyph_pink = {
+                name = "Petroglyph",
+                text = {
+                    "{C:attention}-#1#{} Ante,",
+                    "Decrease level of",
+                    "all {C:attention}poker hands",
+                    "{s:0.8}Modified by Pink Stake",
+                },
+            },
             v_omen_globe = {
                 text = {
                     "{C:spectral}Spectral{} cards may",

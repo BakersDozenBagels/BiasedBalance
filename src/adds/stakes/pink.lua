@@ -5,9 +5,9 @@ SMODS.Stake {
         y = 0 
     },
 	atlas = "stakes",
-	above_stake = "gold",
+	above_stake = "biasedBalance_silver",
 	applied_stakes = { 
-        "gold" 
+        "biasedBalance_silver" 
     },
 	sticker_pos = {x = 0, y = 0},
 	sticker_atlas = 'stickers',
@@ -16,6 +16,7 @@ SMODS.Stake {
 		G.GAME.starting_params.hands = G.GAME.starting_params.hands - 1
 		G.GAME.modifiers.money_per_hand = 2
 		G.GAME.starting_params.dollars = G.GAME.starting_params.dollars + 1
+		G.GAME.Biased_Balance.pink_stake_active = true
 	end,
 	shiny = true,
 	order = 9,

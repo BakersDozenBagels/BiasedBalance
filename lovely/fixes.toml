@@ -314,7 +314,7 @@ pattern = '''if (key == 'x_mult' or key == 'xmult' or key == 'Xmult' or key == '
 position = "after"
 payload = '''
 if not G.GAME.blind.disabled and G.GAME.blind.name == 'bl_biasedBalance_Delta' then
-    G.GAME.blind.chips = math.floor(G.GAME.blind.chips + (get_blind_amount(G.GAME.round_resets.ante) * G.GAME.starting_params.ante_scaling) * 0.3)
+    G.GAME.blind.chips = math.floor(G.GAME.blind.chips + (get_blind_amount(G.GAME.round_resets.ante) * G.GAME.starting_params.ante_scaling) * 0.5)
     G.GAME.blind.chip_text = number_format(G.GAME.blind.chips)
     G.GAME.blind:wiggle()
 end

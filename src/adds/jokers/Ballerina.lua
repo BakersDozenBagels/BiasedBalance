@@ -1,3 +1,14 @@
+local function has_unique_values(values)
+    local seen = {}
+    for _, value in ipairs(values) do
+        if seen[value] then
+            return false
+        end
+        seen[value] = true
+    end
+    return true
+end
+
 SMODS.Joker {
     key = "Ballerina",
     atlas = "Joker",
@@ -7,109 +18,58 @@ SMODS.Joker {
     },
     rarity = 1,
     cost = 3,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     config = {
         extra = {
-            size = 5,
-            money = 3,
-            first_hand = nil,
-            second_hand = nil,
-            third_hand = nil
+            money = 8,
+            num_hands = 4,
+            current_hands = {}
         }
     },
     loc_vars = function(self, info_queue, card)
         return { 
             vars = { 
-                card.ability.extra.size,
-                card.ability.extra.money
+                card.ability.extra.money,
+                card.ability.extra.num_hands,
+                card.ability.extra.current_hands
             } 
         }
     end,
     calculate = function(self, card, context)
-        if context.before then
-            if #context.scoring_hand >= card.ability.extra.size then
-                local total_hands = 1
-                -- Check for first hand
-                if not card.ability.extra.first_hand then
-                    card.ability.extra.first_hand = context.scoring_name
-                    return {
-                        message = (total_hands .. '/3'),
-                        colour = G.C.FILTER
-                    }
-                end
-                -- Check for second hand
-                total_hands = total_hands + 1
-                if not card.ability.extra.second_hand then
-                    -- Reset if First = Second
-                    if card.ability.extra.first_hand == context.scoring_name then
-                        card.ability.extra.first_hand = nil
-                        card.ability.extra.second_hand = nil
-                        card.ability.extra.third_hand = nil
-                        return {
-                            message = localize('k_reset'),
-                            colour = G.C.RED
-                        }
-                    end
-                    -- Set Second Hand
-                    card.ability.extra.second_hand = context.scoring_name
-                    return {
-                        message = (total_hands .. '/3'),
-                        colour = G.C.FILTER
-                    }
-                end
-                -- Check for third hand
-                if not card.ability.extra.third_hand then
-                    -- Reset if Second = Third
-                    if card.ability.extra.second_hand == context.scoring_name then
-                        card.ability.extra.first_hand = nil
-                        card.ability.extra.second_hand = nil
-                        card.ability.extra.third_hand = nil
-                        return {
-                            message = localize('k_reset'),
-                            colour = G.C.RED
-                        }
-                    end
-                    -- Set Third Hand
-                    card.ability.extra.third_hand = context.scoring_name
-                        local r = pseudorandom('j_biasedBalance_Ballerina')
-                        local hands = {
-                            card.ability.extra.first_hand,
-                            card.ability.extra.second_hand,
-                            card.ability.extra.third_hand
-                        }
-                        local idx = math.floor(r * #hands) + 1
-                        local hand = hands[idx]
+        if context.after and not context.blueprint then
+            table.insert(card.ability.extra.current_hands, context.scoring_name)
 
-                        SMODS.smart_level_up_hand(card, hand, false, 1)
+            local current_hands = card.ability.extra.current_hands
+            local unique_values = has_unique_values(current_hands)
 
-                        G.GAME.dollar_buffer = (G.GAME.dollar_buffer or 0) + card.ability.extra.money
-                        card.ability.extra.first_hand = nil
-                        card.ability.extra.second_hand = nil
-                        card.ability.extra.third_hand = nil
-                        return {
-                            dollars = card.ability.extra.money,
-                            func = function() -- This is for timing purposes, it runs after the dollar manipulation
-                                G.E_MANAGER:add_event(Event({
-                                    func = function()
-                                        G.GAME.dollar_buffer = 0
-                                        return true
-                                    end
-                                }))
-                            end
-                        }
-                end
+            if unique_values and #current_hands >= card.ability.extra.num_hands then
+                SMODS.calculate_effect {
+                    dollars = card.ability.extra.money,
+                    card = card,
+                }
+                local r = pseudorandom('j_biasedBalance_Ballerina')
+                local idx = math.floor(r * #card.ability.extra.current_hands) + 1
+                local hand = card.ability.extra.current_hands[idx]
 
-            else
-                -- No 5 card hand played
-                card.ability.extra.first_hand = nil
-                card.ability.extra.second_hand = nil
-                card.ability.extra.third_hand = nil
+                SMODS.smart_level_up_hand(card, hand, false, 1)
+                card.ability.extra.current_hands = {}
                 return {
                             message = localize('k_reset'),
                             colour = G.C.RED
                         }
+            elseif not unique_values then
+                card.ability.extra.current_hands = {}
+                return {
+                            message = localize('k_reset'),
+                            colour = G.C.RED
+                        }
+            else
+                return {
+                        message = (#card.ability.extra.current_hands .. '/' .. card.ability.extra.num_hands),
+                        colour = G.C.FILTER
+                    }
             end
         end
     end

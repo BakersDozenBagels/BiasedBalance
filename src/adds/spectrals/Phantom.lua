@@ -21,16 +21,6 @@ SMODS.Consumable {
                 play_sound('generic1', 0.9 + math.random() * 0.1, 0.8)
                 play_sound('holo1', 1.2 + math.random() * 0.1, 0.4)
                 BiasedBalance.lose_up_to(card.ability.extra.pay)
-                if G.shop_vouchers then
-                    G.E_MANAGER:add_event(Event {
-                        func = function()
-                            for i = 1, #G.GAME.tags do
-                                G.GAME.tags[i]:apply_to_run({ type = 'voucher_add' })
-                            end
-                            return true
-                        end
-                    })
-                end
                 return true
             end
         }))

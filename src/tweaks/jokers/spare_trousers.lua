@@ -1,6 +1,6 @@
 SMODS.Joker:take_ownership("trousers", {
     rarity = 2,
-    config = { extra = { mult = 2, chips = 4 }, mult = 0, chips = 0 },
+    config = { extra = { mult = 2, chips = 6 }, mult = 0, chips = 0 },
     loc_vars = function(self, info_queue, card)
         return { vars = { card.ability.extra.mult, card.ability.extra.chips, localize('Two Pair', 'poker_hands'), card.ability.mult, card.ability.chips } }
     end,

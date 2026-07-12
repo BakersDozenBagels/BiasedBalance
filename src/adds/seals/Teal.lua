@@ -13,7 +13,7 @@ SMODS.Seal {
         }
     },
     calculate = function(self, card, context)
-        if context.main_scoring and context.cardarea == G.play then
+        if context.before and context.cardarea == G.play then
                 G.GAME.probabilities.normal = G.GAME.probabilities.normal * 2
                 card.ability.seal.extra.num_scored = card.ability.seal.extra.num_scored * 2
             return {
