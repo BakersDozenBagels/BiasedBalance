@@ -174,7 +174,7 @@ return {
                 text = {
                     "If played hand contains",
                     "an XMult effect, increase",
-                    "required score by 30%"
+                    "required score by X0.5"
                 }
             },
             bl_biasedBalance_Gamma = {
