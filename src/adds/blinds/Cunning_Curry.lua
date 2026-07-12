@@ -7,7 +7,7 @@ SMODS.Blind {
     atlas = "blinds",
     boss = { showdown = true },
     loc_vars = function(self)
-        local numerator, denominator = SMODS.get_probability_vars(self, 1, 4, 'curry')
+        local numerator, denominator = SMODS.get_probability_vars(self, 1, 3, 'curry')
         return { vars = { numerator, denominator } }
     end,
     collection_loc_vars = function(self)
@@ -16,7 +16,7 @@ SMODS.Blind {
     boss_colour = HEX("d75c00"),
     set_blind = function(self)
         for k, v in pairs(G.playing_cards) do
-            if SMODS.pseudorandom_probability(self, pseudoseed('curry'), 1, 4, 'curry') then
+            if SMODS.pseudorandom_probability(self, pseudoseed('curry'), 1, 3, 'curry') then
                 SMODS.debuff_card(v, true, 'curry')
             end
         end
