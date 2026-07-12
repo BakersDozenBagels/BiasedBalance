@@ -103,7 +103,9 @@ return {
                     "{C:attention,T:v_biasedBalance_recipe}#1#{} and",
                     "{C:attention,T:v_biasedBalance_trade_secret}#2#{}",
                     "{C:attention}Booster Packs{} are",
-                    "more expensive"
+                    "more expensive",
+                    "{C:attention}Rerolls{} cost",
+                    "{C:money}$#3#{} more"
                 }
             },
             b_biasedBalance_Legendary = {
