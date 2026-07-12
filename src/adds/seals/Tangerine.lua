@@ -9,7 +9,7 @@ SMODS.Seal {
     },
     config = {
         extra = {
-            a_mult = 1,
+            a_mult = 2,
             mult = 0,
             num_cards = 5,
         }
