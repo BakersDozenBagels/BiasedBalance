@@ -7,15 +7,15 @@ SMODS.Blind {
     atlas = "blinds",
     boss = { showdown = true },
     loc_vars = function(self)
-        return { vars = { 225 } }
+        return { vars = { 30 + 25 * (G.GAME.round_resets.ante or 0) } }
     end,
     collection_loc_vars = function(self)
-        return { vars = { 225 } }
+        return { vars = { "(30 + (25 * Ante))" } }
     end,
     boss_colour = HEX("4f6367"),
     calculate = function(self, blind, context)
         if not blind.disabled and context.final_scoring_step then
-            local subtract = 225
+            local subtract = 30 + 25 * (G.GAME.round_resets.ante or 0)
             print(hand_chips)
             print(subtract)
             if hand_chips - subtract <= 5 then
